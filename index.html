@@ -232,7 +232,7 @@
   
   
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yanbingxu.com/2020/06/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F/">
+    <link itemprop="mainEntityOfPage" href="http://yanbingxu.com/2020/06/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -251,7 +251,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F/" itemprop="url">数据库设计范式</a></h1>
+                <a class="post-title-link" href="/2020/06/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/" itemprop="url"> 数据库设计规范</a></h1>
         
 
         <div class="post-meta">
@@ -263,7 +263,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-22T19:12:36+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-22T19:50:59+08:00">
                 2020-06-22
               </time>
             
@@ -284,7 +284,316 @@
       
         
           
-            
+            <h2 id="数据库设计范式"><a href="#数据库设计范式" class="headerlink" title="数据库设计范式"></a>数据库设计范式</h2><blockquote>
+<p>数据库规范化，又称正规化、标准化，是数据库设计的一系列原理和技术，以减少数据库中数据冗余，增进数据的一致性。关系模型的发明者埃德加·科德最早提出这一概念，并于1970年代初定义了<strong>第一范式</strong>、<strong>第二范式</strong>和<strong>第三范式</strong>的概念，还与Raymond F. Boyce于1974年共同定义了第三范式的改进范式——<strong>BC范式</strong>。</p>
+</blockquote>
+<blockquote>
+<p>除外还包括针对多值依赖的<strong>第四范式</strong>，连接依赖的<strong>第五范式</strong>、<strong>DK范式</strong>和<strong>第六范式</strong>。</p>
+</blockquote>
+<blockquote>
+<p>现在数据库设计最多满足3NF，普遍认为范式过高，虽然具有对数据关系更好的约束性，但也导致数据关系表增加而令数据库IO更易繁忙，原来交由数据库处理的关系约束现更多在数据库使用程序中完成。<br><img src="/2020/06/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/1-1.png" alt="1-1.png"></p>
+</blockquote>
+<hr>
+<h2 id="第一范式-1NF"><a href="#第一范式-1NF" class="headerlink" title="第一范式(1NF)"></a>第一范式(1NF)</h2><blockquote>
+<p>第一范式（1NF）是为了要排除 <strong>重复组</strong> 的出现，所采用的方法是要求数据库的每个列的值域都是由 <strong>原子值</strong> 组成；每个字段的值都只能是单一值。</p>
+</blockquote>
+<blockquote>
+<p>第一范式存在部分函数依赖和完全函数依赖</p>
+</blockquote>
+<h3 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h3><h4 id="重复组"><a href="#重复组" class="headerlink" title="重复组"></a>重复组</h4><blockquote>
+<p>重复组是指每一条记录可能有不定个数的值</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">顾客</th>
+<th align="center">日期</th>
+<th align="center">数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Pete</td>
+<td align="center">Monday</td>
+<td align="center">19.00  -28.20</td>
+</tr>
+<tr>
+<td align="center">Pete</td>
+<td align="center">Wednesday</td>
+<td align="center">-84.00</td>
+</tr>
+<tr>
+<td align="center">Sarah</td>
+<td align="center">Friday</td>
+<td align="center">100.00 150.00 -40.00</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>应将每条记录都转换为单一记录，即消除 <strong>重复组</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">顾客</th>
+<th align="center">日期</th>
+<th align="center">数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Pete</td>
+<td align="center">Monday</td>
+<td align="center">19.00</td>
+</tr>
+<tr>
+<td align="center">Pete</td>
+<td align="center">Monday</td>
+<td align="center">-28.20</td>
+</tr>
+<tr>
+<td align="center">Pete</td>
+<td align="center">Wednesday</td>
+<td align="center">-84.00</td>
+</tr>
+<tr>
+<td align="center">Sarah</td>
+<td align="center">Friday</td>
+<td align="center">100.00</td>
+</tr>
+<tr>
+<td align="center">Sarah</td>
+<td align="center">Friday</td>
+<td align="center">150.00</td>
+</tr>
+<tr>
+<td align="center">Sarah</td>
+<td align="center">Friday</td>
+<td align="center">-40.00</td>
+</tr>
+</tbody></table>
+<h4 id="缺乏唯一标识符"><a href="#缺乏唯一标识符" class="headerlink" title="缺乏唯一标识符"></a>缺乏唯一标识符</h4><blockquote>
+<p>在同一张表中有两条相同的记录，无法分辨这两条记录</p>
+</blockquote>
+<p>|  顾客  |  日期  |  数量  |<br>|  :—-:  |  :—-:  |  :—-:  |  :—-:  |<br>| Pete | Monday | 19.00 |<br>| Pete | Monday | 19.00 |</p>
+<blockquote>
+<p>应给每条记录设置一个唯一标识符，可以是一个字段，也可以是一组字段</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">id</th>
+<th align="center">顾客</th>
+<th align="center">日期</th>
+<th align="center">数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">Pete</td>
+<td align="center">Monday</td>
+<td align="center">19.00</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Pete</td>
+<td align="center">Monday</td>
+<td align="center">19.00</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="第二范式-2NF"><a href="#第二范式-2NF" class="headerlink" title="第二范式(2NF)"></a>第二范式(2NF)</h2><blockquote>
+<p>第二范式（2NF）是要求数据表里的所有非主属性都 <strong>完全函数依赖</strong> 于候选关键字</p>
+</blockquote>
+<blockquote>
+<p>每个非键属性必须独立于任意一个候选键的任意一部分属性。如果有哪些数据只和一个键的一部分有关的话，就得把它们独立出来变成另一个数据表。如果一个数据表的键只有单个字段的话，它就一定符合第二范式。</p>
+</blockquote>
+<p>如果一个数据表满足第二范式应该</p>
+<ul>
+<li>符合第一范式</li>
+<li>所有 非主键字段 都不能 <strong>部分函数依赖</strong> 候选关键字</li>
+</ul>
+<h3 id="举个栗子-1"><a href="#举个栗子-1" class="headerlink" title="举个栗子"></a>举个栗子</h3><blockquote>
+<p>因为同一个组件有可能由不同的供应商提供，所以得把组件 ID 和供应商 ID 合在一起组成一个主键。</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>本表主键：{ 组件ID，供应商ID }</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">组件 ID</th>
+<th align="center">价格</th>
+<th align="center">供应商 ID</th>
+<th align="center">供应商名称</th>
+<th align="center">供应商地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">65</td>
+<td align="center">59.99</td>
+<td align="center">1</td>
+<td align="center">AliBaba</td>
+<td align="center">杭州</td>
+</tr>
+<tr>
+<td align="center">73</td>
+<td align="center">20.00</td>
+<td align="center">1</td>
+<td align="center">AliBaba</td>
+<td align="center">杭州</td>
+</tr>
+<tr>
+<td align="center">65</td>
+<td align="center">69.99</td>
+<td align="center">2</td>
+<td align="center">Tencent</td>
+<td align="center">深圳</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>组件（关键词）和价格之间的关系很正确：同一个组件在不同供应商有可能会有不同的报价，所以价格确实和主键完全相关（完全依赖）。</p>
+</blockquote>
+<blockquote>
+<p>另一方面，供应商的名称和住址就只和供应商 ID 有关（部分依赖），这不符合第二范式的原则。仔细看就会发现 “AliBaba” 这个名称和 “杭州” 这个地址重复出现了两次；要是它改名了或是被其他公司并购了怎么办？这时候最好把这些数据存到第二个数据表中：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">供应商 ID</th>
+<th align="center">供应商名称</th>
+<th align="center">供应商地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">AliBaba</td>
+<td align="center">杭州</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">AliBaba</td>
+<td align="center">杭州</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Tencent</td>
+<td align="center">深圳</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">组件 ID</th>
+<th align="center">价格</th>
+<th align="center">供应商 ID</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">65</td>
+<td align="center">59.99</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">73</td>
+<td align="center">20.00</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">65</td>
+<td align="center">69.99</td>
+<td align="center">2</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>检查数据表里的每个字段，确认它们是不是都和关键词完全相关， 这样才能知道这个数据表是不是符合第二范式； 如果不是的话，就把那些不完全相关的字段移到独立的数据表里</p>
+</blockquote>
+<hr>
+<h2 id="第三范式"><a href="#第三范式" class="headerlink" title="第三范式"></a>第三范式</h2><blockquote>
+<p>每一个非主属性都不 <strong>传递函数依赖</strong> 于候选关键字</p>
+</blockquote>
+<blockquote>
+<p>第三范式（3NF）是数据库正规化所使用的正规形式，要求所有非主键属性都只和候选键有相关性，也就是说非主键属性之间应该是独立无关的。</p>
+</blockquote>
+<h3 id="举个栗子-2"><a href="#举个栗子-2" class="headerlink" title="举个栗子"></a>举个栗子</h3><blockquote>
+<p>第三范式要求非主键字段之间不能有依赖关系，显然 [总价] 依赖于非主键字段“单价”和“数量”，不符合第三范式</p>
+</blockquote>
+<blockquote>
+<p>主键：{订单编号}</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">订单编号</th>
+<th align="center">客户名称</th>
+<th align="center">单价</th>
+<th align="center">数量</th>
+<th align="center">总价</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1000</td>
+<td align="center">Jacob</td>
+<td align="center">$35.00</td>
+<td align="center">3</td>
+<td align="center">$105.00</td>
+</tr>
+<tr>
+<td align="center">1001</td>
+<td align="center">Tim</td>
+<td align="center">$25.00</td>
+<td align="center">2</td>
+<td align="center">$50.00</td>
+</tr>
+<tr>
+<td align="center">1000</td>
+<td align="center">Yuanzhibx</td>
+<td align="center">$25.00</td>
+<td align="center">3</td>
+<td align="center">$75.00</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>将 [总价] 字段删除，使用时通过 [单价] * [数量] 既可获得 [总价] 字段内容</p>
+</blockquote>
+<blockquote>
+<p>即原本使用 SQL 语句：</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Order.Total <span class="keyword">FROM</span> <span class="keyword">Order</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>修改为：</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> UnitPrice * Quantity <span class="keyword">FROM</span> <span class="keyword">Order</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">订单编号</th>
+<th align="center">客户名称</th>
+<th align="center">单价</th>
+<th align="center">数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1000</td>
+<td align="center">Jacob</td>
+<td align="center">$35.00</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">1001</td>
+<td align="center">Tim</td>
+<td align="center">$25.00</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">1000</td>
+<td align="center">Yuanzhibx</td>
+<td align="center">$25.00</td>
+<td align="center">3</td>
+</tr>
+</tbody></table>
+<hr>
+
           
         
       
