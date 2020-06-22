@@ -73,7 +73,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yanbingxu.com/2020/06/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/1-1.png">
 <meta property="article:published_time" content="2020-06-22T11:50:59.000Z">
-<meta property="article:modified_time" content="2020-06-22T14:30:14.992Z">
+<meta property="article:modified_time" content="2020-06-22T14:39:45.804Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yanbingxu.com/2020/06/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/1-1.png">
@@ -530,7 +530,9 @@
 <p>第三范式（3NF）要求每一个非主属性都不 <strong>传递函数依赖</strong> 于候选关键字</p>
 </blockquote>
 <h2 id="举个栗子-2"><a href="#举个栗子-2" class="headerlink" title="举个栗子"></a>举个栗子</h2><blockquote>
-<p>【Order】（OrderID，OrderDate，CustomerID，CustomerName，CustomerAddr，CustomerCity）主键是（OrderID）。 </p>
+<ul>
+<li><strong>本表主键：{OrderID}</strong> </li>
+</ul>
 </blockquote>
 <table>
 <thead>
@@ -572,10 +574,10 @@
 <p>其中 <strong>[OrderDate]</strong>，<strong>[CustomerID]</strong>，<strong>[CustomerName]</strong>，<strong>[CustomerAddr]</strong>，<strong>[CustomerCity]</strong> 等非主键列都完全依赖于主键（OrderID），所以符合 2NF。</p>
 </blockquote>
 <blockquote>
-<p>不过问题是 <strong>[CustomerName]</strong>，<strong>[CustomerAddr]</strong>，<strong>[CustomerCity]</strong> 直接依赖的是 <strong>[CustomerID]</strong>（非主键列），而不是直接依赖于主键，它是通过传递才依赖于主键，所以不符合 3NF。 </p>
+<p>不过问题是 <strong>[CustomerName]</strong>，<strong>[CustomerAddr]</strong>，<strong>[CustomerCity]</strong> 直接依赖的是 <strong>[CustomerID]</strong>（非主键列），而不是直接依赖于主键，它是通过传递才依赖于主键，所以不符合3NF。 </p>
 </blockquote>
 <blockquote>
-<p>通过拆分【Order】为【Order】和【Customer】从而达到 3NF。</p>
+<p>通过拆分 <strong>Order</strong> 为 <strong>Order</strong> 和 <strong>Customer</strong> 从而达到 3NF。</p>
 </blockquote>
 <table>
 <thead>
@@ -630,19 +632,16 @@
 </tr>
 </tbody></table>
 <h2 id="再举个栗子"><a href="#再举个栗子" class="headerlink" title="再举个栗子"></a>再举个栗子</h2><blockquote>
-<p>第三范式要求非主键字段之间不能有依赖关系，显然 [总价] 依赖于非主键字段“单价”和“数量”，不符合第三范式</p>
-</blockquote>
-<blockquote>
-<p>主键：{订单编号}</p>
+<p><strong>本表主键：{订单编号}</strong></p>
 </blockquote>
 <table>
 <thead>
 <tr>
-<th align="center">订单编号</th>
-<th align="center">客户名称</th>
-<th align="center">单价</th>
-<th align="center">数量</th>
-<th align="center">总价</th>
+<th align="center">订单编号(Order Number)</th>
+<th align="center">客户名称(Customer Name)</th>
+<th align="center">单价(Unit Price)</th>
+<th align="center">数量(Quantity)</th>
+<th align="center">总价(Total)</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -668,7 +667,10 @@
 </tr>
 </tbody></table>
 <blockquote>
-<p>将 [总价] 字段删除，使用时通过 [单价] * [数量] 既可获得 [总价] 字段内容</p>
+<p>第三范式要求非主键字段之间不能有依赖关系，显然 <strong>[总价]</strong> 依赖于非主键字段 <strong>[单价]</strong> 和 <strong>[数量]</strong> ，不符合第三范式</p>
+</blockquote>
+<blockquote>
+<p>将 <strong>[总价]</strong> 字段删除，使用时通过 <strong>[单价]</strong> * <strong>[数量]</strong> 既可获得 <strong>[总价]</strong> 字段内容</p>
 </blockquote>
 <blockquote>
 <p>即原本使用 SQL 语句：</p>
