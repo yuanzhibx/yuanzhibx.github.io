@@ -372,7 +372,25 @@
 <h4 id="缺乏唯一标识符"><a href="#缺乏唯一标识符" class="headerlink" title="缺乏唯一标识符"></a>缺乏唯一标识符</h4><blockquote>
 <p>在同一张表中有两条相同的记录，无法分辨这两条记录</p>
 </blockquote>
-<p>|  顾客  |  日期  |  数量  |<br>|  :—-:  |  :—-:  |  :—-:  |  :—-:  |<br>| Pete | Monday | 19.00 |<br>| Pete | Monday | 19.00 |</p>
+<table>
+<thead>
+<tr>
+<th align="center">顾客</th>
+<th align="center">日期</th>
+<th align="center">数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Pete</td>
+<td align="center">Monday</td>
+<td align="center">19.00</td>
+</tr>
+<tr>
+<td align="center">Pete</td>
+<td align="center">Monday</td>
+<td align="center">19.00</td>
+</tr>
+</tbody></table>
 <blockquote>
 <p>应给每条记录设置一个唯一标识符，可以是一个字段，也可以是一组字段</p>
 </blockquote>
