@@ -283,36 +283,19 @@
 
       
         
-          
-            <h2 id="什么是-Lombok"><a href="#什么是-Lombok" class="headerlink" title="什么是 Lombok"></a>什么是 Lombok</h2><blockquote>
+          <h2 id="什么是-Lombok"><a href="#什么是-Lombok" class="headerlink" title="什么是 Lombok"></a>什么是 Lombok</h2><blockquote>
 <p>Lombok 是一个第三方库，Lombok 以注解形式来帮助简化消除一些必须有但显得很臃肿的 java 代码。例如 POJO 类中的 Get、Set、toString…</p>
 </blockquote>
 <blockquote>
 <p>让你的代码更加优雅、简洁</p>
 </blockquote>
-<h2 id="IntelliJ-IDEA-配置-Lombok"><a href="#IntelliJ-IDEA-配置-Lombok" class="headerlink" title="IntelliJ IDEA 配置 Lombok"></a>IntelliJ IDEA 配置 Lombok</h2><h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><ul>
-<li>打开 <strong>Preferences / Plugins</strong> 搜索并安装 <strong>Lombok</strong> 插件。</li>
-<li>安装之后打开 <strong>Enable</strong> 选项，之后会提示重启 IDE，重启后既可</li>
-</ul>
-<p><img src="/2020/06/25/Lombok/yanbingxu/Desktop/blog/source/_posts/Lombok/1-1.png" alt="1-1.png"></p>
-<h3 id="引入-Lombok-依赖"><a href="#引入-Lombok-依赖" class="headerlink" title="引入 Lombok 依赖"></a>引入 Lombok 依赖</h3><p>安装完插件后还不可直接使用，需要在项目的 <strong>pom.xml</strong> 中添加 lombok 的依赖既可生效</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.16.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Eclipse-amp-STS-配置-Lombok"><a href="#Eclipse-amp-STS-配置-Lombok" class="headerlink" title="Eclipse &amp; STS 配置 Lombok"></a>Eclipse &amp; STS 配置 Lombok</h2><p>后续更新…</p>
-<h2 id="Lombok-常用注解"><a href="#Lombok-常用注解" class="headerlink" title="Lombok 常用注解"></a>Lombok 常用注解</h2><blockquote>
-<ul>
-<li><strong>@Setter</strong> 用于为描述的类生成 setter 方法，不包含 final 修饰属性。</li>
-<li><strong>@Getter</strong> 用于为描述的类生成 getter 方法。 </li>
-<li><strong>@ToString</strong> 用于为描述的类添加 toString 方法。 </li>
-<li><strong>@EqualsAndHashCode</strong> 用于为描述的类，生成 hashCode 和 equals 方法。 </li>
-<li><strong>@NoArgsConstructor</strong> 用于为描述的类生成无参的构造方法。 </li>
-<li><strong>@AllArgsConstructor</strong> 用于为描述的类生成包含类中所有字段的构造方法。 </li>
-<li><strong>@Data</strong> 用于为描述的类生成 setter、getter、equals、canEqual、hashCode、toString 方法，如为 final 属性，则不会为该属性生成 setter 方法。 </li>
-<li><strong>@Slf4J</strong> 用于为描述的类添加一个日志属性对象</li>
-</ul>
-</blockquote>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/06/25/Lombok/#more" rel="contents">
+              READ MORE &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
