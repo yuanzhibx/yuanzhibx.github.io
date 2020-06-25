@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next tumo" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1">
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/tumo.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="TyCoding's Blog" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Java基础JDK和JRE区别？ JRE即Java Runtime Environment，Java运行环境。包括Java虚拟机和Java类库 JDK是Java开发工具包，例如：tools.jar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础回顾">
+<meta property="og:url" content="https://yuanzhibx.github.io/2020/06/22/Java%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/index.html">
+<meta property="og:site_name" content="Yuanzhibx Blog">
+<meta property="og:description" content="Java基础JDK和JRE区别？ JRE即Java Runtime Environment，Java运行环境。包括Java虚拟机和Java类库 JDK是Java开发工具包，例如：tools.jar">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://cdn.tycoding.cn/20180127210359151.png">
+<meta property="og:image" content="http://cdn.tycoding.cn/1120165-20171207161602113-1451349858.png">
+<meta property="og:image" content="http://cdn.tycoding.cn/1120165-20171207162758425-142549066.png">
+<meta property="og:image" content="http://cdn.tycoding.cn/1120165-20171207162815925-341262498.png">
+<meta property="og:image" content="http://cdn.tycoding.cn/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.png">
+<meta property="og:image" content="http://cdn.tycoding.cn/%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8.png">
+<meta property="og:image" content="http://cdn.tycoding.cn/8db4a3bdfb238da1a1c4431d2b6e075c_hd.png">
+<meta property="og:image" content="http://cdn.tycoding.cn/JDK1.8%E4%B9%8B%E5%90%8E%E7%9A%84HashMap%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg">
+<meta property="og:image" content="http://cdn.tycoding.cn/QQ20190623-181246.png">
+<meta property="og:image" content="http://cdn.tycoding.cn/QQ20190623-181259.png">
+<meta property="og:image" content="https://www.tycoding.cn/2019/05/09/jvm/jvm-start/QQ20190503-095731.png">
+<meta property="og:image" content="http://cdn.tycoding.cn/Java+%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%8F%98%E8%BF%81.png">
+<meta property="og:image" content="http://cdn.tycoding.cn/2019-4%E6%AD%BB%E9%94%811.png">
+<meta property="article:published_time" content="2020-06-22T12:55:31.000Z">
+<meta property="article:modified_time" content="2020-06-22T13:25:31.582Z">
+<meta property="article:author" content="Yuanzhibx">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://cdn.tycoding.cn/20180127210359151.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Tumo',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://yuanzhibx.github.io/2020/06/22/Java基础回顾/"/>
+
+
+
+
+
+  <title>Java基础回顾 | Yuanzhibx Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" style="overflow-x:hidden;padding-right:320px" lang="en">
+
+  <style>@media (min-width:768px) and (max-width:991px){body .header-innerr{width:700px!important}}.header-innerr{margin:0 auto;padding:100px 0 70px;width:880px}@media (min-width:1600px){.container .header-innerr{width:1200px}}.header-innerr{position:relative}.header-innerr{padding:20px 0 0}.header-innerr:after,.header-innerr:before{content:" ";display:table}.header-innerr:after{clear:both}@media (max-width:767px){.header-innerr{width:auto;padding:10px;margin-bottom:-20px}}</style>
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    
+    
+
+    <link href="/lib/font-awesome/css/font-merienda.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title" style="font-family:Merienda;font-size:1.3rem">Yuanzhibx Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Stay hungry, stay foolish.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            HOME
+          </a>
+        </li>
+      
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            ARCHIVES
+          </a>
+        </li>
+      
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            ABOUT
+          </a>
+        </li>
+      
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links/" rel="section">
+            LINKS
+          </a>
+        </li>
+      
+
+    </ul>
+  
+
+</nav>
+
+
+
+ </div>
+
+      <div class="header-innerr">
+        
+          <div class="note info" style="margin:0;letter-spacing:.15px">
+            🐤 动吧旅游生态系统：
+            <a style="color:#40dab2;font-weight:600" 
+              href="https://github.com/yuanzhibx/DB-SYS-V3.01" target="_blank" class="animsition-link">
+              https://github.com/yuanzhibx/DB-SYS-V3.01
+            </a>
+          </div>
+        
+      </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://yuanzhibx.github.io/2020/06/22/Java%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yuanzhibx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuanzhibx Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java基础回顾</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-22T20:55:31+08:00">
+                2020-06-22
+              </time>
+            
+          </span>
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="JDK和JRE区别？"><a href="#JDK和JRE区别？" class="headerlink" title="JDK和JRE区别？"></a>JDK和JRE区别？</h2><ol>
+<li><code>JRE</code>即Java Runtime Environment，Java运行环境。包括Java虚拟机和Java类库</li>
+<li><code>JDK</code>是Java开发<strong>工具包</strong>，例如：<code>tools.jar</code></li>
+</ol>
+<a id="more"></a>
+<h2 id="和-equals-区别"><a href="#和-equals-区别" class="headerlink" title="== 和 equals 区别"></a>== 和 equals 区别</h2><ol>
+<li><p><code>==</code>是一个比较运算符，对于基本类型，比较的是具体的数值(int、double..)；对于引用类型，比较的是对象的内存地址</p>
+</li>
+<li><p><code>equals</code>是超类<code>Object</code>就具有的方法，因此所有的引用类型都具有这个方法，只用用来比较引用数据类型。<code>equals</code>方法默认比较的对象内存地址，如果重写该方法，一般比较的是对象的属性值</p>
+</li>
+</ol>
+<p><code>Object</code>类<code>equals</code>方法源码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">this</span> == obj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>new</code>对象是在堆内存中开辟一份空间，所以其引用变量就是指向了堆内存的地址，栗子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EqualsTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        User a = <span class="keyword">new</span> User();</span><br><span class="line">        User b = <span class="keyword">new</span> User();</span><br><span class="line">        System.out.println(a == b); <span class="comment">//false</span></span><br><span class="line">        System.out.println(a.equals(b)); <span class="comment">//true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span> == o) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (!(o <span class="keyword">instanceof</span> User)) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        User user = (User) o;</span><br><span class="line">        <span class="keyword">return</span> age == user.age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Objects.hash(age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="两个对象的hashCode-相同，则equals-一定为true？"><a href="#两个对象的hashCode-相同，则equals-一定为true？" class="headerlink" title="两个对象的hashCode()相同，则equals()一定为true？"></a>两个对象的hashCode()相同，则equals()一定为true？</h2><ul>
+<li>如果两个对象相等(<code>equals()</code>为true)，那么他们的<code>hashCode()</code>一定相同</li>
+<li>如果两个对象的<code>hashCode()</code>相同，他们的<code>equals()</code>方法不一定相同</li>
+</ul>
+<p>JVM虚拟机通过<code>hashCode()</code>方法为Object对象分配一个int类型数值，以此来提高Java中集合对象(Map、HashMap…)中对象存储的效率。当集合中需要添加新元素，首先通过<code>hashCode()</code>获取该对象对应的地址位置，如果该位置上没有值就直接储存到该位置，如果有值就再调用<code>equals()</code>与新元素的值比较，相同就不再储存否则就散列到其他位置，大大减少了调用<code>equals()</code>方法比较的次数。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EqualsTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        User a = <span class="keyword">new</span> User();</span><br><span class="line">        User b = <span class="keyword">new</span> User();</span><br><span class="line">        System.out.println(a == b); <span class="comment">//false</span></span><br><span class="line">        System.out.println(a.equals(b)); <span class="comment">//false</span></span><br><span class="line">        System.out.println(a.hashCode() == b.hashCode()); <span class="comment">//false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="final-的作用"><a href="#final-的作用" class="headerlink" title="final 的作用"></a>final 的作用</h2><p>可修饰类、类属性、类方法。</p>
+<ol>
+<li><p>被<code>final</code>修饰的类不能被继承</p>
+</li>
+<li><p><code>final</code>修饰的类属性可以是基本类型也可以是引用类型，如果是基本类型就不能再被赋值；如果是引用类型，就不能再指向其他引用地址，但对象本身是可以改变的。</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FinalTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> User USER = <span class="keyword">new</span> User();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        User u2 = <span class="keyword">new</span> User();</span><br><span class="line"><span class="comment">//        user = u2; // ERROR</span></span><br><span class="line">        USER.age = <span class="number">23</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> age = <span class="number">12</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>类中所有<code>private</code>方法都是隐式的定义为final，为private方法添加final就毫无意义。</li>
+</ol>
+<h2 id="String属于基本数据类型吗？"><a href="#String属于基本数据类型吗？" class="headerlink" title="String属于基本数据类型吗？"></a>String属于基本数据类型吗？</h2><p><strong>不是，String属于特殊的引用类型</strong></p>
+<p>Java中基本数据类型有：int、short、long、char、boolean、float、double、byte</p>
+<ol>
+<li><code>String</code>是特殊的引用类型并且是<code>final</code>的，JVM使用字符串常量池储存字符串数据。创建新的字符串，JVM首先会去字符串常量池中寻找有没有该字符串，如果没有就添加到该常量池，如果有就返回该字符串在常量池中的引用。</li>
+<li><code>String s = &quot;a&quot;; s += &quot;b&quot;;</code>，这段代码执行前后，字符串常量池中将出现<code>a</code>和<code>ab</code>两个字符串常量，而原本<code>s</code>变量的引用指向了常量池中<code>ab</code>。</li>
+<li><code>String s = new String(&quot;ab&quot;)</code>，这段代码一共创建了几个对象？<strong>一个或两个</strong>。如果字符串常量池中有了<code>ab</code>这个字符串(比如在此之前已经使用了<code>String str = &quot;ab&quot;</code>)，那么新的<code>s</code>对象引用其实仅仅是指向了字符串常量中的<code>ab</code>，并没有创建新的字符串对象。<strong>但是</strong>，每次调用<code>new</code>都会在堆内存开辟空间，创建一个String对象，这是肯定的。</li>
+</ol>
+<p>栗子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String a = <span class="string">"abc"</span>;</span><br><span class="line">        String b = <span class="string">"abc"</span>;</span><br><span class="line">        String c = <span class="keyword">new</span> String(<span class="string">"abc"</span>);</span><br><span class="line">        System.out.println(a == b); <span class="comment">//true</span></span><br><span class="line">        System.out.println(a.equals(b)); <span class="comment">//true</span></span><br><span class="line">        System.out.println(a.equals(c)); <span class="comment">//true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="String和StringBuffer和StringBuilder的区别"><a href="#String和StringBuffer和StringBuilder的区别" class="headerlink" title="String和StringBuffer和StringBuilder的区别"></a>String和StringBuffer和StringBuilder的区别</h3><ol>
+<li><code>String</code>是不可变字符串，<code>StringBuffer</code>和<code>StringBuilder</code>是可变字符串。如果经常改变字符串的原始数据，最好使用<code>StringBuffer</code>代替。</li>
+<li><code>String</code>默认重写了<code>equals</code>方法和<code>hashCode()</code>方法；而<code>StringBuffer</code>没有重写<code>equals</code>方法，使用<code>new StringBuffer(&quot;&quot;)</code>会直接在堆内存中开辟空间储存对象。因此将<code>StringBuffer</code>对象储存仅Java集合中可能会出现问题。</li>
+<li><code>StringBuffer</code>是线程安全的，效率低；<code>StringBuilder</code>是线程不安全的，效率高。</li>
+</ol>
+<h2 id="static关键字是否可覆盖？"><a href="#static关键字是否可覆盖？" class="headerlink" title="static关键字是否可覆盖？"></a>static关键字是否可覆盖？</h2><p><code>static</code>关键字表明一个成员变量或者是成员方法可以在没有所属的类实例变量的情况下被访问。被<code>static</code>标记的方法不能被覆盖，因为方法的覆盖是基于运行时动态绑定的，而<code>static</code>方法在编译时就已经和该类绑定了，也就是<code>static</code>标记的变量、方法都是随着类的加载而加载的，所以可以通过不创建对象实例就能访问该变量、方法；而不创建对象实例就访问非<code>static</code>变量、方法是不行的，因为此变量、方法还没有被创建。</p>
+<ul>
+<li><code>static</code>标记的方法只能访问<code>static</code>变量或方法</li>
+<li>非<code>static</code>标记的方法可以访问<code>static</code>或非<code>static</code>标记的变量或方法</li>
+</ul>
+<h2 id="自动拆箱、自动装箱"><a href="#自动拆箱、自动装箱" class="headerlink" title="自动拆箱、自动装箱"></a>自动拆箱、自动装箱</h2><p>因为Java自身面向对象OOP的特性，而一切基本数据类型都不具有面向对象的特性，所以Java为基本的数据类型提供了对应的引用类型。</p>
+<p>具体表现在程序在编译期间自动将基本数据类型转换为引用类型(装箱)、将引用数据类型转换为基本数据类型(拆箱)</p>
+<table>
+<thead>
+<tr>
+<th>基本数据类型</th>
+<th>引用数据类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>shrot</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>long</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>float</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>char</td>
+<td>Char</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Boolean</td>
+</tr>
+</tbody></table>
+<p>栗子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Integer i1 = <span class="number">100</span>;</span><br><span class="line">    Integer i2 = <span class="number">100</span>;</span><br><span class="line">    Integer i3 = <span class="number">200</span>;</span><br><span class="line">    Integer i4 = <span class="number">200</span>;</span><br><span class="line">    System.out.println(i1 == i2);</span><br><span class="line">    System.out.println(i3 == i4);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>结果：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">true</span></span><br><span class="line"><span class="keyword">false</span></span><br></pre></td></tr></table></figure>
+
+
+<p>Java中实现基本数据类型和引用类型之间的拆装箱一般都是用过<code>valueOf()</code>方法实现的。例如我们看下<code>Integer</code>类的<code>valueOf()</code>方法源码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Integer <span class="title">valueOf</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (i &gt;= IntegerCache.low &amp;&amp; i &lt;= IntegerCache.high)</span><br><span class="line">        <span class="keyword">return</span> IntegerCache.cache[i + (-IntegerCache.low)];</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Integer(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>可以看到：当声明一个新的整数型变量，编译时通过<code>Integer</code>类的<code>valueOf()</code>进行拆装箱计算，这个方法会首先比较这个整数值是否在<code>IntegerCache</code>的范围内，如果在就返回<code>IntegerCache</code>类中的数值；如果不在就直接<code>new Integer</code>。那么我们看下<code>IntegerCache</code>类源码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">IntegerCache</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> low = -<span class="number">128</span>;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> high;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> Integer cache[];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        <span class="comment">// high value may be configured by property</span></span><br><span class="line">        <span class="keyword">int</span> h = <span class="number">127</span>;</span><br><span class="line">        String integerCacheHighPropValue =</span><br><span class="line">            sun.misc.VM.getSavedProperty(<span class="string">"java.lang.Integer.IntegerCache.high"</span>);</span><br><span class="line">        <span class="keyword">if</span> (integerCacheHighPropValue != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">int</span> i = parseInt(integerCacheHighPropValue);</span><br><span class="line">                i = Math.max(i, <span class="number">127</span>);</span><br><span class="line">                <span class="comment">// Maximum array size is Integer.MAX_VALUE</span></span><br><span class="line">                h = Math.min(i, Integer.MAX_VALUE - (-low) -<span class="number">1</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span>( NumberFormatException nfe) &#123;</span><br><span class="line">                <span class="comment">// If the property cannot be parsed into an int, ignore it.</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        high = h;</span><br><span class="line"></span><br><span class="line">        cache = <span class="keyword">new</span> Integer[(high - low) + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> j = low;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; cache.length; k++)</span><br><span class="line">            cache[k] = <span class="keyword">new</span> Integer(j++);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// range [-128, 127] must be interned (JLS7 5.1.7)</span></span><br><span class="line">        <span class="keyword">assert</span> IntegerCache.high &gt;= <span class="number">127</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">IntegerCache</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>所以，当声明一个新的整型变量时（int、Integer），如果这个变量值的大小在<code>[-128, 127]</code>之间，就直接返回<code>IntegerCache</code>中储存的常量值，否则就直接<code>new</code>一个新的<code>Integer</code>来保存这个常量值。所以上面才会出现<code>false</code>的结果。</p>
+<p><strong>同理</strong>：其他的数据类型例如：<code>long</code>、<code>short</code>等都具有对应的<code>LongCache</code>、<code>ShortCache</code>等类。</p>
+<h2 id="Overriding和Overloaded"><a href="#Overriding和Overloaded" class="headerlink" title="Overriding和Overloaded"></a>Overriding和Overloaded</h2><p>方法的重写Overriding和方法的重载Overloaded都是Java多态性的一种表现。</p>
+<ul>
+<li><code>Overriding</code>: 子类中定义了和父类中名称、参数列表相同的方法</li>
+<li><code>Overloaded</code>: 方法名相同，参数列表不同</li>
+</ul>
+<h2 id="Java支持多继承吗？"><a href="#Java支持多继承吗？" class="headerlink" title="Java支持多继承吗？"></a>Java支持多继承吗？</h2><p>不支持。Java中每个类都只能继承一个类，可以实现多个接口。但是可以通过<strong>多层</strong>继承实现。</p>
+<p>类定义属性和方法，描述某一类事物的抽象。而接口定义了行为，并不限于任何具体意向。</p>
+<p>从逻辑上说，单继承更加明确指出一个子类就应该是其父类代表的事物中某个更具体的类别。而接口则不同，接口定义了一些公共行为。因此类对接口的implements称为实现而不能称为继承。</p>
+<h2 id="接口和抽象类的区别？"><a href="#接口和抽象类的区别？" class="headerlink" title="接口和抽象类的区别？"></a>接口和抽象类的区别？</h2><ul>
+<li>接口中所有的方法隐含都是抽象的。而抽象类则可以同时包含抽象和非抽象的方法。</li>
+<li>接口中定义的方法必须是不包含具体实现的（即隐式的抽象方法）；但抽象类中既可以定义抽象方法（不包含具体实现）又可以定义非抽象方法 ( 包含具体实现 )</li>
+<li>类实现接口就必须实现接口中定义的所有方法；但继承一个抽象类，可以不实现抽象类中的抽象方法 ( 但前提是这个类也是抽象的 )</li>
+<li>抽象类可以是不提供接口方法实现的情况下实现接口</li>
+<li>接口中声明的变量默认都是final的；但抽象类可以包含非final的变量</li>
+<li>接口中的成员方法默认都是public的；但抽象类中的成员函数可以是private、protected、public</li>
+<li>接口是绝对抽象的，不可以被实例化；</li>
+</ul>
+<h2 id="引用传递和值传递"><a href="#引用传递和值传递" class="headerlink" title="引用传递和值传递"></a>引用传递和值传递</h2><p><strong>Java中采用值传递的方式</strong></p>
+<p>栗子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TransferTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line">        Integer b = <span class="number">2</span>;</span><br><span class="line">        swap(a, b);</span><br><span class="line">        System.out.println(a);</span><br><span class="line">        System.out.println(b);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">1</span>, <span class="number">2</span>&#125;;</span><br><span class="line">        swap(arr);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        arr[<span class="number">0</span>] = <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> a, Integer b)</span> </span>&#123;</span><br><span class="line">        a = <span class="number">10</span>;</span><br><span class="line">        b = <span class="number">20</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>方法传递时传递的参数其实仅值原参数的一个拷贝，对于基本类型传递的就是具体的值的拷贝，对于引用类型传递的是对象地址。</p>
+<p>所以上面的例子中，基本数据类型a,b经过swap方法并没有改变原始值，而引用类型arr数组经过swap方法就改变了原始值（因为直接对对象堆内存地址数据操作）。</p>
+<h2 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a>IO流</h2><p><img src="http://cdn.tycoding.cn/20180127210359151.png" alt></p>
+<h3 id="Java中有几种类型的流？"><a href="#Java中有几种类型的流？" class="headerlink" title="[Java中有几种类型的流？"></a>[Java中有几种类型的流？</h3><p>字符流和字节流。字节流继承<code>InputStream</code>和<code>OutputStream</code>；字符流继承自<code>InputStreamReader</code>和<code>OutputStreamWriter</code>。</p>
+<h3 id="Java-IO中的方法阻塞"><a href="#Java-IO中的方法阻塞" class="headerlink" title="Java IO中的方法阻塞"></a>Java IO中的方法阻塞</h3><p>Java中的阻塞式方法是指在程序调用该方法时，必须等待输入数据可用或检测到输入结果时结束或抛出异常，否则程序会一直停留在该语句上，不会执行下面的语句。比如<code>read()</code>和<code>readLine()</code>方法。</p>
+<h3 id="字符流和字节流的区别？"><a href="#字符流和字节流的区别？" class="headerlink" title="字符流和字节流的区别？"></a>字符流和字节流的区别？</h3><p>数据的输入和输出在计算机中最终都是通过字节的形式传递的，对应通过<code>InputStream</code>和<code>OutputStream</code>实现，他们都是针对字节操作的。</p>
+<p>而有时候通常需要读取一些完全是字符的文本数据，通常使用基于字节流的包装类字符流完成操作，他们通过<code>InputStreamReader</code>和<code>OutputStreamWriter</code>实现。</p>
+<p>字符流是字节流的包装，即使有时候读取的是字符流，但也可能需要转换为字节写入。</p>
+<h3 id="NIO"><a href="#NIO" class="headerlink" title="NIO"></a>NIO</h3><p>传统的IO是阻塞式的，会一直监听一个ServerSocket，在调用read等方法时，会一直等到数据到来或缓冲区已满时才返回；调用accept时也会一直阻塞到有客户端连接时才继续执行；每个客户端连接成功后，服务端都会踢动一个县城去处理该客户端的请求；在多线程处理多个连接时，每个线程都拥有自己的栈空间并且占用了一些CPU时间，每个线程遇到外部未准备好时，都会发生阻塞。阻塞的结果就是会打来大量的进程上下文切换。</p>
+<p>而对于NIO，它是非阻塞式，核心类：</p>
+<ul>
+<li>Buffer： 为所有的原始类型提供Buffer缓冲支持</li>
+<li>Charset： 字符集编码解码解决方案</li>
+<li>Channel： 一个新的原始IO抽象，用于读取Buffer类型，通道可以认为是一种链接，可以是到特定设备、程序或是网络链接、</li>
+</ul>
+<h2 id="说说List、Set、Map三者的区别"><a href="#说说List、Set、Map三者的区别" class="headerlink" title="说说List、Set、Map三者的区别"></a>说说List、Set、Map三者的区别</h2><ul>
+<li>List:  List接口储存一组不唯一 (可以有多个元素引用引用相同的对象)，有序的对象，可插入多条null元素</li>
+<li>Set:  不允许重复的集合，不允许有多个元素引用相同的对象，只允许有一个null元素</li>
+<li>Map:  使用键值对储存，Map会维护与Key有关联的值，两个Key可以引用相同的对象，但Key不能重复。 </li>
+</ul>
+<h2 id="Array和ArrayList有什么区别？"><a href="#Array和ArrayList有什么区别？" class="headerlink" title="Array和ArrayList有什么区别？"></a>Array和ArrayList有什么区别？</h2><ul>
+<li><code>Array</code>可以包含基本类型和对象类型；<code>ArrayList</code>只能包含对象类型</li>
+<li><code>Array</code>大小是固定的；<code>ArrayList</code>大小是动态变化的</li>
+<li><code>ArrayList</code>提供了诸如<code>addAll()</code>、<code>removeAll()</code>、<code>iterator()</code>方法等</li>
+<li>对于基本数据类型，集合使用自动装箱来减少代码量；但当处理固定大小的基本类型数据时，这种方式相对较慢。</li>
+</ul>
+<h2 id="ArrayList和LinkedList的区别？"><a href="#ArrayList和LinkedList的区别？" class="headerlink" title="ArrayList和LinkedList的区别？"></a>ArrayList和LinkedList的区别？</h2><ol>
+<li><strong>是否保证线程安全</strong>：  <code>ArrayList</code>和<code>LinkedList</code>都是不同步的，也就是不保证线程安全</li>
+<li><strong>底层数据结构</strong>： <code>ArrayList</code>底层使用的是<code>Object</code>数组；<code>LinkedList</code>底层使用的是 <strong>双向链表</strong> 结构</li>
+<li><strong>插入和删除是否受元素位置影响？</strong><code>ArrayList</code>采用数组储存，所以插入和删除元素都受元素位置的影响；<code>LinkedList</code> 采用链表储存，所以插入、删除元素都不受元素位置影响。</li>
+<li><strong>是否支持快速随机访问？</strong><code>LinkedList</code>因为使用链表储存，无法通过元素索引快速访问；而<code>ArrayList</code>因为底层采用Object数组储存，可以通过索引快速随机访问。</li>
+<li><strong>内存空间占用</strong>：  <code>ArrayList</code>的空间浪费主要体现在在List列表的结尾都会预留一定的空间容量，而<code>LinkedList</code>的空间花费体现在他的每一个元素都需要消耗比<code>ArrayList</code>更多的空间（因为要储存直接后继和直接前驱以及数据）。</li>
+</ol>
+<h3 id="什么是迭代器"><a href="#什么是迭代器" class="headerlink" title="什么是迭代器"></a>什么是迭代器</h3><p><code>Iterator</code>接口中提供了很多对集合元素迭代的方法。每个集合中都有可以返回迭代器对象的方法<code>iterator()</code>。迭代器在迭代的过程中可以删除底层集合的元素。</p>
+<h3 id="Iterator和ListIterator的区别？"><a href="#Iterator和ListIterator的区别？" class="headerlink" title="Iterator和ListIterator的区别？"></a>Iterator和ListIterator的区别？</h3><ul>
+<li><code>Iterator</code>可以用来遍历Set和List集合，但是<code>ListIterator</code>只能遍历List</li>
+<li><code>Iterator</code>对集合只能向前遍历（<code>next()</code>）；而<code>ListIterator</code>可以向前遍历（<code>next()</code>），也可以向后遍历（<code>previous()</code>）</li>
+<li><code>ListIterator</code>实现了<code>Iterator</code>接口</li>
+</ul>
+<h3 id="RandomAccess接口"><a href="#RandomAccess接口" class="headerlink" title="RandomAccess接口"></a>RandomAccess接口</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ArrayList</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayList</span>&lt;<span class="title">E</span>&gt; <span class="keyword">extends</span> <span class="title">AbstractList</span>&lt;<span class="title">E</span>&gt;</span></span><br><span class="line"><span class="class">        <span class="keyword">implements</span> <span class="title">List</span>&lt;<span class="title">E</span>&gt;, <span class="title">RandomAccess</span>, <span class="title">Cloneable</span>, <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span></span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//RandomAccess</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">RandomAccess</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//LinkedList</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkedList</span>&lt;<span class="title">E</span>&gt;</span></span><br><span class="line"><span class="class">    <span class="keyword">extends</span> <span class="title">AbstractSequentialList</span>&lt;<span class="title">E</span>&gt;</span></span><br><span class="line"><span class="class">    <span class="keyword">implements</span> <span class="title">List</span>&lt;<span class="title">E</span>&gt;, <span class="title">Deque</span>&lt;<span class="title">E</span>&gt;, <span class="title">Cloneable</span>, <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span></span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>源码中<code>ArrayList</code>类实现了<code>RandomAccess</code>接口，<code>LinkedList</code>类中却没有实现这个接口，但是<code>RandomAccess</code>接口中却什么也没有定义。可以看<code>RandomAccess</code>接口上的注释：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Marker interface used by &lt;tt&gt;List&lt;/tt&gt; implementations to indicate that</span></span><br><span class="line"><span class="comment"> * they support fast (generally constant time) random access.  The primary</span></span><br><span class="line"><span class="comment"> * purpose of this interface is to allow generic algorithms to alter their</span></span><br><span class="line"><span class="comment"> * behavior to provide good performance when applied to either random or</span></span><br><span class="line"><span class="comment"> * sequential access lists.</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+
+<p>大概就是说这个接口仅是一个标识Marker，实现了这个接口的List将支持快速随机访问（random access）。接下来，我们查看<code>Collections</code>类中的<code>binarySearch</code>方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(List&lt;? extends Comparable&lt;? <span class="keyword">super</span> T&gt;&gt; list, T key)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (list <span class="keyword">instanceof</span> RandomAccess || list.size()&lt;BINARYSEARCH_THRESHOLD)</span><br><span class="line">        <span class="keyword">return</span> Collections.indexedBinarySearch(list, key);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> Collections.iteratorBinarySearch(list, key);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> &lt;T&gt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">indexedBinarySearch</span><span class="params">(List&lt;? extends Comparable&lt;? <span class="keyword">super</span> T&gt;&gt; list, T key)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> low = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> high = list.size()-<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (low &lt;= high) &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = (low + high) &gt;&gt;&gt; <span class="number">1</span>;</span><br><span class="line">        Comparable&lt;? <span class="keyword">super</span> T&gt; midVal = list.get(mid);</span><br><span class="line">        <span class="keyword">int</span> cmp = midVal.compareTo(key);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (cmp &lt; <span class="number">0</span>)</span><br><span class="line">            low = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (cmp &gt; <span class="number">0</span>)</span><br><span class="line">            high = mid - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> mid; <span class="comment">// key found</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -(low + <span class="number">1</span>);  <span class="comment">// key not found</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> &lt;T&gt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">iteratorBinarySearch</span><span class="params">(List&lt;? extends Comparable&lt;? <span class="keyword">super</span> T&gt;&gt; list, T key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> low = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> high = list.size()-<span class="number">1</span>;</span><br><span class="line">    ListIterator&lt;? extends Comparable&lt;? <span class="keyword">super</span> T&gt;&gt; i = list.listIterator();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (low &lt;= high) &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = (low + high) &gt;&gt;&gt; <span class="number">1</span>;</span><br><span class="line">        Comparable&lt;? <span class="keyword">super</span> T&gt; midVal = get(i, mid);</span><br><span class="line">        <span class="keyword">int</span> cmp = midVal.compareTo(key);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (cmp &lt; <span class="number">0</span>)</span><br><span class="line">            low = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (cmp &gt; <span class="number">0</span>)</span><br><span class="line">            high = mid - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> mid; <span class="comment">// key found</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -(low + <span class="number">1</span>);  <span class="comment">// key not found</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p><code>binarySearch()</code>方法是从List中查找指定元素，其中首先判断传入的List时候实现了<code>RandomAccess</code>接口，如果实现了就调用<code>indexedBinarySearch()</code>方法，否则就调用<code>iteratorBinarySearch()</code>方法。再看这两个方法的源码：</p>
+<ul>
+<li>如果传入的List实现了<code>RandomAccess</code>接口，采用普通for循环遍历</li>
+<li>若传入的List未实现<code>RandomAccess</code>接口，采用<code>iterator</code>遍历</li>
+</ul>
+<h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><p><strong>链表（Linked List）</strong>由一串节点组成，每个节点包含任意的实例数据和一或两个用来指向上一个/下一个节点位置的指针</p>
+<blockquote>
+<p>   单向链表</p>
+</blockquote>
+<p>单向链表包含每个节点Node包含两个部分：第一部分data储存当前节点数据、第二部分next存储下一节点的地址。</p>
+<ul>
+<li>单向链表只可向一个方向遍历，查找一个节点需要从第一个节点开始向下依次寻找</li>
+</ul>
+<p><img src="http://cdn.tycoding.cn/1120165-20171207161602113-1451349858.png" alt></p>
+<ul>
+<li>单向链表插入节点从链表头部插入，将新插入节点的next指向原头部节点位置即可</li>
+</ul>
+<p><img src="http://cdn.tycoding.cn/1120165-20171207162758425-142549066.png" alt></p>
+<ul>
+<li>删除节点，只需要将该节点上一个节点的next指向该节点下一个节点即可</li>
+</ul>
+<p><img src="http://cdn.tycoding.cn/1120165-20171207162815925-341262498.png" alt></p>
+<blockquote>
+<p>  双向链表</p>
+</blockquote>
+<p><strong>双向链表</strong> 包含两个指针，<code>prev</code>指向前一个节点，<code>next</code>指向后一个节点。</p>
+<p><img src="http://cdn.tycoding.cn/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.png" alt></p>
+<blockquote>
+<p>  双向循环链表</p>
+</blockquote>
+<p><strong>双向循环链表</strong> 最后一个节点的<code>next</code>指向<code>head</code>，而<code>head</code>的<code>prev</code>指向最后一个节点，形成一个环。</p>
+<p><img src="http://cdn.tycoding.cn/%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8.png" alt></p>
+<h2 id="ArrayList和Vector和LinkedList的区别？"><a href="#ArrayList和Vector和LinkedList的区别？" class="headerlink" title="ArrayList和Vector和LinkedList的区别？"></a>ArrayList和Vector和LinkedList的区别？</h2><ul>
+<li><strong>ArrayList</strong>:  底层数据结构是数组，查询快，增删慢。线程不安全，效率高</li>
+<li><strong>Vector</strong>:  底层数据结构是数组，查询快，增删慢。线程安全，效率低</li>
+<li><strong>LinkedList</strong>:  底层数据结构是链表，查询慢，增删快。线程不安全，效率高</li>
+</ul>
+<h2 id="谈谈ArrayList的扩容机制"><a href="#谈谈ArrayList的扩容机制" class="headerlink" title="谈谈ArrayList的扩容机制"></a>谈谈ArrayList的扩容机制</h2><p>Java中基本数组都是定长的，一旦被实例化后就不能改变其长度，意味着创建数组时必须确定数组的容量大小。而很多情况下，数组的长度不是确定的，需要动态增减，<code>ArrayList</code>的出现就解决了这一问题。</p>
+<p><code>ArrayList</code>的扩容机制表现在<code>add()</code>方法上，先看<code>add()</code>方法的源码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">add</span><span class="params">(E e)</span> </span>&#123;</span><br><span class="line">    ensureCapacityInternal(size + <span class="number">1</span>);  <span class="comment">// Increments modCount!!</span></span><br><span class="line">    elementData[size++] = e;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ensureCapacityInternal</span><span class="params">(<span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">    ensureExplicitCapacity(calculateCapacity(elementData, minCapacity));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取最小容量</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">calculateCapacity</span><span class="params">(Object[] elementData, <span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA) &#123;</span><br><span class="line">        <span class="keyword">return</span> Math.max(DEFAULT_CAPACITY, minCapacity);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> minCapacity;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//判断是否需要扩容</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ensureExplicitCapacity</span><span class="params">(<span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">    modCount++;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// overflow-conscious code</span></span><br><span class="line">    <span class="keyword">if</span> (minCapacity - elementData.length &gt; <span class="number">0</span>)</span><br><span class="line">        grow(minCapacity);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>当向<code>ArrayList</code>对象中添加新元素时，首先会调用<code>ensureCapacityInternal(size)</code>方法，<code>size</code>为最小扩容量；<code>ensureCapacityInternal()</code>方法会首先调用<code>calculateCapacity</code>来确定需要的最小容量；最后调用<code>ensureExplicitCapacity()</code>方法判断时候需要扩容。最后判断所需最小容量如果大于当前数组的空间大小，则需要扩容，调用<code>grow()</code>方法扩容：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">grow</span><span class="params">(<span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 获取ArrayList中elementDaata数组的长度</span></span><br><span class="line">    <span class="keyword">int</span> oldCapacity = elementData.length;</span><br><span class="line">    <span class="comment">// 扩容至原来的1.5倍</span></span><br><span class="line">    <span class="keyword">int</span> newCapacity = oldCapacity + (oldCapacity &gt;&gt; <span class="number">1</span>);</span><br><span class="line">    <span class="comment">// 判断新的数组容量够不够</span></span><br><span class="line">    <span class="comment">// 够了就直接使用这个长度创建新数组</span></span><br><span class="line">    <span class="keyword">if</span> (newCapacity - minCapacity &lt; <span class="number">0</span>)</span><br><span class="line">        <span class="comment">// 不够就将数组的长度设置为需要的长度</span></span><br><span class="line">        newCapacity = minCapacity;</span><br><span class="line">    <span class="comment">// 检查此时的最大值是否溢出</span></span><br><span class="line">    <span class="keyword">if</span> (newCapacity - MAX_ARRAY_SIZE &gt; <span class="number">0</span>)</span><br><span class="line">        newCapacity = hugeCapacity(minCapacity);</span><br><span class="line">    <span class="comment">// 调用Arrays.copyOf()将elementData数组数据拷贝到新数组</span></span><br><span class="line">    <span class="comment">// 并将elementData指向新数组newCapacity的内存地址</span></span><br><span class="line">    elementData = Arrays.copyOf(elementData, newCapacity);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>总结</strong>：  <code>ArrayList</code>扩容的本质就是计算所需扩容size得到新的数组，将原数组中的数据复制到新数组中，最后将原数组指向新数组在堆内存的引用地址即可。</p>
+<h2 id="HashMap和HashTable的区别？"><a href="#HashMap和HashTable的区别？" class="headerlink" title="HashMap和HashTable的区别？"></a>HashMap和HashTable的区别？</h2><ol>
+<li><code>HashMap</code>和<code>HashTable</code>都实现了<code>Map</code>接口，主要区别在线程安全性、同步、速度</li>
+<li><strong>线程是否安全</strong>： <code>HashMap</code>非同步线程不安全，<code>HashTable</code>同步线程安全。<code>HashTable</code>内部的方法都经过<code>synchronized</code>修饰。</li>
+<li><strong>效率</strong>:  <code>HashMap</code>线程不安全效率高，<code>HashTable</code>线程安全效率低。</li>
+<li><strong>对null key和null value的支持</strong>： <code>HashMap</code>中，<code>null</code>可以作为key，这样的key只有一个，但可以有多个key对应的值为null；在<code>HashTable</code>中的key不能为null</li>
+<li><strong>底层数据结构</strong>： JDK1.8后的<code>HashMap</code>在解决哈希冲突时有了较大的变化，当链表长度大于阀值时（默认是8），将链表转换为红黑树，以减少搜索时间。<code>HashTable</code>没有这样的机制。</li>
+</ol>
+<h2 id="HashMap和HashSet区别"><a href="#HashMap和HashSet区别" class="headerlink" title="HashMap和HashSet区别?"></a>HashMap和HashSet区别?</h2><table>
+<thead>
+<tr>
+<th align="left">HashMap</th>
+<th align="left">HashSet</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">实现了Map接口</td>
+<td align="left">实现了Set接口</td>
+</tr>
+<tr>
+<td align="left">储存键值堆</td>
+<td align="left">仅储存对象</td>
+</tr>
+<tr>
+<td align="left">调用<code>put()</code>向Map中添加元素</td>
+<td align="left">调用<code>add()</code>向Set中添加元素</td>
+</tr>
+<tr>
+<td align="left"><code>HashMap</code>使用<code>Key</code>计算<code>HashCode</code></td>
+<td align="left"><code>HashSet</code>使用成员对象来计算<code>hashCode</code>值，对于两个对象来说，<code>hashCode</code>可能相同，所以用<code>equals</code>判断对象的相等性</td>
+</tr>
+</tbody></table>
+<h2 id="HashSet如何检查重复？"><a href="#HashSet如何检查重复？" class="headerlink" title="HashSet如何检查重复？"></a>HashSet如何检查重复？</h2><p>在前面讲<code>hashCode</code>和<code>equals</code>时就提到了，<code>HashSet</code>集合同样适用。向<code>HashSet</code>中存入一个元素，<code>HashSet</code>首先会根据对象的<code>hashCode</code>值判断当期集合中此<code>hashCode</code>对应的位置有没有值，如果没有就直接添加，如果有就再调用<code>equals</code>方法比较两个对象是否相同，相同就不再储存（保证了<code>Set</code>集合不重复的特性），否则就散列到其他位置储存。</p>
+<h2 id="HashMap底层实现？"><a href="#HashMap底层实现？" class="headerlink" title="HashMap底层实现？"></a>HashMap底层实现？</h2><p><code>Map</code>在Java中的实现由很多，<code>HashMap</code>便是其中之一，随着JDK版本的更新，<code>HashMap</code>的实现也在不断更新：</p>
+<ul>
+<li><strong>&lt;=JDK1.7</strong>:  Table数组 + Entry链表</li>
+<li><strong>&gt;=JDK1.8</strong>:  Table数组 + Entry链表/红黑树</li>
+</ul>
+<p>参考：</p>
+<ul>
+<li><a href="http://study.ikuvn.com/#/docs/zh-cn/java/data-structure/hashmap" target="_blank" rel="noopener">HashMap</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/21673805" target="_blank" rel="noopener">Java 8系列之重新认识HashMap</a></li>
+</ul>
+<h3 id="HashHash"><a href="#HashHash" class="headerlink" title="#HashHash"></a><a href="#Hash">#Hash</a>Hash</h3><p><strong>Hash（哈希、散列）</strong>，就是把任意长度的输入通过散列算法变换成固定长度的输出，该输出就是散列值。</p>
+<p>Hash函数的一种实现：</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>直接取余法</strong>： <code>f(x) = x mod max</code></p>
+<ul>
+<li></li>
+</ul>
+<p><strong>位运算法</strong>： <code>f(x) = x &amp; max</code></p>
+<p><code>HashMap</code>采用 <strong>位运算法</strong>，相比直接取余，位运算直接对内存中的二进制数据操作，不需要再转阿欢为十进制，因此处理速度很快：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7</span> &amp; <span class="number">33</span> = <span class="number">1</span></span><br><span class="line">    </span><br><span class="line">    <span class="number">000111</span></span><br><span class="line">  &amp; <span class="number">100001</span></span><br><span class="line">  --------</span><br><span class="line">    <span class="number">000001</span> = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Hash冲突"><a href="#Hash冲突" class="headerlink" title="Hash冲突"></a>Hash冲突</h3><p>假设将100个数据通过Hash散列后存储到10个不同的容器中，必定会出现多个元素分布到同一个容器中。具体到<code>HashMap</code>集合中，若将多个<code>K-V</code>数据存入<code>put</code>，<code>HashMap</code>根据元素<code>key</code>计算到对应的<code>hashCode</code>值，如果计算得到多个不同的<code>key</code>对应的<code>hashCode</code>值相同（即要储存到同一位置），此时这种现象就称为 <strong>Hash冲突</strong>。</p>
+<p><code>HashMap</code>默认采用了 <strong>链地址法</strong> 解决Hash冲突问题，即通过类似单链表的方式将 <strong>冲突的元素</strong> 串起来，搜索时遍历这个链表即可。<strong>注意</strong>： 如果冲突的Hash越来越多，这个链就会越来越长。</p>
+<h3 id="实现原理"><a href="#实现原理" class="headerlink" title="[实现原理"></a>[实现原理</h3><p><img src="http://cdn.tycoding.cn/8db4a3bdfb238da1a1c4431d2b6e075c_hd.png" alt></p>
+<p>这里我们需要了解两个名词：</p>
+<ul>
+<li><strong>Table</strong>: 哈希桶数组（哈希表），存放Node元素，底层是一个<code>Node[] table</code></li>
+<li><strong>Node</strong>: 节点元素，Node是HashMap的一个内部类，实现了<code>Map.Entry</code>接口，本质是一个映射（K-V）</li>
+</ul>
+<p><code>HashMap</code>内部的一些关键属性需要了解：</p>
+<ul>
+<li><code>DEFAULT_INITIAL_CAPACITY</code>: Tabale数组的初始化长度，默认是<code>1 &lt;&lt; 4</code>，<code>2^4 = 16</code></li>
+<li><code>MAXIMUM_CAPACITY</code>: Table数组最高长度，默认为<code>1 &lt;&lt; 30</code>，<code>2^30 = 1073741824</code></li>
+<li><code>DEFAULT_LOAD_FACTOR</code>: 负载因子，当总元素数 &gt; 数组长度 * 负载因子时，Table数组将扩容，默认是0.75</li>
+<li><code>TREEIFY_THRESHOLD</code>: 树化阀值，当单个Table内Node数量超过该值，则将链表转换为红黑树，默认是8</li>
+<li><code>UNTREEIFY_THRESHOLD</code>: 链化阀值，当扩容期间单个Table的Entry数量小于该值，则将红黑数转换为链表，默认为6</li>
+<li><code>MIN_TREEIFY_CAPACITY</code>: 最小树化阀值，当Table中所有元素超过该值，才会进行树化</li>
+<li><code>size</code>: 当前HashMap实际存在的键值对数量</li>
+<li><code>threshold</code>: HashMap所能容纳的最大数据量的Node（键值对）个数。<code>Node[] table</code>初始化长度length是16，<code>loadFactor</code>负载因子默认是0.75，<code>threshold = length * loadFactor</code></li>
+<li><code>loadFactor</code>: 负载因子，默认是0.17</li>
+<li><code>modCount</code>: 记录HashMap内部结构发生变化的次数</li>
+</ul>
+<p><code>HashMap</code>内部存在一个<code>Node</code>Table数组，这个数组的初始化长度是<code>DEFAULT_INITIAL_CAPACITY</code>，他是一个单向链表：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span>&lt;<span class="title">K</span>,<span class="title">V</span>&gt; <span class="keyword">implements</span> <span class="title">Map</span>.<span class="title">Entry</span>&lt;<span class="title">K</span>,<span class="title">V</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">int</span> hash; <span class="comment">//key的Hash值</span></span><br><span class="line">    <span class="keyword">final</span> K key; <span class="comment">//key</span></span><br><span class="line">    V value; <span class="comment">//value</span></span><br><span class="line">    Node&lt;K,V&gt; next; <span class="comment">//下一个节点</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>参考单链表的结构，Table中每个<code>Node</code>节点包含两个部分，Node元素作为节点的<code>header</code>，<code>next</code>指向下一个节点。<strong>这种链式结构的存在正是为了解决Hash冲突</strong></p>
+<blockquote>
+<p><strong>Hash冲突</strong>： 两个元素经过Hash散列后被分到同一个组内（两个元素<code>hashCode</code>相同，<code>key</code>却不同），我们将其解释为Hash冲突。</p>
+</blockquote>
+<p>栗子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">map.put(<span class="string">"tycoding"</span>, <span class="string">"18"</span>);</span><br></pre></td></tr></table></figure>
+
+
+<p><code>HashMap</code>将根据<code>&quot;tycoding&quot;</code>这个Key得到其<code>hashCode</code>值，然后经过Hash算法定位到其在<code>HashMap</code>储存的位置，如果两个不同的<code>key</code>定位到了同一个位置，此时就发生了Hash冲突。</p>
+<p>在JDK1.7之前，解决Hash冲突的方式是将冲突的Node节点放在一个链表中。在JDK1.8中，当Table中链长超过<code>TREEIFY_THRESHOLD</code>阀值后，会将链表转换为红黑树的实现<code>TreeNode</code>:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span>&lt;<span class="title">K</span>,<span class="title">V</span>&gt; <span class="keyword">extends</span> <span class="title">LinkedHashMap</span>.<span class="title">Entry</span>&lt;<span class="title">K</span>,<span class="title">V</span>&gt; </span>&#123;</span><br><span class="line">    TreeNode&lt;K,V&gt; parent;  <span class="comment">// red-black tree links</span></span><br><span class="line">    TreeNode&lt;K,V&gt; left;</span><br><span class="line">    TreeNode&lt;K,V&gt; right;</span><br><span class="line">    TreeNode&lt;K,V&gt; prev;    <span class="comment">// needed to unlink next upon deletion</span></span><br><span class="line">    <span class="keyword">boolean</span> red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>当发生<strong>Hash冲突</strong>时，根据HashMap默认采用的 <strong>链地址法</strong>，即将冲突的Hash串成一个链式结构储存到HashMap对应的位置。<strong>但是</strong> 随着Hash冲突越来越多，这个<strong>链将越来越长</strong>，这就将导致遍历碰撞key时的消耗不断增加，也就直接导致了性能的不足。在JDK1.8后，HashMap对单个Table中的Node超出某个阀值后，将开始树化操作（链表转换为红黑树），这对搜索的性能将会有很大的提升。</p>
+<p><img src="http://cdn.tycoding.cn/JDK1.8%E4%B9%8B%E5%90%8E%E7%9A%84HashMap%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" alt></p>
+<p><strong>总结</strong></p>
+<p>到此，我们总结一下HashMap的实现原理：</p>
+<ul>
+<li><code>HashMap</code>根据key的<code>hashCode</code>值存储元素。<code>put</code>新元素会遍历链表，根据新元素的<code>key</code>计算<code>hashCode</code>得到散列位置，如果该位置有值再调用<code>equals</code>判断<code>value</code>是否相同，相同就散列到其他位置储存。</li>
+<li><code>HashMap</code>在<code>put</code>新元素时如果遇到<code>key</code>对应的<code>hashCode</code>相同，可能会产生Hash冲突问题。<code>HashMap</code>的做法是采用链式结构（链表）储存存在Hash冲突的元素，查询时再遍历这个链接结构元素集合即可。</li>
+<li>如果发生Hash冲突的元素很多，这个 <strong>链</strong> 将很长，影响到遍历key消耗性能的增加，于是判断当Table中Node节点大于默认值8时，将链表转换为红黑树（<code>TreeNode</code>）存储元素。</li>
+</ul>
+<h2 id="Collection和Collections的区别？"><a href="#Collection和Collections的区别？" class="headerlink" title="Collection和Collections的区别？"></a>Collection和Collections的区别？</h2><ul>
+<li><code>Collection</code>是集合类的上级接口，继承他的接口主要有<code>Set</code>和<code>List</code></li>
+<li><code>Collections</code>仅是针对集合类封装的一个工具类，在<code>java.util</code>包下</li>
+</ul>
+<h2 id="Comparable和Comparator的区别？"><a href="#Comparable和Comparator的区别？" class="headerlink" title="Comparable和Comparator的区别？"></a>Comparable和Comparator的区别？</h2><ul>
+<li><code>Comparable</code>接口来自<code>java.lang</code>包，提供<code>compareTo(Object obj)</code> 方法排序</li>
+<li><code>Comparator</code>接口来自<code>java.util</code>包，提供<code>compare(Object obj1, Object obj2)</code>方法排序</li>
+</ul>
+<p>当需要对一个集合采用一种方式排序，使用<code>Comparable</code>接口；如果需要对一个集合采用两种排序方式就使用<code>Comparator</code>接口。</p>
+<h2 id="Java集合框架总结"><a href="#Java集合框架总结" class="headerlink" title="Java集合框架总结"></a>Java集合框架总结</h2><h3 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h3><p><img src="http://cdn.tycoding.cn/QQ20190623-181246.png" alt></p>
+<h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4><ul>
+<li><strong>ArrayList</strong>:  Object数组，线程不安全，查询快，增删慢，效率高</li>
+<li><strong>Vector</strong>:  Object数组，线程安全，查询快，增删慢，效率低</li>
+<li><strong>LinkedList</strong>:  双向链表，线程不安全，查询慢，增删快，效率高</li>
+</ul>
+<h4 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h4><ul>
+<li><strong>HashSet</strong>: 无序、唯一，基于HashMap实现，底层采用HashMap存储元素</li>
+<li><strong>LinkedHashSet</strong>: LinkedHashSet继承自HashSet，并且其内部通过LinkedHashMap实现</li>
+<li><strong>TreeSet</strong> 有序、唯一，红黑树</li>
+</ul>
+<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><p><img src="http://cdn.tycoding.cn/QQ20190623-181259.png" alt></p>
+<ul>
+<li><strong>HashMap</strong>: JDK1.8之前HashMap由数组和链表组成，数组时HashMap的主体，链表是为了解决Hash冲突问题。JDK1.8之后当Table中Node数量大于8时，就将链表转换为红黑树，以减少搜索时间提高效率。</li>
+<li><strong>LinkedHashMap</strong>: LinkedHashMap继承自HashMap，所有他的底层仍然由数组和链表/红黑树实现。另外，LinkedHashMap在上面的结构基础上，增加了一条双向链表，使得上面的结构可以保持键值对的插入顺序。</li>
+<li><strong>HashTable</strong>:  数组+链表组成。数组时HashTable的主体，链表是为了解决Hash冲突问题</li>
+<li><strong>TreeMap</strong>:  红黑树</li>
+</ul>
+<h1 id="Java并发"><a href="#Java并发" class="headerlink" title="Java并发"></a>Java并发</h1><h2 id="线程和进程的区别？"><a href="#线程和进程的区别？" class="headerlink" title="线程和进程的区别？"></a>线程和进程的区别？</h2><ul>
+<li>进程是程序的一次执行过程，是系统运行程序的基本单位</li>
+<li>线程与进程类似，但线程是一个比进程更小的执行单位。一个进程执行过程中可以产生多个线程，</li>
+</ul>
+<p>在Java中，启用一个<code>main</code>方法就是启动了一个JVM进程，而<code>main</code>函数所在的线程就是这个进程中的一个线程，也称为主线程。</p>
+<h2 id="从JVM角度分析进程和线程的关系？"><a href="#从JVM角度分析进程和线程的关系？" class="headerlink" title="从JVM角度分析进程和线程的关系？"></a>从JVM角度分析进程和线程的关系？</h2><p>根据JVM的内存划分，对于线程而言：多个线程<strong>共享进程的堆、方法区资源</strong>，但每个线程又有自己的程序计数器、虚拟机栈、本地方法栈。</p>
+<p><img src="https://www.tycoding.cn/2019/05/09/jvm/jvm-start/QQ20190503-095731.png" alt></p>
+<p>也就是说，在一个JVM进程中，可以存在多个线程，每个线程都共享了这个JVM进程的方法区、堆；并且每个线程又都具有自己的虚拟机栈、本地方法栈、程序计数器等。</p>
+<h3 id="为什么方法区和堆是线程共享区？"><a href="#为什么方法区和堆是线程共享区？" class="headerlink" title="为什么方法区和堆是线程共享区？"></a>为什么方法区和堆是线程共享区？</h3><ul>
+<li><strong>方法区（Method Area）</strong> 存储已被虚拟机加载的类信息、常量、静态变量等数据。方法区中又包含 <strong>运行时常量池</strong> ，这部分区域储存Class文件信息和编译期生成的各种字面量和符号引用。</li>
+<li><strong>堆（Heap）</strong>  堆内存储存了对象实例（比如<code>new</code>关键字创建的实例对象），它是JVM中内存区最大的一块区域。</li>
+</ul>
+<p>所以，一个进程的启动可能包含了多个线程，而这个进程中的静态变量等都是随着类加载而加载的，他应该不属于某个线程独有，所以将其存储于方法区中。对象实例都储存在Java堆内存中，作为Java最大的一块内存区域，肯定不能是某个线程独占的。</p>
+<h3 id="为什么虚拟机栈和本地方法栈是线程独占区？"><a href="#为什么虚拟机栈和本地方法栈是线程独占区？" class="headerlink" title="为什么虚拟机栈和本地方法栈是线程独占区？"></a>为什么虚拟机栈和本地方法栈是线程独占区？</h3><ul>
+<li><strong>虚拟机栈</strong>： 每个Java方法执行的同时都会创建一个栈帧储存局部变量表、操作数栈、方法出口等。从方法的执行到结束，对应将栈帧压入Java虚拟机栈和从虚拟机栈中弹出的过程。</li>
+<li><strong>本地方法栈</strong>： 本地方法栈类似Java虚拟机栈，只不过Java虚拟机栈为虚拟机执行Java方法服务，而本地方法栈则为虚拟机使用到的<code>native</code>方法服务。</li>
+</ul>
+<h3 id="程序计数器是什么？"><a href="#程序计数器是什么？" class="headerlink" title="程序计数器是什么？"></a>程序计数器是什么？</h3><p><strong>程序计数器（Program Counter Register）</strong>：当前线程执行的字节码的行号指示器。每个线程都有独立的程序计数器。此内存区域是Java虚拟机中唯一一个没有任何OutOfMemoryError情况的区域。</p>
+<h2 id="说说并行和并发的区别？"><a href="#说说并行和并发的区别？" class="headerlink" title="说说并行和并发的区别？"></a>说说并行和并发的区别？</h2><ul>
+<li><strong>并行</strong>： 同一时间段，多个任务都在执行（单位时间内不一定同时执行）</li>
+<li><strong>并发</strong>： 单位时间内，多个任务同时执行。</li>
+</ul>
+<h2 id="使用多线程可能带来什么问题？"><a href="#使用多线程可能带来什么问题？" class="headerlink" title="使用多线程可能带来什么问题？"></a>使用多线程可能带来什么问题？</h2><p>并发编程的目的就是提高程序的执行效率，但并发编程可能造成：内存泄漏、上下文切换、死锁等问题</p>
+<h2 id="说说线程的生命周期和状态？"><a href="#说说线程的生命周期和状态？" class="headerlink" title="说说线程的生命周期和状态？"></a>说说线程的生命周期和状态？</h2><p>状态名称状态说明<strong>new</strong>初始状态，线程被创建，但还没有调用<code>start()</code>方法<strong>runnable</strong>运行状态，Java线程将操作系统中就绪和运行两种状态统称为“运行中”<strong>blocked</strong>阻塞状态，表示线程阻塞于锁<strong>waiting</strong>等待状态，线程需要等待当前线程或其他线程执行完成<strong>time_waiting</strong>超时等待状态，他可以实现在指定时间后自动返回<strong>terminated</strong>终止状态，表示当前线程已经执行完毕<br>对应，程序会因为不同代码的执行产生不同的状态，如下图：</p>
+<p><img src="http://cdn.tycoding.cn/Java+%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%8F%98%E8%BF%81.png" alt></p>
+<p>如上，线程创建后将进入<strong>NEW（初始）</strong>状态，调用<code>start()</code>开始运行，当线程执行<code>wait()</code>方法后，线程将进入<strong>WAITING（等待）</strong>状态，可以通过<code>wait(long)</code>或<code>join(long)</code>等方法终止等待状态；当线程调用同步方法时，在没有获取到锁的情况下，线程将会进入到<strong>BLOCKED（阻塞）</strong>状态。</p>
+<h2 id="什么是上下文切换？"><a href="#什么是上下文切换？" class="headerlink" title="什么是上下文切换？"></a>什么是上下文切换？</h2><p>简单来说，并发编程中实际线程的数量都可能大于CPU核心的个数，而COU一个核心在任意时刻只能被一个线程使用，CPU为了保证并发的线程都有被执行，采用<strong>随机分配时间片并轮转</strong>的方式；而一个线程的时间片用户将保存并进入就绪状态直到下次分配时间片再执行，这个 <strong>任务从保存到再加载的过程就是一次上下文切换</strong>。</p>
+<h2 id="什么是死锁？如何避免"><a href="#什么是死锁？如何避免" class="headerlink" title="什么是死锁？如何避免?"></a>什么是死锁？如何避免?</h2><p>举例：线程A持有资源2，线程B持有资源1，在线程A、B都没有释放自己所持有资源的情况下（锁未释放），他们都想同时获取对方的资源，因为资源1、2都被锁定，两个线程都会进入相互等待的情况，这种情况称为死锁。</p>
+<p><img src="http://cdn.tycoding.cn/2019-4%E6%AD%BB%E9%94%811.png" alt></p>
+<p>栗子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DeadLockDemo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Object resource1 = <span class="keyword">new</span> Object();<span class="comment">//资源 1</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Object resource2 = <span class="keyword">new</span> Object();<span class="comment">//资源 2</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (resource1) &#123;</span><br><span class="line">                System.out.println(Thread.currentThread() + <span class="string">"get resource1"</span>);</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">                System.out.println(Thread.currentThread() + <span class="string">"waiting get resource2"</span>);</span><br><span class="line">                <span class="keyword">synchronized</span> (resource2) &#123;</span><br><span class="line">                    System.out.println(Thread.currentThread() + <span class="string">"get resource2"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, <span class="string">"线程 1"</span>).start();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (resource2) &#123;</span><br><span class="line">                System.out.println(Thread.currentThread() + <span class="string">"get resource2"</span>);</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">                System.out.println(Thread.currentThread() + <span class="string">"waiting get resource1"</span>);</span><br><span class="line">                <span class="keyword">synchronized</span> (resource1) &#123;</span><br><span class="line">                    System.out.println(Thread.currentThread() + <span class="string">"get resource1"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, <span class="string">"线程 2"</span>).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>Output:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Thread[线程 <span class="number">1</span>,<span class="number">5</span>,main]get resource1</span><br><span class="line">Thread[线程 <span class="number">2</span>,<span class="number">5</span>,main]get resource2</span><br><span class="line">Thread[线程 <span class="number">1</span>,<span class="number">5</span>,main]waiting get resource2</span><br><span class="line">Thread[线程 <span class="number">2</span>,<span class="number">5</span>,main]waiting get resource1</span><br></pre></td></tr></table></figure>
+
+
+<p>线程1以<code>resource1</code>作为同步监视器，即可以轻松获取<code>resource1</code>同时也锁定了<code>resource1</code>，此时调用<code>sleep</code>让线程1等待1秒钟；此时线程2开始执行，他以<code>resource2</code>作为同步监视器同时也锁定了<code>resource2</code>，此时调用<code>sleep</code>让线程2等待1秒钟；而此时线程1等待1秒已经结束了，当他想要获取<code>resource2</code>时发现<code>resource2</code>已经被线程2锁定了，同理线程2结束等待后想要获取<code>resource1</code>时发现<code>resource1</code>已经被线程1锁定了。那么两者都无法同时获取对方的线程，便进入死锁状态。</p>
+<p>因此产生死锁需要具备以下四个条件：</p>
+<ol>
+<li>互斥条件：该资源任意一个时刻只能由一个线程占用</li>
+<li>请求和保持条件：一个线程因请求资源而阻塞时，对已获取的资源保持不放</li>
+<li>不剥夺条件：线程已获取的资源在未使用完之前不能被其他线程强行剥夺，只有自己使用完毕后才使用资源</li>
+<li>循环等待条件：若干进程之前形成一种头尾相接的循环等待资源关系。</li>
+</ol>
+<p>避免死锁就要破坏这四个条件中任意一个：</p>
+<ol>
+<li>破坏互斥条件：这个条件我们无法破坏，因为我们用锁的目的就是想让他们互斥</li>
+<li>破坏请求与保持条件：一次性申请所有资源</li>
+<li>破坏循环等待条件：按照一定顺序申请资源，避免资源的循环使用</li>
+</ol>
+<p>解决方案: 修改线程2</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">    <span class="keyword">synchronized</span> (resource1) &#123;</span><br><span class="line">        System.out.println(Thread.currentThread() + <span class="string">"get resource1"</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(Thread.currentThread() + <span class="string">"waiting get resource2"</span>);</span><br><span class="line">        <span class="keyword">synchronized</span> (resource2) &#123;</span><br><span class="line">            System.out.println(Thread.currentThread() + <span class="string">"get resource2"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;, <span class="string">"线程 2"</span>).start();</span><br></pre></td></tr></table></figure>
+
+
+<p>Outout:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Thread[线程 <span class="number">1</span>,<span class="number">5</span>,main]get resource1</span><br><span class="line">Thread[线程 <span class="number">1</span>,<span class="number">5</span>,main]waiting get resource2</span><br><span class="line">Thread[线程 <span class="number">1</span>,<span class="number">5</span>,main]get resource2</span><br><span class="line">Thread[线程 <span class="number">2</span>,<span class="number">5</span>,main]get resource1</span><br><span class="line">Thread[线程 <span class="number">2</span>,<span class="number">5</span>,main]waiting get resource2</span><br><span class="line">Thread[线程 <span class="number">2</span>,<span class="number">5</span>,main]get resource2</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="说说sleep-方法和wait-方法的区别？"><a href="#说说sleep-方法和wait-方法的区别？" class="headerlink" title="说说sleep()方法和wait()方法的区别？"></a>说说sleep()方法和wait()方法的区别？</h2><p>两者最主要的区别在于：<strong>sleep 方法没有释放锁，而 wait 方法释放了锁</strong></p>
+<ul>
+<li>两者都可以暂停线程的执行</li>
+<li><code>wait()</code>通常用于线程间交互/通信，<code>sleep()</code>通常用户暂停执行</li>
+<li><code>wait()</code>方法被调用后，线程不会自动苏醒，需要别的线程调用同一对象上的<code>notify()</code>或者<code>notifyAll()</code>方法。<code>sleep()</code>方法执行完成后，线程会自动苏醒。</li>
+</ul>
+<h2 id="调用start-方法会执行run-方法，为什么不能直接调用run-方法？"><a href="#调用start-方法会执行run-方法，为什么不能直接调用run-方法？" class="headerlink" title="调用start()方法会执行run()方法，为什么不能直接调用run()方法？"></a>调用start()方法会执行run()方法，为什么不能直接调用run()方法？</h2><p><code>new</code>一个<code>Thread</code>，线程进入了新建状态；调用<code>start()</code>方法，会启用一个线程并使线程进入就绪状态，当分配到时间片后就可以开始执行。<code>start()</code>会执行线程的相应准备工作，然后自动执行<code>run()</code>方法的内容，这才是真正的多线程工作。而直接执行<code>run()</code>方法，会吧<code>run()</code>方法当做一个<code>main</code>线程下的一个普通方法去执行，并不会在某个线程中执行他。</p>
+<p><strong>总结：调用<code>start</code>方法可以启动线程并使线程进入就绪状态，而<code>run()</code>方法只是<code>Thread</code>的一个普通方法调用，还是在main主线程里执行，并不会在一个新线程中执行</strong></p>
+<h2 id="synchronized关键字"><a href="#synchronized关键字" class="headerlink" title="synchronized关键字"></a>synchronized关键字</h2><p><code>synchronized</code>关键字解决多个线程之间访问资源的同步性，<code>synchronized</code>关键字可以保证它修饰的方法或代码块在任意时刻只能有一个线程执行。</p>
+<ul>
+<li><p><strong>synchronized关键字最主要的三种使用方式</strong>：</p>
+<ul>
+<li><p><strong>修饰实例方法</strong>： 给当前对象加锁，进入同步代码块前要获取当前对象实例的锁</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 此处的&#96;synchronized&#96;就相当于&#96;synchronized(this)&#96;，锁定的是当前对象</span><br><span class="line">public synchronized void add() &#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>修饰静态方法</strong>： 给当前类加锁（因为静态方法没有<code>this</code>），会作用于当前类的所有对象实例，因为静态成员不属于任何一个实例对象，是一个类成员。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 此处的&#96;synchronized&#96;就相当于&#96;synzhronized(T.class)&#96;，(T的当前类)</span><br><span class="line">public synchronized static void add() &#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>修饰代码块</strong>： 指定加锁对象，对给定对象加锁，进入同步代码块之前要获取给定对象的锁</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+
+      
+    </div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>如果你觉得这篇文章帮助到了你，你可以帮作者买一杯可乐表示鼓励</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.png" alt="Yuanzhibx WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Yuanzhibx Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/" rel="next" title=" 数据库设计规范">
+                <i class="fa fa-chevron-left"></i>  数据库设计规范
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/06/24/MyBatis-Plus-%E5%85%A5%E9%97%A8/" rel="prev" title="MyBatis Plus 入门">
+                MyBatis Plus 入门 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+  <hr/>
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+    
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element" style="opacity: 1; display: block; transform: translateX(0px);">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">Contents</li>
+          <li class="sidebar-nav-overview" data-target="site-overview">Overview</li>
+        </ul>
+      
+
+  
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-overview">
+          <div class="sidebar-sticky sticky">
+            <div itemscope="" itemtype="http://schema.org/Person">
+              <div class="author__avatar">
+                
+                  <img itemprop="image"
+                    src="/images/avatar.jpg"
+                    alt="Yuanzhibx" /> 
+                
+              </div>
+              <div class="author__content">
+                <h3 class="author__name" itemprop="name">Yuanzhibx</h3>
+                <p class="author__bio" itemprop="description"></p>
+              </div>
+              
+                <div class="author__urls-wrapper">
+                  <button class="btn btn--inverse">Follow</button>
+                  <ul class="author__urls social-icons">
+                    
+                      <li>
+                        <a href="https://github.com/yuanzhibx/yuanzhibx.github.io" target="_blank" title="GitHub">
+                            
+                              <i class="fa fa-fw fa-github"></i>&nbsp;&nbsp;GitHub</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://space.bilibili.com/177628303" target="_blank" title="bilibili">
+                            
+                              <i class="fa fa-fw fa-link"></i>&nbsp;&nbsp;bilibili</a>
+                      </li>
+                    
+
+                    
+                      <li class="menu-item menu-item-search">
+                        
+                          <a href="javascript:;" class="popup-trigger">
+                          <i class="fa fa-fw fa-search"></i>&nbsp;&nbsp;
+                        
+                          
+                          
+                          Search
+                        </a>
+                      </li>
+                    
+
+                    
+                      <div class="site-search">
+                        
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+                      </div>
+                    
+
+                  </ul>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java基础"><span class="nav-number">1.</span> <span class="nav-text">Java基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JDK和JRE区别？"><span class="nav-number">1.1.</span> <span class="nav-text">JDK和JRE区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#和-equals-区别"><span class="nav-number">1.2.</span> <span class="nav-text">&#x3D;&#x3D; 和 equals 区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两个对象的hashCode-相同，则equals-一定为true？"><span class="nav-number">1.3.</span> <span class="nav-text">两个对象的hashCode()相同，则equals()一定为true？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#final-的作用"><span class="nav-number">1.4.</span> <span class="nav-text">final 的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String属于基本数据类型吗？"><span class="nav-number">1.5.</span> <span class="nav-text">String属于基本数据类型吗？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#String和StringBuffer和StringBuilder的区别"><span class="nav-number">1.5.1.</span> <span class="nav-text">String和StringBuffer和StringBuilder的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static关键字是否可覆盖？"><span class="nav-number">1.6.</span> <span class="nav-text">static关键字是否可覆盖？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动拆箱、自动装箱"><span class="nav-number">1.7.</span> <span class="nav-text">自动拆箱、自动装箱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overriding和Overloaded"><span class="nav-number">1.8.</span> <span class="nav-text">Overriding和Overloaded</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java支持多继承吗？"><span class="nav-number">1.9.</span> <span class="nav-text">Java支持多继承吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口和抽象类的区别？"><span class="nav-number">1.10.</span> <span class="nav-text">接口和抽象类的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用传递和值传递"><span class="nav-number">1.11.</span> <span class="nav-text">引用传递和值传递</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO流"><span class="nav-number">1.12.</span> <span class="nav-text">IO流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java中有几种类型的流？"><span class="nav-number">1.12.1.</span> <span class="nav-text">[Java中有几种类型的流？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-IO中的方法阻塞"><span class="nav-number">1.12.2.</span> <span class="nav-text">Java IO中的方法阻塞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符流和字节流的区别？"><span class="nav-number">1.12.3.</span> <span class="nav-text">字符流和字节流的区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NIO"><span class="nav-number">1.12.4.</span> <span class="nav-text">NIO</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说说List、Set、Map三者的区别"><span class="nav-number">1.13.</span> <span class="nav-text">说说List、Set、Map三者的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array和ArrayList有什么区别？"><span class="nav-number">1.14.</span> <span class="nav-text">Array和ArrayList有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList和LinkedList的区别？"><span class="nav-number">1.15.</span> <span class="nav-text">ArrayList和LinkedList的区别？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是迭代器"><span class="nav-number">1.15.1.</span> <span class="nav-text">什么是迭代器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Iterator和ListIterator的区别？"><span class="nav-number">1.15.2.</span> <span class="nav-text">Iterator和ListIterator的区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RandomAccess接口"><span class="nav-number">1.15.3.</span> <span class="nav-text">RandomAccess接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链表"><span class="nav-number">1.15.4.</span> <span class="nav-text">链表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList和Vector和LinkedList的区别？"><span class="nav-number">1.16.</span> <span class="nav-text">ArrayList和Vector和LinkedList的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#谈谈ArrayList的扩容机制"><span class="nav-number">1.17.</span> <span class="nav-text">谈谈ArrayList的扩容机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap和HashTable的区别？"><span class="nav-number">1.18.</span> <span class="nav-text">HashMap和HashTable的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap和HashSet区别"><span class="nav-number">1.19.</span> <span class="nav-text">HashMap和HashSet区别?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashSet如何检查重复？"><span class="nav-number">1.20.</span> <span class="nav-text">HashSet如何检查重复？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap底层实现？"><span class="nav-number">1.21.</span> <span class="nav-text">HashMap底层实现？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashHash"><span class="nav-number">1.21.1.</span> <span class="nav-text">#HashHash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hash冲突"><span class="nav-number">1.21.2.</span> <span class="nav-text">Hash冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现原理"><span class="nav-number">1.21.3.</span> <span class="nav-text">[实现原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection和Collections的区别？"><span class="nav-number">1.22.</span> <span class="nav-text">Collection和Collections的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Comparable和Comparator的区别？"><span class="nav-number">1.23.</span> <span class="nav-text">Comparable和Comparator的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java集合框架总结"><span class="nav-number">1.24.</span> <span class="nav-text">Java集合框架总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Collection"><span class="nav-number">1.24.1.</span> <span class="nav-text">Collection</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#List"><span class="nav-number">1.24.1.1.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Set"><span class="nav-number">1.24.1.2.</span> <span class="nav-text">Set</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Map"><span class="nav-number">1.24.2.</span> <span class="nav-text">Map</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java并发"><span class="nav-number">2.</span> <span class="nav-text">Java并发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线程和进程的区别？"><span class="nav-number">2.1.</span> <span class="nav-text">线程和进程的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从JVM角度分析进程和线程的关系？"><span class="nav-number">2.2.</span> <span class="nav-text">从JVM角度分析进程和线程的关系？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么方法区和堆是线程共享区？"><span class="nav-number">2.2.1.</span> <span class="nav-text">为什么方法区和堆是线程共享区？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么虚拟机栈和本地方法栈是线程独占区？"><span class="nav-number">2.2.2.</span> <span class="nav-text">为什么虚拟机栈和本地方法栈是线程独占区？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序计数器是什么？"><span class="nav-number">2.2.3.</span> <span class="nav-text">程序计数器是什么？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说说并行和并发的区别？"><span class="nav-number">2.3.</span> <span class="nav-text">说说并行和并发的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用多线程可能带来什么问题？"><span class="nav-number">2.4.</span> <span class="nav-text">使用多线程可能带来什么问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说说线程的生命周期和状态？"><span class="nav-number">2.5.</span> <span class="nav-text">说说线程的生命周期和状态？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是上下文切换？"><span class="nav-number">2.6.</span> <span class="nav-text">什么是上下文切换？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是死锁？如何避免"><span class="nav-number">2.7.</span> <span class="nav-text">什么是死锁？如何避免?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说说sleep-方法和wait-方法的区别？"><span class="nav-number">2.8.</span> <span class="nav-text">说说sleep()方法和wait()方法的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调用start-方法会执行run-方法，为什么不能直接调用run-方法？"><span class="nav-number">2.9.</span> <span class="nav-text">调用start()方法会执行run()方法，为什么不能直接调用run()方法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synchronized关键字"><span class="nav-number">2.10.</span> <span class="nav-text">synchronized关键字</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" style="display: inline-block">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="author" itemprop="copyrightHolder">Yuanzhibx</span>
+
+  
+  &nbsp;&nbsp; | &nbsp;&nbsp;
+</div>
+
+        
+<div class="busuanzi-count" style="display: inline-block">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      UV
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      PV
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <span style="font-family:'Source Sans Pro','Helvetica Neue',Arial,sans-serif;font-size:1.2em;font-weight:600">TOP</span>
+    </div>
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/mo.min.js"></script>
+  <script>$(function(){$("a").not(".nav-link,.cloud-tie-join-count,.ignore-href,.jstree-anchor").addClass("animsition-link")});var burst1=new mojs.Burst({left:0,top:0,radius:{5:40},children:{shape:"circle",fill:["red","cyan","orange"],fillOpacity:.8,radiusX:3.5,radiusY:3.5}});document.addEventListener("click",function(a){null==a.target.href&&"footer"!=a.target.className&&"copyright"!=a.target.className&&"author__urls social-icons"!=a.target.className&&"author__avatar"!=a.target.className&&"sidebar sidebar-active"!=a.target.className&&burst1.tune({x:a.pageX,y:a.pageY}).generate().replay()})</script>
+  <div data-name="mojs-shape"></div>
+  
+</body>
+</html>
