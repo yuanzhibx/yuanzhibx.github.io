@@ -386,124 +386,17 @@
 
       
         
-          
-            <p>前段时间将云服务器重新安装后，打算在服务器上搭建项目运行。因此把搭建服务器时的坑记录下来，如有错误，欢迎指正。</p>
+          <p>前段时间将云服务器重新安装后，打算在服务器上搭建项目运行。因此把搭建服务器时的坑记录下来，如有错误，欢迎指正。</p>
 <blockquote>
 <p>环境：CentOS 7.6 64 位</p>
 </blockquote>
-<h2 id="macOS-通过-SSH-连接腾讯云服务器"><a href="#macOS-通过-SSH-连接腾讯云服务器" class="headerlink" title="macOS 通过 SSH 连接腾讯云服务器"></a>macOS 通过 SSH 连接腾讯云服务器</h2><h3 id="创建-SSH-密钥并下载"><a href="#创建-SSH-密钥并下载" class="headerlink" title="创建 SSH 密钥并下载"></a>创建 SSH 密钥并下载</h3><blockquote>
-<p>在 <a href="https://console.cloud.tencent.com/" target="_blank" rel="noopener">腾讯云官网</a> 进入云服务器界面。在 <strong>【SSH 密钥】</strong> 中创建密钥，并将下载下来的 SSH 密钥保存在 Finder 的 <code>~/.ssh</code> 目录下<br><img src="/2020/07/01/Linux-Java-%E8%B8%A9%E5%9D%91/1-1.png" alt="1-1.png"></p>
-</blockquote>
-<blockquote>
-<p>没有可通过终端创建该目录</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">mkdir .ssh</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>创建完成后将密钥文件移动到 <code>.ssh</code> 目录既可</p>
-</blockquote>
-<h3 id="使用-SSH-连接腾讯云服务器"><a href="#使用-SSH-连接腾讯云服务器" class="headerlink" title="使用 SSH 连接腾讯云服务器"></a>使用 SSH 连接腾讯云服务器</h3><blockquote>
-<p> 使用 iTerm(或终端) 输入如下命令既可通过 SSH 方式连接腾讯云服务器 </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -i ~&#x2F;.ssh&#x2F;yuanzhibx.dms root@152.136.133.75</span><br></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li>~/.ssh 为存放密钥文件的本地目录</li>
-<li>yuanzhibx.dms 为自定义的密钥文件名</li>
-<li>root 为云服务器的系统管理员帐号</li>
-<li>152.136.133.75 为云服务器的公网IP地址</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>结果如下图<br><img src="/2020/07/01/Linux-Java-%E8%B8%A9%E5%9D%91/1-2.png" alt="1-2.png"></p>
-</blockquote>
-<h3 id="通过-iTerm2-一键登录-SSH"><a href="#通过-iTerm2-一键登录-SSH" class="headerlink" title="通过 iTerm2 一键登录 SSH"></a>通过 iTerm2 一键登录 SSH</h3><p>占坑，未完待续</p>
-<h2 id="CentOS-安装-MySQL"><a href="#CentOS-安装-MySQL" class="headerlink" title="CentOS 安装 MySQL"></a>CentOS 安装 MySQL</h2><h3 id="安装-wget"><a href="#安装-wget" class="headerlink" title="安装 wget"></a>安装 wget</h3><blockquote>
-<p>Linux 系统中的 wget 是一个下载文件的工具，它用在命令行下,对于 Linux 用户是必不可少的工具，我们经常要下载一些软件或从远程服务器恢复备份到本地服务器</p>
-</blockquote>
-<blockquote>
-<p>通过如下命令安装 wget</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget</span><br></pre></td></tr></table></figure>
-<h3 id="通过-wget-下载-MySQL-安装包"><a href="#通过-wget-下载-MySQL-安装包" class="headerlink" title="通过 wget 下载 MySQL 安装包"></a>通过 wget 下载 MySQL 安装包</h3><blockquote>
-<p>通过如下命令下载，<code>wget</code> 后跟的是安装包的下载网址</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http:&#x2F;&#x2F;dev.mysql.com&#x2F;get&#x2F;mysql57-community-release-el7-8.noarch.rpm</span><br></pre></td></tr></table></figure>
-<h3 id="安装-MySQL-源"><a href="#安装-MySQL-源" class="headerlink" title="安装 MySQL 源"></a>安装 MySQL 源</h3><blockquote>
-<p>通过如下命令安装 MySQL 源，安装中需要确认直接输入 <code>Y</code> 确认既可</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql57-community-release-el7-8.noarch.rpm</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>可通过以下命令来检查是否安装成功</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum repolist enabled | grep &quot;mysql.*-community.*&quot;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如图所示，即为安装成功<br><img src="/2020/07/01/Linux-Java-%E8%B8%A9%E5%9D%91/1-3.png" alt="1-3.png"></p>
-</blockquote>
-<h3 id="安装-MySQL"><a href="#安装-MySQL" class="headerlink" title="安装 MySQL"></a>安装 MySQL</h3><blockquote>
-<p>在 <code>/usr</code> 目录下建立一个 <code>mysql</code> 文件夹，并进入该文件夹执行 <code>mysql</code> 安装命令</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir mysql</span><br><span class="line">cd &#x2F;mysql</span><br><span class="line">yum install mysql-community-server</span><br></pre></td></tr></table></figure>
-
-<h3 id="启动数据库"><a href="#启动数据库" class="headerlink" title="启动数据库"></a>启动数据库</h3><blockquote>
-<p>启动数据库命令如下</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure>
-
-<h3 id="登录-MySQL"><a href="#登录-MySQL" class="headerlink" title="登录 MySQL"></a>登录 MySQL</h3><blockquote>
-<p>输入如下命令后键入密码既可登录数据库</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
-
-<h3 id="MySQL-密码错误如何解决"><a href="#MySQL-密码错误如何解决" class="headerlink" title="MySQL 密码错误如何解决"></a>MySQL 密码错误如何解决</h3><p>占坑，未完待续</p>
-<h2 id="CentOS-安装-JDK"><a href="#CentOS-安装-JDK" class="headerlink" title="CentOS 安装 JDK"></a>CentOS 安装 JDK</h2><h3 id="查看可安装-Java-版本"><a href="#查看可安装-Java-版本" class="headerlink" title="查看可安装 Java 版本"></a>查看可安装 Java 版本</h3><blockquote>
-<p>通过如下命令来查看可安装 Java 版本</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y list java*</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如图所示(因为我已经安装，所以查询会有已安装 java)<br><img src="/2020/07/01/Linux-Java-%E8%B8%A9%E5%9D%91/2-1.png" alt="2-1.png"></p>
-</blockquote>
-<h3 id="使用-yum-安装-JDK-1-8"><a href="#使用-yum-安装-JDK-1-8" class="headerlink" title="使用 yum 安装 JDK 1.8"></a>使用 yum 安装 JDK 1.8</h3><blockquote>
-<p>选择一个 Java 版本进行安装，我们选择 java1.8 64 位的。所以选择安装 <code>java-1.8.0-openjdk-devel.x86_64</code>。</p>
-</blockquote>
-<blockquote>
-<p>选择 <code>-devel</code> 的安装，安装的是 jdk 。不带 <code>-devel</code> 的安装的是 jre 。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y java-1.8.0-openjdk-devel.x86_64</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看已安装-JDK-版本"><a href="#查看已安装-JDK-版本" class="headerlink" title="查看已安装 JDK 版本"></a>查看已安装 JDK 版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如图所示，即为安装成功<br><img src="/2020/07/01/Linux-Java-%E8%B8%A9%E5%9D%91/2-2.png" alt="2-2.png"></p>
-</blockquote>
-<h2 id="CentOS-安装-Tomcat"><a href="#CentOS-安装-Tomcat" class="headerlink" title="CentOS 安装 Tomcat"></a>CentOS 安装 Tomcat</h2><h3 id="使用-yum-安装-Tomcat"><a href="#使用-yum-安装-Tomcat" class="headerlink" title="使用 yum 安装 Tomcat"></a>使用 yum 安装 Tomcat</h3><blockquote>
-<p>使用如下命令安装 <code>tomcat</code>, ，安装中需要确认直接输入 <code>Y</code> 确认既可</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install tomcat</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看-Tomcat-状态"><a href="#查看-Tomcat-状态" class="headerlink" title="查看 Tomcat 状态"></a>查看 Tomcat 状态</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status tomcat</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如图所示，<code>tomcat</code> 为 <code>dead(死亡)</code> 状态<br><img src="/2020/07/01/Linux-Java-%E8%B8%A9%E5%9D%91/3-1.png" alt="3-1.png"></p>
-</blockquote>
-<h3 id="运行-Tomcat"><a href="#运行-Tomcat" class="headerlink" title="运行 Tomcat"></a>运行 Tomcat</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start tomcat</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如图所示，<code>tomcat</code> 从 <code>dead(死亡)</code> 状态变为 <code>running(运行)</code> 状态。此时 <code>tomcat</code> 已经正常的跑起来了。<br><img src="/2020/07/01/Linux-Java-%E8%B8%A9%E5%9D%91/3-2.png" alt="3-2.png"></p>
-</blockquote>
-<h3 id="安装-tomcat-浏览器管理界面"><a href="#安装-tomcat-浏览器管理界面" class="headerlink" title="安装 tomcat 浏览器管理界面"></a>安装 tomcat 浏览器管理界面</h3><blockquote>
-<p>此时我们在浏览器中运行 <a href="http://152.136.133.75:8080" target="_blank" rel="noopener">http://152.136.133.75:8080</a> 是不能访问的。显示找不到 xxx 的网页。并且报错 <code>404</code>。</p>
-</blockquote>
-<blockquote>
-<p>因为只安装了<code>Tomcat</code> 的基础服务，还没安装 <code>Tomcat</code> 的浏览器管理界面。</p>
-</blockquote>
-<blockquote>
-<p>通过如下命令进入 <code>Tomcat</code> 的 <code>webapps</code> 目录，并安装默认浏览器管理界面</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd webapps</span><br><span class="line">yum install tomcat-webapps tomcat-admin-webapps</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如图所示，<code>tomcat</code> 浏览器管理界面安装成功<br><img src="/2020/07/01/Linux-Java-%E8%B8%A9%E5%9D%91/3-3.png" alt="3-3.png"></p>
-</blockquote>
-<h3 id="tomcat-常用命令"><a href="#tomcat-常用命令" class="headerlink" title="tomcat 常用命令"></a>tomcat 常用命令</h3><p>占坑，未完待续</p>
-<h2 id="CentOS-安装-Redis"><a href="#CentOS-安装-Redis" class="headerlink" title="CentOS 安装 Redis"></a>CentOS 安装 Redis</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/01/Linux-Java-%E8%B8%A9%E5%9D%91/#more" rel="contents">
+              READ MORE &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
