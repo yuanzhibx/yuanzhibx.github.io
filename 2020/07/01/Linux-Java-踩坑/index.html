@@ -80,7 +80,7 @@
 <meta property="og:image" content="https://yuanzhibx.github.io/2020/07/01/Linux-Java-%E8%B8%A9%E5%9D%91/3-2.png">
 <meta property="og:image" content="https://yuanzhibx.github.io/2020/07/01/Linux-Java-%E8%B8%A9%E5%9D%91/3-3.png">
 <meta property="article:published_time" content="2020-07-01T10:57:54.000Z">
-<meta property="article:modified_time" content="2020-07-01T12:59:59.027Z">
+<meta property="article:modified_time" content="2020-07-01T14:48:05.794Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://yuanzhibx.github.io/2020/07/01/Linux-Java-%E8%B8%A9%E5%9D%91/1-1.png">
@@ -408,7 +408,22 @@
 <blockquote>
 <p>如图所示，<code>tomcat</code> 浏览器管理界面安装成功<br><img src="/2020/07/01/Linux-Java-%E8%B8%A9%E5%9D%91/3-3.png" alt="3-3.png"></p>
 </blockquote>
-<h3 id="tomcat-常用命令"><a href="#tomcat-常用命令" class="headerlink" title="tomcat 常用命令"></a>tomcat 常用命令</h3><p>占坑，未完待续</p>
+<h3 id="tomcat-常用命令"><a href="#tomcat-常用命令" class="headerlink" title="tomcat 常用命令"></a>tomcat 常用命令</h3><blockquote>
+<p>运行 <code>Tomcat</code> 服务</p>
+</blockquote>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">start</span> tomcat</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>停止 <code>Tomcat</code> 服务</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop tomcat</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>重启 <code>Tomcat</code> 服务</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart tomcat</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>开机启动 <code>Tomcat</code> 服务</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable tomcat</span><br></pre></td></tr></table></figure>
 <h2 id="CentOS-安装-Redis"><a href="#CentOS-安装-Redis" class="headerlink" title="CentOS 安装 Redis"></a>CentOS 安装 Redis</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2>
       
     </div>
