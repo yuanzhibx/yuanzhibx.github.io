@@ -64,15 +64,15 @@
 
 
 
-<meta name="description" content="什么是 MyBatis Plus 官方说明：MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。   虽然 MyBatis 可以直接在 xml 中通过 SQL 语句操作数据库，很灵活。但正其操作都要通过SQL语句进行，就必须写大量的xml文件，比较繁琐。MyBatis-Plus 就很好的解决了这个问题。它">
+<meta name="description" content="什么是 MyBatis Plus 官方说明：MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。   虽然 MyBatis 可以直接在 xml 中通过 SQL 语句操作数据库，很灵活。但其操作都要通过SQL语句进行，就必须写大量的xml文件，比较繁琐。MyBatis-Plus 就很好的解决了这个问题。它已">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MyBatis Plus 入门">
 <meta property="og:url" content="https://yuanzhibx.github.io/2020/06/24/MyBatis-Plus-%E5%85%A5%E9%97%A8/index.html">
 <meta property="og:site_name" content="Yuanzhibx Blog">
-<meta property="og:description" content="什么是 MyBatis Plus 官方说明：MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。   虽然 MyBatis 可以直接在 xml 中通过 SQL 语句操作数据库，很灵活。但正其操作都要通过SQL语句进行，就必须写大量的xml文件，比较繁琐。MyBatis-Plus 就很好的解决了这个问题。它">
+<meta property="og:description" content="什么是 MyBatis Plus 官方说明：MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。   虽然 MyBatis 可以直接在 xml 中通过 SQL 语句操作数据库，很灵活。但其操作都要通过SQL语句进行，就必须写大量的xml文件，比较繁琐。MyBatis-Plus 就很好的解决了这个问题。它已">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-24T07:29:54.000Z">
-<meta property="article:modified_time" content="2020-07-02T02:00:34.927Z">
+<meta property="article:modified_time" content="2020-07-02T02:06:21.689Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
 
@@ -288,7 +288,7 @@
 <p>官方说明：MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。</p>
 </blockquote>
 <blockquote>
-<p>虽然 MyBatis 可以直接在 xml 中通过 SQL 语句操作数据库，很灵活。但正其操作都要通过SQL语句进行，就必须写大量的xml文件，比较繁琐。MyBatis-Plus 就很好的解决了这个问题。它已经封装好了一些 crud 方法，我们不需要再写 xml 了，直接调用封装好的方法既可。</p>
+<p>虽然 MyBatis 可以直接在 xml 中通过 SQL 语句操作数据库，很灵活。但其操作都要通过SQL语句进行，就必须写大量的xml文件，比较繁琐。MyBatis-Plus 就很好的解决了这个问题。它已经封装好了一些 crud 方法，我们不需要再写 xml 了，直接调用封装好的方法既可。</p>
 </blockquote>
 <a id="more"></a>
 <hr>
@@ -314,6 +314,7 @@
 <blockquote>
 <p>其中 @MapperScan 为指定要变成实现类的接口所在的包，然后包下面的所有接口在编译之后都会生成相应的实现类。应在 Springboot 启动类上面添加</p>
 </blockquote>
+<hr>
 <h2 id="业务编写"><a href="#业务编写" class="headerlink" title="业务编写"></a>业务编写</h2><h3 id="POJO-类"><a href="#POJO-类" class="headerlink" title="POJO 类"></a>POJO 类</h3><blockquote>
 <p>使用 @Data 注解，省去代码中大量的get()、 set()、 toString()等方法。</p>
 </blockquote>
@@ -333,6 +334,7 @@
 <blockquote>
 <p>通过以上的步骤，就实现了 <code>tbl_user</code> 表基础的增删改查操作。一切都是如此的优雅，简洁</p>
 </blockquote>
+<hr>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><blockquote>
 <p>[1] <a href="https://www.codesheep.cn/2019/04/12/springbt-mybatis-plus/" target="_blank" rel="noopener">codesheep.cn</a></p>
 </blockquote>
