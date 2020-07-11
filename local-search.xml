@@ -56,11 +56,11 @@
   
   
   <entry>
-    <title>Git 配置使用</title>
-    <link href="/blog/2020/06/29/Git-%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/"/>
-    <url>/blog/2020/06/29/Git-%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/</url>
+    <title>IDEA &amp; Git</title>
+    <link href="/blog/2020/06/29/IDEA-Git/"/>
+    <url>/blog/2020/06/29/IDEA-Git/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p>正在编写，约 7 月 12 号更新</p><h2 id="什么是-Git"><a href="#什么是-Git" class="headerlink" title="什么是 Git"></a>什么是 Git</h2><blockquote><p>Git 是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。<br>Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。<br>Torvalds 开始着手开发 Git 是为了作为一种过渡方案来替代 BitKeeper。</p></blockquote><a id="more"></a><hr><h2 id="在-IDEA-配置-Git"><a href="#在-IDEA-配置-Git" class="headerlink" title="在 IDEA 配置 Git"></a>在 IDEA 配置 Git</h2><blockquote><ul><li><a href="https://yuanzhibx.github.io/2020/07/03/IDEA-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/#more" target="_blank" rel="noopener">IDEA 基本使用</a></li></ul></blockquote><blockquote><p>IDEA &amp; Git 配置<br>使用 IDEA 来将代码上传到 Github</p></blockquote><hr><h2 id="使用-Git-上传项目到-Github"><a href="#使用-Git-上传项目到-Github" class="headerlink" title="使用 Git 上传项目到 Github"></a>使用 Git 上传项目到 Github</h2><hr><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] <a href="https://baike.baidu.com/item/GIT/12647237" target="_blank" rel="noopener">百度百科 Git</a></p><p>[2] <a href></a></p><p>[3] <a href></a></p>]]></content>
     
     
     
@@ -69,11 +69,11 @@
   
   
   <entry>
-    <title>IDEA &amp; Git</title>
-    <link href="/blog/2020/06/29/IDEA-Git/"/>
-    <url>/blog/2020/06/29/IDEA-Git/</url>
+    <title>Git 配置使用</title>
+    <link href="/blog/2020/06/29/Git-%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/"/>
+    <url>/blog/2020/06/29/Git-%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/</url>
     
-    <content type="html"><![CDATA[<p>正在编写，约 7 月 12 号更新</p><h2 id="什么是-Git"><a href="#什么是-Git" class="headerlink" title="什么是 Git"></a>什么是 Git</h2><blockquote><p>Git 是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。<br>Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。<br>Torvalds 开始着手开发 Git 是为了作为一种过渡方案来替代 BitKeeper。</p></blockquote><a id="more"></a><hr><h2 id="在-IDEA-配置-Git"><a href="#在-IDEA-配置-Git" class="headerlink" title="在 IDEA 配置 Git"></a>在 IDEA 配置 Git</h2><blockquote><ul><li><a href="https://yuanzhibx.github.io/2020/07/03/IDEA-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/#more" target="_blank" rel="noopener">IDEA 基本使用</a></li></ul></blockquote><blockquote><p>IDEA &amp; Git 配置<br>使用 IDEA 来将代码上传到 Github</p></blockquote><hr><h2 id="使用-Git-上传项目到-Github"><a href="#使用-Git-上传项目到-Github" class="headerlink" title="使用 Git 上传项目到 Github"></a>使用 Git 上传项目到 Github</h2><hr><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] <a href="https://baike.baidu.com/item/GIT/12647237" target="_blank" rel="noopener">百度百科 Git</a></p><p>[2] <a href></a></p><p>[3] <a href></a></p>]]></content>
+    <content type="html"><![CDATA[]]></content>
     
     
     
