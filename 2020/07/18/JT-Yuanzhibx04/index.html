@@ -72,7 +72,7 @@
 <meta property="og:description" content="JT_Yuanzhibx JT 为分布式集群聚合项目项目 GIthub 仓库：JT_Yuanzhibx: github.com&#x2F;yuanzhibx&#x2F;JT_Yuanzhibx   该笔记记录了 JT_Yuanzhibx 项目的数据库高可用  正在编写……">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-18T02:48:40.000Z">
-<meta property="article:modified_time" content="2020-07-18T02:56:42.953Z">
+<meta property="article:modified_time" content="2020-07-18T03:29:27.921Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
 
@@ -292,6 +292,17 @@
 </blockquote>
 <p>正在编写……</p>
 <a id="more"></a>
+
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><h3 id="项目弊端"><a href="#项目弊端" class="headerlink" title="项目弊端"></a>项目弊端</h3><h3 id="数据库数据同步流程图"><a href="#数据库数据同步流程图" class="headerlink" title="数据库数据同步流程图"></a>数据库数据同步流程图</h3><h3 id="数据库热备份原理图"><a href="#数据库热备份原理图" class="headerlink" title="数据库热备份原理图"></a>数据库热备份原理图</h3><hr>
+<h2 id="CentOS-2"><a href="#CentOS-2" class="headerlink" title="CentOS 2"></a>CentOS 2</h2><blockquote>
+<p>准备第二台Linux操作系统</p>
+</blockquote>
+<h3 id="安装数据库"><a href="#安装数据库" class="headerlink" title="安装数据库"></a>安装数据库</h3><h3 id="Navicat-连接数据库"><a href="#Navicat-连接数据库" class="headerlink" title="Navicat 连接数据库"></a>Navicat 连接数据库</h3><hr>
+<h2 id="数据库主从配置"><a href="#数据库主从配置" class="headerlink" title="数据库主从配置"></a>数据库主从配置</h2><hr>
+<h2 id="数据库读写分离-均衡负载"><a href="#数据库读写分离-均衡负载" class="headerlink" title="数据库读写分离-均衡负载"></a>数据库读写分离-均衡负载</h2><hr>
+<h2 id="数据库双机热备"><a href="#数据库双机热备" class="headerlink" title="数据库双机热备"></a>数据库双机热备</h2><hr>
+<h2 id="数据库高可用"><a href="#数据库高可用" class="headerlink" title="数据库高可用"></a>数据库高可用</h2><hr>
+
       
     </div>
 
@@ -495,7 +506,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JT-Yuanzhibx"><span class="nav-number">1.</span> <span class="nav-text">JT_Yuanzhibx</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JT-Yuanzhibx"><span class="nav-number">1.</span> <span class="nav-text">JT_Yuanzhibx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目弊端"><span class="nav-number">2.1.</span> <span class="nav-text">项目弊端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库数据同步流程图"><span class="nav-number">2.2.</span> <span class="nav-text">数据库数据同步流程图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库热备份原理图"><span class="nav-number">2.3.</span> <span class="nav-text">数据库热备份原理图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CentOS-2"><span class="nav-number">3.</span> <span class="nav-text">CentOS 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装数据库"><span class="nav-number">3.1.</span> <span class="nav-text">安装数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Navicat-连接数据库"><span class="nav-number">3.2.</span> <span class="nav-text">Navicat 连接数据库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库主从配置"><span class="nav-number">4.</span> <span class="nav-text">数据库主从配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库读写分离-均衡负载"><span class="nav-number">5.</span> <span class="nav-text">数据库读写分离-均衡负载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库双机热备"><span class="nav-number">6.</span> <span class="nav-text">数据库双机热备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库高可用"><span class="nav-number">7.</span> <span class="nav-text">数据库高可用</span></a></li></ol></div>
             
 
           </div>
