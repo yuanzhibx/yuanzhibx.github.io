@@ -66,15 +66,22 @@
 
 <meta name="description" content="JT_Yuanzhibx JT 为分布式集群聚合项目项目 GIthub 仓库：JT_Yuanzhibx: github.com&#x2F;yuanzhibx&#x2F;JT_Yuanzhibx   该笔记记录了 JT_Yuanzhibx 项目的 Redis 使用  正在编写……">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JT_Yuanzhibx05 【Redis】">
+<meta property="og:title" content="JT_Yuanzhibx05 【Redis 1】">
 <meta property="og:url" content="https://yuanzhibx.github.io/2020/07/21/JT-Yuanzhibx05/index.html">
 <meta property="og:site_name" content="Yuanzhibx&#39;s Blog">
 <meta property="og:description" content="JT_Yuanzhibx JT 为分布式集群聚合项目项目 GIthub 仓库：JT_Yuanzhibx: github.com&#x2F;yuanzhibx&#x2F;JT_Yuanzhibx   该笔记记录了 JT_Yuanzhibx 项目的 Redis 使用  正在编写……">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://yuanzhibx.github.io/2020/07/21/JT-Yuanzhibx05/62A3591B-84AE-4848-8590-3D7CB4D6EC70-5466652.png">
+<meta property="og:image" content="https://yuanzhibx.github.io/2020/07/21/JT-Yuanzhibx05/CB212DD1-3A57-4949-98BC-5409CB78A2F8.png">
+<meta property="og:image" content="https://yuanzhibx.github.io/2020/07/21/JT-Yuanzhibx05/8C9D9455-A26E-460A-B453-0409C80D7EE0.png">
+<meta property="og:image" content="https://yuanzhibx.github.io/2020/07/21/JT-Yuanzhibx05/800F6CBB-EEC0-441C-85A1-671E8F284CAA.png">
+<meta property="og:image" content="https://yuanzhibx.github.io/2020/07/21/JT-Yuanzhibx05/4A970E06-5DDC-4156-B84F-F0BCC57BEB25.png">
+<meta property="og:image" content="https://yuanzhibx.github.io/2020/07/21/JT-Yuanzhibx05/FE6DC311-D4EA-4163-910D-AD27AA3C08C6.png">
 <meta property="article:published_time" content="2020-07-21T07:16:32.000Z">
-<meta property="article:modified_time" content="2020-07-21T07:18:34.435Z">
+<meta property="article:modified_time" content="2020-07-23T02:27:35.050Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yuanzhibx.github.io/2020/07/21/JT-Yuanzhibx05/62A3591B-84AE-4848-8590-3D7CB4D6EC70-5466652.png">
 
 
 
@@ -110,7 +117,7 @@
 
 
 
-  <title>JT_Yuanzhibx05 【Redis】 | Yuanzhibx's Blog</title>
+  <title>JT_Yuanzhibx05 【Redis 1】 | Yuanzhibx's Blog</title>
   
 
 
@@ -252,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JT_Yuanzhibx05 【Redis】</h1>
+          <h1 class="post-title" itemprop="name headline">JT_Yuanzhibx05 【Redis 1】</h1>
         
 
         <div class="post-meta">
@@ -292,6 +299,233 @@
 </blockquote>
 <p>正在编写……</p>
 <a id="more"></a>
+
+<h2 id="什么是-Redis"><a href="#什么是-Redis" class="headerlink" title="什么是 Redis"></a>什么是 Redis</h2><blockquote>
+<p><strong>Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。 它支持多种类型的数据结构，如 字符串（strings）， 散列（hashes）， 列表（lists）， 集合（sets）， 有序集合（sorted sets） 与范围查询</strong>， bitmaps， hyperloglogs 和 地理空间（geospatial） 索引半径查询。 Redis 内置了 复制（replication），LUA脚本（Lua scripting）， LRU驱动事件（LRU eviction），事务（transactions） 和不同级别的 磁盘持久化（persistence）， 并通过 Redis哨兵（Sentinel）和自动 分区（Cluster）提供高可用性（high availability）</p>
+</blockquote>
+<blockquote>
+<p>性能问题: 读速度 11.2万次/秒 写 8.6万次/秒 平均 10万次/秒</p>
+</blockquote>
+<h3 id="什么是-NOSQL"><a href="#什么是-NOSQL" class="headerlink" title="什么是 NOSQL"></a>什么是 NOSQL</h3><blockquote>
+<p>NoSQL(NoSQL = Not Only SQL )，意即”不仅仅是SQL”。</p>
+</blockquote>
+<blockquote>
+<p>NoSQL 是一项全新的数据库革命性运动，早期就有人提出，发展至2009年趋势越发高涨。NoSQL的拥护者们提倡运用非关系型的数据存储，相对于铺天盖地的关系型数据库运用，这一概念无疑是一种全新的思维的注入。</p>
+</blockquote>
+<blockquote>
+<p>非关系型数据库：<strong>Redis、MongoDB、HBase</strong> 等</p>
+</blockquote>
+<h3 id="什么是消息中间件"><a href="#什么是消息中间件" class="headerlink" title="什么是消息中间件"></a>什么是消息中间件</h3><blockquote>
+<p>当前使用较多的消息队列有 <strong>RabbitMQ、RocketMQ、ActiveMQ、Kafka、ZeroMQ、MetaMQ</strong> 等，而部分数据库如 <strong>Redis、MySQL</strong> 以及 <strong>phxsql</strong> 也可实现消息队列的功能。</p>
+</blockquote>
+<blockquote>
+<p>消息中间件主要的作用是为了实现数据的平滑过渡,让程序调用更加流畅(润滑剂)</p>
+</blockquote>
+<h2 id="为什么需要使用-Redis-缓存"><a href="#为什么需要使用-Redis-缓存" class="headerlink" title="为什么需要使用 Redis 缓存"></a>为什么需要使用 Redis 缓存</h2><blockquote>
+<p>说明：使用缓存可以有效的降低用户访问物理设备的频次，有效的减少并发的压力。保护后端真实的服务器。</p>
+</blockquote>
+<h3 id="缓存应如何设计"><a href="#缓存应如何设计" class="headerlink" title="缓存应如何设计"></a>缓存应如何设计</h3><ol>
+<li>缓存应该使用什么样的数据结构？<blockquote>
+<ul>
+<li>K-V KEY必须唯一</li>
+</ul>
+</blockquote>
+</li>
+<li>如果需要缓存进行快速的读取,首先开发语言如何选择? <blockquote>
+<ul>
+<li>C语言 软件的运行环境如何选择. 内存中</li>
+</ul>
+</blockquote>
+</li>
+<li>如何防止内存数据丢失? 缺点: 断电即擦除 <blockquote>
+<ul>
+<li>内存数据的持久化操作(内存数据保存到磁盘中)</li>
+</ul>
+</blockquote>
+</li>
+<li>缓存的空间大小如何维护. 不能一直存,有时也会删除数据 如何操作? <blockquote>
+<ul>
+<li>内存优化算法: LRU算法/LFU算法</li>
+</ul>
+</blockquote>
+</li>
+<li>缓存使用如何防止宕机带来的影响?<blockquote>
+<ul>
+<li>(HA)高可用 部署redis集群</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h2 id="Redis-安装"><a href="#Redis-安装" class="headerlink" title="Redis 安装"></a>Redis 安装</h2><h3 id="上传-Redis-安装包"><a href="#上传-Redis-安装包" class="headerlink" title="上传 Redis 安装包"></a>上传 Redis 安装包</h3><blockquote>
+<p>上传 Redis 安装包到 Linux 虚拟机，并解压</p>
+</blockquote>
+<h3 id="安装-Redis"><a href="#安装-Redis" class="headerlink" title="安装 Redis"></a>安装 Redis</h3><blockquote>
+<p>在 redis 的根目录执行如下命令对 Redis 进行安装</p>
+</blockquote>
+<p>1</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
+
+<p>2</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><blockquote>
+<p>编辑 Redis.conf</p>
+</blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim redis.conf</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>修改绑定 IP</p>
+</blockquote>
+<p><img src="/2020/07/21/JT-Yuanzhibx05/62A3591B-84AE-4848-8590-3D7CB4D6EC70-5466652.png" alt="62A3591B-84AE-4848-8590-3D7CB4D6EC70"></p>
+<blockquote>
+<p>修改保护模式</p>
+</blockquote>
+<p><img src="/2020/07/21/JT-Yuanzhibx05/CB212DD1-3A57-4949-98BC-5409CB78A2F8.png" alt="CB212DD1-3A57-4949-98BC-5409CB78A2F8"></p>
+<blockquote>
+<p>开启后台启动</p>
+</blockquote>
+<p><img src="/2020/07/21/JT-Yuanzhibx05/8C9D9455-A26E-460A-B453-0409C80D7EE0.png" alt="8C9D9455-A26E-460A-B453-0409C80D7EE0"></p>
+<h3 id="Redis-命令"><a href="#Redis-命令" class="headerlink" title="Redis 命令"></a>Redis 命令</h3><blockquote>
+<p>启动 Redis </p>
+</blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server redis.conf</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>进入客户端 </p>
+</blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -p 6379</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关闭 Redis </p>
+</blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -p 6379 shutdown</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>简化操作: 如果操作的redis是默认的端口 则可以省略不写</p>
+</blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">redis-cli</span><br><span class="line">redis-cli shutdown</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Spring-整合-Redis"><a href="#Spring-整合-Redis" class="headerlink" title="Spring 整合 Redis"></a>Spring 整合 Redis</h2><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><blockquote>
+<p>将 jedis 对象交给 spring 容器进行管理。之后哪里需要直接注入即可。</p>
+</blockquote>
+<p>步骤:</p>
+<ol>
+<li>编辑 <code>redis.properties</code> 文件，指定 Redis 节点的 <strong>ip、port</strong></li>
+<li>由于 Redis 比较重要,很多业务系统都需要调用,所以将 Redis 整合写入 common</li>
+<li>通过配置类(配置文件)形式整合 Redis</li>
+</ol>
+<h3 id="引入-Jar-包"><a href="#引入-Jar-包" class="headerlink" title="引入 Jar 包"></a>引入 Jar 包</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- spring整合redis --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>redis.clients<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jedis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.data<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="redis-properties"><a href="#redis-properties" class="headerlink" title="redis.properties"></a>redis.properties</h3><blockquote>
+<p>配置文件所在位置</p>
+</blockquote>
+<p><img src="/2020/07/21/JT-Yuanzhibx05/800F6CBB-EEC0-441C-85A1-671E8F284CAA.png" alt="800F6CBB-EEC0-441C-85A1-671E8F284CAA"></p>
+<blockquote>
+<p>编辑配置文件</p>
+</blockquote>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">redis.host</span>=<span class="string">172.18.55.141</span></span><br><span class="line"><span class="meta">redis.port</span>=<span class="string">6379</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="编辑-Redis-配置类"><a href="#编辑-Redis-配置类" class="headerlink" title="编辑 Redis 配置类"></a>编辑 Redis 配置类</h3><blockquote>
+<p>RedisConfig.java</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.jt.config;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Yuanzhibx</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span> 2020-07-17</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@PropertySource</span>(<span class="string">"classpath:/properties/redis.properties"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;redis.host&#125;"</span>)</span><br><span class="line">	<span class="keyword">private</span> String host;</span><br><span class="line">	<span class="meta">@Value</span>(<span class="string">"$&#123;redis.port&#125;"</span>)</span><br><span class="line">    <span class="keyword">private</span> Integer port;</span><br><span class="line">    </span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Jedis <span class="title">jedis</span><span class="params">()</span> </span>&#123;	</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Jedis(host, port);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="封装-ObjectMapperUtil"><a href="#封装-ObjectMapperUtil" class="headerlink" title="封装 ObjectMapperUtil"></a>封装 ObjectMapperUtil</h2><blockquote>
+<p>该 API 主要负责将对象转化为 JSON，将 JSON 转化为对象，同时优化异常处理。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.jt.util;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Yuanzhibx</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span> 2020-07-17</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ObjectMapperUtil</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> ObjectMapper MAPPER = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 将对象转化为 JSON 串</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">toJson</span><span class="params">(Object target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (target == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException(<span class="string">"target 数据为空~"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> MAPPER.writeValueAsString(target);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (JsonProcessingException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            <span class="comment">//如果转化过程中有问题, 直接抛出异常</span></span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 将 JSON 串转化为对象</span></span><br><span class="line"><span class="comment">     * 用户传递什么类型, 就返回什么对象</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * &lt;T&gt; T 定义了一个泛型对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">T <span class="title">toObject</span><span class="params">(String json, Class&lt;T&gt; targetClass)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (StringUtils.isEmpty(json) || targetClass == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException(<span class="string">"target 数据为空~"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> MAPPER.readValue(json, targetClass);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (JsonProcessingException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="商品分类缓存实现"><a href="#商品分类缓存实现" class="headerlink" title="商品分类缓存实现"></a>商品分类缓存实现</h2><h3 id="业务分析"><a href="#业务分析" class="headerlink" title="业务分析"></a>业务分析</h3><blockquote>
+<p>商品分类信息可以使用 Redis 缓存实现该功能<br><img src="/2020/07/21/JT-Yuanzhibx05/4A970E06-5DDC-4156-B84F-F0BCC57BEB25.png" alt="4A970E06-5DDC-4156-B84F-F0BCC57BEB25"></p>
+</blockquote>
+<ol>
+<li>当用户点击商品分类按钮时开始获取服务端数据</li>
+<li>先查询 Redis 缓存是否有数据</li>
+<li>如果 Redis 中没有数据,则查询数据库.之后将查询的结果保存到 Redis 中</li>
+<li>如果 Redis 中有数据,则直接返回缓存记录</li>
+</ol>
+<blockquote>
+<p>数据库存储结构问题</p>
+</blockquote>
+<ul>
+<li>K-V结构 key=“包含parentId” value= 查询之后的返回值结果 List</li>
+<li>String数据类型 redis使用频率最高.</li>
+</ul>
+<blockquote>
+<p>思路</p>
+</blockquote>
+<ol>
+<li>准备key=“ITEM_CAT::”+parentID</li>
+<li>准备value=”JSON”串</li>
+<li>首先查询redis缓存<ul>
+<li>有: 直接获取缓存数据返回给用户</li>
+<li>没有: 直接查询数据库，之后将返回值结果保存到 redis 中，方便下次使用</li>
+</ul>
+</li>
+</ol>
+<h3 id="ItemCatController"><a href="#ItemCatController" class="headerlink" title="ItemCatController"></a>ItemCatController</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Redis 缓存分类信息</span></span><br><span class="line"><span class="comment"> * 根据商品父级 id 查询商品分类信息, 返回 VO 对象</span></span><br><span class="line"><span class="comment"> * url: /item/cat/list</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> parentId 一级分类 id</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> EasyUITree 对象</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/list"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> List&lt;EasyUITree&gt; <span class="title">findItemCatByParentId</span><span class="params">(@RequestParam(value = <span class="string">"id"</span>, defaultValue = <span class="string">"0"</span>)</span> Long parentId) </span>&#123;</span><br><span class="line">    <span class="comment">// 通过缓存的方式获取数据</span></span><br><span class="line">    <span class="keyword">return</span> itemCatService.findItemCatByCache(parentId);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ItemCatService-amp-Impl"><a href="#ItemCatService-amp-Impl" class="headerlink" title="ItemCatService &amp; Impl"></a>ItemCatService &amp; Impl</h3><blockquote>
+<p>ItemCatService</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Redis</span></span><br><span class="line"><span class="comment"> * 根据商品 id 实现缓存查询商品分类信息</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> parentId 商品分类 id</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> 商品分类信息</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function">List&lt;EasyUITree&gt; <span class="title">findItemCatByCache</span><span class="params">(Long parentId)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>ItemCatServiceImpl</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Redis</span></span><br><span class="line"><span class="comment"> * 根据商品 id 实现缓存查询商品分类信息</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> parentId 商品分类 id</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> 商品分类信息</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> List&lt;EasyUITree&gt; <span class="title">findItemCatByCache</span><span class="params">(Long parentId)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 定义 key</span></span><br><span class="line">    String key = <span class="string">"ITEM_CAT_LIST::"</span> + parentId;</span><br><span class="line">    Long startTime = System.currentTimeMillis();</span><br><span class="line">    List&lt;EasyUITree&gt; treeList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 判断 redis 中是否有值</span></span><br><span class="line">    <span class="keyword">if</span> (jedis.exists(key)) &#123;</span><br><span class="line">        <span class="comment">//不是第一次查询, 则获取缓存数据直接返回</span></span><br><span class="line">        String json = jedis.get(key);</span><br><span class="line">        Long endTime = System.currentTimeMillis();</span><br><span class="line">        treeList = ObjectMapperUtil.toObject(json, treeList.getClass());</span><br><span class="line">        System.out.println(<span class="string">"redis 查询缓存的时间 [ "</span> + (endTime - startTime) + <span class="string">" ] ms"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//没有key, 表示第一次查询</span></span><br><span class="line">        treeList = findItemCatByParentId(parentId);</span><br><span class="line">        Long endTime = System.currentTimeMillis();</span><br><span class="line">        String json = ObjectMapperUtil.toJson(treeList);</span><br><span class="line">        jedis.set(key, json);</span><br><span class="line">        System.out.println(<span class="string">"redis 第一次查询缓存的时间 [ "</span> + (endTime - startTime) + <span class="string">" ] ms"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> treeList;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><blockquote>
+<p>即实现 Redis 缓存查询数据库，速度提升</p>
+</blockquote>
+<hr>
+<h2 id="AOP-X-Redis"><a href="#AOP-X-Redis" class="headerlink" title="AOP X Redis"></a>AOP X Redis</h2><h3 id="传统项目弊端"><a href="#传统项目弊端" class="headerlink" title="传统项目弊端"></a>传统项目弊端</h3><ol>
+<li>由于将 redis 的操作写到 service 层中，必须导致业务的耦合性高</li>
+<li>如果采用上述的方式完成缓存，则改缓存不通用，并且代码冗余、效率低</li>
+</ol>
+<h3 id="AOP-核心理念"><a href="#AOP-核心理念" class="headerlink" title="AOP 核心理念"></a>AOP 核心理念</h3><p><img src="/2020/07/21/JT-Yuanzhibx05/FE6DC311-D4EA-4163-910D-AD27AA3C08C6.png" alt="FE6DC311-D4EA-4163-910D-AD27AA3C08C6"></p>
+<blockquote>
+<p>AOP = 切入点表达式 + 通知方法</p>
+</blockquote>
+<h3 id="切入点表达式"><a href="#切入点表达式" class="headerlink" title="切入点表达式"></a>切入点表达式</h3><ol>
+<li><strong>bean(bean的ID)：</strong> 按照指定的bean名称拦截用户的请求，之后执行通知方法。只能匹配单个bean对象</li>
+<li><strong>within(包名.类名)：</strong> 可以按照类通配的方式去拦截用户的请求. 控制粒度较粗。</li>
+<li><strong>execution(返回值类型 包名.类名.方法名(参数列表))：</strong> 方法参数级别 控制粒度较细</li>
+<li><strong>@annotation(包名.注解名称)：</strong> 按照注解的方式去拦截用户请求</li>
+</ol>
+<h3 id="通知方法"><a href="#通知方法" class="headerlink" title="通知方法"></a>通知方法</h3><ol>
+<li><strong>前置通知:</strong> 主要在目标方法执行之前执行</li>
+<li><strong>后置通知:</strong> 在目标方法执行之后执行</li>
+<li><strong>异常通知:</strong> 在目标方法执行的过程中报了异常之后执行.</li>
+<li><strong>最终通知:</strong> 无论什么时候都要执行的通知方法.<br>上述的通知方法,无法控制目标方法是否执行.所以一般”只做记录不做改变”</li>
+<li><strong>环绕通知:</strong> 一般采用环绕通知 实现对业务的控制</li>
+</ol>
+<h2 id="AOP-实现-Redis-缓存"><a href="#AOP-实现-Redis-缓存" class="headerlink" title="AOP 实现 Redis 缓存"></a>AOP 实现 Redis 缓存</h2><h3 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h3><blockquote>
+<p>CacheFind</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.jt.anno;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Yuanzhibx</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span> 2020-07-18</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Target</span>(ElementType.METHOD)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> CacheFind &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 识别存入 redis 中的 key 的前缀</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">key</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 保存时间</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">secondes</span><span class="params">()</span> <span class="keyword">default</span> 0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="标识注解"><a href="#标识注解" class="headerlink" title="标识注解"></a>标识注解</h3><blockquote>
+<p>在 <code>ItemCatServiceImpl</code> 类中该方法上使用该注解</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="meta">@CacheFind</span>(key = <span class="string">"ITEM_CAT_LIST"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> List&lt;EasyUITree&gt; <span class="title">findItemCatByParentId</span><span class="params">(Long parentId)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//......</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3><blockquote>
+<p>AOP 实现缓存业务处理</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.jt.aop;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Yuanzhibx</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span> 2020-07-18</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Aspect</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CacheAOP</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">        单台 redis 注入: private Jedis jedis</span></span><br><span class="line"><span class="comment">        多台 redis 注入: private ShardedJedis jedis;</span></span><br><span class="line"><span class="comment">        集群 redis 注入: private JedisCluster jedis;</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Autowired</span>(required = <span class="keyword">false</span>)</span><br><span class="line">    <span class="keyword">private</span> Jedis jedis;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 拦截被 <span class="doctag">@CacheFind</span> 标识的方法, 之后利用 aop 进行缓存的控制</span></span><br><span class="line"><span class="comment">     * 通知方法: 环绕通知</span></span><br><span class="line"><span class="comment">     * 实现步骤:</span></span><br><span class="line"><span class="comment">     *          1. 准备查询 redis 的 key     ITEM_CAT_LIST::第一个参数</span></span><br><span class="line"><span class="comment">     *          2. 动态获取注解语法           <span class="doctag">@annotation</span>(cacheFind)</span></span><br><span class="line"><span class="comment">     *              拦截指定注解类型的注解并且将注解对象当做参数传递</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</span><br><span class="line">    <span class="meta">@Around</span>(<span class="string">"@annotation(cacheFind)"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">around</span><span class="params">(ProceedingJoinPoint joinPoint, CacheFind cacheFind)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 获取注解中的 key</span></span><br><span class="line">        String key = cacheFind.key();</span><br><span class="line">        <span class="comment">// 动态获取第一个参数当做 key</span></span><br><span class="line">        Object firstArg = joinPoint.getArgs()[<span class="number">0</span>].toString();</span><br><span class="line">        key += <span class="string">"::"</span> + firstArg;</span><br><span class="line">        Object result = <span class="keyword">null</span>;</span><br><span class="line">        <span class="comment">// 根据 key 查询 redis</span></span><br><span class="line">        <span class="keyword">if</span> (jedis.exists(key)) &#123;</span><br><span class="line">            String json = jedis.get(key);</span><br><span class="line">            <span class="comment">// 获取返回值类型</span></span><br><span class="line">            MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();</span><br><span class="line">            result = ObjectMapperUtil.toObject(json, methodSignature.getReturnType());</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// key 不存在, 第一次查询数据库</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                result = joinPoint.proceed();</span><br><span class="line">                <span class="comment">// 将数据保存到 redis 中</span></span><br><span class="line">                String json = ObjectMapperUtil.toJson(result);</span><br><span class="line">                <span class="keyword">int</span> secondes = cacheFind.secondes();</span><br><span class="line">                <span class="keyword">if</span> (secondes &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    jedis.setex(key, secondes, json);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    jedis.set(key, json);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Throwable throwable) &#123;</span><br><span class="line">                throwable.printStackTrace();</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(throwable);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实现商品分类的缓存"><a href="#实现商品分类的缓存" class="headerlink" title="实现商品分类的缓存"></a>实现商品分类的缓存</h3><blockquote>
+<p>在 <code>ItemCatServiceImpl</code> 类中该方法上使用该注解。实现商品列表查询时的缓存处理</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="meta">@CacheFind</span>(key = <span class="string">"ITEM_CAT_ID"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> ItemCat <span class="title">findItemCatById</span><span class="params">(Long itemCatId)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//......</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+
       
     </div>
 
@@ -495,7 +729,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JT-Yuanzhibx"><span class="nav-number">1.</span> <span class="nav-text">JT_Yuanzhibx</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JT-Yuanzhibx"><span class="nav-number">1.</span> <span class="nav-text">JT_Yuanzhibx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是-Redis"><span class="nav-number">2.</span> <span class="nav-text">什么是 Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是-NOSQL"><span class="nav-number">2.1.</span> <span class="nav-text">什么是 NOSQL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是消息中间件"><span class="nav-number">2.2.</span> <span class="nav-text">什么是消息中间件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么需要使用-Redis-缓存"><span class="nav-number">3.</span> <span class="nav-text">为什么需要使用 Redis 缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存应如何设计"><span class="nav-number">3.1.</span> <span class="nav-text">缓存应如何设计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis-安装"><span class="nav-number">4.</span> <span class="nav-text">Redis 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上传-Redis-安装包"><span class="nav-number">4.1.</span> <span class="nav-text">上传 Redis 安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Redis"><span class="nav-number">4.2.</span> <span class="nav-text">安装 Redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改配置文件"><span class="nav-number">4.3.</span> <span class="nav-text">修改配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis-命令"><span class="nav-number">4.4.</span> <span class="nav-text">Redis 命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-整合-Redis"><span class="nav-number">5.</span> <span class="nav-text">Spring 整合 Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析"><span class="nav-number">5.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入-Jar-包"><span class="nav-number">5.2.</span> <span class="nav-text">引入 Jar 包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redis-properties"><span class="nav-number">5.3.</span> <span class="nav-text">redis.properties</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑-Redis-配置类"><span class="nav-number">5.4.</span> <span class="nav-text">编辑 Redis 配置类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装-ObjectMapperUtil"><span class="nav-number">6.</span> <span class="nav-text">封装 ObjectMapperUtil</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#商品分类缓存实现"><span class="nav-number">7.</span> <span class="nav-text">商品分类缓存实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#业务分析"><span class="nav-number">7.1.</span> <span class="nav-text">业务分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ItemCatController"><span class="nav-number">7.2.</span> <span class="nav-text">ItemCatController</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ItemCatService-amp-Impl"><span class="nav-number">7.3.</span> <span class="nav-text">ItemCatService &amp; Impl</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现"><span class="nav-number">7.4.</span> <span class="nav-text">实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AOP-X-Redis"><span class="nav-number">8.</span> <span class="nav-text">AOP X Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#传统项目弊端"><span class="nav-number">8.1.</span> <span class="nav-text">传统项目弊端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AOP-核心理念"><span class="nav-number">8.2.</span> <span class="nav-text">AOP 核心理念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切入点表达式"><span class="nav-number">8.3.</span> <span class="nav-text">切入点表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通知方法"><span class="nav-number">8.4.</span> <span class="nav-text">通知方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AOP-实现-Redis-缓存"><span class="nav-number">9.</span> <span class="nav-text">AOP 实现 Redis 缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义注解"><span class="nav-number">9.1.</span> <span class="nav-text">自定义注解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标识注解"><span class="nav-number">9.2.</span> <span class="nav-text">标识注解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现-1"><span class="nav-number">9.3.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现商品分类的缓存"><span class="nav-number">9.4.</span> <span class="nav-text">实现商品分类的缓存</span></a></li></ol></li></ol></div>
             
 
           </div>
