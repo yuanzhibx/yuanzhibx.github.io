@@ -64,12 +64,12 @@
 
 
 
-<meta name="description" content="Java基础JDK和JRE区别？ JRE即Java Runtime Environment，Java运行环境。包括Java虚拟机和Java类库 JDK是Java开发工具包，例如：tools.jar">
+<meta name="description" content="Java 基础JDK 和 JRE 区别？ JRE即 Java Runtime Environment，Java 运行环境。包括 Java 虚拟机和 Java 类库 JDK 是 Java Development Kit，它是功能齐全的 Java SDK。它拥有 JRE 所拥有的一切，还有编译器（javac）和工具（如 javadoc 和 jdb）。它能够创建和编译程序。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java基础回顾">
+<meta property="og:title" content="Java基础回顾 【重构中】">
 <meta property="og:url" content="https://yuanzhibx.github.io/2020/02/18/Java%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/index.html">
 <meta property="og:site_name" content="Yuanzhibx&#39;s Blog">
-<meta property="og:description" content="Java基础JDK和JRE区别？ JRE即Java Runtime Environment，Java运行环境。包括Java虚拟机和Java类库 JDK是Java开发工具包，例如：tools.jar">
+<meta property="og:description" content="Java 基础JDK 和 JRE 区别？ JRE即 Java Runtime Environment，Java 运行环境。包括 Java 虚拟机和 Java 类库 JDK 是 Java Development Kit，它是功能齐全的 Java SDK。它拥有 JRE 所拥有的一切，还有编译器（javac）和工具（如 javadoc 和 jdb）。它能够创建和编译程序。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://cdn.tycoding.cn/20180127210359151.png">
 <meta property="og:image" content="http://cdn.tycoding.cn/1120165-20171207161602113-1451349858.png">
@@ -85,7 +85,7 @@
 <meta property="og:image" content="http://cdn.tycoding.cn/Java+%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%8F%98%E8%BF%81.png">
 <meta property="og:image" content="http://cdn.tycoding.cn/2019-4%E6%AD%BB%E9%94%811.png">
 <meta property="article:published_time" content="2020-02-18T09:29:31.000Z">
-<meta property="article:modified_time" content="2020-07-24T01:50:35.359Z">
+<meta property="article:modified_time" content="2020-07-24T02:59:14.659Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://cdn.tycoding.cn/20180127210359151.png">
@@ -124,7 +124,7 @@
 
 
 
-  <title>Java基础回顾 | Yuanzhibx's Blog</title>
+  <title>Java基础回顾 【重构中】 | Yuanzhibx's Blog</title>
   
 
 
@@ -266,7 +266,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java基础回顾</h1>
+          <h1 class="post-title" itemprop="name headline">Java基础回顾 【重构中】</h1>
         
 
         <div class="post-meta">
@@ -302,11 +302,45 @@
       
 
       
-        <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="JDK和JRE区别？"><a href="#JDK和JRE区别？" class="headerlink" title="JDK和JRE区别？"></a>JDK和JRE区别？</h2><ol>
-<li><code>JRE</code>即Java Runtime Environment，Java运行环境。包括Java虚拟机和Java类库</li>
-<li><code>JDK</code>是Java开发<strong>工具包</strong>，例如：<code>tools.jar</code></li>
+        <h1 id="Java-基础"><a href="#Java-基础" class="headerlink" title="Java 基础"></a>Java 基础</h1><h2 id="JDK-和-JRE-区别？"><a href="#JDK-和-JRE-区别？" class="headerlink" title="JDK 和 JRE 区别？"></a>JDK 和 JRE 区别？</h2><ol>
+<li><code>JRE</code>即 Java Runtime Environment，Java 运行环境。包括 Java 虚拟机和 Java 类库</li>
+<li><code>JDK</code> 是 Java Development Kit，它是功能齐全的 Java SDK。它拥有 JRE 所拥有的一切，还有编译器（javac）和工具（如 javadoc 和 jdb）。它能够创建和编译程序。<a id="more"></a>
+
+</li>
 </ol>
-<a id="more"></a>
+<h2 id="Oracle-JDK-和-OpenJDK-的对比"><a href="#Oracle-JDK-和-OpenJDK-的对比" class="headerlink" title="Oracle JDK 和 OpenJDK 的对比"></a>Oracle JDK 和 OpenJDK 的对比</h2><ol>
+<li>Oracle JDK 大概每 6 个月发一次主要版本，而 OpenJDK 版本大概每三个月发布一次</li>
+<li>OpenJDK 是一个参考模型并且是完全开源的，而 Oracle JDK 是 OpenJDK 的一个实现，并不是完全开源的</li>
+<li>Oracle JDK 将更多地关注稳定性，它重视更多的企业级用户，而 OpenJDK 经常发布以支持其他性能，这可能会导致不稳定</li>
+<li>在响应性和 JVM 性能方面，Oracle JDK 与 OpenJDK 相比提供了更好的性能</li>
+<li>Oracle JDK 不会为即将发布的版本提供长期支持，用户每次都必须通过更新到最新版本获得支持来获取最新版本</li>
+<li>Oracle JDK 根据二进制代码许可协议获得许可，而 OpenJDK 根据 GPL v2 许可获得许可</li>
+</ol>
+<h2 id="Java-语言特点"><a href="#Java-语言特点" class="headerlink" title="Java 语言特点"></a>Java 语言特点</h2><ol>
+<li>简单易学</li>
+<li>面向对象</li>
+<li>一次编译，到处运行（JVM 实现平台无关性）</li>
+<li>支持多线程</li>
+<li>支持网络编程</li>
+</ol>
+<h1 id="Java-语法"><a href="#Java-语法" class="headerlink" title="Java 语法"></a>Java 语法</h1><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>Java 中的注释有三种：</p>
+<ol>
+<li>单行注释<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br></pre></td></tr></table></figure></li>
+<li>多行注释<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    多行注释</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure></li>
+<li>文档注释<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 文档注释</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="continue、break、和-return-的区别"><a href="#continue、break、和-return-的区别" class="headerlink" title="continue、break、和 return 的区别"></a>continue、break、和 return 的区别</h2><p>在循环结构中，当循环条件不满足或者循环次数达到要求时，循环会正常结束。但是，有时候可能需要在循环的过程中，当发生了某种条件之后 ，提前终止循环，这就需要用到下面几个关键词：</p>
+<ol>
+<li>continue ：指跳出当前的这一次循环，继续下一次循环。</li>
+<li>break ：指跳出整个循环体，继续执行循环下面的语句。</li>
+</ol>
+<p>return 用于跳出所在方法，结束该方法的运行。return 一般有两种用法：</p>
+<ol>
+<li><code>return;</code> ：直接使用 return 结束方法执行，用于没有返回值函数的方法</li>
+<li><code>return value;</code> ：return 一个特定值，用于有返回值函数的方法</li>
+</ol>
 <h2 id="和-equals-区别"><a href="#和-equals-区别" class="headerlink" title="== 和 equals 区别"></a>== 和 equals 区别</h2><ol>
 <li><p><code>==</code>是一个比较运算符，对于基本类型，比较的是具体的数值(int、double..)；对于引用类型，比较的是对象的内存地址</p>
 </li>
@@ -340,32 +374,11 @@
 <ol start="3">
 <li>类中所有<code>private</code>方法都是隐式的定义为final，为private方法添加final就毫无意义。</li>
 </ol>
-<h2 id="String属于基本数据类型吗？"><a href="#String属于基本数据类型吗？" class="headerlink" title="String属于基本数据类型吗？"></a>String属于基本数据类型吗？</h2><p><strong>不是，String属于特殊的引用类型</strong></p>
-<p>Java中基本数据类型有：int、short、long、char、boolean、float、double、byte</p>
-<ol>
-<li><code>String</code>是特殊的引用类型并且是<code>final</code>的，JVM使用字符串常量池储存字符串数据。创建新的字符串，JVM首先会去字符串常量池中寻找有没有该字符串，如果没有就添加到该常量池，如果有就返回该字符串在常量池中的引用。</li>
-<li><code>String s = &quot;a&quot;; s += &quot;b&quot;;</code>，这段代码执行前后，字符串常量池中将出现<code>a</code>和<code>ab</code>两个字符串常量，而原本<code>s</code>变量的引用指向了常量池中<code>ab</code>。</li>
-<li><code>String s = new String(&quot;ab&quot;)</code>，这段代码一共创建了几个对象？<strong>一个或两个</strong>。如果字符串常量池中有了<code>ab</code>这个字符串(比如在此之前已经使用了<code>String str = &quot;ab&quot;</code>)，那么新的<code>s</code>对象引用其实仅仅是指向了字符串常量中的<code>ab</code>，并没有创建新的字符串对象。<strong>但是</strong>，每次调用<code>new</code>都会在堆内存开辟空间，创建一个String对象，这是肯定的。</li>
-</ol>
-<p>栗子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String a = <span class="string">"abc"</span>;</span><br><span class="line">        String b = <span class="string">"abc"</span>;</span><br><span class="line">        String c = <span class="keyword">new</span> String(<span class="string">"abc"</span>);</span><br><span class="line">        System.out.println(a == b); <span class="comment">//true</span></span><br><span class="line">        System.out.println(a.equals(b)); <span class="comment">//true</span></span><br><span class="line">        System.out.println(a.equals(c)); <span class="comment">//true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="String和StringBuffer和StringBuilder的区别"><a href="#String和StringBuffer和StringBuilder的区别" class="headerlink" title="String和StringBuffer和StringBuilder的区别"></a>String和StringBuffer和StringBuilder的区别</h3><ol>
-<li><code>String</code>是不可变字符串，<code>StringBuffer</code>和<code>StringBuilder</code>是可变字符串。如果经常改变字符串的原始数据，最好使用<code>StringBuffer</code>代替。</li>
-<li><code>String</code>默认重写了<code>equals</code>方法和<code>hashCode()</code>方法；而<code>StringBuffer</code>没有重写<code>equals</code>方法，使用<code>new StringBuffer(&quot;&quot;)</code>会直接在堆内存中开辟空间储存对象。因此将<code>StringBuffer</code>对象储存仅Java集合中可能会出现问题。</li>
-<li><code>StringBuffer</code>是线程安全的，效率低；<code>StringBuilder</code>是线程不安全的，效率高。</li>
-</ol>
-<h2 id="static关键字是否可覆盖？"><a href="#static关键字是否可覆盖？" class="headerlink" title="static关键字是否可覆盖？"></a>static关键字是否可覆盖？</h2><p><code>static</code>关键字表明一个成员变量或者是成员方法可以在没有所属的类实例变量的情况下被访问。被<code>static</code>标记的方法不能被覆盖，因为方法的覆盖是基于运行时动态绑定的，而<code>static</code>方法在编译时就已经和该类绑定了，也就是<code>static</code>标记的变量、方法都是随着类的加载而加载的，所以可以通过不创建对象实例就能访问该变量、方法；而不创建对象实例就访问非<code>static</code>变量、方法是不行的，因为此变量、方法还没有被创建。</p>
-<ul>
-<li><code>static</code>标记的方法只能访问<code>static</code>变量或方法</li>
-<li>非<code>static</code>标记的方法可以访问<code>static</code>或非<code>static</code>标记的变量或方法</li>
-</ul>
-<h2 id="Java-基本数据类型？各自占多少字节？"><a href="#Java-基本数据类型？各自占多少字节？" class="headerlink" title="Java 基本数据类型？各自占多少字节？"></a>Java 基本数据类型？各自占多少字节？</h2><p>Java<strong>中</strong>有8种基本数据类型，分别为：</p>
+<h1 id="Java-数据类型"><a href="#Java-数据类型" class="headerlink" title="Java 数据类型"></a>Java 数据类型</h1><h2 id="Java-基本数据类型？各自占多少字节？"><a href="#Java-基本数据类型？各自占多少字节？" class="headerlink" title="Java 基本数据类型？各自占多少字节？"></a>Java 基本数据类型？各自占多少字节？</h2><p>Java<strong>中</strong>有8种基本数据类型，分别为：</p>
 <ol>
 <li>6种数字类型 ：byte、short、int、long、float、double</li>
 <li>1种字符类型：char</li>
-<li>1中布尔型：boolean。 </li>
+<li>1种布尔型：boolean。</li>
 </ol>
 <table>
 <thead>
@@ -427,11 +440,11 @@
 </tbody></table>
 <p>对于boolean，官方文档未明确定义，它依赖于 JVM 厂商的具体实现。逻辑上理解是占用 1 位，但是实际中会考虑计算机高效存储因素。</p>
 <h2 id="自动拆箱、自动装箱"><a href="#自动拆箱、自动装箱" class="headerlink" title="自动拆箱、自动装箱"></a>自动拆箱、自动装箱</h2><p>因为Java自身面向对象OOP的特性，而一切基本数据类型都不具有面向对象的特性，所以Java为基本的数据类型提供了对应的引用类型。</p>
-<p>具体表现在程序在编译期间自动将基本数据类型转换为引用类型(装箱)、将引用数据类型转换为基本数据类型(拆箱)</p>
 <ul>
 <li><strong>装箱</strong>：将基本类型用它们对应的引用类型包装起来；</li>
 <li><strong>拆箱</strong>：将包装类型转换为基本数据类型；</li>
 </ul>
+<p>具体表现在程序在编译期间自动将基本数据类型转换为引用类型(装箱)、将引用数据类型转换为基本数据类型(拆箱)</p>
 <table>
 <thead>
 <tr>
@@ -479,10 +492,8 @@
 <p>结果：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">true</span></span><br><span class="line"><span class="keyword">false</span></span><br></pre></td></tr></table></figure>
 
-
 <p>Java中实现基本数据类型和引用类型之间的拆装箱一般都是用过<code>valueOf()</code>方法实现的。例如我们看下<code>Integer</code>类的<code>valueOf()</code>方法源码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Integer <span class="title">valueOf</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (i &gt;= IntegerCache.low &amp;&amp; i &lt;= IntegerCache.high)</span><br><span class="line">        <span class="keyword">return</span> IntegerCache.cache[i + (-IntegerCache.low)];</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Integer(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 
 <p>可以看到：当声明一个新的整数型变量，编译时通过<code>Integer</code>类的<code>valueOf()</code>进行拆装箱计算，这个方法会首先比较这个整数值是否在<code>IntegerCache</code>的范围内，如果在就返回<code>IntegerCache</code>类中的数值；如果不在就直接<code>new Integer</code>。那么我们看下<code>IntegerCache</code>类源码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">IntegerCache</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> low = -<span class="number">128</span>;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> high;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> Integer cache[];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        <span class="comment">// high value may be configured by property</span></span><br><span class="line">        <span class="keyword">int</span> h = <span class="number">127</span>;</span><br><span class="line">        String integerCacheHighPropValue =</span><br><span class="line">            sun.misc.VM.getSavedProperty(<span class="string">"java.lang.Integer.IntegerCache.high"</span>);</span><br><span class="line">        <span class="keyword">if</span> (integerCacheHighPropValue != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">int</span> i = parseInt(integerCacheHighPropValue);</span><br><span class="line">                i = Math.max(i, <span class="number">127</span>);</span><br><span class="line">                <span class="comment">// Maximum array size is Integer.MAX_VALUE</span></span><br><span class="line">                h = Math.min(i, Integer.MAX_VALUE - (-low) -<span class="number">1</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span>( NumberFormatException nfe) &#123;</span><br><span class="line">                <span class="comment">// If the property cannot be parsed into an int, ignore it.</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        high = h;</span><br><span class="line"></span><br><span class="line">        cache = <span class="keyword">new</span> Integer[(high - low) + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> j = low;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; cache.length; k++)</span><br><span class="line">            cache[k] = <span class="keyword">new</span> Integer(j++);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// range [-128, 127] must be interned (JLS7 5.1.7)</span></span><br><span class="line">        <span class="keyword">assert</span> IntegerCache.high &gt;= <span class="number">127</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">IntegerCache</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -490,15 +501,79 @@
 
 <p>所以，当声明一个新的整型变量时（int、Integer），如果这个变量值的大小在<code>[-128, 127]</code>之间，就直接返回<code>IntegerCache</code>中储存的常量值，否则就直接<code>new</code>一个新的<code>Integer</code>来保存这个常量值。所以上面才会出现<code>false</code>的结果。</p>
 <p><strong>同理</strong>：其他的数据类型例如：<code>long</code>、<code>short</code>等都具有对应的<code>LongCache</code>、<code>ShortCache</code>等类。</p>
-<h2 id="Overriding和Overloaded"><a href="#Overriding和Overloaded" class="headerlink" title="Overriding和Overloaded"></a>Overriding和Overloaded</h2><p>方法的重写Overriding和方法的重载Overloaded都是Java多态性的一种表现。</p>
+<h2 id="String属于基本数据类型吗？"><a href="#String属于基本数据类型吗？" class="headerlink" title="String属于基本数据类型吗？"></a>String属于基本数据类型吗？</h2><p><strong>不是，String属于特殊的引用类型</strong></p>
+<p>Java中基本数据类型有：int、short、long、char、boolean、float、double、byte</p>
+<ol>
+<li><code>String</code>是特殊的引用类型并且是<code>final</code>的，JVM使用字符串常量池储存字符串数据。创建新的字符串，JVM首先会去字符串常量池中寻找有没有该字符串，如果没有就添加到该常量池，如果有就返回该字符串在常量池中的引用。</li>
+<li><code>String s = &quot;a&quot;; s += &quot;b&quot;;</code>，这段代码执行前后，字符串常量池中将出现<code>a</code>和<code>ab</code>两个字符串常量，而原本<code>s</code>变量的引用指向了常量池中<code>ab</code>。</li>
+<li><code>String s = new String(&quot;ab&quot;)</code>，这段代码一共创建了几个对象？<strong>一个或两个</strong>。如果字符串常量池中有了<code>ab</code>这个字符串(比如在此之前已经使用了<code>String str = &quot;ab&quot;</code>)，那么新的<code>s</code>对象引用其实仅仅是指向了字符串常量中的<code>ab</code>，并没有创建新的字符串对象。<strong>但是</strong>，每次调用<code>new</code>都会在堆内存开辟空间，创建一个String对象，这是肯定的。</li>
+</ol>
+<p>栗子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String a = <span class="string">"abc"</span>;</span><br><span class="line">        String b = <span class="string">"abc"</span>;</span><br><span class="line">        String c = <span class="keyword">new</span> String(<span class="string">"abc"</span>);</span><br><span class="line">        System.out.println(a == b); <span class="comment">//true</span></span><br><span class="line">        System.out.println(a.equals(b)); <span class="comment">//true</span></span><br><span class="line">        System.out.println(a.equals(c)); <span class="comment">//true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="String、StringBuffer-和-StringBuilder-的区别"><a href="#String、StringBuffer-和-StringBuilder-的区别" class="headerlink" title="String、StringBuffer 和 StringBuilder 的区别"></a>String、StringBuffer 和 StringBuilder 的区别</h3><ol>
+<li><code>String</code>是不可变字符串，<code>StringBuffer</code>和<code>StringBuilder</code>是可变字符串。如果经常改变字符串的原始数据，最好使用<code>StringBuffer</code>代替。</li>
+<li><code>String</code>默认重写了<code>equals</code>方法和<code>hashCode()</code>方法；而<code>StringBuffer</code>没有重写<code>equals</code>方法，使用<code>new StringBuffer(&quot;&quot;)</code>会直接在堆内存中开辟空间储存对象。因此将<code>StringBuffer</code>对象储存仅Java集合中可能会出现问题。</li>
+<li><code>StringBuffer</code>是线程安全的，效率低；<code>StringBuilder</code>是线程不安全的，效率高。</li>
+</ol>
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><h2 id="Overriding和Overloaded"><a href="#Overriding和Overloaded" class="headerlink" title="Overriding和Overloaded"></a>Overriding和Overloaded</h2><p>方法的重写Overriding和方法的重载Overloaded都是Java多态性的一种表现。</p>
 <ul>
 <li><code>Overriding</code>: 子类中定义了和父类中名称、参数列表相同的方法</li>
 <li><code>Overloaded</code>: 方法名相同，参数列表不同</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th align="left">区别点</th>
+<th align="left">重载方法</th>
+<th align="left">重写方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">发生范围</td>
+<td align="left">同一个类</td>
+<td align="left">子类 中</td>
+</tr>
+<tr>
+<td align="left">参数列表</td>
+<td align="left">必须修改</td>
+<td align="left">一定不能修改</td>
+</tr>
+<tr>
+<td align="left">返回类型</td>
+<td align="left">可修改</td>
+<td align="left">一定不能修改</td>
+</tr>
+<tr>
+<td align="left">异常</td>
+<td align="left">可修改</td>
+<td align="left">可以减少或删除，一定不能抛出新的或者更广的异常</td>
+</tr>
+<tr>
+<td align="left">访问修饰符</td>
+<td align="left">可修改</td>
+<td align="left">一定不能做更严格的限制（可以降低限制）</td>
+</tr>
+<tr>
+<td align="left">发生阶段</td>
+<td align="left">编译期</td>
+<td align="left">运行期</td>
+</tr>
+</tbody></table>
+<h2 id="static关键字是否可覆盖？"><a href="#static关键字是否可覆盖？" class="headerlink" title="static关键字是否可覆盖？"></a>static关键字是否可覆盖？</h2><p><code>static</code> 关键字表明一个成员变量或者是成员方法可以在没有所属的类实例变量的情况下被访问。被 <code>static</code> 标记的方法不能被覆盖，因为方法的覆盖是基于运行时动态绑定的，而 <code>static</code> 方法在编译时就已经和该类绑定了，也就是 <code>static</code> 标记的变量、方法都是随着类的加载而加载的，所以可以通过不创建对象实例就能访问该变量、方法；而不创建对象实例就访问非 <code>static</code> 变量、方法是不行的，因为此变量、方法还没有被创建。</p>
+<ul>
+<li><code>static</code> 标记的方法只能访问 <code>static</code> 变量或方法</li>
+<li>非 <code>static</code> 标记的方法可以访问 <code>static</code> 或非 <code>static</code> 标记的变量或方法</li>
+</ul>
+<h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h2 id="面向对象和面向过程的区别"><a href="#面向对象和面向过程的区别" class="headerlink" title="面向对象和面向过程的区别"></a>面向对象和面向过程的区别</h2><ul>
+<li><strong>面向过程</strong> ：<strong>面向过程性能比面向对象高。</strong> 因为类调用时需要实例化，开销比较大，比较消耗资源，所以当性能是最重要的考量因素的时候，比如单片机、嵌入式开发、Linux/Unix 等一般采用面向过程开发。但是，<strong>面向过程没有面向对象易维护、易复用、易扩展。</strong></li>
+<li><strong>面向对象</strong> ：<strong>面向对象易维护、易复用、易扩展。</strong> 因为面向对象有封装、继承、多态性的特性，所以可以设计出低耦合的系统，使系统更加灵活、更加易于维护。但是，<strong>面向对象性能比面向过程低</strong>。</li>
+</ul>
 <h2 id="Java支持多继承吗？"><a href="#Java支持多继承吗？" class="headerlink" title="Java支持多继承吗？"></a>Java支持多继承吗？</h2><p>不支持。Java中每个类都只能继承一个类，可以实现多个接口。但是可以通过<strong>多层</strong>继承实现。</p>
 <p>类定义属性和方法，描述某一类事物的抽象。而接口定义了行为，并不限于任何具体意向。</p>
 <p>从逻辑上说，单继承更加明确指出一个子类就应该是其父类代表的事物中某个更具体的类别。而接口则不同，接口定义了一些公共行为。因此类对接口的implements称为实现而不能称为继承。</p>
-<h2 id="接口和抽象类的区别？"><a href="#接口和抽象类的区别？" class="headerlink" title="接口和抽象类的区别？"></a>接口和抽象类的区别？</h2><ul>
+<h1 id="接口和抽象类"><a href="#接口和抽象类" class="headerlink" title="接口和抽象类"></a>接口和抽象类</h1><h2 id="接口和抽象类的区别？"><a href="#接口和抽象类的区别？" class="headerlink" title="接口和抽象类的区别？"></a>接口和抽象类的区别？</h2><ul>
 <li>接口中所有的方法隐含都是抽象的。而抽象类则可以同时包含抽象和非抽象的方法。</li>
 <li>接口中定义的方法必须是不包含具体实现的（即隐式的抽象方法）；但抽象类中既可以定义抽象方法（不包含具体实现）又可以定义非抽象方法 ( 包含具体实现 )</li>
 <li>类实现接口就必须实现接口中定义的所有方法；但继承一个抽象类，可以不实现抽象类中的抽象方法 ( 但前提是这个类也是抽象的 )</li>
@@ -515,7 +590,7 @@
 <p>方法传递时传递的参数其实仅值原参数的一个拷贝，对于基本类型传递的就是具体的值的拷贝，对于引用类型传递的是对象地址。</p>
 <p>所以上面的例子中，基本数据类型a,b经过swap方法并没有改变原始值，而引用类型arr数组经过swap方法就改变了原始值（因为直接对对象堆内存地址数据操作）。</p>
 <h2 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a>IO流</h2><p><img src="http://cdn.tycoding.cn/20180127210359151.png" alt></p>
-<h3 id="Java中有几种类型的流？"><a href="#Java中有几种类型的流？" class="headerlink" title="[Java中有几种类型的流？"></a>[Java中有几种类型的流？</h3><p>字符流和字节流。字节流继承<code>InputStream</code>和<code>OutputStream</code>；字符流继承自<code>InputStreamReader</code>和<code>OutputStreamWriter</code>。</p>
+<h3 id="Java中有几种类型的流？"><a href="#Java中有几种类型的流？" class="headerlink" title="Java中有几种类型的流？"></a>Java中有几种类型的流？</h3><p>字符流和字节流。字节流继承<code>InputStream</code>和<code>OutputStream</code>；字符流继承自<code>InputStreamReader</code>和<code>OutputStreamWriter</code>。</p>
 <h3 id="Java-IO中的方法阻塞"><a href="#Java-IO中的方法阻塞" class="headerlink" title="Java IO中的方法阻塞"></a>Java IO中的方法阻塞</h3><p>Java中的阻塞式方法是指在程序调用该方法时，必须等待输入数据可用或检测到输入结果时结束或抛出异常，否则程序会一直停留在该语句上，不会执行下面的语句。比如<code>read()</code>和<code>readLine()</code>方法。</p>
 <h3 id="字符流和字节流的区别？"><a href="#字符流和字节流的区别？" class="headerlink" title="字符流和字节流的区别？"></a>字符流和字节流的区别？</h3><p>数据的输入和输出在计算机中最终都是通过字节的形式传递的，对应通过<code>InputStream</code>和<code>OutputStream</code>实现，他们都是针对字节操作的。</p>
 <p>而有时候通常需要读取一些完全是字符的文本数据，通常使用基于字节流的包装类字符流完成操作，他们通过<code>InputStreamReader</code>和<code>OutputStreamWriter</code>实现。</p>
@@ -1026,7 +1101,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java基础"><span class="nav-number">1.</span> <span class="nav-text">Java基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JDK和JRE区别？"><span class="nav-number">1.1.</span> <span class="nav-text">JDK和JRE区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#和-equals-区别"><span class="nav-number">1.2.</span> <span class="nav-text">&#x3D;&#x3D; 和 equals 区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两个对象的hashCode-相同，则equals-一定为true？"><span class="nav-number">1.3.</span> <span class="nav-text">两个对象的hashCode()相同，则equals()一定为true？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#final-的作用"><span class="nav-number">1.4.</span> <span class="nav-text">final 的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String属于基本数据类型吗？"><span class="nav-number">1.5.</span> <span class="nav-text">String属于基本数据类型吗？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#String和StringBuffer和StringBuilder的区别"><span class="nav-number">1.5.1.</span> <span class="nav-text">String和StringBuffer和StringBuilder的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static关键字是否可覆盖？"><span class="nav-number">1.6.</span> <span class="nav-text">static关键字是否可覆盖？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-基本数据类型？各自占多少字节？"><span class="nav-number">1.7.</span> <span class="nav-text">Java 基本数据类型？各自占多少字节？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动拆箱、自动装箱"><span class="nav-number">1.8.</span> <span class="nav-text">自动拆箱、自动装箱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overriding和Overloaded"><span class="nav-number">1.9.</span> <span class="nav-text">Overriding和Overloaded</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java支持多继承吗？"><span class="nav-number">1.10.</span> <span class="nav-text">Java支持多继承吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口和抽象类的区别？"><span class="nav-number">1.11.</span> <span class="nav-text">接口和抽象类的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用传递和值传递"><span class="nav-number">1.12.</span> <span class="nav-text">引用传递和值传递</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO流"><span class="nav-number">1.13.</span> <span class="nav-text">IO流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java中有几种类型的流？"><span class="nav-number">1.13.1.</span> <span class="nav-text">[Java中有几种类型的流？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-IO中的方法阻塞"><span class="nav-number">1.13.2.</span> <span class="nav-text">Java IO中的方法阻塞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符流和字节流的区别？"><span class="nav-number">1.13.3.</span> <span class="nav-text">字符流和字节流的区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NIO"><span class="nav-number">1.13.4.</span> <span class="nav-text">NIO</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说说List、Set、Map三者的区别"><span class="nav-number">1.14.</span> <span class="nav-text">说说List、Set、Map三者的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array和ArrayList有什么区别？"><span class="nav-number">1.15.</span> <span class="nav-text">Array和ArrayList有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList和LinkedList的区别？"><span class="nav-number">1.16.</span> <span class="nav-text">ArrayList和LinkedList的区别？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是迭代器"><span class="nav-number">1.16.1.</span> <span class="nav-text">什么是迭代器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Iterator和ListIterator的区别？"><span class="nav-number">1.16.2.</span> <span class="nav-text">Iterator和ListIterator的区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RandomAccess接口"><span class="nav-number">1.16.3.</span> <span class="nav-text">RandomAccess接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链表"><span class="nav-number">1.16.4.</span> <span class="nav-text">链表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList和Vector和LinkedList的区别？"><span class="nav-number">1.17.</span> <span class="nav-text">ArrayList和Vector和LinkedList的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#谈谈ArrayList的扩容机制"><span class="nav-number">1.18.</span> <span class="nav-text">谈谈ArrayList的扩容机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap和HashTable的区别？"><span class="nav-number">1.19.</span> <span class="nav-text">HashMap和HashTable的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap和HashSet区别"><span class="nav-number">1.20.</span> <span class="nav-text">HashMap和HashSet区别?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashSet如何检查重复？"><span class="nav-number">1.21.</span> <span class="nav-text">HashSet如何检查重复？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap底层实现？"><span class="nav-number">1.22.</span> <span class="nav-text">HashMap底层实现？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashHash"><span class="nav-number">1.22.1.</span> <span class="nav-text">#HashHash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hash冲突"><span class="nav-number">1.22.2.</span> <span class="nav-text">Hash冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现原理"><span class="nav-number">1.22.3.</span> <span class="nav-text">[实现原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection和Collections的区别？"><span class="nav-number">1.23.</span> <span class="nav-text">Collection和Collections的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Comparable和Comparator的区别？"><span class="nav-number">1.24.</span> <span class="nav-text">Comparable和Comparator的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java集合框架总结"><span class="nav-number">1.25.</span> <span class="nav-text">Java集合框架总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Collection"><span class="nav-number">1.25.1.</span> <span class="nav-text">Collection</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#List"><span class="nav-number">1.25.1.1.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Set"><span class="nav-number">1.25.1.2.</span> <span class="nav-text">Set</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Map"><span class="nav-number">1.25.2.</span> <span class="nav-text">Map</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java并发"><span class="nav-number">2.</span> <span class="nav-text">Java并发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线程和进程的区别？"><span class="nav-number">2.1.</span> <span class="nav-text">线程和进程的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从JVM角度分析进程和线程的关系？"><span class="nav-number">2.2.</span> <span class="nav-text">从JVM角度分析进程和线程的关系？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么方法区和堆是线程共享区？"><span class="nav-number">2.2.1.</span> <span class="nav-text">为什么方法区和堆是线程共享区？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么虚拟机栈和本地方法栈是线程独占区？"><span class="nav-number">2.2.2.</span> <span class="nav-text">为什么虚拟机栈和本地方法栈是线程独占区？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序计数器是什么？"><span class="nav-number">2.2.3.</span> <span class="nav-text">程序计数器是什么？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说说并行和并发的区别？"><span class="nav-number">2.3.</span> <span class="nav-text">说说并行和并发的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用多线程可能带来什么问题？"><span class="nav-number">2.4.</span> <span class="nav-text">使用多线程可能带来什么问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说说线程的生命周期和状态？"><span class="nav-number">2.5.</span> <span class="nav-text">说说线程的生命周期和状态？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是上下文切换？"><span class="nav-number">2.6.</span> <span class="nav-text">什么是上下文切换？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是死锁？如何避免"><span class="nav-number">2.7.</span> <span class="nav-text">什么是死锁？如何避免?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说说sleep-方法和wait-方法的区别？"><span class="nav-number">2.8.</span> <span class="nav-text">说说sleep()方法和wait()方法的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调用start-方法会执行run-方法，为什么不能直接调用run-方法？"><span class="nav-number">2.9.</span> <span class="nav-text">调用start()方法会执行run()方法，为什么不能直接调用run()方法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synchronized关键字"><span class="nav-number">2.10.</span> <span class="nav-text">synchronized关键字</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-基础"><span class="nav-number">1.</span> <span class="nav-text">Java 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JDK-和-JRE-区别？"><span class="nav-number">1.1.</span> <span class="nav-text">JDK 和 JRE 区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Oracle-JDK-和-OpenJDK-的对比"><span class="nav-number">1.2.</span> <span class="nav-text">Oracle JDK 和 OpenJDK 的对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-语言特点"><span class="nav-number">1.3.</span> <span class="nav-text">Java 语言特点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-语法"><span class="nav-number">2.</span> <span class="nav-text">Java 语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">2.1.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#continue、break、和-return-的区别"><span class="nav-number">2.2.</span> <span class="nav-text">continue、break、和 return 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#和-equals-区别"><span class="nav-number">2.3.</span> <span class="nav-text">&#x3D;&#x3D; 和 equals 区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两个对象的hashCode-相同，则equals-一定为true？"><span class="nav-number">2.4.</span> <span class="nav-text">两个对象的hashCode()相同，则equals()一定为true？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#final-的作用"><span class="nav-number">2.5.</span> <span class="nav-text">final 的作用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-数据类型"><span class="nav-number">3.</span> <span class="nav-text">Java 数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-基本数据类型？各自占多少字节？"><span class="nav-number">3.1.</span> <span class="nav-text">Java 基本数据类型？各自占多少字节？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动拆箱、自动装箱"><span class="nav-number">3.2.</span> <span class="nav-text">自动拆箱、自动装箱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String属于基本数据类型吗？"><span class="nav-number">3.3.</span> <span class="nav-text">String属于基本数据类型吗？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#String、StringBuffer-和-StringBuilder-的区别"><span class="nav-number">3.3.1.</span> <span class="nav-text">String、StringBuffer 和 StringBuilder 的区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法"><span class="nav-number">4.</span> <span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overriding和Overloaded"><span class="nav-number">4.1.</span> <span class="nav-text">Overriding和Overloaded</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static关键字是否可覆盖？"><span class="nav-number">4.2.</span> <span class="nav-text">static关键字是否可覆盖？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象"><span class="nav-number">5.</span> <span class="nav-text">面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象和面向过程的区别"><span class="nav-number">5.1.</span> <span class="nav-text">面向对象和面向过程的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java支持多继承吗？"><span class="nav-number">5.2.</span> <span class="nav-text">Java支持多继承吗？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接口和抽象类"><span class="nav-number">6.</span> <span class="nav-text">接口和抽象类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#接口和抽象类的区别？"><span class="nav-number">6.1.</span> <span class="nav-text">接口和抽象类的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用传递和值传递"><span class="nav-number">6.2.</span> <span class="nav-text">引用传递和值传递</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO流"><span class="nav-number">6.3.</span> <span class="nav-text">IO流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java中有几种类型的流？"><span class="nav-number">6.3.1.</span> <span class="nav-text">Java中有几种类型的流？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-IO中的方法阻塞"><span class="nav-number">6.3.2.</span> <span class="nav-text">Java IO中的方法阻塞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符流和字节流的区别？"><span class="nav-number">6.3.3.</span> <span class="nav-text">字符流和字节流的区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NIO"><span class="nav-number">6.3.4.</span> <span class="nav-text">NIO</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说说List、Set、Map三者的区别"><span class="nav-number">6.4.</span> <span class="nav-text">说说List、Set、Map三者的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array和ArrayList有什么区别？"><span class="nav-number">6.5.</span> <span class="nav-text">Array和ArrayList有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList和LinkedList的区别？"><span class="nav-number">6.6.</span> <span class="nav-text">ArrayList和LinkedList的区别？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是迭代器"><span class="nav-number">6.6.1.</span> <span class="nav-text">什么是迭代器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Iterator和ListIterator的区别？"><span class="nav-number">6.6.2.</span> <span class="nav-text">Iterator和ListIterator的区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RandomAccess接口"><span class="nav-number">6.6.3.</span> <span class="nav-text">RandomAccess接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链表"><span class="nav-number">6.6.4.</span> <span class="nav-text">链表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList和Vector和LinkedList的区别？"><span class="nav-number">6.7.</span> <span class="nav-text">ArrayList和Vector和LinkedList的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#谈谈ArrayList的扩容机制"><span class="nav-number">6.8.</span> <span class="nav-text">谈谈ArrayList的扩容机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap和HashTable的区别？"><span class="nav-number">6.9.</span> <span class="nav-text">HashMap和HashTable的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap和HashSet区别"><span class="nav-number">6.10.</span> <span class="nav-text">HashMap和HashSet区别?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashSet如何检查重复？"><span class="nav-number">6.11.</span> <span class="nav-text">HashSet如何检查重复？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap底层实现？"><span class="nav-number">6.12.</span> <span class="nav-text">HashMap底层实现？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashHash"><span class="nav-number">6.12.1.</span> <span class="nav-text">#HashHash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hash冲突"><span class="nav-number">6.12.2.</span> <span class="nav-text">Hash冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现原理"><span class="nav-number">6.12.3.</span> <span class="nav-text">[实现原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection和Collections的区别？"><span class="nav-number">6.13.</span> <span class="nav-text">Collection和Collections的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Comparable和Comparator的区别？"><span class="nav-number">6.14.</span> <span class="nav-text">Comparable和Comparator的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java集合框架总结"><span class="nav-number">6.15.</span> <span class="nav-text">Java集合框架总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Collection"><span class="nav-number">6.15.1.</span> <span class="nav-text">Collection</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#List"><span class="nav-number">6.15.1.1.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Set"><span class="nav-number">6.15.1.2.</span> <span class="nav-text">Set</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Map"><span class="nav-number">6.15.2.</span> <span class="nav-text">Map</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java并发"><span class="nav-number">7.</span> <span class="nav-text">Java并发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线程和进程的区别？"><span class="nav-number">7.1.</span> <span class="nav-text">线程和进程的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从JVM角度分析进程和线程的关系？"><span class="nav-number">7.2.</span> <span class="nav-text">从JVM角度分析进程和线程的关系？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么方法区和堆是线程共享区？"><span class="nav-number">7.2.1.</span> <span class="nav-text">为什么方法区和堆是线程共享区？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么虚拟机栈和本地方法栈是线程独占区？"><span class="nav-number">7.2.2.</span> <span class="nav-text">为什么虚拟机栈和本地方法栈是线程独占区？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序计数器是什么？"><span class="nav-number">7.2.3.</span> <span class="nav-text">程序计数器是什么？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说说并行和并发的区别？"><span class="nav-number">7.3.</span> <span class="nav-text">说说并行和并发的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用多线程可能带来什么问题？"><span class="nav-number">7.4.</span> <span class="nav-text">使用多线程可能带来什么问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说说线程的生命周期和状态？"><span class="nav-number">7.5.</span> <span class="nav-text">说说线程的生命周期和状态？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是上下文切换？"><span class="nav-number">7.6.</span> <span class="nav-text">什么是上下文切换？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是死锁？如何避免"><span class="nav-number">7.7.</span> <span class="nav-text">什么是死锁？如何避免?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说说sleep-方法和wait-方法的区别？"><span class="nav-number">7.8.</span> <span class="nav-text">说说sleep()方法和wait()方法的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调用start-方法会执行run-方法，为什么不能直接调用run-方法？"><span class="nav-number">7.9.</span> <span class="nav-text">调用start()方法会执行run()方法，为什么不能直接调用run()方法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synchronized关键字"><span class="nav-number">7.10.</span> <span class="nav-text">synchronized关键字</span></a></li></ol></li></ol></div>
             
 
           </div>
