@@ -333,6 +333,176 @@
   
   
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://yuanzhibx.github.io/2020/08/06/SpringCloud01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yuanzhibx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuanzhibx's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/06/SpringCloud01/" itemprop="url">SpringCloud 【01】</a></h1>
+        
+
+        <div class="post-meta">
+          
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-06T14:20:23+08:00">
+                2020-08-06
+              </time>
+            
+          </span>
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>项目 GIthub 仓库：<a href="https://github.com/yuanzhibx/Spring-Cloud" target="_blank" rel="noopener">yuanzhibx/Spring-Cloud</a></p>
+</blockquote>
+<blockquote>
+<p>此文为本人学习 SpringCloud 所记录，如有错误，欢迎指正</p>
+</blockquote>
+<h1 id="什么是-SpringCloud"><a href="#什么是-SpringCloud" class="headerlink" title="什么是 SpringCloud"></a>什么是 SpringCloud</h1><p>spring cloud 是 <strong>一系列框架的集合</strong>。它利用 spring boot 的开发便利性巧妙地简化了分布式系统基础设施的开发，如<strong>服务发现注册、配置中心、消息总线、负载均衡、断路器、数据监控</strong>等，都可以用 spring boot 的开发风格做到一键启动和部署。spring cloud 并没有重复制造轮子，它只是将目前各家公司开发的比较成熟、经得起实际考验的服务框架组合起来，通过 spring boot 风格进行再封装屏蔽掉了复杂的配置和实现原理，最终给开发者留出了一套<strong>简单易懂、易部署和易维护</strong>的分布式系统开发工具包。</p>
+<p>spring cloud 对于中小型互联网公司来说是一种福音，因为这类公司往往没有实力或者没有足够的资金投入去开发自己的分布式系统基础设施，使用 spring cloud <strong>一站式解决方案</strong>能在从容应对业务发展的同时<strong>大大减少开发成本</strong>。同时，随着近几年微服务架构和 docker 容器概念的火爆，也会让 spring cloud 在未来越来越“云”化的软件开发风格中立有一席之地，尤其是在目前五花八门的分布式解决方案中提供了<strong>标准化</strong>的、一站式的技术方案，意义可能会堪比当年 servlet 规范的诞生，有效推进服务端软件系统技术水平的进步。</p>
+<h1 id="技术组成"><a href="#技术组成" class="headerlink" title="技术组成"></a>技术组成</h1><ul>
+<li><p>eureka<br>微服务治理，服务注册和发现</p>
+</li>
+<li><p>ribbon<br>负载均衡、请求重试</p>
+</li>
+<li><p>hystrix<br>断路器，服务降级、熔断</p>
+</li>
+<li><p>feign<br>ribbon + hystrix 集成，并提供声明式客户端</p>
+</li>
+<li><p>hystrix dashboard 和 turbine<br>hystrix 数据监控</p>
+</li>
+<li><p>zuul<br>API 网关，提供微服务的统一入口，并提供统一的权限验证</p>
+</li>
+<li><p>config<br>配置中心</p>
+</li>
+<li><p>bus<br>消息总线, 配置刷新</p>
+</li>
+<li><p>sleuth+zipkin<br>链路跟踪</p>
+</li>
+</ul>
+<hr>
+<h1 id="Eureka"><a href="#Eureka" class="headerlink" title="Eureka"></a>Eureka</h1><h2 id="Eureka-是什么"><a href="#Eureka-是什么" class="headerlink" title="Eureka 是什么"></a>Eureka 是什么</h2><ul>
+<li><p>Eureka 为一款注册中心工具</p>
+</li>
+<li><p>Spring Cloud 支持多款注册中心工具：eureka，zookeeper，consul…….</p>
+</li>
+</ul>
+<h2 id="Eureka-运行参数"><a href="#Eureka-运行参数" class="headerlink" title="Eureka 运行参数"></a>Eureka 运行参数</h2><ol>
+<li>注册<ul>
+<li>一次次反复尝试注册,直到注册成功</li>
+</ul>
+</li>
+<li>拉取<ul>
+<li>每30秒拉取一次注册表</li>
+</ul>
+</li>
+<li>心跳<ul>
+<li>每30秒发送一次心跳</li>
+<li>eureka连续3次收不到心跳, 就会删除该服务</li>
+</ul>
+</li>
+<li>自我保护模式<ul>
+<li>由于网络不稳定, 15分钟内85%服务器心跳异常</li>
+<li>保护所有的注册信息, 不删除</li>
+<li>网络稳定后, 可以自动退出保护模式, 恢复正常</li>
+<li>开发期间可以先关闭保护模式</li>
+</ul>
+</li>
+</ol>
+<h2 id="Eureka-和-Zookeeper-区别"><a href="#Eureka-和-Zookeeper-区别" class="headerlink" title="Eureka 和 Zookeeper 区别"></a>Eureka 和 Zookeeper 区别</h2><ul>
+<li>eureka<ul>
+<li>强调 AP - 可用性、分区容错性</li>
+<li>集群 - 对等结构</li>
+</ul>
+</li>
+<li>zookeeper<ul>
+<li>强调 CP - 一致性、分区容错性</li>
+<li>集群 - 主从结构</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Ribbon"><a href="#Ribbon" class="headerlink" title="Ribbon"></a>Ribbon</h1><h2 id="Ribbon-是什么"><a href="#Ribbon-是什么" class="headerlink" title="Ribbon 是什么"></a>Ribbon 是什么</h2><p>Ribbon 是 Netflix 发布的云中间层服务开源项目，其主要功能是提供<strong>负载均衡</strong>和<strong>重试</strong></p>
+<p>Ribbon 的作用，解决的问题：</p>
+<ol>
+<li><p>负载均衡（微服务系统必须功能）</p>
+<p>访问压力可以分散到多态服务器</p>
+</li>
+<li><p>重试（不是必须功能）</p>
+<p>当第一次请求失败或等待超时，可以自动发起重试请求</p>
+</li>
+</ol>
+<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><h2 id="重试"><a href="#重试" class="headerlink" title="重试"></a>重试</h2><h1 id="Hystrix"><a href="#Hystrix" class="headerlink" title="Hystrix"></a>Hystrix</h1><h1 id="Feign"><a href="#Feign" class="headerlink" title="Feign"></a>Feign</h1><h1 id="Hystrix-dashboard-和-Turbine"><a href="#Hystrix-dashboard-和-Turbine" class="headerlink" title="Hystrix dashboard 和 Turbine"></a>Hystrix dashboard 和 Turbine</h1><h1 id="Zuul"><a href="#Zuul" class="headerlink" title="Zuul"></a>Zuul</h1><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1>
+          
+        
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+  <hr/>
+
+    
+      
+
+  
+
+  
+  
+  
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://yuanzhibx.github.io/2020/07/28/JT-Yuanzhibx08/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1097,101 +1267,6 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/07/08/JT-Yuanzhibx01/#more" rel="contents">
-              READ MORE &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-  <hr/>
-
-    
-      
-
-  
-
-  
-  
-  
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://yuanzhibx.github.io/2020/07/04/SpringBoot/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yuanzhibx">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuanzhibx's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/04/SpringBoot/" itemprop="url">SpringBoot 注解</a></h1>
-        
-
-        <div class="post-meta">
-          
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-04T18:49:31+08:00">
-                2020-07-04
-              </time>
-            
-          </span>
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="SpringBoot-配置文件说明"><a href="#SpringBoot-配置文件说明" class="headerlink" title="SpringBoot 配置文件说明"></a>SpringBoot 配置文件说明</h2>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/07/04/SpringBoot/#more" rel="contents">
               READ MORE &raquo;
             </a>
           </div>
