@@ -72,7 +72,7 @@
 <meta property="og:description" content="项目 GIthub 仓库：yuanzhibx&#x2F;Spring-Cloud   此文为本人学习 SpringCloud 所记录，如有错误，欢迎指正">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-08-06T06:20:23.000Z">
-<meta property="article:modified_time" content="2020-08-06T07:05:33.915Z">
+<meta property="article:modified_time" content="2020-08-06T07:54:22.970Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
 
@@ -366,7 +366,7 @@
 <p>当第一次请求失败或等待超时，可以自动发起重试请求</p>
 </li>
 </ol>
-<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><h3 id="先从eureka获取服务的主机地址列表"><a href="#先从eureka获取服务的主机地址列表" class="headerlink" title="先从eureka获取服务的主机地址列表"></a>先从eureka获取服务的主机地址列表</h3><h3 id="对主机地址列表-轮询发送请求"><a href="#对主机地址列表-轮询发送请求" class="headerlink" title="对主机地址列表, 轮询发送请求"></a>对主机地址列表, 轮询发送请求</h3><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol>
+<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><h3 id="先从-eureka-获取服务的主机地址列表"><a href="#先从-eureka-获取服务的主机地址列表" class="headerlink" title="先从 eureka 获取服务的主机地址列表"></a>先从 eureka 获取服务的主机地址列表</h3><h3 id="对主机地址列表-轮询发送请求"><a href="#对主机地址列表-轮询发送请求" class="headerlink" title="对主机地址列表, 轮询发送请求"></a>对主机地址列表, 轮询发送请求</h3><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol>
 <li><p>ribbon 依赖（在 eureka client 中已经包含）</p>
 </li>
 <li><p>添加 <code>@LoadBalanced</code> 注解，用 Ribbon 封装 <code>RestTemplate</code> 对象，对 <code>RestTemplate</code> 功能进行增强</p>
@@ -380,7 +380,100 @@
 <p>根据eureka地址表，可以获取这个服务的集群主机地址列表</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">restTemplate.getForObject(<span class="string">"http://item-service/&#123;1&#125;"</span>, .......)</span><br></pre></td></tr></table></figure>
 
-<h2 id="重试"><a href="#重试" class="headerlink" title="重试"></a>重试</h2><h1 id="Hystrix"><a href="#Hystrix" class="headerlink" title="Hystrix"></a>Hystrix</h1><h1 id="Feign"><a href="#Feign" class="headerlink" title="Feign"></a>Feign</h1><h1 id="Hystrix-dashboard-和-Turbine"><a href="#Hystrix-dashboard-和-Turbine" class="headerlink" title="Hystrix dashboard 和 Turbine"></a>Hystrix dashboard 和 Turbine</h1><h1 id="Zuul"><a href="#Zuul" class="headerlink" title="Zuul"></a>Zuul</h1><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1>
+<h2 id="重试"><a href="#重试" class="headerlink" title="重试"></a>重试</h2><p>重试是一种容错机制, 如果请求后台服务出错, 或者服务器故障, 可以向另一台服务器重试访问</p>
+<h3 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h3><ol>
+<li><p>添加 spring-retry 依赖</p>
+</li>
+<li><p>设置重试参数：</p>
+<ul>
+<li>MaxAutoRetries - 单台服务器的重试次数</li>
+<li>MaxAutoRetriesNextServer - 更换服务器的次数</li>
+<li>OkToRetryOnAllOperations - 是否对所有类型请求都重试，默认只对 get 重试，如果要对所有请求重试设置成 true</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">MaxAutoRetries</td>
+<td align="left">单台服务器的重试次数</td>
+</tr>
+<tr>
+<td align="left">MaxAutoRetriesNextServer</td>
+<td align="left">更换服务器的次数</td>
+</tr>
+<tr>
+<td align="left">OkToRetryOnAllOperations</td>
+<td align="left">是否对所有类型请求都重试，默认只对 GET 重试</td>
+</tr>
+</tbody></table>
+<p>下面两个超时设置不能在 yml 中配置，需要在 java 代码中设置</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">ConnectTimeout</td>
+<td align="left">建立连接等待超时时间</td>
+</tr>
+<tr>
+<td align="left">ReadTimeout</td>
+<td align="left">连接已建立并已经发送请求, 等待接收响应的超时时间</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="Hystrix"><a href="#Hystrix" class="headerlink" title="Hystrix"></a>Hystrix</h1><h2 id="Hystrix-是什么？"><a href="#Hystrix-是什么？" class="headerlink" title="Hystrix 是什么？"></a>Hystrix 是什么？</h2><ul>
+<li>Hystrix 是用于处理 <strong>延迟和容错</strong> 的开源库</li>
+<li>Hystrix 主要用于避免级联故障，提高系统弹性</li>
+<li>Hystrix 解决了由于扇出导致的 <strong>“雪崩效应”</strong></li>
+<li>Hystrix 的核心是 <strong>“隔离”</strong> 和 <strong>“熔断机制”</strong></li>
+</ul>
+<blockquote>
+<p>作用</p>
+</blockquote>
+<ol>
+<li>降级</li>
+<li>熔断</li>
+</ol>
+<h2 id="配置-2"><a href="#配置-2" class="headerlink" title="配置"></a>配置</h2><h3 id="添加-Hystrix-依赖"><a href="#添加-Hystrix-依赖" class="headerlink" title="添加 Hystrix 依赖"></a>添加 Hystrix 依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-hystrix<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="主程序添加-EnableCircuitBreaker"><a href="#主程序添加-EnableCircuitBreaker" class="headerlink" title="主程序添加 @EnableCircuitBreaker"></a>主程序添加 @EnableCircuitBreaker</h3><p>启用 hystrix 断路器，断路器提供两个核心功能：</p>
+<ul>
+<li><p><strong>降级</strong>：超时、出错、不可到达时，对服务降级，返回错误信息或者是缓存数据</p>
+</li>
+<li><p><strong>熔断</strong>：当服务压力过大，错误比例过多时，熔断所有请求，所有请求直接降级</p>
+</li>
+</ul>
+<h2 id="降级"><a href="#降级" class="headerlink" title="降级"></a>降级</h2><p>当调用后台服务失败，或超时，可以向客户端返回降级结果。</p>
+<h3 id="快速失败"><a href="#快速失败" class="headerlink" title="快速失败"></a>快速失败</h3><ul>
+<li>客户端不必长时间阻塞等待后台服务结果，超时后可以快速获得反馈。</li>
+<li>防止雪崩、防止错误传播</li>
+</ul>
+<h3 id="HystrixCommand"><a href="#HystrixCommand" class="headerlink" title="@HystrixCommand()"></a>@HystrixCommand()</h3><blockquote>
+<p>添加 @HystrixCommand 注解，指定降级方法名</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@HystrixCommand</span>(fallbackMethod=<span class="string">"降级方法名"</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加降级方法-实现降级代码"><a href="#添加降级方法-实现降级代码" class="headerlink" title="添加降级方法, 实现降级代码"></a>添加降级方法, 实现降级代码</h3><h2 id="熔断"><a href="#熔断" class="headerlink" title="熔断"></a>熔断</h2><p>熔断就像家里的电箱，有一个总闸，如果访问量过大（过热），触发熔断，家里的电路会被断开。</p>
+<p>当系统访问量过大，出现大量的失败情况时，会触发熔断，断路器打开后，所有的请求直接执行降级代码返回降级结果。</p>
+<p>触发熔断的条件：</p>
+<ol>
+<li>10秒内20次请求（必须首先满足）</li>
+<li>50%失败，执行了降级代码</li>
+</ol>
+<hr>
+<h1 id="Feign"><a href="#Feign" class="headerlink" title="Feign"></a>Feign</h1><hr>
+<h1 id="Hystrix-dashboard-和-Turbine"><a href="#Hystrix-dashboard-和-Turbine" class="headerlink" title="Hystrix dashboard 和 Turbine"></a>Hystrix dashboard 和 Turbine</h1><hr>
+<h1 id="Zuul"><a href="#Zuul" class="headerlink" title="Zuul"></a>Zuul</h1><hr>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1>
       
     </div>
 
@@ -584,7 +677,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是-SpringCloud"><span class="nav-number">1.</span> <span class="nav-text">什么是 SpringCloud</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技术组成"><span class="nav-number">2.</span> <span class="nav-text">技术组成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Eureka"><span class="nav-number">3.</span> <span class="nav-text">Eureka</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Eureka-是什么"><span class="nav-number">3.1.</span> <span class="nav-text">Eureka 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Eureka-运行参数"><span class="nav-number">3.2.</span> <span class="nav-text">Eureka 运行参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Eureka-和-Zookeeper-区别"><span class="nav-number">3.3.</span> <span class="nav-text">Eureka 和 Zookeeper 区别</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ribbon"><span class="nav-number">4.</span> <span class="nav-text">Ribbon</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ribbon-是什么"><span class="nav-number">4.1.</span> <span class="nav-text">Ribbon 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#负载均衡"><span class="nav-number">4.2.</span> <span class="nav-text">负载均衡</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先从eureka获取服务的主机地址列表"><span class="nav-number">4.2.1.</span> <span class="nav-text">先从eureka获取服务的主机地址列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对主机地址列表-轮询发送请求"><span class="nav-number">4.2.2.</span> <span class="nav-text">对主机地址列表, 轮询发送请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">4.2.3.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重试"><span class="nav-number">4.3.</span> <span class="nav-text">重试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hystrix"><span class="nav-number">5.</span> <span class="nav-text">Hystrix</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Feign"><span class="nav-number">6.</span> <span class="nav-text">Feign</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hystrix-dashboard-和-Turbine"><span class="nav-number">7.</span> <span class="nav-text">Hystrix dashboard 和 Turbine</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Zuul"><span class="nav-number">8.</span> <span class="nav-text">Zuul</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">9.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是-SpringCloud"><span class="nav-number">1.</span> <span class="nav-text">什么是 SpringCloud</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技术组成"><span class="nav-number">2.</span> <span class="nav-text">技术组成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Eureka"><span class="nav-number">3.</span> <span class="nav-text">Eureka</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Eureka-是什么"><span class="nav-number">3.1.</span> <span class="nav-text">Eureka 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Eureka-运行参数"><span class="nav-number">3.2.</span> <span class="nav-text">Eureka 运行参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Eureka-和-Zookeeper-区别"><span class="nav-number">3.3.</span> <span class="nav-text">Eureka 和 Zookeeper 区别</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ribbon"><span class="nav-number">4.</span> <span class="nav-text">Ribbon</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ribbon-是什么"><span class="nav-number">4.1.</span> <span class="nav-text">Ribbon 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#负载均衡"><span class="nav-number">4.2.</span> <span class="nav-text">负载均衡</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先从-eureka-获取服务的主机地址列表"><span class="nav-number">4.2.1.</span> <span class="nav-text">先从 eureka 获取服务的主机地址列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对主机地址列表-轮询发送请求"><span class="nav-number">4.2.2.</span> <span class="nav-text">对主机地址列表, 轮询发送请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">4.2.3.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重试"><span class="nav-number">4.3.</span> <span class="nav-text">重试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-1"><span class="nav-number">4.3.1.</span> <span class="nav-text">配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hystrix"><span class="nav-number">5.</span> <span class="nav-text">Hystrix</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hystrix-是什么？"><span class="nav-number">5.1.</span> <span class="nav-text">Hystrix 是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-2"><span class="nav-number">5.2.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加-Hystrix-依赖"><span class="nav-number">5.2.1.</span> <span class="nav-text">添加 Hystrix 依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主程序添加-EnableCircuitBreaker"><span class="nav-number">5.2.2.</span> <span class="nav-text">主程序添加 @EnableCircuitBreaker</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#降级"><span class="nav-number">5.3.</span> <span class="nav-text">降级</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速失败"><span class="nav-number">5.3.1.</span> <span class="nav-text">快速失败</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HystrixCommand"><span class="nav-number">5.3.2.</span> <span class="nav-text">@HystrixCommand()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加降级方法-实现降级代码"><span class="nav-number">5.3.3.</span> <span class="nav-text">添加降级方法, 实现降级代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#熔断"><span class="nav-number">5.4.</span> <span class="nav-text">熔断</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Feign"><span class="nav-number">6.</span> <span class="nav-text">Feign</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hystrix-dashboard-和-Turbine"><span class="nav-number">7.</span> <span class="nav-text">Hystrix dashboard 和 Turbine</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Zuul"><span class="nav-number">8.</span> <span class="nav-text">Zuul</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">9.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
