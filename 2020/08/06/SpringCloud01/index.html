@@ -76,7 +76,7 @@
 <meta property="og:image" content="https://yuanzhibx.github.io/2020/08/06/SpringCloud01/D7567131-D841-4BB2-9450-C3435FBED961.png">
 <meta property="og:image" content="https://yuanzhibx.github.io/2020/08/06/SpringCloud01/4E4341DC-2F2F-48F7-986A-92CF00C5EEC9.png">
 <meta property="article:published_time" content="2020-08-06T06:20:23.000Z">
-<meta property="article:modified_time" content="2020-08-07T00:26:48.324Z">
+<meta property="article:modified_time" content="2020-08-07T01:02:19.548Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://yuanzhibx.github.io/2020/08/06/SpringCloud01/5BBB96F4-34B7-4A99-8B5D-F1D4EE8A171A.png">
@@ -296,107 +296,7 @@
 <p>此文为本人学习 SpringCloud 所记录，如有错误，欢迎指正<br><strong>持续更新中……</strong></p>
 </blockquote>
 <a id="more"></a>
-<hr>
-<ul>
-<li><a href="#----springcloud">什么是 SpringCloud</a></li>
-<li><a href="#----">技术组成</a></li>
-<li><a href="#eureka">Eureka</a><ul>
-<li><a href="#eureka----">Eureka 是什么</a></li>
-<li><a href="#eureka-----">Eureka 运行参数</a></li>
-<li><a href="#eureka---zookeeper---">Eureka 和 Zookeeper 区别</a></li>
-</ul>
-</li>
-<li><a href="#ribbon">Ribbon</a><ul>
-<li><a href="#ribbon----">Ribbon 是什么</a></li>
-<li><a href="#----">负载均衡</a><ul>
-<li><a href="#---eureka------------">先从 eureka 获取服务的主机地址列表</a></li>
-<li><a href="#---------------">对主机地址列表, 轮询发送请求</a></li>
-<li><a href="#--">配置</a></li>
-</ul>
-</li>
-<li><a href="#--">重试</a><ul>
-<li><a href="#---1">配置</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#hystrix">Hystrix</a><ul>
-<li><a href="#hystrix-----">Hystrix 是什么？</a><ul>
-<li><a href="#--">作用</a></li>
-</ul>
-</li>
-<li><a href="#---2">配置</a><ul>
-<li><a href="#---hystrix---">添加 Hystrix 依赖</a></li>
-<li><a href="#-------enablecircuitbreaker">主程序添加 @EnableCircuitBreaker</a></li>
-</ul>
-</li>
-<li><a href="#--">降级</a><ul>
-<li><a href="#----">快速失败</a></li>
-<li><a href="#-hystrixcommand--">@HystrixCommand()</a></li>
-<li><a href="#--------------">添加降级方法, 实现降级代码</a></li>
-</ul>
-</li>
-<li><a href="#--">熔断</a></li>
-</ul>
-</li>
-<li><a href="#hystrix-dashboard">Hystrix dashboard</a><ul>
-<li><a href="#actuator">actuator</a></li>
-<li><a href="#---3">配置</a><ul>
-<li><a href="#---actuator---">添加 actuator 依赖</a></li>
-<li><a href="#---hystrixstream-----">暴露 hystrix.stream 监控端点</a></li>
-<li><a href="#---actuator----------">访问 actuator 路径，查看监控端点</a></li>
-</ul>
-</li>
-<li><a href="#hystrix-dashboard----">Hystrix dashboard 仪表盘</a><ul>
-<li><a href="#----">添加依赖</a></li>
-<li><a href="#-------enablehystrixdashboard">主程序注解 @EnableHystrixDashboard</a></li>
-<li><a href="#---hystrix-dashboard">访问 hystrix dashboard</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#feign">Feign</a><ul>
-<li><a href="#----feign-">什么是 Feign？</a></li>
-<li><a href="#---4">配置</a><ul>
-<li><a href="#-----1">添加依赖</a></li>
-<li><a href="#-----">主程序注解</a></li>
-<li><a href="#feign-------">Feign 声明式客户端</a></li>
-<li><a href="#--">流程</a></li>
-</ul>
-</li>
-<li><a href="#---ribbon">集成 Ribbon</a></li>
-<li><a href="#---hystrix">集成 Hystrix</a><ul>
-<li><a href="#feign----hystrix">feign 启用 hystrix</a></li>
-<li><a href="#-------">主程序添加注解</a></li>
-<li><a href="#---1">降级</a></li>
-<li><a href="#hystrix-dashboard-1">Hystrix dashboard</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#turbine">Turbine</a><ul>
-<li><a href="#turbine----">Turbine 是什么</a></li>
-<li><a href="#---5">配置</a><ul>
-<li><a href="#turbine--">Turbine依赖</a></li>
-<li><a href="#yml--">yml配置</a></li>
-<li><a href="#------1">主程序注解</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#zuul">Zuul</a><ul>
-<li><a href="#zuul----">Zuul 是什么</a></li>
-<li><a href="#---6">配置</a><ul>
-<li><a href="#-----2">添加依赖</a></li>
-<li><a href="#yml---1">yml配置</a></li>
-<li><a href="#------2">主程序注解</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#--">参考</a></li>
-</ul>
-<p><small><i><a href="http://ecotrust-canada.github.io/markdown-toc/" target="_blank" rel="noopener">Table of contents generated with markdown-toc</a></i></small></p>
+
 <hr>
 <h1 id="什么是-SpringCloud"><a href="#什么是-SpringCloud" class="headerlink" title="什么是 SpringCloud"></a>什么是 SpringCloud</h1><p>spring cloud 是 <strong>一系列框架的集合</strong>。它利用 spring boot 的开发便利性巧妙地简化了分布式系统基础设施的开发，如<strong>服务发现注册、配置中心、消息总线、负载均衡、断路器、数据监控</strong>等，都可以用 spring boot 的开发风格做到一键启动和部署。spring cloud 并没有重复制造轮子，它只是将目前各家公司开发的比较成熟、经得起实际考验的服务框架组合起来，通过 spring boot 风格进行再封装屏蔽掉了复杂的配置和实现原理，最终给开发者留出了一套<strong>简单易懂、易部署和易维护</strong>的分布式系统开发工具包。</p>
 <p>spring cloud 对于中小型互联网公司来说是一种福音，因为这类公司往往没有实力或者没有足够的资金投入去开发自己的分布式系统基础设施，使用 spring cloud <strong>一站式解决方案</strong>能在从容应对业务发展的同时<strong>大大减少开发成本</strong>。同时，随着近几年微服务架构和 docker 容器概念的火爆，也会让 spring cloud 在未来越来越“云”化的软件开发风格中立有一席之地，尤其是在目前五花八门的分布式解决方案中提供了<strong>标准化</strong>的、一站式的技术方案，意义可能会堪比当年 servlet 规范的诞生，有效推进服务端软件系统技术水平的进步。</p>
