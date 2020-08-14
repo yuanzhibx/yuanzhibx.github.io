@@ -64,17 +64,27 @@
 
 
 
-<meta name="description" content="JT_Yuanzhibx 项目 GIthub 仓库：JT_Yuanzhibx: github.com&#x2F;yuanzhibx&#x2F;JT_Yuanzhibx   该笔记记录了 JT_Yuanzhibx 项目的 Redis 高级使用  正在编写……">
+<meta name="description" content="项目 GIthub 仓库：JT_Yuanzhibx: github.com&#x2F;yuanzhibx&#x2F;JT_Yuanzhibx   该笔记记录了 JT_Yuanzhibx 项目的 Redis 高级使用  正在编写……">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JT_Yuanzhibx06 【Redis 2】">
 <meta property="og:url" content="https://yuanzhibx.github.io/2020/07/23/JT-Yuanzhibx06/index.html">
 <meta property="og:site_name" content="Yuanzhibx&#39;s Blog">
-<meta property="og:description" content="JT_Yuanzhibx 项目 GIthub 仓库：JT_Yuanzhibx: github.com&#x2F;yuanzhibx&#x2F;JT_Yuanzhibx   该笔记记录了 JT_Yuanzhibx 项目的 Redis 高级使用  正在编写……">
+<meta property="og:description" content="项目 GIthub 仓库：JT_Yuanzhibx: github.com&#x2F;yuanzhibx&#x2F;JT_Yuanzhibx   该笔记记录了 JT_Yuanzhibx 项目的 Redis 高级使用  正在编写……">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://yuanzhibx.github.io/2020/07/23/JT-Yuanzhibx06/5A198016-0666-46C0-A466-4CC580721F49.png">
+<meta property="og:image" content="https://yuanzhibx.github.io/2020/07/23/JT-Yuanzhibx06/D1640643-BF0C-4E67-96F1-3C5B8D69D7B7-7403669.png">
+<meta property="og:image" content="https://yuanzhibx.github.io/2020/07/23/JT-Yuanzhibx06/50C975C5-4D06-4656-89D3-FCEAA147F042.png">
+<meta property="og:image" content="https://yuanzhibx.github.io/2020/07/23/JT-Yuanzhibx06/D84A225B-D236-4876-9E05-1BA338BD54AC.png">
+<meta property="og:image" content="https://yuanzhibx.github.io/2020/07/23/JT-Yuanzhibx06/6355A703-73AE-47FF-821E-29232D126FDC.png">
+<meta property="og:image" content="https://yuanzhibx.github.io/2020/07/23/JT-Yuanzhibx06/6A678288-9E8D-411D-A90E-5ACCCB119482.png">
+<meta property="og:image" content="https://yuanzhibx.github.io/2020/07/23/JT-Yuanzhibx06/D57B7BAA-1621-4DE4-A296-59EA7AE86C7C.png">
+<meta property="og:image" content="https://yuanzhibx.github.io/2020/07/23/JT-Yuanzhibx06/DC22BDDE-4BF4-47F2-B818-276291B3062A.png">
+<meta property="og:image" content="https://yuanzhibx.github.io/2020/07/23/JT-Yuanzhibx06/57475546-48C5-440F-9D77-DA5E75E9747C.png">
 <meta property="article:published_time" content="2020-07-23T02:30:07.000Z">
-<meta property="article:modified_time" content="2020-07-23T02:46:36.835Z">
+<meta property="article:modified_time" content="2020-08-14T11:40:40.257Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yuanzhibx.github.io/2020/07/23/JT-Yuanzhibx06/5A198016-0666-46C0-A466-4CC580721F49.png">
 
 
 
@@ -284,7 +294,7 @@
       
 
       
-        <h2 id="JT-Yuanzhibx"><a href="#JT-Yuanzhibx" class="headerlink" title="JT_Yuanzhibx"></a>JT_Yuanzhibx</h2><blockquote>
+        <blockquote>
 <p>项目 GIthub 仓库：JT_Yuanzhibx: <a href="https://github.com/yuanzhibx/JT_Yuanzhibx" target="_blank" rel="noopener">github.com/yuanzhibx/JT_Yuanzhibx</a></p>
 </blockquote>
 <blockquote>
@@ -293,7 +303,137 @@
 <p>正在编写……</p>
 <a id="more"></a>
 
-<h2 id><a href="#" class="headerlink" title></a></h2>
+<h1 id="Redis-分片"><a href="#Redis-分片" class="headerlink" title="Redis 分片"></a>Redis 分片</h1><h2 id="为什么使用分片"><a href="#为什么使用分片" class="headerlink" title="为什么使用分片"></a>为什么使用分片</h2><blockquote>
+<p>说明: 虽然 redis 可以扩展内存空间的大小. 但是如果需要存储海量的数据一味的扩大内存, 其实效率不高</p>
+</blockquote>
+<blockquote>
+<p>分片介绍: 准备多台redis, 共同为用户提供缓存服务. 在保证效率的前提下, 实现了内存的扩容. 用户在使用分片机制时, 将多台redis当做1台使用.</p>
+</blockquote>
+<hr>
+<h2 id="分片搭建"><a href="#分片搭建" class="headerlink" title="分片搭建"></a>分片搭建</h2><h3 id="分片规划"><a href="#分片规划" class="headerlink" title="分片规划"></a>分片规划</h3><p>由3台 redis 构成 端口号分别为 <strong>6379/6380/6381</strong>, 如果需要准备多台 redis 则准备多个配置文件即可, 注意其中的端口号</p>
+<h3 id="准备多台-redis"><a href="#准备多台-redis" class="headerlink" title="准备多台 redis"></a>准备多台 redis</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir shards</span><br><span class="line">$ cp redis.conf shards&#x2F;6379.conf</span><br><span class="line">$ cp redis.conf shards&#x2F;6380.conf</span><br><span class="line">$ cp redis.conf shards&#x2F;6381.conf</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改-redis-端口"><a href="#修改-redis-端口" class="headerlink" title="修改 redis 端口"></a>修改 redis 端口</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim 6381.conf</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><img src="/2020/07/23/JT-Yuanzhibx06/5A198016-0666-46C0-A466-4CC580721F49.png" alt="5A198016-0666-46C0-A466-4CC580721F49"></p>
+</blockquote>
+<h3 id="启动-reids"><a href="#启动-reids" class="headerlink" title="启动 reids"></a>启动 reids</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ redis-server 6379.conf &amp; redis-server 6380.conf &amp; redis-server 6381.conf &amp;</span><br></pre></td></tr></table></figure>
+
+<p>检查服务是否启动:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ps -ef | grep redis</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="一致性hash算法介绍"><a href="#一致性hash算法介绍" class="headerlink" title="一致性hash算法介绍"></a>一致性hash算法介绍</h2><blockquote>
+<p>一致性哈希算法在1997年由麻省理工学院提出，是一种特殊的哈希算法，目的是解决分布式缓存的问题。 在移除或者添加一个服务器时，能够尽可能小地改变已存在的服务请求与处理请求服务器之间的<strong>映射关系</strong>。一致性哈希解决了简单哈希算法在分布式哈希表( Distributed Hash Table，DHT) 中存在的<strong>动态伸缩</strong>等问题。</p>
+</blockquote>
+<h3 id="一致性hash原理说明"><a href="#一致性hash原理说明" class="headerlink" title="一致性hash原理说明"></a>一致性hash原理说明</h3><blockquote>
+<p>目的: 解决数据如何在分布式环境下进行存储!!!</p>
+</blockquote>
+<blockquote>
+<p>hash取值区间: 8位16进制数 共有 2^32种可能性!!! (24)8=2^32次方</p>
+</blockquote>
+<ol>
+<li>数据如何存储</li>
+</ol>
+<p><img src="/2020/07/23/JT-Yuanzhibx06/D1640643-BF0C-4E67-96F1-3C5B8D69D7B7-7403669.png" alt="D1640643-BF0C-4E67-96F1-3C5B8D69D7B7"></p>
+<ol start="2">
+<li>当节点发生变化带来哪些影响</li>
+</ol>
+<p>当节点的数量发生了变化时, 则节点中的对应的数据可以动态的迁移</p>
+<p>原则: 当发生了节点变化时 ,应该尽可能小的影响其他节点</p>
+<p><img src="/2020/07/23/JT-Yuanzhibx06/50C975C5-4D06-4656-89D3-FCEAA147F042.png" alt="50C975C5-4D06-4656-89D3-FCEAA147F042"></p>
+<h3 id="一致性hash特性"><a href="#一致性hash特性" class="headerlink" title="一致性hash特性"></a>一致性hash特性</h3><blockquote>
+<p>一致性哈希算法是在哈希算法基础上提出的，在动态变化的分布式环境中，哈希算法应该满足的几个条件: 平衡性、单调性和分散性。</p>
+</blockquote>
+<ul>
+<li><p>①平衡性(均衡性)是指hash的结果应该平均分配到各个节点，这样从算法上解决了负载均衡问题。 利用虚拟节点实现数据平衡 (平衡数据不能做到绝对平均,只能是相对的)</p>
+</li>
+<li><p>②单调性是指在新增或者删减节点时，不影响系统正常运行 . 可以实现动态的数据迁移.</p>
+</li>
+<li><p>③分散性是指数据应该分散地存放在分布式集群中的各个节点(节点自己可以有备份)，不必每个节点都存储所有的数据<br>鸡蛋不要放到一个篮子里。</p>
+</li>
+</ul>
+<hr>
+<h2 id="SpringBoot-整合-Redis-分片"><a href="#SpringBoot-整合-Redis-分片" class="headerlink" title="SpringBoot 整合 Redis 分片"></a>SpringBoot 整合 Redis 分片</h2><h3 id="编辑分片配置文件"><a href="#编辑分片配置文件" class="headerlink" title="编辑分片配置文件"></a>编辑分片配置文件</h3><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#redis.host=192.168.126.129</span></span><br><span class="line"><span class="comment">#redis.port=6379</span></span><br><span class="line"><span class="meta">redis.nodes</span>=<span class="string">192.168.126.129:6379,192.168.126.129:6380,192.168.126.129:6381</span></span><br></pre></td></tr></table></figure>
+<h3 id="编辑配置类实现-redis-整合"><a href="#编辑配置类实现-redis-整合" class="headerlink" title="编辑配置类实现 redis 整合"></a>编辑配置类实现 redis 整合</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span> 	<span class="comment">//我是一个配置类    一般都会与@Bean联用</span></span><br><span class="line"><span class="meta">@PropertySource</span>(<span class="string">"classpath:/properties/redis.properties"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisConfig</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Value</span>(<span class="string">"$&#123;redis.nodes&#125;"</span>)</span><br><span class="line">	<span class="keyword">private</span> String redisNodes;   <span class="comment">//node,node,node</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">/*整合分片实现Redis内存扩容*/</span></span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> ShardedJedis <span class="title">shardedJedis</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		String[] nodes = redisNodes.split(<span class="string">","</span>);  <span class="comment">//节点数组</span></span><br><span class="line">		<span class="comment">//动态获取Redis节点信息.</span></span><br><span class="line">		List&lt;JedisShardInfo&gt; list = <span class="keyword">new</span> ArrayList&lt;JedisShardInfo&gt;();</span><br><span class="line">		<span class="keyword">for</span> (String node : nodes) &#123; <span class="comment">//node= host:port ----&gt;[host,port]</span></span><br><span class="line">			String host = node.split(<span class="string">":"</span>)[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">int</span> port = Integer.parseInt(node.split(<span class="string">":"</span>)[<span class="number">1</span>]);</span><br><span class="line">			list.add(<span class="keyword">new</span> JedisShardInfo(host, port));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//返回分片对象</span></span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> ShardedJedis(list);</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 单台测试</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	<span class="doctag">@Value</span>("$&#123;redis.host&#125;")</span></span><br><span class="line"><span class="comment">	private String host;</span></span><br><span class="line"><span class="comment">	<span class="doctag">@Value</span>("$&#123;redis.port&#125;")</span></span><br><span class="line"><span class="comment">	private Integer port;</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	//将返回值的结果交给spring容器进行管理,如果以后想要使用该对象则可以直接注入.</span></span><br><span class="line"><span class="comment">	<span class="doctag">@Bean</span></span></span><br><span class="line"><span class="comment">	public Jedis jedis() &#123;</span></span><br><span class="line"><span class="comment">		</span></span><br><span class="line"><span class="comment">		return new Jedis(host, port);</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改-RedisAOP-中的注入"><a href="#修改-RedisAOP-中的注入" class="headerlink" title="修改 RedisAOP 中的注入"></a>修改 RedisAOP 中的注入</h3><p><img src="/2020/07/23/JT-Yuanzhibx06/D84A225B-D236-4876-9E05-1BA338BD54AC.png" alt="D84A225B-D236-4876-9E05-1BA338BD54AC"></p>
+<h3 id="关于redis分片总结"><a href="#关于redis分片总结" class="headerlink" title="关于redis分片总结"></a>关于redis分片总结</h3><ol>
+<li>当redis节点宕机之后,用户访问必然受到影响.</li>
+<li>当redis服务宕机之后,该节点中的数据可能丢失</li>
+<li>Redis分片可以实现内存数据的扩容.</li>
+<li>Redis分片机制中hash运算发生在业务服务器中.redis只负责存取.不负责计算. 所以效率更高.</li>
+</ol>
+<hr>
+<h1 id="Redis-属性说明"><a href="#Redis-属性说明" class="headerlink" title="Redis 属性说明"></a>Redis 属性说明</h1><h2 id="Redis持久化策略"><a href="#Redis持久化策略" class="headerlink" title="Redis持久化策略"></a>Redis持久化策略</h2><p>Redis的数据都保存在内存中,如果断电或者宕机,则内存数据将擦除,导致数据的丢失.为了防止数据丢失,Redis内部有持久化机制.<br>当第一次Redis服务启动时,根据配置文件中的持久化要求.进行持久化操作.如果不是第一次启动,则在服务启动时会根据持久化文件的配置,读取指定的持久化文件.实现内存数据的恢复.</p>
+<h3 id="RDB-模式"><a href="#RDB-模式" class="headerlink" title="RDB 模式"></a>RDB 模式</h3><blockquote>
+<p>特点:</p>
+</blockquote>
+<ol>
+<li>rdb模式是redis中默认的持久化策略.</li>
+<li>rdb模式定期持久化.保存的是Redis中的内存数据快照.持久化文件占用空间较小.</li>
+<li>rdb模式可能导致内存数据丢失</li>
+</ol>
+<blockquote>
+<p>命令:<br>前提:需要在redis的客户端中执行.</p>
+</blockquote>
+<ol>
+<li>save 命令 立即持久化 会导致其他操作陷入阻塞.</li>
+<li>bgsave 命令 开启后台运行. 以异步的方式进行持久化. 不会造成其他操作的阻塞.</li>
+</ol>
+<blockquote>
+<p>持久化周期</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">save <span class="number">900</span> <span class="number">1</span>        <span class="number">900</span>秒内,如果用户执行的<span class="number">1</span>次更新操作,则持久化一次</span><br><span class="line">save <span class="number">300</span> <span class="number">10</span>		  <span class="number">300</span>秒内,如果用户执行的<span class="number">10</span>次更新操作,则持久化一次</span><br><span class="line">save <span class="number">60</span> <span class="number">10000</span>	  <span class="number">60</span>秒内,如果用户执行的<span class="number">10000</span>次更新操作,则持久化一次</span><br><span class="line">save <span class="number">1</span> <span class="number">1</span>	 	  <span class="number">1</span>秒内,如果用户执行的<span class="number">1</span>次更新操作,则持久化一次    set 阻塞!!!!</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>持久化文件:</p>
+<p><img src="/2020/07/23/JT-Yuanzhibx06/6355A703-73AE-47FF-821E-29232D126FDC.png" alt="6355A703-73AE-47FF-821E-29232D126FDC"></p>
+</blockquote>
+<blockquote>
+<p>持久化文件路径:</p>
+<p><img src="/2020/07/23/JT-Yuanzhibx06/6A678288-9E8D-411D-A90E-5ACCCB119482.png" alt="6A678288-9E8D-411D-A90E-5ACCCB119482"></p>
+</blockquote>
+<h3 id="AOF-模式"><a href="#AOF-模式" class="headerlink" title="AOF 模式"></a>AOF 模式</h3><blockquote>
+<p>特点:</p>
+</blockquote>
+<ol>
+<li>AOF模式默认条件下是关闭状态. 如果需要开启则需要修改配置文件.</li>
+<li>AOF模式可以实现数据的实时持久化操作,AOF模式记录的是用户的操作过程.</li>
+<li>只要开启了AOF模式,则持久化方式以AOF模式为主.</li>
+</ol>
+<blockquote>
+<p>配置:</p>
+</blockquote>
+<p>开启AOF持久化方式</p>
+<p><img src="/2020/07/23/JT-Yuanzhibx06/D57B7BAA-1621-4DE4-A296-59EA7AE86C7C.png" alt="D57B7BAA-1621-4DE4-A296-59EA7AE86C7C"></p>
+<p>持久化文件格式:</p>
+<p><img src="/2020/07/23/JT-Yuanzhibx06/DC22BDDE-4BF4-47F2-B818-276291B3062A.png" alt="DC22BDDE-4BF4-47F2-B818-276291B3062A"></p>
+<p>持久化文件名称配置:</p>
+<p><img src="/2020/07/23/JT-Yuanzhibx06/57475546-48C5-440F-9D77-DA5E75E9747C.png" alt="57475546-48C5-440F-9D77-DA5E75E9747C"></p>
+<p>持久化文件策略说明</p>
+<blockquote>
+<p>appendfsync always    只要用户执行一次操作,则持久化一次.</p>
+</blockquote>
+<blockquote>
+<p><strong>appendfsync everysec  每秒持久化一次   默认策略</strong>      效率略低于RDB</p>
+</blockquote>
+<blockquote>
+<p>appendfsync no        不主动持久化.</p>
+</blockquote>
+<h3 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h3><p>公司新入职一个员工,对于业务不熟,出于好奇在生产环境下执行了flushAll命令,问:如果你是项目经理,如何解决 ??<br>A: 暴打一顿 驱逐出公司<br>B: 冷嘲热讽 让其主动离职 ,并且承担后果<br>C: 予以安慰,告诉他你是最棒的 之后去甲方负荆请罪<br>D: 相视一笑,告诉他 你别管了 交给我处理吧 .</p>
+<p>处理方式:修改AOF文件中的flushAll命令,之后重启即可.</p>
+<h3 id="持久化总结"><a href="#持久化总结" class="headerlink" title="持久化总结"></a>持久化总结</h3><ol>
+<li>如果用户允许少量的数据丢失,则可以选用RDB模式. 效率更高</li>
+<li>如果用户不允许数据丢失,则选用AOF模式.</li>
+<li>可以2种方式都选, 需要搭建组从结构 , 主机选用RDB模式, 从机选用AOF模式,可以保证业务允许.</li>
+</ol>
+<h3 id="配置多种持久化方式"><a href="#配置多种持久化方式" class="headerlink" title="配置多种持久化方式"></a>配置多种持久化方式</h3><ol>
+<li>设计 : 6379 当主机 7380当从机.</li>
+<li>修改主机的配置文件:<br>要求: 主机使用RDB模式</li>
+</ol>
+<h2 id="Redis-内存策略"><a href="#Redis-内存策略" class="headerlink" title="Redis 内存策略"></a>Redis 内存策略</h2><h2 id="Redis-集群"><a href="#Redis-集群" class="headerlink" title="Redis 集群"></a>Redis 集群</h2>
       
     </div>
 
@@ -501,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JT-Yuanzhibx"><span class="nav-number">1.</span> <span class="nav-text">JT_Yuanzhibx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text"></span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis-分片"><span class="nav-number">1.</span> <span class="nav-text">Redis 分片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么使用分片"><span class="nav-number">1.1.</span> <span class="nav-text">为什么使用分片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分片搭建"><span class="nav-number">1.2.</span> <span class="nav-text">分片搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分片规划"><span class="nav-number">1.2.1.</span> <span class="nav-text">分片规划</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备多台-redis"><span class="nav-number">1.2.2.</span> <span class="nav-text">准备多台 redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-redis-端口"><span class="nav-number">1.2.3.</span> <span class="nav-text">修改 redis 端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动-reids"><span class="nav-number">1.2.4.</span> <span class="nav-text">启动 reids</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一致性hash算法介绍"><span class="nav-number">1.3.</span> <span class="nav-text">一致性hash算法介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一致性hash原理说明"><span class="nav-number">1.3.1.</span> <span class="nav-text">一致性hash原理说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一致性hash特性"><span class="nav-number">1.3.2.</span> <span class="nav-text">一致性hash特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringBoot-整合-Redis-分片"><span class="nav-number">1.4.</span> <span class="nav-text">SpringBoot 整合 Redis 分片</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑分片配置文件"><span class="nav-number">1.4.1.</span> <span class="nav-text">编辑分片配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑配置类实现-redis-整合"><span class="nav-number">1.4.2.</span> <span class="nav-text">编辑配置类实现 redis 整合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-RedisAOP-中的注入"><span class="nav-number">1.4.3.</span> <span class="nav-text">修改 RedisAOP 中的注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于redis分片总结"><span class="nav-number">1.4.4.</span> <span class="nav-text">关于redis分片总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis-属性说明"><span class="nav-number">2.</span> <span class="nav-text">Redis 属性说明</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis持久化策略"><span class="nav-number">2.1.</span> <span class="nav-text">Redis持久化策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RDB-模式"><span class="nav-number">2.1.1.</span> <span class="nav-text">RDB 模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AOF-模式"><span class="nav-number">2.1.2.</span> <span class="nav-text">AOF 模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面试题"><span class="nav-number">2.1.3.</span> <span class="nav-text">面试题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#持久化总结"><span class="nav-number">2.1.4.</span> <span class="nav-text">持久化总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置多种持久化方式"><span class="nav-number">2.1.5.</span> <span class="nav-text">配置多种持久化方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis-内存策略"><span class="nav-number">2.2.</span> <span class="nav-text">Redis 内存策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis-集群"><span class="nav-number">2.3.</span> <span class="nav-text">Redis 集群</span></a></li></ol></li></ol></div>
             
 
           </div>
