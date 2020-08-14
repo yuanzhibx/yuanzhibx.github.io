@@ -73,7 +73,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://yuanzhibx.github.io/2020/07/03/Linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/DB04CB7380394D02868AC162A6E50FC0-3865896.jpg">
 <meta property="article:published_time" content="2020-07-03T00:41:51.000Z">
-<meta property="article:modified_time" content="2020-08-14T08:06:51.351Z">
+<meta property="article:modified_time" content="2020-08-14T08:13:33.449Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://yuanzhibx.github.io/2020/07/03/Linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/DB04CB7380394D02868AC162A6E50FC0-3865896.jpg">
@@ -369,105 +369,107 @@
 <p>$ tar tvf archive_name.tar</p>
 </blockquote>
 <h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a><a class="sub-title" name="grep">grep</a></h3><p>在文件中查找字符串(不区分大小写)</p>
-<pre class="hljs perl">$ <span class="hljs-keyword">grep</span> -i <span class="hljs-string">"the"</span> demo_file
-</pre>
-
+<blockquote>
+<p>$ grep -i “the” demo_file</p>
+</blockquote>
 <p>输出成功匹配的行，以及该行之后的三行</p>
-<pre class="hljs perl">$ <span class="hljs-keyword">grep</span> -A <span class="hljs-number">3</span> -i <span class="hljs-string">"example"</span> demo_text
-</pre>
-
+<blockquote>
+<p>$ grep -A 3 -i “example” demo_text</p>
+</blockquote>
 <p>在一个文件夹中递归查询包含指定字符串的文件</p>
-<pre class="hljs perl">$ <span class="hljs-keyword">grep</span> -r <span class="hljs-string">"ramesh"</span> *
-</pre>
-
+<blockquote>
+<p>$ grep -r “ramesh” *</p>
+</blockquote>
 <h3 id="find"><a href="#find" class="headerlink" title="find"></a><a class="sub-title" name="find">find</a></h3><p>查找指定文件名的文件(不区分大小写)</p>
 <blockquote>
-<p>$ find -iname <span class="hljs-string">“MyProgram.c”</span><br></p>
+<p>$ find -iname “MyProgram.c”</p>
 </blockquote>
 <p>对找到的文件执行某个命令</p>
-<pre class="hljs perl">$ find -iname <span class="hljs-string">"MyProgram.c"</span> -<span class="hljs-keyword">exec</span> md5sum {} \;
-</pre>
-
+<blockquote>
+<p>$ find -iname “MyProgram.c” -exec md5sum {} ;</p>
+</blockquote>
 <p>查找home目录下的所有空文件</p>
-<pre class="hljs php">$ find ~ -<span class="hljs-keyword">empty</span>
-</pre>
-
+<blockquote>
+<p>$ find ~ -empty</p>
+</blockquote>
 <h3 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a><a class="sub-title" name="ssh">ssh</a></h3><p>登录到远程主机</p>
-<pre class="hljs bash">$ ssh <span class="hljs-operator">-l</span> jsmith remotehost.example.com
-</pre>
-
+<blockquote>
+<p>$ ssh -l jsmith remotehost.example.com</p>
+</blockquote>
 <p>调试ssh客户端</p>
-<pre class="hljs bash">$ ssh -v <span class="hljs-operator">-l</span> jsmith remotehost.example.com
-</pre>
-
+<blockquote>
+<p>$ ssh -v -l jsmith remotehost.example.com</p>
+</blockquote>
 <p>显示ssh客户端版本</p>
 <blockquote>
-<p>$ ssh -<span class="hljs-constant">V</span><br></p>
+<p>$ ssh -V</p>
 </blockquote>
 <h3 id="sed"><a href="#sed" class="headerlink" title="sed"></a><a class="sub-title" name="sed">sed</a></h3><p>当你将Dos系统中的文件复制到Unix/Linux后，这个文件每行都会以\r\n结尾，sed可以轻易将其转换为Unix格式的文件，使用\n结尾的文件</p>
 <blockquote>
-<p>$ sed <span class="hljs-string">‘s/.$//‘</span> filename<br></p>
+<p>$ sed ‘s/.$//‘ filename</p>
 </blockquote>
 <p>反转文件内容并输出</p>
 <blockquote>
-<p>$ sed -n <span class="hljs-string">‘1!G; h; p’</span> filename<br></p>
+<p>$ sed -n ‘1!G; h; p’ filename</p>
 </blockquote>
 <p>为非空行添加行号</p>
 <blockquote>
-<p>$ sed <span class="hljs-string">‘/./=’</span> thegeekstuff.txt | sed <span class="hljs-string">‘N; s/\n/ /‘</span><br></p>
+<p>$ sed ‘/./=’ thegeekstuff.txt | sed ‘N; s/\n/ /‘</p>
 </blockquote>
 <h3 id="awk"><a href="#awk" class="headerlink" title="awk"></a><a class="sub-title" name="awk">awk</a></h3><p>删除重复行</p>
 <blockquote>
-<p>$ awk <span class="hljs-string">‘!($0 in array) { array[$0]; print}’</span> temp<br></p>
+<p>$ awk ‘!($0 in array) { array[$0]; print}’ temp</p>
 </blockquote>
 <p>打印/etc/passwd中所有包含同样的uid和gid的行</p>
 <blockquote>
-<p>$ awk -<span class="hljs-constant">F</span> <span class="hljs-string">‘:’</span> <span class="hljs-string">‘$3=$4’</span> /etc/passwd<br></p>
+<p>$ awk -F ‘:’ ‘$3=$4’ /etc/passwd</p>
 </blockquote>
 <p>打印文件中的指定部分的字段</p>
 <blockquote>
-<p>$ awk <span class="hljs-string">‘{print $2,$5;}’</span> employee.txt<br></p>
+<p>$ awk ‘{print $2,$5;}’ employee.txt</p>
 </blockquote>
 <h3 id="vim"><a href="#vim" class="headerlink" title="vim"></a><a class="sub-title" name="vim">vim</a></h3><p>打开文件并跳到第10行</p>
 <blockquote>
-<p>$ vim +<span class="hljs-number">10</span> filename.txt<br></p>
+<p>$ vim +10 filename.txt</p>
 </blockquote>
 <p>打开文件跳到第一个匹配的行</p>
-<pre class="hljs">$ vim +/search-term filename.txt
-</pre>
-
+<blockquote>
+<p>$ vim +/search-term filename.txt</p>
+</blockquote>
 <p>以只读模式打开文件</p>
 <blockquote>
-<p>$ vim -<span class="hljs-constant">R</span> /etc/passwd<br></p>
+<p>$ vim -R /etc/passwd</p>
 </blockquote>
 <h3 id="diff"><a href="#diff" class="headerlink" title="diff"></a><a class="sub-title" name="diff">diff</a></h3><p>比较的时候忽略空白符</p>
 <blockquote>
-<p>$ diff -w name_list.txt name_list_new.txt<br></p>
+<p>$ diff -w name_list.txt name_list_new.txt</p>
 </blockquote>
 <h3 id="sort"><a href="#sort" class="headerlink" title="sort"></a><a class="sub-title" name="sort">sort</a></h3><p>以升序对文件内容排序</p>
-<pre class="hljs perl">$ <span class="hljs-keyword">sort</span> names.txt
-</pre>
-
+<blockquote>
+<p>$ sort names.txt<br></p>
+</blockquote>
 <p>以降序对文件内容排序</p>
-<pre class="hljs perl">$ <span class="hljs-keyword">sort</span> -r names.txt
-</pre>
-
+<blockquote>
+<p>$ sort -r names.txt<br></p>
+</blockquote>
 <p>以第三个字段对/etc/passwd的内容排序</p>
-<pre class="hljs perl">$ <span class="hljs-keyword">sort</span> -t: -k <span class="hljs-number">3</span>n /etc/passwd | more
-</pre>
-
+<blockquote>
+<p>$ sort -t: -k <span class="hljs-number">3</span>n /etc/passwd | more<br></p>
+</blockquote>
 <h3 id="export"><a href="#export" class="headerlink" title="export"></a><a class="sub-title" name="export">export</a></h3><p>输出跟字符串oracle匹配的环境变量</p>
-<pre class="hljs bash">$ <span class="hljs-keyword">export</span> | grep ORCALE
-<span class="hljs-keyword">declare</span> -x ORACLE_BASE=<span class="hljs-string">"/u01/app/oracle"</span>
-<span class="hljs-keyword">declare</span> -x ORACLE_HOME=<span class="hljs-string">"/u01/app/oracle/product/10.2.0"</span>
-<span class="hljs-keyword">declare</span> -x ORACLE_SID=<span class="hljs-string">"med"</span>
-<span class="hljs-keyword">declare</span> -x ORACLE_TERM=<span class="hljs-string">"xterm"</span>
-</pre>
-
+<blockquote>
+<p>E</p>
+</blockquote>
+<p>de n&gt; -x ORACLE_HOME=<span class="hljs-string">“/u01/app/oracle/&gt;</span></p>
+<blockquote>
+<blockquote>
+</blockquote>
+<p>de n&gt; -x ORACLE_TERM=<span class="hljs-string">“xterm”</span><br></p>
+</blockquote>
 <p>设置全局环境变量</p>
-<pre class="hljs bash">$ <span class="hljs-keyword">export</span> ORACLE_HOME=/u01/app/oracle/product/<span class="hljs-number">10.2</span>.<span class="hljs-number">0</span>
-</pre>
-
+<blockquote>
+<p>$ expo &gt; ORACLE_HOME=/u01/app/oracle/product/<span class="hljs-number">10.2</span>.<span class="hljs-number">0</span><br></p>
+</blockquote>
 <h3 id="xargs"><a href="#xargs" class="headerlink" title="xargs"></a><a class="sub-title" name="xargs">xargs</a></h3><p>将所有图片文件拷贝到外部驱动器</p>
 <blockquote>
 <p>$ ls *.jpg | xargs -n1 -i cp {} /external-hard-drive/directory<br></p>
@@ -534,21 +536,21 @@ Length     Date   Time    Name
 </pre>
 
 <h3 id="shutdown"><a href="#shutdown" class="headerlink" title="shutdown"></a><a class="sub-title" name="shutdown">shutdown</a></h3><p>关闭系统并立即关机</p>
-<pre class="hljs perl">$ <span class="hljs-keyword">shutdown</span> -h now
-</pre>
-
+<blockquote>
+<p>$ shut an&gt; -h now<br></p>
+</blockquote>
 <p>10分钟后关机</p>
-<pre class="hljs perl">$ <span class="hljs-keyword">shutdown</span> -h +<span class="hljs-number">10</span>
-</pre>
-
+<blockquote>
+<p>$ shut an&gt; -h +<span class="hljs-number">10</span><br></p>
+</blockquote>
 <p>重启</p>
-<pre class="hljs perl">$ <span class="hljs-keyword">shutdown</span> -r now
-</pre>
-
+<blockquote>
+<p>$ shut an&gt; -r now<br></p>
+</blockquote>
 <p>重启期间强制进行系统检查</p>
-<pre class="hljs perl">$ <span class="hljs-keyword">shutdown</span> -Fr now
-</pre>
-
+<blockquote>
+<p>$ shut an&gt; -Fr now<br></p>
+</blockquote>
 <h3 id="ftp"><a href="#ftp" class="headerlink" title="ftp"></a><a class="sub-title" name="ftp">ftp</a></h3><p>ftp命令和sftp命令的用法基本相似连接ftp服务器并下载多个文件</p>
 <blockquote>
 <p>$ ftp <span class="hljs-constant">IP</span>/hostname<br><span class="hljs-prompt">ftp&gt;</span> mget *.html<br></p>
@@ -620,13 +622,13 @@ Swap:            <span class="hljs-number">3</span>          <span class="hljs-n
 
 <h3 id="top"><a href="#top" class="headerlink" title="top"></a><a class="sub-title" name="top">top</a></h3><p>top命令会显示当前系统中占用资源最多的一些进程（默认以CPU占用率排序）如果你想改变排序方式，可以在结果列表中点击O（大写字母O）会显示所有可用于排序的列，这个时候你就可以选择你想排序的列</p>
 <pre class="hljs sql">Current Sort Field:  P  for window 1:Def
-<span class="hljs-operator"><span class="hljs-keyword">Select</span> sort <span class="hljs-keyword">field</span> via <span class="hljs-keyword">field</span> letter, type <span class="hljs-keyword">any</span> other <span class="hljs-keyword">key</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">return</span>
-
-  a: PID        = Process Id              v: nDRT       = Dirty Pages <span class="hljs-keyword">count</span>
-  d: UID        = <span class="hljs-keyword">User</span> Id                 y: WCHAN      = Sleeping <span class="hljs-keyword">in</span> <span class="hljs-keyword">Function</span>
-  e: <span class="hljs-keyword">USER</span>       = <span class="hljs-keyword">User</span> Name               z: Flags      = Task Flags
-  ........
-</span></pre>
+a fiel  > retu >> 
+> 
+  s coun 
+ >  g in
+ >  = User Name               z: Flags      = Task Flags
+ >  ........
+</pre>
 
 <p>如果只想显示某个特定用户的进程，可以使用-u选项</p>
 <blockquote>
@@ -658,12 +660,9 @@ Filesystem    Type   <span class="hljs-number">1</span>K-blocks      Used Availa
 </pre>
 
 <h3 id="kill"><a href="#kill" class="headerlink" title="kill"></a><a class="sub-title" name="kill">kill</a></h3><p>kill用于终止一个进程。一般我们会先用<code>ps -ef</code>查找某个进程得到它的进程号，然后再使用<code>kill -9 进程号</code>终止该进程。你还可以使用killall、pkill、xkill来终止进程</p>
-<pre class="hljs perl">$ ps -ef | <span class="hljs-keyword">grep</span> vim
-ramesh    <span class="hljs-number">7243</span>  <span class="hljs-number">7222</span>  <span class="hljs-number">9</span> <span class="hljs-number">22</span>:<span class="hljs-number">43</span> pts/<span class="hljs-number">2</span>    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> vim
-
-$ <span class="hljs-keyword">kill</span> -<span class="hljs-number">9</span> <span class="hljs-number">7243</span>
-</pre>
-
+<blockquote>
+<p>| grep vim<br>ramesh    <span class="hljs-number">7243</span>  <span class="hljs-number">7222</span>  <span class="hljs-number">9</span> <span class="hljs-number">22</span>:<span class="hljs-number">43</span> pts/<span class="hljs-number">2</span>    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> vim<br>$ kill -<span class="hljs-number">9</span> <span class="hljs-number">&gt; 7243</span><br></p>
+</blockquote>
 <h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a><a class="sub-title" name="rm">rm</a></h3><p>删除文件前先确认</p>
 <blockquote>
 <p>$ rm -i filename.txt<br></p>
@@ -719,26 +718,26 @@ $ <span class="hljs-keyword">kill</span> -<span class="hljs-number">9</span> <sp
 
 <h3 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a><a class="sub-title" name="chmod">chmod</a></h3><p>chmod用于改变文件和目录的权限</p>
 <p>给指定文件的属主和属组所有权限(包括读、写、执行)</p>
-<pre class="hljs perl">$ <span class="hljs-keyword">chmod</span> ug+rwx file.txt
-</pre>
-
+<blockquote>
+<p>$ chmo  ug+rwx file.txt<br></p>
+</blockquote>
 <p>删除指定文件的属组的所有权限</p>
-<pre class="hljs perl">$ <span class="hljs-keyword">chmod</span> g-rwx file.txt
-</pre>
-
+<blockquote>
+<p>$ chmo  g-rwx file.txt<br></p>
+</blockquote>
 <p>修改目录的权限，以及递归修改目录下面所有文件和子目录的权限</p>
-<pre class="hljs perl">$ <span class="hljs-keyword">chmod</span> -R ug+rwx file.txt
-</pre>
-
+<blockquote>
+<p>$ chmo  -R ug+rwx file.txt<br></p>
+</blockquote>
 <h3 id="chown"><a href="#chown" class="headerlink" title="chown"></a><a class="sub-title" name="chown">chown</a></h3><p>chown用于改变文件属主和属组</p>
 <p>同时将某个文件的属主改为oracle，属组改为db</p>
 <pre class="hljs css">$ <span class="hljs-tag">chown</span> <span class="hljs-tag">oracle</span><span class="hljs-pseudo">:dba</span> <span class="hljs-tag">dbora</span><span class="hljs-class">.sh</span>
 </pre>
 
 <p>使用-R选项对目录和目录下的文件进行递归修改</p>
-<pre class="hljs perl">$ <span class="hljs-keyword">chown</span> -R oracle:dba /home/oracle
-</pre>
-
+<blockquote>
+<p>$ chow  -R oracle:dba /home/oracle<br></p>
+</blockquote>
 <h3 id="passwd"><a href="#passwd" class="headerlink" title="passwd"></a><a class="sub-title" name="passwd">passwd</a></h3><p>passwd用于在命令行修改密码，使用这个命令会要求你先输入旧密码，然后输入新密码</p>
 <blockquote>
 <p>$ passwd<br></p>
@@ -752,9 +751,9 @@ $ <span class="hljs-keyword">kill</span> -<span class="hljs-number">9</span> <sp
 </pre>
 
 <h3 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a><a class="sub-title" name="mkdir">mkdir</a></h3><p>在home目录下创建一个名为temp的目录</p>
-<pre class="hljs perl">$ <span class="hljs-keyword">mkdir</span> ~<span class="hljs-regexp">/temp
-</span></pre>
-
+<blockquote>
+<p>$ mkdi  ~<span class="hljs-regexp">/temp<br></span></p>
+</blockquote>
 <p>使用-p选项可以创建一个路径上所有不存在的目录</p>
 <pre class="hljs coffeescript">$ mkdir -p dir1<span class="hljs-regexp">/dir2/dir3/dir4/</span>
 </pre>
@@ -788,8 +787,8 @@ lsmk: /tmp/lsmk
 <span class="hljs-title">ls</span>        <span class="hljs-params">(<span class="hljs-number">1</span>)</span>  - list directory contents
 
 $ whatis ifconfig
-<span class="hljs-title">ifconfig</span> <span class="hljs-params">(<span class="hljs-number">8</span>)</span>         - configure a network <span class="hljs-keyword">interface</span>
-</span></pre>
+<span class="hljs-title">ifconfig</span> <span class="hljs-params">(<pan k inte pan>> 
+</pan></span></span></pre>
 
 <h3 id="locate"><a href="#locate" class="headerlink" title="locate"></a><a class="sub-title" name="locate">locate</a></h3><p>locate命名可以显示某个指定文件（或一组文件）的路径，它会使用由updatedb创建的数据库</p>
 <p>下面的命令会显示系统中所有包含crontab字符串的文件</p>
@@ -817,11 +816,11 @@ $ whatis ifconfig
 </ol>
 <p>例如，我们执行<code>whatis crontab</code>，你可以看到crontab有两个命令类型1和5，所以我们可以通过下面的命令查看命令类型5的man页面</p>
 <pre class="hljs cs">$ <span class="hljs-function">whatis crontab
-<span class="hljs-title">crontab</span> <span class="hljs-params">(<span class="hljs-number">1</span>)</span>          - maintain crontab files <span class="hljs-keyword">for</span> individual <span class="hljs-title">users</span> <span class="hljs-params">(V3)</span>
-<span class="hljs-title">crontab</span> <span class="hljs-params">(<span class="hljs-number">5</span>)</span>          - tables <span class="hljs-keyword">for</span> driving cron
+<span class="hljs-title">crontab</span> <span class="hljs-params">(<ndividual s for< ndividual <span class="hljs-title">users</ndividual></span> <span class="hljs-params> ">(V3)</span>
+<span class="hljs-title">crontab</span> <span class="hljs-params">(<riving s for< riving cron> 
 
 $ man 5 crontab
-</span></pre>
+</riving></span></span></pre>
 
 <h3 id="tail"><a href="#tail" class="headerlink" title="tail"></a><a class="sub-title" name="tail">tail</a></h3><p>tail命令默认显示文件最后的10行文本</p>
 <blockquote>
