@@ -73,7 +73,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://yuanzhibx.github.io/2020/07/03/Linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/DB04CB7380394D02868AC162A6E50FC0-3865896.jpg">
 <meta property="article:published_time" content="2020-07-03T00:41:51.000Z">
-<meta property="article:modified_time" content="2020-08-14T08:13:33.449Z">
+<meta property="article:modified_time" content="2020-08-14T08:39:27.340Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://yuanzhibx.github.io/2020/07/03/Linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/DB04CB7380394D02868AC162A6E50FC0-3865896.jpg">
@@ -446,172 +446,173 @@
 </blockquote>
 <h3 id="sort"><a href="#sort" class="headerlink" title="sort"></a><a class="sub-title" name="sort">sort</a></h3><p>以升序对文件内容排序</p>
 <blockquote>
-<p>$ sort names.txt<br></p>
+<p>$ sort names.txt</p>
 </blockquote>
 <p>以降序对文件内容排序</p>
 <blockquote>
-<p>$ sort -r names.txt<br></p>
+<p>$ sort -r names.txt</p>
 </blockquote>
 <p>以第三个字段对/etc/passwd的内容排序</p>
 <blockquote>
-<p>$ sort -t: -k <span class="hljs-number">3</span>n /etc/passwd | more<br></p>
+<p>$ sort -t: -k 3n /etc/passwd | more</p>
 </blockquote>
 <h3 id="export"><a href="#export" class="headerlink" title="export"></a><a class="sub-title" name="export">export</a></h3><p>输出跟字符串oracle匹配的环境变量</p>
 <blockquote>
-<p>E</p>
-</blockquote>
-<p>de n&gt; -x ORACLE_HOME=<span class="hljs-string">“/u01/app/oracle/&gt;</span></p>
-<blockquote>
-<blockquote>
-</blockquote>
-<p>de n&gt; -x ORACLE_TERM=<span class="hljs-string">“xterm”</span><br></p>
+<p>$ export | grep ORCALE <br><br>declare -x ORACLE_BASE=”/u01/app/oracle” <br><br>declare -x ORACLE_HOME=”/u01/app/oracle/product/10.2.0” <br><br>declare -x ORACLE_SID=”med” <br><br>declare -x ORACLE_TERM=”xterm” <br></p>
 </blockquote>
 <p>设置全局环境变量</p>
 <blockquote>
-<p>$ expo &gt; ORACLE_HOME=/u01/app/oracle/product/<span class="hljs-number">10.2</span>.<span class="hljs-number">0</span><br></p>
+<p>$ export ORACLE_HOME=/u01/app/oracle/product/10.2.0</p>
 </blockquote>
 <h3 id="xargs"><a href="#xargs" class="headerlink" title="xargs"></a><a class="sub-title" name="xargs">xargs</a></h3><p>将所有图片文件拷贝到外部驱动器</p>
 <blockquote>
-<p>$ ls *.jpg | xargs -n1 -i cp {} /external-hard-drive/directory<br></p>
+<p>$ ls *.jpg | xargs -n1 -i cp {} /external-hard-drive/directory</p>
 </blockquote>
 <p>将系统中所有jpd文件压缩打包</p>
-<pre class="hljs coffeescript">$ find / -name *.jpg -type f -<span class="hljs-built_in">print</span> | xargs tar -cvzf images.tar.gz
-</pre>
-
+<blockquote>
+<p>$ find / -name *.jpg -type f -print | xargs tar -cvzf images.tar.gz</p>
+</blockquote>
 <p>下载文件中列出的所有url对应的页面</p>
-<pre class="hljs cpp">$ cat url-<span class="hljs-built_in">list</span>.txt | xargs wget –c
-</pre>
-
+<blockquote>
+<p>$ cat url-list.txt | xargs wget –c</p>
+</blockquote>
 <h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a><a class="sub-title" name="ls">ls</a></h3><p>以易读的方式显示文件大小(显示为MB,GB…)</p>
-<pre class="hljs css">$ <span class="hljs-tag">ls</span> <span class="hljs-tag">-lh</span>
-<span class="hljs-tag">-rw-r-----</span> 1 <span class="hljs-tag">ramesh</span> <span class="hljs-tag">team-dev</span> 8<span class="hljs-class">.9M</span> <span class="hljs-tag">Jun</span> 12 15<span class="hljs-pseudo">:27</span> <span class="hljs-tag">arch-linux</span><span class="hljs-class">.txt</span><span class="hljs-class">.gz</span>
-</pre>
-
+<blockquote>
+<p>$ ls -lh <br><br>-rw-r—– 1 ramesh team-dev 8.9M Jun 12 15:27 arch-linux.txt.gz <br></p>
+</blockquote>
 <p>以最后修改时间升序列出文件</p>
 <blockquote>
-<p>$ ls -ltr<br></p>
+<p>$ ls -ltr</p>
 </blockquote>
 <p>在文件名后面显示文件类型</p>
 <blockquote>
-<p>$ ls -<span class="hljs-constant">F</span><br></p>
+<p>$ ls -F</p>
 </blockquote>
 <h3 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a><a class="sub-title" name="pwd">pwd</a></h3><p>输出当前工作目录</p>
 <h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a><a class="sub-title" name="cd">cd</a></h3><p><code>cd -</code>可以在最近工作的两个目录间切换</p>
 <p>使用<code>shopt -s cdspell</code>可以设置自动对cd命令进行拼写检查</p>
 <h3 id="gzip"><a href="#gzip" class="headerlink" title="gzip"></a><a class="sub-title" name="gzip">gzip</a></h3><p>创建一个*.gz的压缩文件</p>
 <blockquote>
-<p>$ gzip test.txt<br></p>
+<p>$ gzip test.txt</p>
 </blockquote>
 <p>解压*.gz文件</p>
-<pre class="hljs bash">$ gzip <span class="hljs-operator">-d</span> test.txt.gz
-</pre>
-
+<blockquote>
+<p>$ gzip -d test.txt.gz</p>
+</blockquote>
 <p>显示压缩的比率</p>
+<blockquote>
 <pre class="hljs bash">$ gzip <span class="hljs-operator">-l</span> *.gz
      compressed        uncompressed  ratio uncompressed_name
           <span class="hljs-number">23709</span>               <span class="hljs-number">97975</span>  <span class="hljs-number">75.8</span>% asp-patch-rpms.txt
 </pre>
-
+</blockquote>
 <h3 id="bzip2"><a href="#bzip2" class="headerlink" title="bzip2 "></a><a class="sub-title" name="bzip2">bzip2 </a></h3><p>创建*.bz2压缩文件</p>
 <blockquote>
-<p>$ bzip2 test.txt<br></p>
+<p>$ bzip2 test.txt</p>
 </blockquote>
 <p>解压*.bz2文件</p>
-<pre class="hljs bash">bzip2 <span class="hljs-operator">-d</span> test.txt.bz2
-</pre>
-
+<blockquote>
+<p>bzip2 -d test.txt.bz2</p>
+</blockquote>
 <h3 id="uzip"><a href="#uzip" class="headerlink" title="uzip"></a><a class="sub-title" name="uzip">uzip</a></h3><p>解压*.zip文件</p>
 <blockquote>
-<p>$ unzip test.zip<br></p>
+<p>$ unzip test.zip</p>
 </blockquote>
 <p>查看*.zip文件的内容</p>
-<pre class="hljs bash">$ unzip <span class="hljs-operator">-l</span> jasper.zip
+<blockquote>
+<pre class="hljs bash">$ unzip <span class="hljs-operator">-l jasper.zip
 Archive:  jasper.zip
 Length     Date   Time    Name
 --------    ----   ----    ----
-<span class="hljs-number">40995</span>  <span class="hljs-number">11</span>-<span class="hljs-number">30</span>-<span class="hljs-number">98</span> <span class="hljs-number">23</span>:<span class="hljs-number">50</span>   META-INF/MANIFEST.MF
-<span class="hljs-number">32169</span>  <span class="hljs-number">08</span>-<span class="hljs-number">25</span>-<span class="hljs-number">98</span> <span class="hljs-number">21</span>:<span class="hljs-number">07</span>   classes_
-<span class="hljs-number">15964</span>  <span class="hljs-number">08</span>-<span class="hljs-number">25</span>-<span class="hljs-number">98</span> <span class="hljs-number">21</span>:<span class="hljs-number">07</span>   classes_names
-<span class="hljs-number">10542</span>  <span class="hljs-number">08</span>-<span class="hljs-number">25</span>-<span class="hljs-number">98</span> <span class="hljs-number">21</span>:<span class="hljs-number">07</span>   classes_ncomp
-</pre>
-
+<span class="hljs-number">40995  <span class="hljs-number">11-<span class="hljs-number">30-<span class="hljs-number">98 <span class="hljs-number">23:<span class="hljs-number">50   META-INF/MANIFEST.MF
+<span class="hljs-number">32169  <span class="hljs-number">08-<span class="hljs-number">25-<span class="hljs-number">98 <span class="hljs-number">21:<span class="hljs-number">07   classes_
+<span class="hljs-number">15964  <span class="hljs-number">08-<span class="hljs-number">25-<span class="hljs-number">98 <span class="hljs-number">21:<span class="hljs-number">07   classes_names
+<span class="hljs-number">10542  <span class="hljs-number">08-<span class="hljs-number">25-<span class="hljs-number">98 <span class="hljs-number">21:<span class="hljs-number">07   classes_ncomp
+</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></pre></blockquote>
 <h3 id="shutdown"><a href="#shutdown" class="headerlink" title="shutdown"></a><a class="sub-title" name="shutdown">shutdown</a></h3><p>关闭系统并立即关机</p>
 <blockquote>
-<p>$ shut an&gt; -h now<br></p>
+<p>$ shut an&gt; -h now</p>
 </blockquote>
 <p>10分钟后关机</p>
 <blockquote>
-<p>$ shut an&gt; -h +<span class="hljs-number">10</span><br></p>
+<p>$ shutdown -h +10</p>
 </blockquote>
 <p>重启</p>
 <blockquote>
-<p>$ shut an&gt; -r now<br></p>
+<p>$ shutdown -r now</p>
 </blockquote>
 <p>重启期间强制进行系统检查</p>
 <blockquote>
-<p>$ shut an&gt; -Fr now<br></p>
+<p>$ shut an&gt; -Fr now</p>
 </blockquote>
 <h3 id="ftp"><a href="#ftp" class="headerlink" title="ftp"></a><a class="sub-title" name="ftp">ftp</a></h3><p>ftp命令和sftp命令的用法基本相似连接ftp服务器并下载多个文件</p>
 <blockquote>
-<p>$ ftp <span class="hljs-constant">IP</span>/hostname<br><span class="hljs-prompt">ftp&gt;</span> mget *.html<br></p>
+<p>$ ftp IP/hostname <br><br>ftp&gt; mget *.html</p>
 </blockquote>
 <p>显示远程主机上文件列表</p>
-<pre class="hljs ruby"><span class="hljs-prompt">ftp&gt;</span> mls *.html -
-<span class="hljs-regexp">/ftptest/features</span>.html
-/ftptest/index.html
-/ftptest/othertools.html
-/ftptest/samplereport.html
-/ftptest/usage.html
-</pre>
-
+<blockquote>
+<p>ftp&gt; mls *.html -<br>/ftptest/features.html<br>/ftptest/index.html<br>/ftptest/othertools.html<br>/ftptest/samplereport.html<br>/ftptest/usage.html</p>
+</blockquote>
 <h3 id="crontab"><a href="#crontab" class="headerlink" title="crontab"></a><a class="sub-title" name="crontab">crontab</a></h3><p>查看某个用户的crontab入口</p>
-<pre class="hljs bash">$ crontab -u john <span class="hljs-operator">-l</span>
-</pre>
-
+<blockquote>
+<p>$ crontab -u john -l</p>
+</blockquote>
 <p>设置一个每十分钟执行一次的计划任务</p>
-<pre class="hljs markdown"><span class="hljs-emphasis">*/10 *</span> <span class="hljs-bullet">* *</span> * /home/ramesh/check-disk-space
-</pre>
-
+<blockquote>
+<p>*/10 * * * * /home/ramesh/check-disk-space</p>
+</blockquote>
 <h3 id="service"><a href="#service" class="headerlink" title="service"></a><a class="sub-title" name="service">service</a></h3><p>service命令用于运行System V init脚本，这些脚本一般位于/etc/init.d文件下，这个命令可以直接运行这个文件夹里面的脚本，而不用加上路径</p>
 <p>查看服务状态</p>
 <blockquote>
-<p>$ service ssh status<br></p>
+<p>$ service ssh status</p>
 </blockquote>
 <p>查看所有服务状态</p>
 <blockquote>
-<p>$ service –status-all<br></p>
+<p>$ service –status-all</p>
 </blockquote>
 <p>重启服务</p>
 <blockquote>
-<p>$ service ssh restart<br></p>
+<p>$ service ssh restart</p>
 </blockquote>
 <h3 id="ps"><a href="#ps" class="headerlink" title="ps"></a><a class="sub-title" name="ps">ps</a></h3><p>ps命令用于显示正在运行中的进程的信息，ps命令有很多选项，这里只列出了几个</p>
 <p>查看当前正在运行的所有进程</p>
 <blockquote>
-<p>$ ps -ef | more<br></p>
+<p>$ ps -ef | more</p>
 </blockquote>
 <p>以树状结构显示当前正在运行的进程，H选项表示显示进程的层次结构</p>
 <blockquote>
-<p>$ ps -efH | more<br></p>
+<p>$ ps -efH | more</p>
 </blockquote>
+<h3 id="ps-1"><a href="#ps-1" class="headerlink" title="ps"></a><a class="sub-title" name="ps">ps</a></h3><p>ps命令用于显示正在运行中的进程的信息，ps命令有很多选项，这里只列出了几个</p>
+<p>查看当前正在运行的所有进程</p>
+<pre class="hljs ruby"><span class="hljs-variable">$ </span>ps -ef | more
+</pre>
+
+<p>以树状结构显示当前正在运行的进程，H选项表示显示进程的层次结构</p>
+<pre class="hljs ruby"><span class="hljs-variable">$ </span>ps -efH | more
+</pre>
+
 <h3 id="free"><a href="#free" class="headerlink" title="free"></a><a class="sub-title" name="free">free</a></h3><p>这个命令用于显示系统当前内存的使用情况，包括已用内存、可用内存和交换内存的情况</p>
 <p>默认情况下free会以字节为单位输出内存的使用量</p>
+<blockquote>
 <pre class="hljs cpp">$ <span class="hljs-built_in">free</span>
              total       used       <span class="hljs-built_in">free</span>     shared    buffers     cached
 Mem:       <span class="hljs-number">3566408</span>    <span class="hljs-number">1580220</span>    <span class="hljs-number">1986188</span>          <span class="hljs-number">0</span>     <span class="hljs-number">203988</span>     <span class="hljs-number">902960</span>
 -/+ buffers/cache:     <span class="hljs-number">473272</span>    <span class="hljs-number">3093136</span>
 Swap:      <span class="hljs-number">4000176</span>          <span class="hljs-number">0</span>    <span class="hljs-number">4000176</span>
 </pre>
-
+</blockquote>
 <p>如果你想以其他单位输出内存的使用量，需要加一个选项，-g为GB，-m为MB，-k为KB，-b为字节</p>
+<blockquote>
 <pre class="hljs cpp">$ <span class="hljs-built_in">free</span> -g
              total       used       <span class="hljs-built_in">free</span>     shared    buffers     cached
 Mem:             <span class="hljs-number">3</span>          <span class="hljs-number">1</span>          <span class="hljs-number">1</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>
 -/+ buffers/cache:          <span class="hljs-number">0</span>          <span class="hljs-number">2</span>
 Swap:            <span class="hljs-number">3</span>          <span class="hljs-number">0</span>          <span class="hljs-number">3</span>
 </pre>
-
+</blockquote>
 <p>如果你想查看所有内存的汇总，请使用-t选项，使用这个选项会在输出中加一个汇总行</p>
+<blockquote>
 <pre class="hljs ruby">ramesh<span class="hljs-variable">@ramesh</span>-<span class="hljs-symbol">laptop:</span>~<span class="hljs-variable">$ </span>free -t
              total       used       free     shared    buffers     cached
 <span class="hljs-constant">Mem</span><span class="hljs-symbol">:</span>       <span class="hljs-number">3566408</span>    <span class="hljs-number">1592148</span>    <span class="hljs-number">1974260</span>          <span class="hljs-number">0</span>     <span class="hljs-number">204260</span>     <span class="hljs-number">912556</span>
@@ -619,29 +620,32 @@ Swap:            <span class="hljs-number">3</span>          <span class="hljs-n
 <span class="hljs-constant">Swap</span><span class="hljs-symbol">:</span>      <span class="hljs-number">4000176</span>          <span class="hljs-number">0</span>    <span class="hljs-number">4000176</span>
 <span class="hljs-constant">Total</span><span class="hljs-symbol">:</span>     <span class="hljs-number">7566584</span>    <span class="hljs-number">1592148</span>    <span class="hljs-number">5974436</span>
 </pre>
-
+</blockquote>
 <h3 id="top"><a href="#top" class="headerlink" title="top"></a><a class="sub-title" name="top">top</a></h3><p>top命令会显示当前系统中占用资源最多的一些进程（默认以CPU占用率排序）如果你想改变排序方式，可以在结果列表中点击O（大写字母O）会显示所有可用于排序的列，这个时候你就可以选择你想排序的列</p>
+<blockquote>
 <pre class="hljs sql">Current Sort Field:  P  for window 1:Def
-a fiel  > retu >> 
-> 
-  s coun 
- >  g in
- >  = User Name               z: Flags      = Task Flags
- >  ........
-</pre>
+<span class="hljs-operator"><span class="hljs-keyword">Select</span> sort <span class="hljs-keyword">field</span> via <span class="hljs-keyword">field</span> letter, type <span class="hljs-keyword">any</span> other <span class="hljs-keyword">key</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">return</span>
 
+  a: PID        = Process Id              v: nDRT       = Dirty Pages <span class="hljs-keyword">count</span>
+  d: UID        = <span class="hljs-keyword">User</span> Id                 y: WCHAN      = Sleeping <span class="hljs-keyword">in</span> <span class="hljs-keyword">Function</span>
+  e: <span class="hljs-keyword">USER</span>       = <span class="hljs-keyword">User</span> Name               z: Flags      = Task Flags
+  ........
+</span></pre>
+</blockquote>
 <p>如果只想显示某个特定用户的进程，可以使用-u选项</p>
 <blockquote>
-<p>$ top -u oracle<br></p>
+<p>$ top -u oracle</p>
 </blockquote>
 <h3 id="df"><a href="#df" class="headerlink" title="df"></a><a class="sub-title" name="df">df</a></h3><p>显示文件系统的磁盘使用情况，默认情况下<code>df -k</code>将以字节为单位输出磁盘的使用量</p>
+<blockquote>
 <pre class="hljs coffeescript">$ df -k
-Filesystem           <span class="hljs-number">1</span>K-blocks      Used Available Use% Mounted <span class="hljs-literal">on</span>
+Filesystem           <span class="hljs-number">1</span>K-blocks      Used Available Use% Mounted > <span class="hljs-literal">on</span>
 <span class="hljs-regexp">/dev/sda1             29530400   3233104  24797232  12% /</span>
-/dev/sda2            <span class="hljs-number">120367992</span>  <span class="hljs-number">50171596</span>  <span class="hljs-number">64082060</span>  <span class="hljs-number">44</span>% /home
+/dev/sda2            <span class="hljs-number">120367992</span>  < class="hljs-number">50171596</> span>  <span class="hljs-number">64082060</span>  <span class="hljs-number">44</span>% /home
 </pre>
-
+</blockquote>
 <p>使用-h选项可以以更符合阅读习惯的方式显示磁盘使用量</p>
+<blockquote>
 <pre class="hljs coffeescript">$ df -h
 Filesystem                  Size   Used  Avail Capacity  iused      ifree %iused  Mounted <span class="hljs-literal">on</span>
 <span class="hljs-regexp">/dev/disk0s2               232Gi   84Gi  148Gi    37% 21998562   38864868   36%   /</span>
@@ -651,271 +655,384 @@ map auto_home                <span class="hljs-number">0</span>Bi    <span class
 /dev/disk0s4               <span class="hljs-number">466</span>Gi   <span class="hljs-number">45</span>Gi  <span class="hljs-number">421</span>Gi    <span class="hljs-number">10</span>%   <span class="hljs-number">112774</span>  <span class="hljs-number">440997174</span>    <span class="hljs-number">0</span>%   /Volumes/BOOTCAMP
 <span class="hljs-regexp">//</span>app<span class="hljs-property">@izenesoft</span>.cn/public  <span class="hljs-number">2.7</span>Ti  <span class="hljs-number">1.3</span>Ti  <span class="hljs-number">1.4</span>Ti    <span class="hljs-number">48</span>%        <span class="hljs-number">0</span> <span class="hljs-number">18446744073709551615</span>    <span class="hljs-number">0</span>%   /Volumes/public
 </pre>
-
+</blockquote>
 <p>使用-T选项显示文件系统类型</p>
+<blockquote>
 <pre class="hljs coffeescript">$ df -T
 Filesystem    Type   <span class="hljs-number">1</span>K-blocks      Used Available Use% Mounted <span class="hljs-literal">on</span>
 <span class="hljs-regexp">/dev/sda1     ext4    29530400   3233120  24797216  12% /</span>
 /dev/sda2     ext4   <span class="hljs-number">120367992</span>  <span class="hljs-number">50171596</span>  <span class="hljs-number">64082060</span>  <span class="hljs-number">44</span>% /home
 </pre>
-
-<h3 id="kill"><a href="#kill" class="headerlink" title="kill"></a><a class="sub-title" name="kill">kill</a></h3><p>kill用于终止一个进程。一般我们会先用<code>ps -ef</code>查找某个进程得到它的进程号，然后再使用<code>kill -9 进程号</code>终止该进程。你还可以使用killall、pkill、xkill来终止进程</p>
-<blockquote>
-<p>| grep vim<br>ramesh    <span class="hljs-number">7243</span>  <span class="hljs-number">7222</span>  <span class="hljs-number">9</span> <span class="hljs-number">22</span>:<span class="hljs-number">43</span> pts/<span class="hljs-number">2</span>    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> vim<br>$ kill -<span class="hljs-number">9</span> <span class="hljs-number">&gt; 7243</span><br></p>
 </blockquote>
+<h3 id="kill"><a href="#kill" class="headerlink" title="kill"></a><a class="sub-title" name="kill">kill</a></h3><p>kill用于终止一个进程。一般我们会先用<code>ps -ef</code>查找某个进程得到它的进程号，然后再使用<code>kill -9 进程号</code>终止该进程。你还可以使用killall、pkill、xkill来终止进程</p>
+<pre class="hljs perl">$ ps -ef | <span class="hljs-keyword">grep</span> vim
+ramesh    <span class="hljs-number">7243</span>  <span class="hljs-number">7222</span>  <span class="hljs-number">9</span> <span class="hljs-number">22</span>:<span class="hljs-number">43</span> pts/<span class="hljs-number">2</span>    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> vim
+
+$ <span class="hljs-keyword">kill</span> -<span class="hljs-number">9</span> <span class="hljs-number">7243</span>
+</pre>
+
+<h3 id="27-rm"><a href="#27-rm" class="headerlink" title="27. rm"></a><a class="sub-title" name="rm">27. rm</a></h3><p>删除文件前先确认</p>
+<pre class="hljs ruby"><span class="hljs-variable">$ </span>rm -i filename.txt
+</pre>
+
+<p>在文件名中使用shell的元字符会非常有用。删除文件前先打印文件名并进行确认</p>
+<pre class="hljs ruby"><span class="hljs-variable">$ </span>rm -i file*
+</pre>
+
+<p>递归删除文件夹下所有文件，并删除该文件夹</p>
+<pre class="hljs ruby"><span class="hljs-variable">$ </span>rm -r example
+</pre>
+
 <h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a><a class="sub-title" name="rm">rm</a></h3><p>删除文件前先确认</p>
 <blockquote>
-<p>$ rm -i filename.txt<br></p>
+<p>$ rm -i filename.txt</p>
 </blockquote>
 <p>在文件名中使用shell的元字符会非常有用。删除文件前先打印文件名并进行确认</p>
 <blockquote>
-<p>$ rm -i file*<br></p>
+<p>$ rm -i file*</p>
 </blockquote>
 <p>递归删除文件夹下所有文件，并删除该文件夹</p>
 <blockquote>
-<p>$ rm -r example<br></p>
+<p>$ rm -r example</p>
 </blockquote>
 <h3 id="cp"><a href="#cp" class="headerlink" title="cp"></a><a class="sub-title" name="cp">cp</a></h3><p>拷贝文件1到文件2，并保持文件的权限、属主和时间戳</p>
 <blockquote>
-<p>$ cp -p file1 file2<br></p>
+<p>$ cp -p file1 file2</p>
 </blockquote>
 <p>拷贝file1到file2，如果file2存在会提示是否覆盖</p>
 <blockquote>
-<p>$ cp -i file1 file2<br></p>
+<p>$ cp -i file1 file2</p>
 </blockquote>
 <h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a><a class="sub-title" name="mv">mv</a></h3><p>将文件名file1重命名为file2，如果file2存在则提示是否覆盖</p>
 <blockquote>
-<p>$ mv -i file1 file2<br></p>
+<p>$ mv -i file1 file2</p>
 </blockquote>
 <p>注意如果使用-f选项则不会进行提示</p>
 <p>-v会输出重命名的过程，当文件名中包含通配符时，这个选项会非常方便</p>
 <blockquote>
-<p>$ mv -v file1 file2<br></p>
+<p>$ mv -v file1 file2</p>
 </blockquote>
 <h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a><a class="sub-title" name="cat">cat</a></h3><p>你可以一次查看多个文件的内容，下面的命令会先打印file1的内容，然后打印file2的内容</p>
 <blockquote>
-<p>$ cat file1 file2<br></p>
+<p>$ cat file1 file2</p>
 </blockquote>
 <p>-n命令可以在每行的前面加上行号</p>
 <pre class="hljs coffeescript">$ cat -n /etc/logrotate.conf
-    <span class="hljs-number">1</span>    /<span class="hljs-reserved">var</span>/log/btmp {
-    <span class="hljs-number">2</span>        missingok
-    <span class="hljs-number">3</span>        monthly
-    <span class="hljs-number">4</span>        create <span class="hljs-number">0660</span> root utmp
-    <span class="hljs-number">5</span>        rotate <span class="hljs-number">1</span>
-    <span class="hljs-number">6</span>    }
-</pre>
+    <span class="hljs-number">1    /<span class="hljs-reserved">var/log/btmp {
+    <span class="hljs-number">2        missingok
+    <span class="hljs-number">3        monthly
+    <span class="hljs-number">4        create <span class="hljs-number">0660 root utmp
+    <span class="hljs-number">5        rotate <span class="hljs-number">1
+    <span class="hljs-number">6    }
 
-<h3 id="mount"><a href="#mount" class="headerlink" title="mount"></a><a class="sub-title" name="mount">mount</a></h3><p>如果要挂载一个文件系统，需要先创建一个目录，然后将这个文件系统挂载到这个目录上</p>
-<pre class="hljs apache"><span class="hljs-comment"># mkdir /u01</span>
 
-<span class="hljs-comment"># mount /dev/sdb1 /u01</span>
-</pre>
+### <a class="sub-title" name="mount">mount</a>
 
-<p>也可以把它添加到fstab中进行自动挂载，这样任何时候系统重启的时候，文件系统都会被加载</p>
+如果要挂载一个文件系统，需要先创建一个目录，然后将这个文件系统挂载到这个目录上
+
+<pre class="hljs apache"><span class="hljs-comment"># mkdir /u01
+
+<span class="hljs-comment"># mount /dev/sdb1 /u01
+
+
+也可以把它添加到fstab中进行自动挂载，这样任何时候系统重启的时候，文件系统都会被加载
+
 <pre class="hljs">/dev/sdb1 /u01 ext2 defaults 0 2
-</pre>
 
-<h3 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a><a class="sub-title" name="chmod">chmod</a></h3><p>chmod用于改变文件和目录的权限</p>
-<p>给指定文件的属主和属组所有权限(包括读、写、执行)</p>
-<blockquote>
-<p>$ chmo  ug+rwx file.txt<br></p>
-</blockquote>
-<p>删除指定文件的属组的所有权限</p>
-<blockquote>
-<p>$ chmo  g-rwx file.txt<br></p>
-</blockquote>
-<p>修改目录的权限，以及递归修改目录下面所有文件和子目录的权限</p>
-<blockquote>
-<p>$ chmo  -R ug+rwx file.txt<br></p>
-</blockquote>
-<h3 id="chown"><a href="#chown" class="headerlink" title="chown"></a><a class="sub-title" name="chown">chown</a></h3><p>chown用于改变文件属主和属组</p>
-<p>同时将某个文件的属主改为oracle，属组改为db</p>
-<pre class="hljs css">$ <span class="hljs-tag">chown</span> <span class="hljs-tag">oracle</span><span class="hljs-pseudo">:dba</span> <span class="hljs-tag">dbora</span><span class="hljs-class">.sh</span>
-</pre>
 
-<p>使用-R选项对目录和目录下的文件进行递归修改</p>
-<blockquote>
-<p>$ chow  -R oracle:dba /home/oracle<br></p>
-</blockquote>
-<h3 id="passwd"><a href="#passwd" class="headerlink" title="passwd"></a><a class="sub-title" name="passwd">passwd</a></h3><p>passwd用于在命令行修改密码，使用这个命令会要求你先输入旧密码，然后输入新密码</p>
-<blockquote>
-<p>$ passwd<br></p>
-</blockquote>
-<p>超级用户可以用这个命令修改其他用户的密码，这个时候不需要输入用户的密码</p>
-<pre class="hljs apache"><span class="hljs-comment"># passwd USERNAME</span>
-</pre>
+### <a class="sub-title" name="chmod">chmod</a>
 
-<p>passwd还可以删除某个用户的密码，这个命令只有root用户才能操作，删除密码后，这个用户不需要输入密码就可以登录到系统</p>
-<pre class="hljs apache"><span class="hljs-comment"># passwd -d USERNAME</span>
-</pre>
+chmod用于改变文件和目录的权限
 
-<h3 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a><a class="sub-title" name="mkdir">mkdir</a></h3><p>在home目录下创建一个名为temp的目录</p>
-<blockquote>
-<p>$ mkdi  ~<span class="hljs-regexp">/temp<br></span></p>
-</blockquote>
-<p>使用-p选项可以创建一个路径上所有不存在的目录</p>
-<pre class="hljs coffeescript">$ mkdir -p dir1<span class="hljs-regexp">/dir2/dir3/dir4/</span>
-</pre>
+给指定文件的属主和属组所有权限(包括读、写、执行)
 
-<h3 id="ifconfig"><a href="#ifconfig" class="headerlink" title="ifconfig"></a><a class="sub-title" name="ifconfig">ifconfig</a></h3><p>ifconfig用于查看和配置Linux系统的网络接口</p>
-<p>查看所有网络接口及其状态</p>
-<pre class="hljs bash">$ ifconfig <span class="hljs-operator">-a</span>
-</pre>
+> $ chmo  ug+rwx file.txt
 
-<p>使用up和down命令启动或停止某个接口</p>
-<blockquote>
-<p>$ ifconfig eth<span class="hljs-number">0</span> up</p>
-</blockquote>
-<p><span class="hljs-variable">$ </span>ifconfig eth<span class="hljs-number">0</span> down<br></p>
-<h3 id="uname"><a href="#uname" class="headerlink" title="uname"></a><a class="sub-title" name="uname">uname</a></h3><p>uname可以显示一些重要的系统信息，例如内核名称、主机名、内核版本号、处理器类型之类的信息</p>
-<pre class="hljs bash">$ uname <span class="hljs-operator">-a</span>
-Linux john-laptop <span class="hljs-number">2.6</span>.<span class="hljs-number">32</span>-<span class="hljs-number">24</span>-generic <span class="hljs-comment">#41-Ubuntu SMP Thu Aug 19 01:12:52 UTC 2010 i686 GNU/Linux</span>
-</pre>
 
-<h3 id="whereis"><a href="#whereis" class="headerlink" title="whereis"></a><a class="sub-title" name="whereis">whereis</a></h3><p>当你不知道某个命令的位置时可以使用whereis命令，下面使用whereis查找ls的位置</p>
+删除指定文件的属组的所有权限
+
+> $ chmo  g-rwx file.txt
+
+
+修改目录的权限，以及递归修改目录下面所有文件和子目录的权限
+
+> $ chmo  -R ug+rwx file.txt
+
+
+### <a class="sub-title" name="chown">chown</a>
+
+chown用于改变文件属主和属组
+
+同时将某个文件的属主改为oracle，属组改为db
+
+<pre class="hljs css">$ <span class="hljs-tag">chown <span class="hljs-tag">oracle<span class="hljs-pseudo">:dba <span class="hljs-tag">dbora<span class="hljs-class">.sh
+
+
+使用-R选项对目录和目录下的文件进行递归修改
+
+> $ chow  -R oracle:dba /home/oracle
+
+
+### <a class="sub-title" name="passwd">passwd</a>
+
+passwd用于在命令行修改密码，使用这个命令会要求你先输入旧密码，然后输入新密码
+
+> $ passwd
+
+
+超级用户可以用这个命令修改其他用户的密码，这个时候不需要输入用户的密码
+
+<pre class="hljs apache"><span class="hljs-comment"># passwd USERNAME
+
+
+passwd还可以删除某个用户的密码，这个命令只有root用户才能操作，删除密码后，这个用户不需要输入密码就可以登录到系统
+
+<pre class="hljs apache"><span class="hljs-comment"># passwd -d USERNAME
+
+
+### <a class="sub-title" name="mkdir">mkdir</a>
+
+在home目录下创建一个名为temp的目录
+
+> $ mkdi  ~<span class="hljs-regexp">/temp
+
+
+使用-p选项可以创建一个路径上所有不存在的目录
+
+<pre class="hljs coffeescript">$ mkdir -p dir1<span class="hljs-regexp">/dir2/dir3/dir4/
+
+
+### <a class="sub-title" name="ifconfig">ifconfig</a>
+
+ifconfig用于查看和配置Linux系统的网络接口
+
+查看所有网络接口及其状态
+
+<pre class="hljs bash">$ ifconfig <span class="hljs-operator">-a
+
+
+使用up和down命令启动或停止某个接口
+
+> $ ifconfig eth<span class="hljs-number">0 up
+
+<span class="hljs-variable">$ ifconfig eth<span class="hljs-number">0 down
+
+
+### <a class="sub-title" name="uname">uname</a>
+
+uname可以显示一些重要的系统信息，例如内核名称、主机名、内核版本号、处理器类型之类的信息
+
+<pre class="hljs bash">$ uname <span class="hljs-operator">-a
+Linux john-laptop <span class="hljs-number">2.6.<span class="hljs-number">32-<span class="hljs-number">24-generic <span class="hljs-comment">#41-Ubuntu SMP Thu Aug 19 01:12:52 UTC 2010 i686 GNU/Linux
+
+
+### <a class="sub-title" name="whereis">whereis</a>
+
+当你不知道某个命令的位置时可以使用whereis命令，下面使用whereis查找ls的位置
 <pre class="hljs javascript">$ whereis ls
-ls: <span class="hljs-regexp">/bin/</span>ls /usr/share/man/man1/ls<span class="hljs-number">.1</span>.gz /usr/share/man/man1p/ls<span class="hljs-number">.1</span>p.gz
-</pre>
-<p>当你想查找某个可执行程序的位置，但这个程序又不在whereis的默认目录下，你可以使用-B选项，并指定目录作为这个选项的参数。下面的命令在/tmp目录下查找lsmk命令</p>
-<pre class="hljs bash">$ whereis -u -B /tmp <span class="hljs-operator">-f</span> lsmk
-lsmk: /tmp/lsmk
-</pre>
+ls: <span class="hljs-regexp">/bin/ls /usr/share/man/man1/ls<span class="hljs-number">.1.gz /usr/share/man/man1p/ls<span class="hljs-number">.1p.gz
 
-<h3 id="whatis"><a href="#whatis" class="headerlink" title="whatis"></a><a class="sub-title" name="whatis">whatis</a></h3><p>wathis显示某个命令的描述信息</p>
+当你想查找某个可执行程序的位置，但这个程序又不在whereis的默认目录下，你可以使用-B选项，并指定目录作为这个选项的参数。下面的命令在/tmp目录下查找lsmk命令
+<pre class="hljs bash">$ whereis -u -B /tmp <span class="hljs-operator">-f lsmk
+lsmk: /tmp/lsmk
+
+
+### <a class="sub-title" name="whatis">whatis</a>
+
+wathis显示某个命令的描述信息
+
 <pre class="hljs cs">$ <span class="hljs-function">whatis ls
-<span class="hljs-title">ls</span>        <span class="hljs-params">(<span class="hljs-number">1</span>)</span>  - list directory contents
+<span class="hljs-title">ls        <span class="hljs-params">(<span class="hljs-number">1)  - list directory contents
 
 $ whatis ifconfig
-<span class="hljs-title">ifconfig</span> <span class="hljs-params">(<pan k inte pan>> 
-</pan></span></span></pre>
+<span class="hljs-title">ifconfig <span class="hljs-params">(<pan k inte pan>> 
 
-<h3 id="locate"><a href="#locate" class="headerlink" title="locate"></a><a class="sub-title" name="locate">locate</a></h3><p>locate命名可以显示某个指定文件（或一组文件）的路径，它会使用由updatedb创建的数据库</p>
-<p>下面的命令会显示系统中所有包含crontab字符串的文件</p>
-<blockquote>
-<p>$ locate crontab<br>/etc/anacrontab<br>/etc/crontab<br>/usr/bin/crontab<br>/usr/share/doc/cron/examples/crontab2english.pl.gz<br>/usr/share/man/man1/crontab.<span class="hljs-number">1</span>.gz<br>/usr/share/man/man5/anacrontab.<span class="hljs-number">5</span>.gz<br>/usr/share/man/man5/crontab.<span class="hljs-number">5</span>.gz<br>/usr/share/vim/vim72/syntax/crontab.vim<br></p>
-</blockquote>
-<h3 id="man"><a href="#man" class="headerlink" title="man"></a><a class="sub-title" name="man">man</a></h3><p>显示某个命令的man页面</p>
-<blockquote>
-<p>$ man crontab<br></p>
-</blockquote>
-<p>有些命令可能会有多个man页面，每个man页面对应一种命令类型</p>
-<blockquote>
-<p>$ man <span class="hljs-constant">SECTION</span>-<span class="hljs-constant">NUMBER</span> commandname<br></p>
-</blockquote>
-<p>man页面一般可以分为8种命令类型</p>
-<ol>
-<li>用户命令</li>
-<li>系统调用</li>
-<li>c库函数</li>
-<li>设备与网络接口</li>
-<li>文件格式</li>
-<li>游戏与屏保</li>
-<li>环境、表、宏</li>
-<li>系统管理员命令和后台运行命令</li>
-</ol>
-<p>例如，我们执行<code>whatis crontab</code>，你可以看到crontab有两个命令类型1和5，所以我们可以通过下面的命令查看命令类型5的man页面</p>
+
+### <a class="sub-title" name="locate">locate</a>
+
+locate命名可以显示某个指定文件（或一组文件）的路径，它会使用由updatedb创建的数据库
+
+下面的命令会显示系统中所有包含crontab字符串的文件
+
+> $ locate crontab
+/etc/anacrontab
+/etc/crontab
+/usr/bin/crontab
+/usr/share/doc/cron/examples/crontab2english.pl.gz
+/usr/share/man/man1/crontab.<span class="hljs-number">1.gz
+/usr/share/man/man5/anacrontab.<span class="hljs-number">5.gz
+/usr/share/man/man5/crontab.<span class="hljs-number">5.gz
+/usr/share/vim/vim72/syntax/crontab.vim
+
+
+### <a class="sub-title" name="man">man</a>
+
+显示某个命令的man页面
+
+> $ man crontab
+
+
+有些命令可能会有多个man页面，每个man页面对应一种命令类型
+
+> $ man <span class="hljs-constant">SECTION-<span class="hljs-constant">NUMBER commandname
+
+
+man页面一般可以分为8种命令类型
+
+1.  用户命令
+2.  系统调用
+3.  c库函数
+4.  设备与网络接口
+5.  文件格式
+6.  游戏与屏保
+7.  环境、表、宏
+8.  系统管理员命令和后台运行命令
+
+例如，我们执行`whatis crontab`，你可以看到crontab有两个命令类型1和5，所以我们可以通过下面的命令查看命令类型5的man页面
+
 <pre class="hljs cs">$ <span class="hljs-function">whatis crontab
-<span class="hljs-title">crontab</span> <span class="hljs-params">(<ndividual s for< ndividual <span class="hljs-title">users</ndividual></span> <span class="hljs-params> ">(V3)</span>
-<span class="hljs-title">crontab</span> <span class="hljs-params">(<riving s for< riving cron> 
+<span class="hljs-title">crontab <span class="hljs-params">(<ndividual s for< ndividual <span class="hljs-title">users <span class="hljs-params> ">(V3)
+<span class="hljs-title">crontab <span class="hljs-params">(<riving s for< riving cron> 
 
 $ man 5 crontab
-</riving></span></span></pre>
 
-<h3 id="tail"><a href="#tail" class="headerlink" title="tail"></a><a class="sub-title" name="tail">tail</a></h3><p>tail命令默认显示文件最后的10行文本</p>
-<blockquote>
-<p>$ tail filename.txt<br></p>
-</blockquote>
-<p>你可以使用-n选项指定要显示的行数</p>
-<blockquote>
-<p>$ tail -n <span class="hljs-constant">N</span> filename.txt<br></p>
-</blockquote>
-<p>你也可以使用-f选项进行实时查看，这个命令执行后会等待，如果有新行添加到文件尾部，它会继续输出新的行，在查看日志时这个选项会非常有用。你可以通过CTRL-C终止命令的执行</p>
-<pre class="hljs bash">$ tail <span class="hljs-operator">-f</span> log-file
-</pre>
 
-<h3 id="less"><a href="#less" class="headerlink" title="less"></a><a class="sub-title" name="less">less</a></h3><p>这个命名可以在不加载整个文件的前提下显示文件内容，在查看大型日志文件的时候这个命令会非常有用</p>
-<pre class="hljs cpp">$ less huge-<span class="hljs-built_in">log</span>-file.<span class="hljs-built_in">log</span>
-</pre>
+### <a class="sub-title" name="tail">tail</a>
 
-<p>当你用less命令打开某个文件时，下面两个按键会给你带来很多帮助，他们用于向前和向后滚屏</p>
-<pre class="hljs coffeescript">CTRL+F – forward one <span class="hljs-built_in">window</span>
-CTRL+B – backward one <span class="hljs-built_in">window</span>
-</pre>
+tail命令默认显示文件最后的10行文本
 
-<h3 id="su"><a href="#su" class="headerlink" title="su"></a><a class="sub-title" name="su">su</a></h3><p>su命令用于切换用户账号，超级用户使用这个命令可以切换到任何其他用户而不用输入密码</p>
-<blockquote>
-<p>$ su - <span class="hljs-constant">USERNAME</span><br></p>
-</blockquote>
-<p>用另外一个用户名执行一个命令下面的示例中用户john使用raj用户名执行ls命令，执行完后返回john的账号</p>
-<pre class="hljs ruby">[john<span class="hljs-variable">@dev</span>-server]<span class="hljs-variable">$ </span>su - raj -c <span class="hljs-string">'ls'</span>
+> $ tail filename.txt
 
-[john<span class="hljs-variable">@dev</span>-server]<span class="hljs-variable">$
-</span></pre>
 
-<p>用指定用户登录，并且使用指定的shell程序，而不用默认的</p>
-<pre class="hljs bash">$ su <span class="hljs-operator">-s</span> <span class="hljs-string">'SHELLNAME'</span> USERNAME
-</pre>
+你可以使用-n选项指定要显示的行数
 
-<h3 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a><a class="sub-title" name="mysql">mysql</a></h3><p>mysql可能是Linux上使用最广泛的数据库，即使你没有在你的服务器上安装mysql，你也可以使用mysql客户端连接到远程的mysql服务器</p>
-<p>连接一个远程数据库，需要输入密码</p>
-<blockquote>
-<p>$ mysql -u root -p -h <span class="hljs-number">192.168</span>.<span class="hljs-number">1.2</span><br></p>
-</blockquote>
-<p>连接本地数据库</p>
-<blockquote>
-<p>$ mysql -u root -p<br></p>
-</blockquote>
-<p>你也可以在命令行中输入数据库密码，只需要在-p后面加上密码作为参数，可以直接写在p后面而不用加空格</p>
-<h3 id="yum"><a href="#yum" class="headerlink" title="yum"></a><a class="sub-title" name="yum">yum</a></h3><p>使用yum安装apache</p>
-<blockquote>
-<p>$ yum install httpd<br></p>
-</blockquote>
-<p>更新apache</p>
-<blockquote>
-<p>$ yum update httpd<br></p>
-</blockquote>
-<p>卸载/删除apache</p>
-<blockquote>
-<p>$ yum remove httpd<br></p>
-</blockquote>
-<h3 id="rpm"><a href="#rpm" class="headerlink" title="rpm"></a><a class="sub-title" name="rpm">rpm</a></h3><p>使用rpm安装apache</p>
-<pre class="hljs apache"><span class="hljs-comment"># rpm -ivh httpd-2.2.3-22.0.1.el5.i386.rpm</span>
-</pre>
+> $ tail -n <span class="hljs-constant">N filename.txt
 
-<p>更新apache</p>
-<pre class="hljs apache"><span class="hljs-comment"># rpm -uvh httpd-2.2.3-22.0.1.el5.i386.rpm</span>
-</pre>
 
-<p>卸载/删除apache</p>
-<pre class="hljs apache"><span class="hljs-comment"># rpm -ev httpd</span>
-</pre>
+你也可以使用-f选项进行实时查看，这个命令执行后会等待，如果有新行添加到文件尾部，它会继续输出新的行，在查看日志时这个选项会非常有用。你可以通过CTRL-C终止命令的执行
 
-<h3 id="ping"><a href="#ping" class="headerlink" title="ping"></a><a class="sub-title" name="ping">ping</a></h3><p>ping一个远程主机，只发5个数据包</p>
-<blockquote>
-<p>$ ping -c <span class="hljs-number">5</span> gmail.com<br></p>
-</blockquote>
-<h3 id="date"><a href="#date" class="headerlink" title="date"></a><a class="sub-title" name="date">date</a></h3><p>设置系统日期</p>
-<pre class="hljs objectivec"><span class="hljs-preprocessor"># date -s <span class="hljs-title">"01/31/2010 23:59:53"</span></span>
-</pre>
+<pre class="hljs bash">$ tail <span class="hljs-operator">-f log-file
 
-<p>当你修改了系统时间，你需要同步硬件时间和系统时间</p>
-<pre class="hljs apache"><span class="hljs-comment"># hwclock –systohc</span>
 
-<span class="hljs-comment"># hwclock --systohc –utc</span>
-</pre>
+### <a class="sub-title" name="less">less</a>
 
-<h3 id="wget"><a href="#wget" class="headerlink" title="wget"></a><a class="sub-title" name="wget">wget</a></h3><p>使用wget从网上下载软件、音乐、视频</p>
-<blockquote>
-<p>$ wget <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/prdownloads.sourceforge.net/sourceforge</span><span class="hljs-regexp">/nagios/nagios</span>-<span class="hljs-number">3.2</span>.<span class="hljs-number">1</span>.tar.gz<br></p>
-</blockquote>
-<p>下载文件并以指定的文件名保存文件</p>
-<pre class="hljs cpp">$ wget -O taglist.zip http:<span class="hljs-comment">//www.vim.org/scripts/download_script.php?src_id=7701</span>
-</pre>
+这个命名可以在不加载整个文件的前提下显示文件内容，在查看大型日志文件的时候这个命令会非常有用
 
-<hr>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] 鸟哥. 鸟 哥 的 Linux 私 房 菜 基 础 篇 第 三 版[J]. 2009.<br>[2] <a href="https://www.thegeekstuff.com/2010/11/50-linux-commands/" target="_blank" rel="noopener">https://www.thegeekstuff.com/2010/11/50-linux-commands/</a></p>
+<pre class="hljs cpp">$ less huge-<span class="hljs-built_in">log-file.<span class="hljs-built_in">log
 
+
+当你用less命令打开某个文件时，下面两个按键会给你带来很多帮助，他们用于向前和向后滚屏
+
+<pre class="hljs coffeescript">CTRL+F – forward one <span class="hljs-built_in">window
+CTRL+B – backward one <span class="hljs-built_in">window
+
+
+### <a class="sub-title" name="su">su</a>
+
+su命令用于切换用户账号，超级用户使用这个命令可以切换到任何其他用户而不用输入密码
+
+> $ su - <span class="hljs-constant">USERNAME
+
+
+用另外一个用户名执行一个命令下面的示例中用户john使用raj用户名执行ls命令，执行完后返回john的账号
+
+<pre class="hljs ruby">[john<span class="hljs-variable">@dev-server]<span class="hljs-variable">$ su - raj -c <span class="hljs-string">'ls'
+
+[john<span class="hljs-variable">@dev-server]<span class="hljs-variable">$
+
+
+用指定用户登录，并且使用指定的shell程序，而不用默认的
+
+<pre class="hljs bash">$ su <span class="hljs-operator">-s <span class="hljs-string">'SHELLNAME' USERNAME
+
+
+### <a class="sub-title" name="mysql">mysql</a>
+
+mysql可能是Linux上使用最广泛的数据库，即使你没有在你的服务器上安装mysql，你也可以使用mysql客户端连接到远程的mysql服务器
+
+连接一个远程数据库，需要输入密码
+
+> $ mysql -u root -p -h <span class="hljs-number">192.168.<span class="hljs-number">1.2
+
+
+连接本地数据库
+
+> $ mysql -u root -p
+
+
+你也可以在命令行中输入数据库密码，只需要在-p后面加上密码作为参数，可以直接写在p后面而不用加空格
+
+### <a class="sub-title" name="yum">yum</a>
+
+使用yum安装apache
+
+> $ yum install httpd
+
+
+更新apache
+
+> $ yum update httpd
+
+
+卸载/删除apache
+
+> $ yum remove httpd
+
+
+### <a class="sub-title" name="rpm">rpm</a>
+
+使用rpm安装apache
+
+<pre class="hljs apache"><span class="hljs-comment"># rpm -ivh httpd-2.2.3-22.0.1.el5.i386.rpm
+
+
+更新apache
+
+<pre class="hljs apache"><span class="hljs-comment"># rpm -uvh httpd-2.2.3-22.0.1.el5.i386.rpm
+
+
+卸载/删除apache
+
+<pre class="hljs apache"><span class="hljs-comment"># rpm -ev httpd
+
+
+### <a class="sub-title" name="ping">ping</a>
+
+ping一个远程主机，只发5个数据包
+
+> $ ping -c <span class="hljs-number">5 gmail.com
+
+
+### <a class="sub-title" name="date">date</a>
+
+设置系统日期
+
+<pre class="hljs objectivec"><span class="hljs-preprocessor"># date -s <span class="hljs-title">"01/31/2010 23:59:53"
+
+
+当你修改了系统时间，你需要同步硬件时间和系统时间
+
+<pre class="hljs apache"><span class="hljs-comment"># hwclock –systohc
+
+<span class="hljs-comment"># hwclock --systohc –utc
+
+
+### <a class="sub-title" name="wget">wget</a>
+
+使用wget从网上下载软件、音乐、视频
+
+> $ wget <span class="hljs-symbol">http:/<span class="hljs-regexp">/prdownloads.sourceforge.net/sourceforge<span class="hljs-regexp">/nagios/nagios-<span class="hljs-number">3.2.<span class="hljs-number">1.tar.gz
+
+
+下载文件并以指定的文件名保存文件
+
+> $ wget -O taglist.zip http://www.vim.org/scripts/download_script.php?src_id=7701
+
+---
+## 参考
+[1] 鸟哥. 鸟 哥 的 Linux 私 房 菜 基 础 篇 第 三 版[J]. 2009.
+[2] [https://www.thegeekstuff.com/2010/11/50-linux-commands/](https://www.thegeekstuff.com/2010/11/50-linux-commands/)
+</span></span></span></span></span></span></span></pre></span></span></pre></span></span></pre></span></pre></span></pre></span></span></span></span></pre></span></span></span></span></span></pre></span></span></span></pre></span></span></pre></span></pre></span></riving></span></span></span></ndividual></span></span></span></pre></span></span></span></span></span></pan></span></span></span></span></span></span></pre></span></pre></span></span></span></pre></span></span></span></span></span></pre></span></span></span></span></pre></span></pre></span></span></pre></span></pre></span></span></span></span></span></pre></pre></span></span></pre></span></span></span></span></span></span></span></span></span></pre>
       
     </div>
 
@@ -1123,7 +1240,7 @@ CTRL+B – backward one <span class="hljs-built_in">window</span>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是-Linux"><span class="nav-number">1.</span> <span class="nav-text">什么是 Linux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-number">2.</span> <span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tar"><span class="nav-number">2.1.</span> <span class="nav-text">tar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#grep"><span class="nav-number">2.2.</span> <span class="nav-text">grep</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find"><span class="nav-number">2.3.</span> <span class="nav-text">find</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh"><span class="nav-number">2.4.</span> <span class="nav-text">ssh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sed"><span class="nav-number">2.5.</span> <span class="nav-text">sed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk"><span class="nav-number">2.6.</span> <span class="nav-text">awk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim"><span class="nav-number">2.7.</span> <span class="nav-text">vim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#diff"><span class="nav-number">2.8.</span> <span class="nav-text">diff</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-number">2.9.</span> <span class="nav-text">sort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#export"><span class="nav-number">2.10.</span> <span class="nav-text">export</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xargs"><span class="nav-number">2.11.</span> <span class="nav-text">xargs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ls"><span class="nav-number">2.12.</span> <span class="nav-text">ls</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pwd"><span class="nav-number">2.13.</span> <span class="nav-text">pwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cd"><span class="nav-number">2.14.</span> <span class="nav-text">cd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gzip"><span class="nav-number">2.15.</span> <span class="nav-text">gzip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzip2"><span class="nav-number">2.16.</span> <span class="nav-text">bzip2 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uzip"><span class="nav-number">2.17.</span> <span class="nav-text">uzip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shutdown"><span class="nav-number">2.18.</span> <span class="nav-text">shutdown</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ftp"><span class="nav-number">2.19.</span> <span class="nav-text">ftp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#crontab"><span class="nav-number">2.20.</span> <span class="nav-text">crontab</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#service"><span class="nav-number">2.21.</span> <span class="nav-text">service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ps"><span class="nav-number">2.22.</span> <span class="nav-text">ps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#free"><span class="nav-number">2.23.</span> <span class="nav-text">free</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#top"><span class="nav-number">2.24.</span> <span class="nav-text">top</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#df"><span class="nav-number">2.25.</span> <span class="nav-text">df</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kill"><span class="nav-number">2.26.</span> <span class="nav-text">kill</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm"><span class="nav-number">2.27.</span> <span class="nav-text">rm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cp"><span class="nav-number">2.28.</span> <span class="nav-text">cp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mv"><span class="nav-number">2.29.</span> <span class="nav-text">mv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cat"><span class="nav-number">2.30.</span> <span class="nav-text">cat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mount"><span class="nav-number">2.31.</span> <span class="nav-text">mount</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chmod"><span class="nav-number">2.32.</span> <span class="nav-text">chmod</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chown"><span class="nav-number">2.33.</span> <span class="nav-text">chown</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#passwd"><span class="nav-number">2.34.</span> <span class="nav-text">passwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mkdir"><span class="nav-number">2.35.</span> <span class="nav-text">mkdir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ifconfig"><span class="nav-number">2.36.</span> <span class="nav-text">ifconfig</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uname"><span class="nav-number">2.37.</span> <span class="nav-text">uname</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#whereis"><span class="nav-number">2.38.</span> <span class="nav-text">whereis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#whatis"><span class="nav-number">2.39.</span> <span class="nav-text">whatis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#locate"><span class="nav-number">2.40.</span> <span class="nav-text">locate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#man"><span class="nav-number">2.41.</span> <span class="nav-text">man</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tail"><span class="nav-number">2.42.</span> <span class="nav-text">tail</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#less"><span class="nav-number">2.43.</span> <span class="nav-text">less</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#su"><span class="nav-number">2.44.</span> <span class="nav-text">su</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql"><span class="nav-number">2.45.</span> <span class="nav-text">mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#yum"><span class="nav-number">2.46.</span> <span class="nav-text">yum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rpm"><span class="nav-number">2.47.</span> <span class="nav-text">rpm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ping"><span class="nav-number">2.48.</span> <span class="nav-text">ping</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#date"><span class="nav-number">2.49.</span> <span class="nav-text">date</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wget"><span class="nav-number">2.50.</span> <span class="nav-text">wget</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是-Linux"><span class="nav-number">1.</span> <span class="nav-text">什么是 Linux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-number">2.</span> <span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tar"><span class="nav-number">2.1.</span> <span class="nav-text">tar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#grep"><span class="nav-number">2.2.</span> <span class="nav-text">grep</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find"><span class="nav-number">2.3.</span> <span class="nav-text">find</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh"><span class="nav-number">2.4.</span> <span class="nav-text">ssh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sed"><span class="nav-number">2.5.</span> <span class="nav-text">sed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk"><span class="nav-number">2.6.</span> <span class="nav-text">awk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim"><span class="nav-number">2.7.</span> <span class="nav-text">vim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#diff"><span class="nav-number">2.8.</span> <span class="nav-text">diff</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-number">2.9.</span> <span class="nav-text">sort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#export"><span class="nav-number">2.10.</span> <span class="nav-text">export</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xargs"><span class="nav-number">2.11.</span> <span class="nav-text">xargs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ls"><span class="nav-number">2.12.</span> <span class="nav-text">ls</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pwd"><span class="nav-number">2.13.</span> <span class="nav-text">pwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cd"><span class="nav-number">2.14.</span> <span class="nav-text">cd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gzip"><span class="nav-number">2.15.</span> <span class="nav-text">gzip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzip2"><span class="nav-number">2.16.</span> <span class="nav-text">bzip2 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uzip"><span class="nav-number">2.17.</span> <span class="nav-text">uzip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shutdown"><span class="nav-number">2.18.</span> <span class="nav-text">shutdown</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ftp"><span class="nav-number">2.19.</span> <span class="nav-text">ftp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#crontab"><span class="nav-number">2.20.</span> <span class="nav-text">crontab</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#service"><span class="nav-number">2.21.</span> <span class="nav-text">service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ps"><span class="nav-number">2.22.</span> <span class="nav-text">ps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ps-1"><span class="nav-number">2.23.</span> <span class="nav-text">ps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#free"><span class="nav-number">2.24.</span> <span class="nav-text">free</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#top"><span class="nav-number">2.25.</span> <span class="nav-text">top</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#df"><span class="nav-number">2.26.</span> <span class="nav-text">df</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kill"><span class="nav-number">2.27.</span> <span class="nav-text">kill</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#27-rm"><span class="nav-number">2.28.</span> <span class="nav-text">27. rm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm"><span class="nav-number">2.29.</span> <span class="nav-text">rm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cp"><span class="nav-number">2.30.</span> <span class="nav-text">cp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mv"><span class="nav-number">2.31.</span> <span class="nav-text">mv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cat"><span class="nav-number">2.32.</span> <span class="nav-text">cat</span></a></li></ol></li></ol></div>
             
 
           </div>
