@@ -64,17 +64,25 @@
 
 
 
-<meta name="description" content="正在编写……">
+<meta name="description" content="Markdown如何优雅的使用 Markdown 来写作？ 在平时使用 Markdown 写文档时，总是会遇到图片的存储问题。今天带大家配置一个优雅的 Markdown 写作环境。 软件选择支持 Markdown 写作的软件有很多种，每个软件都有各自的优缺点。我个人目前使用 VSCode 和 Typora 同时写作。Typora 本身就支持 PicGo 图床工具，配置好图床工具，既可写作时粘贴的图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Markdown写作">
 <meta property="og:url" content="https://yuanzhibx.github.io/2020/08/18/Markdown%E5%86%99%E4%BD%9C/index.html">
 <meta property="og:site_name" content="Yuanzhibx&#39;s Blog">
-<meta property="og:description" content="正在编写……">
+<meta property="og:description" content="Markdown如何优雅的使用 Markdown 来写作？ 在平时使用 Markdown 写文档时，总是会遇到图片的存储问题。今天带大家配置一个优雅的 Markdown 写作环境。 软件选择支持 Markdown 写作的软件有很多种，每个软件都有各自的优缺点。我个人目前使用 VSCode 和 Typora 同时写作。Typora 本身就支持 PicGo 图床工具，配置好图床工具，既可写作时粘贴的图">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200818170030.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200818170249.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200818170528.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200818170820.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200818171527.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200818171627.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200818171901.png">
 <meta property="article:published_time" content="2020-08-18T06:48:40.000Z">
-<meta property="article:modified_time" content="2020-08-18T08:14:02.657Z">
+<meta property="article:modified_time" content="2020-08-18T09:19:09.603Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://cdn.yanbingxu.com/20200818170030.png">
 
 
 
@@ -284,7 +292,57 @@
       
 
       
-        <p>正在编写……</p>
+        <h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h1><p><strong>如何优雅的使用 Markdown 来写作？</strong></p>
+<p>在平时使用 Markdown 写文档时，总是会遇到图片的存储问题。今天带大家配置一个优雅的 Markdown 写作环境。</p>
+<h2 id="软件选择"><a href="#软件选择" class="headerlink" title="软件选择"></a>软件选择</h2><p>支持 Markdown 写作的软件有很多种，每个软件都有各自的优缺点。我个人目前使用 <strong>VSCode</strong> 和 <strong>Typora</strong> 同时写作。Typora 本身就支持 PicGo 图床工具，配置好图床工具，既可写作时粘贴的图片将自动上传到云端。</p>
+<blockquote>
+<p>需要准备如下软件和服务器来完成此功能</p>
+</blockquote>
+<ul>
+<li><a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>: Markdown 写作软件</li>
+<li><a href="https://github.com/Molunerfinn/PicGo/releases/" target="_blank" rel="noopener">PicGo</a>: 图床工具</li>
+<li><a href="https://qiniu.com/" target="_blank" rel="noopener">七牛云</a>: 图床云端服务器</li>
+</ul>
+<hr>
+<h2 id="七牛云"><a href="#七牛云" class="headerlink" title="七牛云"></a>七牛云</h2><p>PicGo 是一个图床工具，而仅有一个工具无法使用，需要给这个图床工具配置云端服务器。</p>
+<p>我们在写 Markdown 文档时，需要把图片和文件一起上传到网站，但将文档上传到其他网站时，可能会出现图片无法访问的情况。不方便管理。且需要自己上传文件比较繁琐。因此我们需要选择一款自己的图床服务器。</p>
+<p>除了自己购买云端服务器，我们亦可以选择网上免费的图床服务器，例如：七牛云、Gitee、GitHub 等等。Github 苦于网速限制就直接放弃吧；Gitee 是个不错的选择但应用内访问图片的链接可能会出现 403 Forbidden 的情况，所以我还是推荐使用七牛云。下面介绍七牛云的图床环境搭建。</p>
+<h3 id="创建存储空间"><a href="#创建存储空间" class="headerlink" title="创建存储空间"></a>创建存储空间</h3><blockquote>
+<p>注：七牛云是一款可以免费使用的云端服务器，但这仅仅是一个服务器，七牛云并不提供域名（新创建的对象储存会提供一个免费的域名，但有期限），因此我们首先需要自己购买一个域名。</p>
+</blockquote>
+<ol>
+<li>进入 <a href="https://www.qiniu.com/" target="_blank" rel="noopener">qiniu.com</a> 七牛云官方网站后，注册账号进入<a href="https://portal.qiniu.com/create" target="_blank" rel="noopener">管理控制台</a></li>
+</ol>
+<p><img src="http://cdn.yanbingxu.com/20200818170030.png" alt="E3D6E631-AB0C-48CA-9ABC-5223E94D7267"></p>
+<ol start="2">
+<li>填入存储空间名称、区域。然后储存空间必须是<strong>公开</strong>的而不是私有的。这样就完成了储存空间的创建，实际上也就类似于一个服务器，最后图片将上传到这个存储空间内，通过外链即可访问。</li>
+</ol>
+<p><img src="http://cdn.yanbingxu.com/20200818170249.png" alt="B3F403C9-4512-4A35-929C-E60C6BA768BD"></p>
+<hr>
+<h2 id="PicGo"><a href="#PicGo" class="headerlink" title="PicGo"></a>PicGo</h2><p>将图床云服务器创建完成后，打开 <strong>PicGo</strong> 的配置，修改默认配置</p>
+<p><img src="http://cdn.yanbingxu.com/20200818170528.png" alt="23B26878-C35B-4619-A7A9-2C375335EAF9"></p>
+<h3 id="七牛云-1"><a href="#七牛云-1" class="headerlink" title="七牛云"></a>七牛云</h3><p>将七牛云与 PicGo 配置连接</p>
+<p><img src="http://cdn.yanbingxu.com/20200818170820.png" alt="F40E3CFA-0C76-450F-B20C-DE5B9DCD0764"></p>
+<ul>
+<li><strong>AccessKey SecretKey</strong>：可以在七牛云控制台，秘钥管理页面找到你的配置</li>
+<li><strong>存储空间名</strong>：填写前面创建的空间名称</li>
+<li><strong>访问网站</strong>：对应七牛云中服务器的域名</li>
+<li><strong>存储区域</strong>：七牛云的存储区域（华东 z0，华北 z1，华南 z2，北美 na0，东南亚 as0 ），根据你空间所在的区域，填对应的代码</li>
+<li><strong>后缀 存储路径</strong>：见名知意，可不填</li>
+</ul>
+<hr>
+<h2 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h2><p>在Typora设置中找到图像配置进行设置</p>
+<p><img src="http://cdn.yanbingxu.com/20200818171527.png" alt="4994B1C6-89EF-4EDF-AFC6-6F892AD96F25"></p>
+<p>然后可以点击验证图片上传选项按钮，如果连接正常将出现以下页面</p>
+<p><img src="http://cdn.yanbingxu.com/20200818171627.png" alt="5119F436-280C-4DDA-9C8A-04C308976F93"></p>
+<p>配置完成了，接下来我们可以尝试在Typora内新创建Markdown文档，截取一张图片直接复制到这个文档中，会发现图片URL从本地路径自动转变为远程域名地址，并且 PicGo 会提示图片上传成功</p>
+<p><img src="http://cdn.yanbingxu.com/20200818171901.png" alt="DCB3DBB4-C1DC-42EC-BAE2-E34055CBE3C1"></p>
+<hr>
+<h1 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h1><ul>
+<li><a href="http://blog.yanbingxu.com/" target="_blank" rel="noopener">Blog@Yuanzhibx’s blog</a></li>
+<li><a href="https://github.com/yuanzhibx" target="_blank" rel="noopener">GitHub@yuanzhibx</a></li>
+<li><a href="https://space.bilibili.com/177628303" target="_blank" rel="noopener">Bilibili@源志bx</a></li>
+</ul>
 
       
     </div>
@@ -388,10 +446,15 @@
       
 
       
+        <ul class="sidebar-nav motion-element" style="opacity: 1; display: block; transform: translateX(0px);">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">Contents</li>
+          <li class="sidebar-nav-overview" data-target="site-overview">Overview</li>
+        </ul>
+      
 
   
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-overview">
           <div class="sidebar-sticky sticky">
             <div itemscope="" itemtype="http://schema.org/Person">
@@ -478,6 +541,22 @@
 
 
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Markdown"><span class="nav-number">1.</span> <span class="nav-text">Markdown</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#软件选择"><span class="nav-number">1.1.</span> <span class="nav-text">软件选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七牛云"><span class="nav-number">1.2.</span> <span class="nav-text">七牛云</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建存储空间"><span class="nav-number">1.2.1.</span> <span class="nav-text">创建存储空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PicGo"><span class="nav-number">1.3.</span> <span class="nav-text">PicGo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#七牛云-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">七牛云</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora"><span class="nav-number">1.4.</span> <span class="nav-text">Typora</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#联系"><span class="nav-number">2.</span> <span class="nav-text">联系</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
