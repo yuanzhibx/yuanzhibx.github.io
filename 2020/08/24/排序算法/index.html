@@ -79,7 +79,7 @@
 <meta property="og:image" content="http://cdn.yanbingxu.com/20200825094101.png">
 <meta property="og:image" content="http://cdn.yanbingxu.com/20200825094108.png">
 <meta property="article:published_time" content="2020-08-24T07:42:36.000Z">
-<meta property="article:modified_time" content="2020-08-25T01:56:20.427Z">
+<meta property="article:modified_time" content="2020-08-25T02:11:00.716Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://cdn.yanbingxu.com/20200824161121.png">
@@ -358,10 +358,18 @@
 <li>而 <strong>n^3+5n</strong> 和 <strong>6n^3+4n</strong> ，<strong>执行曲线分离</strong>，说明多少次方是关键</li>
 </ol>
 <h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><ol>
-<li>一般情况下，<strong>算法中基本操作语句的重复执行次数是问题规模 n 的某个函数</strong>，用 <strong>T(n)</strong> 表示，若有某个辅助函数 <strong>f(n)</strong>，使得当 n 趋近于无穷大时，<strong>T(n) / f(n)</strong> 的极限值为不等于零的常数，则称 f(n) 是 T(n) 的<strong>同数量级函数</strong>。记作 <strong>T(n)=Ｏ(f(n))</strong>，称 <strong>Ｏ(f(n))</strong>  为算法的渐进时间复杂度，简称时间复杂度。</li>
+<li><p>一般情况下，<strong>算法中基本操作语句的重复执行次数是问题规模 n 的某个函数</strong>，用 <strong>T(n)</strong> 表示，若有某个辅助函数 <strong>f(n)</strong>，使得当 n 趋近于无穷大时，<strong>T(n) / f(n)</strong> 的极限值为不等于零的常数，则称 f(n) 是 T(n) 的<strong>同数量级函数</strong>。记作 <strong>T(n)=Ｏ(f(n))</strong>，称 <strong>Ｏ(f(n))</strong>  为算法的渐进时间复杂度，简称时间复杂度。</p>
+</li>
+<li><p>T(n) 不同，但时间复杂度可能相同。 如：T(n)=n²+7n+6 与 T(n)=3n²+2n+2 它们的T(n) 不同，但时间复杂度相同，都为O(n²)。</p>
+</li>
+<li><p>计算时间复杂度的方法：</p>
+<ul>
+<li>用常数1代替运行时间中的所有加法常数  T(n)=n²+7n+6  =&gt; T(n)=n²+7n+1</li>
+<li>修改后的运行次数函数中，只保留最高阶项  T(n)=n²+7n+1 =&gt; T(n)=n²</li>
+<li>去除最高阶项的系数 T(n)=n² =&gt; T(n)=n² =&gt; O(n²)</li>
+</ul>
+</li>
 </ol>
-<p>T(n) 不同，但时间复杂度可能相同。 如：T(n)=n²+7n+6 与 T(n)=3n²+2n+2 它们的T(n) 不同，但时间复杂度相同，都为O(n²)。<br>计算时间复杂度的方法：</p>
-<p>用常数1代替运行时间中的所有加法常数  T(n)=n²+7n+6  =&gt; T(n)=n²+7n+1<br>修改后的运行次数函数中，只保留最高阶项  T(n)=n²+7n+1 =&gt; T(n) = n²<br>去除最高阶项的系数 T(n) = n² =&gt; T(n) = n² =&gt; O(n²)</p>
 <hr>
 <h2 id="算法的空间复杂度"><a href="#算法的空间复杂度" class="headerlink" title="算法的空间复杂度"></a>算法的空间复杂度</h2><hr>
 <h1 id="排序分类"><a href="#排序分类" class="headerlink" title="排序分类"></a>排序分类</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><hr>
