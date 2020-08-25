@@ -71,18 +71,18 @@
 <meta property="og:site_name" content="Yuanzhibx&#39;s Blog">
 <meta property="og:description" content="本文为学习 Java 数据结构与算法所记录，主要内容为 稀疏数组和队列 的原理与应用Github 仓库：DataStructures-and-Algorithms">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://yuanzhibx.github.io/2020/08/15/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E5%92%8C%E9%98%9F%E5%88%97/020617C784B35AFFE59F2142E3FBC6BE.png">
-<meta property="og:image" content="https://yuanzhibx.github.io/2020/08/15/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E5%92%8C%E9%98%9F%E5%88%97/14D7834F33F6223B0E7067E824C248EB.png">
-<meta property="og:image" content="https://yuanzhibx.github.io/2020/08/15/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E5%92%8C%E9%98%9F%E5%88%97/27A6E67B-DB27-40FF-ADA5-843DFB5DCB59.png">
-<meta property="og:image" content="https://yuanzhibx.github.io/2020/08/15/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E5%92%8C%E9%98%9F%E5%88%97/283CB4EA-7578-4D85-B709-DCF02F717C23.png">
-<meta property="og:image" content="https://yuanzhibx.github.io/2020/08/15/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E5%92%8C%E9%98%9F%E5%88%97/929E04EB-299A-4DAF-BB39-57387F88E260.png">
-<meta property="og:image" content="https://yuanzhibx.github.io/2020/08/15/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E5%92%8C%E9%98%9F%E5%88%97/929E04EB-299A-4DAF-BB39-57387F88E260.png">
-<meta property="og:image" content="https://yuanzhibx.github.io/2020/08/15/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E5%92%8C%E9%98%9F%E5%88%97/929E04EB-299A-4DAF-BB39-57387F88E260.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200824175824.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200824175840.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200824175855.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200824175911.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200824175925.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200824175925.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200824175949.png">
 <meta property="article:published_time" content="2020-08-15T01:10:57.000Z">
-<meta property="article:modified_time" content="2020-08-24T08:22:08.481Z">
+<meta property="article:modified_time" content="2020-08-24T10:02:00.383Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://yuanzhibx.github.io/2020/08/15/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E5%92%8C%E9%98%9F%E5%88%97/020617C784B35AFFE59F2142E3FBC6BE.png">
+<meta name="twitter:image" content="http://cdn.yanbingxu.com/20200824175824.png">
 
 
 
@@ -301,7 +301,7 @@
 <h1 id="稀疏-sparsearray-数组"><a href="#稀疏-sparsearray-数组" class="headerlink" title="稀疏 sparsearray 数组"></a>稀疏 sparsearray 数组</h1><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><blockquote>
 <p>编写的五子棋程序中，有存盘退出和续上盘的功能。</p>
 </blockquote>
-<p><img src="/2020/08/15/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E5%92%8C%E9%98%9F%E5%88%97/020617C784B35AFFE59F2142E3FBC6BE.png" alt="020617C784B35AFFE59F2142E3FBC6BE"></p>
+<p><img src="http://cdn.yanbingxu.com/20200824175824.png" alt="020617C784B35AFFE59F2142E3FBC6BE"></p>
 <blockquote>
 <p>因为该二维数组的很多值是默认值 0, 因此记录了很多没有意义的数据。所以使用<strong>稀疏数组</strong>来解决此问题。</p>
 </blockquote>
@@ -311,13 +311,13 @@
 <li>记录数组一共有几行几列，有多少个不同的值</li>
 <li>把具有不同值的元素的行列及值记录在一个小规模的数组中，从而缩小程序的规模</li>
 </ol>
-<h3 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h3><p><img src="/2020/08/15/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E5%92%8C%E9%98%9F%E5%88%97/14D7834F33F6223B0E7067E824C248EB.png" alt="14D7834F33F6223B0E7067E824C248EB"></p>
+<h3 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h3><p><img src="http://cdn.yanbingxu.com/20200824175840.png" alt="14D7834F33F6223B0E7067E824C248EB"></p>
 <hr>
 <h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><ol>
 <li>使用稀疏数组，来保留类似前面的二维数组(棋盘、地图等等) </li>
 <li>把稀疏数组存盘，并且可以从新恢复原来的二维数组数</li>
 </ol>
-<h3 id="整体思路分析"><a href="#整体思路分析" class="headerlink" title="整体思路分析"></a>整体思路分析</h3><p><img src="/2020/08/15/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E5%92%8C%E9%98%9F%E5%88%97/27A6E67B-DB27-40FF-ADA5-843DFB5DCB59.png" alt="27A6E67B-DB27-40FF-ADA5-843DFB5DCB59"></p>
+<h3 id="整体思路分析"><a href="#整体思路分析" class="headerlink" title="整体思路分析"></a>整体思路分析</h3><p><img src="http://cdn.yanbingxu.com/20200824175855.png" alt="27A6E67B-DB27-40FF-ADA5-843DFB5DCB59"></p>
 <blockquote>
 <p>二维数组转稀疏数组的思路</p>
 </blockquote>
@@ -339,19 +339,19 @@
 <h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1><h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><blockquote>
 <p>银行排队案例</p>
 </blockquote>
-<p><img src="/2020/08/15/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E5%92%8C%E9%98%9F%E5%88%97/283CB4EA-7578-4D85-B709-DCF02F717C23.png" alt="283CB4EA-7578-4D85-B709-DCF02F717C23"></p>
+<p><img src="http://cdn.yanbingxu.com/20200824175911.png" alt="283CB4EA-7578-4D85-B709-DCF02F717C23"></p>
 <hr>
 <h2 id="什么是队列"><a href="#什么是队列" class="headerlink" title="什么是队列"></a>什么是队列</h2><ol>
 <li>队列是一个<strong>有序列表</strong>，可以用<strong>数组</strong>或是<strong>链表</strong>来实现。</li>
 <li>遵循<strong>先入先出</strong>的原则。即:先存入队列的数据，要先取出。后存入的要后取出。</li>
 </ol>
-<p><img src="/2020/08/15/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E5%92%8C%E9%98%9F%E5%88%97/929E04EB-299A-4DAF-BB39-57387F88E260.png" alt="929E04EB-299A-4DAF-BB39-57387F88E260"></p>
+<p><img src="http://cdn.yanbingxu.com/20200824175925.png" alt="929E04EB-299A-4DAF-BB39-57387F88E260"></p>
 <hr>
 <h2 id="数组模拟队列"><a href="#数组模拟队列" class="headerlink" title="数组模拟队列"></a>数组模拟队列</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ul>
 <li>队列本身是有序列表，若使用数组的结构来存储队列的数据，则队列数组的声明如下图, 其中 <strong>MaxSize</strong> 是该队列的<strong>最大容量</strong>。</li>
 <li>因为队列的输出、输入是分别从前后端来处理，因此需要两个变量 <strong>front 及 rear</strong> 分别记录队列前后端的下标，front 会随着数据输出而改变，而 rear 则是随着数据输入而改变，如图所示:</li>
 </ul>
-<p><img src="/2020/08/15/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E5%92%8C%E9%98%9F%E5%88%97/929E04EB-299A-4DAF-BB39-57387F88E260.png" alt="929E04EB-299A-4DAF-BB39-57387F88E260"></p>
+<p><img src="http://cdn.yanbingxu.com/20200824175925.png" alt="929E04EB-299A-4DAF-BB39-57387F88E260"></p>
 <ul>
 <li>当我们将数据存入队列时称为”addQueue”，addQueue 的处理需要有两个步骤<blockquote>
 <p>思路分析</p>
@@ -376,7 +376,7 @@
 <li>尾索引的下一个为头索引时表示队列满，即将队列容量空出一个作为约定,这个在做判断队列满的时候需要注意 <strong>(rear + 1) % maxSize == front [满]</strong></li>
 <li><strong>rear == front [空]</strong></li>
 </ul>
-<p><img src="/2020/08/15/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E5%92%8C%E9%98%9F%E5%88%97/929E04EB-299A-4DAF-BB39-57387F88E260.png" alt="929E04EB-299A-4DAF-BB39-57387F88E260"></p>
+<p><img src="http://cdn.yanbingxu.com/20200824175949.png" alt="929E04EB-299A-4DAF-BB39-57387F88E260"></p>
 <blockquote>
 <p>思路分析</p>
 </blockquote>
