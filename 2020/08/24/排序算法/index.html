@@ -80,7 +80,7 @@
 <meta property="og:image" content="http://cdn.yanbingxu.com/20200825094108.png">
 <meta property="og:image" content="http://cdn.yanbingxu.com/20200825110354.png">
 <meta property="article:published_time" content="2020-08-24T07:42:36.000Z">
-<meta property="article:modified_time" content="2020-08-25T06:19:42.730Z">
+<meta property="article:modified_time" content="2020-08-25T07:19:40.895Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://cdn.yanbingxu.com/20200824161121.png">
@@ -376,10 +376,10 @@
 <li>对数阶 <strong>Ο(<em>log</em><sub>2</sub>n)</strong></li>
 <li>线性阶 <strong>O(n)</strong></li>
 <li>线性对数阶 <strong>Ο(n<em>log</em><sub>2</sub>n)</strong></li>
-<li>平方阶 <strong>O(n^2)</strong></li>
-<li>立方阶 <strong>O(n^3)</strong></li>
-<li>k次方阶 <strong>O(n^k)</strong></li>
-<li>指数阶 <strong>O(2^n)</strong></li>
+<li>平方阶 <strong>Ο(n<sup>2</sup>)</strong></li>
+<li>立方阶 <strong>Ο(n<sup>3</sup>)</strong></li>
+<li>k次方阶 <strong>Ο(n<sup>k</sup>)</strong></li>
+<li>指数阶 <strong>Ο(2<sup>n</sup>)</strong></li>
 </ol>
 <p><img src="http://cdn.yanbingxu.com/20200825110354.png" alt="0007"></p>
 <p>说明：</p>
@@ -394,38 +394,147 @@
 <blockquote>
 <p>常数阶  <strong>Ο(1)</strong></p>
 </blockquote>
-<p>无论代码执行了多少行，只要是没有循环等复杂结构，那这个代码的时间复杂度就都是 *<em>O(1)*</em></p>
+<p>无论代码执行了多少行，只要是没有循环等复杂结构，那这个代码的时间复杂度就都是 <strong>O(1)</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> j = <span class="number">2</span>;</span><br><span class="line">++i;</span><br><span class="line">j++;</span><br><span class="line"><span class="keyword">int</span> m = i + j;</span><br></pre></td></tr></table></figure>
 
-<p>上述代码在执行的时候，它消耗的时候并不随着某个变量的增长而增长，那么无论这类代码有多长，即使有几万几十万行，都可以用 <strong>O(1)</strong> 来表示它的时间复杂度。</p>
+<p>上述代码在执行的时候，它消耗的时间并不随着某个变量的增长而增长，那么无论这类代码有多长，即使有几万几十万行，都可以用 <strong>O(1)</strong> 来表示它的时间复杂度。</p>
 <blockquote>
 <p>对数阶  <strong>O(<em>log</em><sub>2</sub>n)</strong></p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(i &lt; n&gt;) &#123;</span><br><span class="line">    i = i * <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(i &lt; n) &#123;</span><br><span class="line">    i = i * <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>说明：在while循环里面，每次都将 i 乘以 2，乘完之后，i 距离 n 就越来越近了。假设循环x次之后，i 就大于 2 了，此时这个循环就退出了，也就是说 2 的 x 次方等于 n，那么 x = log2n也就是说当循环 log2n 次以后，这个代码就结束了。因此这个代码的时间复杂度为：O(log2n)  。 O(log2n) 的这个2 时间上是根据代码变化的，i = i * 3 ，则是 O(log3n) .</p>
+<p>在 while 循环里面，每次都将 i 乘以 2，乘完之后，i 距离 n 就越来越近了。假设循环 x 次之后，i 就大于 2 了，此时这个循环就退出了，也就是说 2 的 x 次方等于 n，那么 <strong>x = <em>log</em><sub>2</sub>n</strong> 也就是说当循环 <strong><em>log</em><sub>2</sub>n</strong> 次以后，这个代码就结束了。<br>因此这个代码的时间复杂度为：<strong>O(<em>log</em><sub>2</sub>n)</strong>。<strong>O(<em>log</em><sub>2</sub>n)</strong> 的这个 <strong><sub>2</sub></strong> 是根据代码变化的，i = i * 3 则是 <strong>O(<em>log</em><sub>3</sub>n)</strong>。</p>
 <blockquote>
 <p>线性阶  <strong>Ο(n)</strong></p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">    j = <span class="number">1</span>;</span><br><span class="line">    j++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>说明：这段代码，for循环里面的代码会执行n遍，因此它消耗的时间是随着n的变化而变化的，因此这类代码都可以用O(n)来表示它的时间复杂度</p>
+<p>这段代码，for 循环里面的代码会执行 n 遍，因此它消耗的时间是<strong>随着 n 的变化而变化</strong>的，因此这类代码都可以用 <strong>O(n)</strong> 来表示它的时间复杂度</p>
 <blockquote>
 <p>线性对数阶  <strong>Ο(n<em>log</em><sub>2</sub>n)</strong></p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(m = <span class="number">1</span>; m &lt; n; m++) &#123;</span><br><span class="line">    i = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i &lt; n) &#123;</span><br><span class="line">        i = i * <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>说明：线性对数阶O(nlogN) 其实非常容易理解，将时间复杂度为O(logn)的代码循环N遍的话，那么它的时间复杂度就是 n * O(logN)，也就是了O(nlogN)</p>
+<p>线性对数阶 <strong>Ο(n<em>log</em><sub>2</sub>n)</strong> 其实非常容易理解，将时间复杂度为 <strong>Ο(log*<sub>2</sub>n)</strong> 的代码循环 N 遍的话，那么它的时间复杂度就是 <strong>n * O(<em>log</em><sub>2</sub>n)</strong>，也就是了 <strong>Ο(n<em>log</em><sub>2</sub>n)</strong></p>
 <blockquote>
 <p>平方阶  <strong>Ο(n<sup>2</sup>)</strong></p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(x = <span class="number">1</span>; i &lt;= n; x++) &#123;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        j = i;</span><br><span class="line">        j++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>说明：平方阶O(n²) 就更容易理解了，如果把 O(n) 的代码再嵌套循环一遍，它的时间复杂度就是 O(n²)，这段代码其实就是嵌套了2层n循环，它的时间复杂度就是 O(n<em>n)，即  O(n²) 如果将其中一层循环的n改成m，那它的时间复杂度就变成了 O(m</em>n)</p>
+<p>平方阶 <strong>O(n<sup>2</sup>)</strong> 就更容易理解了，如果把 <strong>O(n)</strong> 的代码再嵌套循环一遍，它的时间复杂度就是 <strong>O(n<sup>2</sup>)</strong>，这段代码其实就是嵌套了 2 层 n 循环，它的时间复杂度就是 <strong>O(n*n)</strong>，即 <strong>O(n<sup>2</sup>)</strong>。如果将其中一层循环的 n 改成 m，那它的时间复杂度就变成了 <strong>O(m*n)</strong></p>
 <blockquote>
 <p>立方阶  <strong>Ο(n<sup>3</sup>)</strong>、K次方阶  <strong>Ο(n<sup>k</sup>)</strong></p>
 </blockquote>
-<p>说明：参考上面的O(n²) 去理解就好了，O(n³)相当于三层n循环，其它的类似</p>
+<p>参考上面的 O(n<sup>2</sup>) 去理解就好了，<strong>O(n<sup>3</sup>)</strong> 相当于三层 n 循环，其它的类似</p>
+<hr>
+<h3 id="平均时间复杂度和最坏时间复杂度"><a href="#平均时间复杂度和最坏时间复杂度" class="headerlink" title="平均时间复杂度和最坏时间复杂度"></a>平均时间复杂度和最坏时间复杂度</h3><ol>
+<li><p>常数阶 <strong>O(1)</strong></p>
+</li>
+<li><p>对数阶 <strong>Ο(<em>log</em><sub>2</sub>n)</strong></p>
+</li>
+<li><p>线性阶 <strong>O(n)</strong></p>
+</li>
+<li><p>线性对数阶 <strong>Ο(n<em>log</em><sub>2</sub>n)</strong></p>
+</li>
+<li><p>平方阶 <strong>Ο(n<sup>2</sup>)</strong></p>
+</li>
+<li><p>立方阶 <strong>Ο(n<sup>3</sup>)</strong></p>
+</li>
+<li><p>k次方阶 <strong>Ο(n<sup>k</sup>)</strong></p>
+</li>
+<li><p>指数阶 <strong>Ο(2<sup>n</sup>)</strong></p>
+</li>
+<li><p>平均时间复杂度是指所有可能的输入实例<strong>均以等概率出现</strong>的情况下，该算法的运行时间。</p>
+</li>
+<li><p><strong>最坏情况下的时间复杂度</strong>称最坏时间复杂度。一般讨论的时间复杂度均是最坏情况下的时间复杂度。 这样做的原因是：最坏情况下的时间复杂度是算法在任何输入实例上运行时间的<strong>界限</strong>，这就保证了<strong>算法的运行时间不会比最坏情况更长</strong>。</p>
+</li>
+<li><p>平均时间复杂度和最坏时间复杂度是否一致，与算法有关(如图:)</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">排序法</th>
+<th align="center">平均时间</th>
+<th align="center">最差情形</th>
+<th align="center">稳定度</th>
+<th align="center">额外空间</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">冒泡</td>
+<td align="center"><strong>Ο(n<sup>2</sup>)</strong></td>
+<td align="center"><strong>Ο(n<sup>2</sup>)</strong></td>
+<td align="center">稳定</td>
+<td align="center"><strong>O(1)</strong></td>
+<td align="center">n 小时较好</td>
+</tr>
+<tr>
+<td align="center">交换</td>
+<td align="center"><strong>Ο(n<sup>2</sup>)</strong></td>
+<td align="center"><strong>Ο(n<sup>2</sup>)</strong></td>
+<td align="center">不稳定</td>
+<td align="center"><strong>O(1)</strong></td>
+<td align="center">n 小时较好</td>
+</tr>
+<tr>
+<td align="center">选择</td>
+<td align="center"><strong>Ο(n<sup>2</sup>)</strong></td>
+<td align="center"><strong>Ο(n<sup>2</sup>)</strong></td>
+<td align="center">不稳定</td>
+<td align="center"><strong>O(1)</strong></td>
+<td align="center">n 小时较好</td>
+</tr>
+<tr>
+<td align="center">插入</td>
+<td align="center"><strong>Ο(n<sup>2</sup>)</strong></td>
+<td align="center"><strong>Ο(n<sup>2</sup>)</strong></td>
+<td align="center">稳定</td>
+<td align="center"><strong>O(1)</strong></td>
+<td align="center">大部分已排序时较好</td>
+</tr>
+<tr>
+<td align="center">基数</td>
+<td align="center"><strong>Ο(<em>log</em><sub>R</sub>B)</strong></td>
+<td align="center"><strong>Ο(<em>log</em><sub>R</sub>B)</strong></td>
+<td align="center">稳定</td>
+<td align="center"><strong>O(n)</strong></td>
+<td align="center">B 是真数(0-9) <br> R 是基数(个十百)</td>
+</tr>
+<tr>
+<td align="center">Shell</td>
+<td align="center"><strong>Ο(n<em>log</em>n)</strong></td>
+<td align="center"><strong>Ο(n<sup>s</sup>) 1 &lt; s &lt; 2</strong></td>
+<td align="center">不稳定</td>
+<td align="center"><strong>O(1)</strong></td>
+<td align="center">s 是所选分组</td>
+</tr>
+<tr>
+<td align="center">快速</td>
+<td align="center"><strong>Ο(n<em>log</em>n)</strong></td>
+<td align="center"><strong>Ο(n<sup>2</sup>)</strong></td>
+<td align="center">不稳定</td>
+<td align="center"><strong>Ο(n<em>log</em>n)</strong></td>
+<td align="center">n 大时较好</td>
+</tr>
+<tr>
+<td align="center">归并</td>
+<td align="center"><strong>Ο(n<em>log</em>n)</strong></td>
+<td align="center"><strong>Ο(n<em>log</em>n)</strong></td>
+<td align="center">稳定</td>
+<td align="center"><strong>O(1)</strong></td>
+<td align="center">n 大时较好</td>
+</tr>
+<tr>
+<td align="center">堆</td>
+<td align="center"><strong>Ο(n<em>log</em>n)</strong></td>
+<td align="center"><strong>Ο(n<em>log</em>n)</strong></td>
+<td align="center">不稳定</td>
+<td align="center"><strong>O(1)</strong></td>
+<td align="center">n 大时较好</td>
+</tr>
+</tbody></table>
 <hr>
 <h2 id="算法的空间复杂度"><a href="#算法的空间复杂度" class="headerlink" title="算法的空间复杂度"></a>算法的空间复杂度</h2><hr>
 <h1 id="排序分类"><a href="#排序分类" class="headerlink" title="排序分类"></a>排序分类</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><hr>
@@ -648,7 +757,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#排序算法"><span class="nav-number">1.</span> <span class="nav-text">排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是排序算法"><span class="nav-number">1.1.</span> <span class="nav-text">什么是排序算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序算法的分类"><span class="nav-number">1.2.</span> <span class="nav-text">排序算法的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的排序算法分类"><span class="nav-number">1.2.1.</span> <span class="nav-text">常见的排序算法分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法的时间复杂度"><span class="nav-number">1.3.</span> <span class="nav-text">算法的时间复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#度量一个程序-算法-执行时间的两种方法"><span class="nav-number">1.3.1.</span> <span class="nav-text">度量一个程序(算法)执行时间的两种方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间频度"><span class="nav-number">1.3.2.</span> <span class="nav-text">时间频度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是时间复杂度"><span class="nav-number">1.3.3.</span> <span class="nav-text">什么是时间复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的时间复杂度"><span class="nav-number">1.3.4.</span> <span class="nav-text">常见的时间复杂度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法的空间复杂度"><span class="nav-number">1.4.</span> <span class="nav-text">算法的空间复杂度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#排序分类"><span class="nav-number">2.</span> <span class="nav-text">排序分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡排序"><span class="nav-number">2.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择排序"><span class="nav-number">2.2.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入排序"><span class="nav-number">2.3.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#希尔排序"><span class="nav-number">2.4.</span> <span class="nav-text">希尔排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">2.5.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序"><span class="nav-number">2.6.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基数排序"><span class="nav-number">2.7.</span> <span class="nav-text">基数排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用排序算法总结和对比"><span class="nav-number">2.8.</span> <span class="nav-text">常用排序算法总结和对比</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#联系"><span class="nav-number">4.</span> <span class="nav-text">联系</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#排序算法"><span class="nav-number">1.</span> <span class="nav-text">排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是排序算法"><span class="nav-number">1.1.</span> <span class="nav-text">什么是排序算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序算法的分类"><span class="nav-number">1.2.</span> <span class="nav-text">排序算法的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的排序算法分类"><span class="nav-number">1.2.1.</span> <span class="nav-text">常见的排序算法分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法的时间复杂度"><span class="nav-number">1.3.</span> <span class="nav-text">算法的时间复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#度量一个程序-算法-执行时间的两种方法"><span class="nav-number">1.3.1.</span> <span class="nav-text">度量一个程序(算法)执行时间的两种方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间频度"><span class="nav-number">1.3.2.</span> <span class="nav-text">时间频度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是时间复杂度"><span class="nav-number">1.3.3.</span> <span class="nav-text">什么是时间复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的时间复杂度"><span class="nav-number">1.3.4.</span> <span class="nav-text">常见的时间复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#平均时间复杂度和最坏时间复杂度"><span class="nav-number">1.3.5.</span> <span class="nav-text">平均时间复杂度和最坏时间复杂度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法的空间复杂度"><span class="nav-number">1.4.</span> <span class="nav-text">算法的空间复杂度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#排序分类"><span class="nav-number">2.</span> <span class="nav-text">排序分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡排序"><span class="nav-number">2.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择排序"><span class="nav-number">2.2.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入排序"><span class="nav-number">2.3.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#希尔排序"><span class="nav-number">2.4.</span> <span class="nav-text">希尔排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">2.5.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序"><span class="nav-number">2.6.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基数排序"><span class="nav-number">2.7.</span> <span class="nav-text">基数排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用排序算法总结和对比"><span class="nav-number">2.8.</span> <span class="nav-text">常用排序算法总结和对比</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#联系"><span class="nav-number">4.</span> <span class="nav-text">联系</span></a></li></ol></div>
             
 
           </div>
