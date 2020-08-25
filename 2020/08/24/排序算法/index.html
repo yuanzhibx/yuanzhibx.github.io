@@ -80,7 +80,7 @@
 <meta property="og:image" content="http://cdn.yanbingxu.com/20200825094108.png">
 <meta property="og:image" content="http://cdn.yanbingxu.com/20200825110354.png">
 <meta property="article:published_time" content="2020-08-24T07:42:36.000Z">
-<meta property="article:modified_time" content="2020-08-25T06:08:07.262Z">
+<meta property="article:modified_time" content="2020-08-25T06:19:42.730Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://cdn.yanbingxu.com/20200824161121.png">
@@ -372,14 +372,14 @@
 </li>
 </ol>
 <h3 id="常见的时间复杂度"><a href="#常见的时间复杂度" class="headerlink" title="常见的时间复杂度"></a>常见的时间复杂度</h3><ol>
-<li>常数阶 O(1)</li>
-<li>对数阶 Ο(<em>log</em><sub>2</sub>n)</li>
-<li>线性阶 O(n)</li>
-<li>线性对数阶 Ο(n<em>log</em><sub>2</sub>n)</li>
-<li>平方阶 O(n^2)</li>
-<li>立方阶 O(n^3)</li>
-<li>k次方阶 O(n^k)</li>
-<li>指数阶 O(2^n)</li>
+<li>常数阶 <strong>O(1)</strong></li>
+<li>对数阶 <strong>Ο(<em>log</em><sub>2</sub>n)</strong></li>
+<li>线性阶 <strong>O(n)</strong></li>
+<li>线性对数阶 <strong>Ο(n<em>log</em><sub>2</sub>n)</strong></li>
+<li>平方阶 <strong>O(n^2)</strong></li>
+<li>立方阶 <strong>O(n^3)</strong></li>
+<li>k次方阶 <strong>O(n^k)</strong></li>
+<li>指数阶 <strong>O(2^n)</strong></li>
 </ol>
 <p><img src="http://cdn.yanbingxu.com/20200825110354.png" alt="0007"></p>
 <p>说明：</p>
@@ -390,31 +390,42 @@
 <ul>
 <li>从图中可见，我们应该尽可能避免使用指数阶的算法</li>
 </ul>
+<hr>
 <blockquote>
-<p>常数阶  Ο(1)</p>
+<p>常数阶  <strong>Ο(1)</strong></p>
 </blockquote>
-<p>无论代码执行了多少行，只要是没有循环等复杂结构，那这个代码的时间复杂度就都是O(1)</p>
+<p>无论代码执行了多少行，只要是没有循环等复杂结构，那这个代码的时间复杂度就都是 *<em>O(1)*</em></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> j = <span class="number">2</span>;</span><br><span class="line">++i;</span><br><span class="line">j++;</span><br><span class="line"><span class="keyword">int</span> m = i + j;</span><br></pre></td></tr></table></figure>
 
-<p>上述代码在执行的时候，它消耗的时候并不随着某个变量的增长而增长，那么无论这类代码有多长，即使有几万几十万行，都可以用O(1)来表示它的时间复杂度。</p>
+<p>上述代码在执行的时候，它消耗的时候并不随着某个变量的增长而增长，那么无论这类代码有多长，即使有几万几十万行，都可以用 <strong>O(1)</strong> 来表示它的时间复杂度。</p>
 <blockquote>
-<p>对数阶  O(<em>log</em><sub>2</sub>n)</p>
+<p>对数阶  <strong>O(<em>log</em><sub>2</sub>n)</strong></p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(i &lt; n&gt;) &#123;</span><br><span class="line">    i = i * <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>说明：在while循环里面，每次都将 i 乘以 2，乘完之后，i 距离 n 就越来越近了。假设循环x次之后，i 就大于 2 了，此时这个循环就退出了，也就是说 2 的 x 次方等于 n，那么 x = log2n也就是说当循环 log2n 次以后，这个代码就结束了。因此这个代码的时间复杂度为：O(log2n)  。 O(log2n) 的这个2 时间上是根据代码变化的，i = i * 3 ，则是 O(log3n) .</p>
 <blockquote>
-<p>线性阶  Ο(n)</p>
+<p>线性阶  <strong>Ο(n)</strong></p>
 </blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">    j = <span class="number">1</span>;</span><br><span class="line">    j++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>说明：这段代码，for循环里面的代码会执行n遍，因此它消耗的时间是随着n的变化而变化的，因此这类代码都可以用O(n)来表示它的时间复杂度</p>
 <blockquote>
-<p>线性对数阶  Ο(n<em>log</em><sub>2</sub>n)</p>
+<p>线性对数阶  <strong>Ο(n<em>log</em><sub>2</sub>n)</strong></p>
 </blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(m = <span class="number">1</span>; m &lt; n; m++) &#123;</span><br><span class="line">    i = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i &lt; n) &#123;</span><br><span class="line">        i = i * <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>说明：线性对数阶O(nlogN) 其实非常容易理解，将时间复杂度为O(logn)的代码循环N遍的话，那么它的时间复杂度就是 n * O(logN)，也就是了O(nlogN)</p>
 <blockquote>
-<p>平方阶  Ο(n<sup>2</sup>)</p>
+<p>平方阶  <strong>Ο(n<sup>2</sup>)</strong></p>
 </blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(x = <span class="number">1</span>; i &lt;= n; x++) &#123;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        j = i;</span><br><span class="line">        j++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>说明：平方阶O(n²) 就更容易理解了，如果把 O(n) 的代码再嵌套循环一遍，它的时间复杂度就是 O(n²)，这段代码其实就是嵌套了2层n循环，它的时间复杂度就是 O(n<em>n)，即  O(n²) 如果将其中一层循环的n改成m，那它的时间复杂度就变成了 O(m</em>n)</p>
 <blockquote>
-<p>立方阶  Ο(n<sup>3</sup>)、K次方阶  Ο(n<sup>k</sup>)</p>
+<p>立方阶  <strong>Ο(n<sup>3</sup>)</strong>、K次方阶  <strong>Ο(n<sup>k</sup>)</strong></p>
 </blockquote>
+<p>说明：参考上面的O(n²) 去理解就好了，O(n³)相当于三层n循环，其它的类似</p>
 <hr>
 <h2 id="算法的空间复杂度"><a href="#算法的空间复杂度" class="headerlink" title="算法的空间复杂度"></a>算法的空间复杂度</h2><hr>
 <h1 id="排序分类"><a href="#排序分类" class="headerlink" title="排序分类"></a>排序分类</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><hr>
