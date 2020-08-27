@@ -89,9 +89,11 @@
 <meta property="og:image" content="http://cdn.yanbingxu.com/20200826141900.png">
 <meta property="og:image" content="http://cdn.yanbingxu.com/20200827091517.png">
 <meta property="og:image" content="http://cdn.yanbingxu.com/20200827093302.png">
-<meta property="og:image" content="http://cdn.yanbingxu.com/20200827105119.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200827112013.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200827112022.png">
+<meta property="og:image" content="http://cdn.yanbingxu.com/20200827112031.png">
 <meta property="article:published_time" content="2020-08-24T07:42:36.000Z">
-<meta property="article:modified_time" content="2020-08-27T02:51:21.492Z">
+<meta property="article:modified_time" content="2020-08-27T03:36:16.724Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://cdn.yanbingxu.com/20200824161121.png">
@@ -608,7 +610,7 @@
 <p>显然，移位法耗时更短</p>
 <hr>
 <h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><h3 id="什么是快速排序"><a href="#什么是快速排序" class="headerlink" title="什么是快速排序"></a>什么是快速排序</h3><p>快速排序（Quick Sort）是对<strong>冒泡排序</strong>的一种改进</p>
-<p>基本思想是：<br>通过一趟排序将要排序的数据<strong>分割成独立的两部分</strong>，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，<strong>整个排序过程可以递归进行</strong>，以此达到整个数据变成有序序列</p>
+<p>基本思想：<br>通过一趟排序将要排序的数据<strong>分割成独立的两部分</strong>，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，<strong>整个排序过程可以递归进行</strong>，以此达到整个数据变成有序序列</p>
 <h3 id="图解快速排序"><a href="#图解快速排序" class="headerlink" title="图解快速排序"></a>图解快速排序</h3><p><img src="http://cdn.yanbingxu.com/20200827091517.png" alt="0013"></p>
 <p><img src="http://cdn.yanbingxu.com/20200827093302.png" alt="BC2B78C1-E46D-4663-B1AB-C83F3487B894"></p>
 <h3 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h3><p>对 <strong>[-9, 78, 0, 23, -567, 70]</strong> 进行从小到大的排序，要求使用<strong>快速排序</strong>法。<br><strong>测试 8w 和 800w</strong></p>
@@ -626,9 +628,15 @@
 <p>测试效率的数据 80000，快速排序耗时 <strong>70 - 100 ms</strong><br>测试效率的数据 8000 000，快速排序耗时 <strong>1000 - 2000 ms</strong></p>
 </blockquote>
 <hr>
-<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><h3 id="什么是归并排序"><a href="#什么是归并排序" class="headerlink" title="什么是归并排序"></a>什么是归并排序</h3><p>归并排序(Merge Sort)是利用归并的思想实现的排序方法，该算法采用经典的分治（divide-and-conquer）策略（分治法将问题分(divide)成一些小的问题然后递归求解，而治(conquer)的阶段则将分的阶段得到的各答案”修补”在一起，即分而治之)。</p>
-<h3 id="图解归并排序"><a href="#图解归并排序" class="headerlink" title="图解归并排序"></a>图解归并排序</h3><p><img src="http://cdn.yanbingxu.com/20200827105119.png" alt="0014"></p>
-<h3 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h3><hr>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><h3 id="什么是归并排序"><a href="#什么是归并排序" class="headerlink" title="什么是归并排序"></a>什么是归并排序</h3><p>归并排序(Merge Sort)是利用<strong>归并</strong>的思想实现的排序方法，该算法采用经典的<strong>分治</strong>（divide-and-conquer）策略（分治法将问题 <strong>分(divide)</strong> 成一些小的问题然后递归求解，而 <strong>治(conquer)</strong> 的阶段则将分的阶段得到的各答案”修补”在一起，即分而治之)。</p>
+<p><img src="http://cdn.yanbingxu.com/20200827112013.png" alt="0014"></p>
+<p>基本思想：<br>可以看到这种结构很像一棵完全二叉树，本文的归并排序我们采用递归去实现（也可采用迭代的方式去实现）。分阶段可以理解为就是递归拆分子序列的过程，递归深度为 <strong><em>log</em><sub>2</sub>n</strong>。</p>
+<h3 id="图解归并排序"><a href="#图解归并排序" class="headerlink" title="图解归并排序"></a>图解归并排序</h3><p>再来看看治阶段，我们需要将两个已经有序的子序列合并成一个有序序列，比如上图中的最后一次合并，要将 <strong>[4,5,7,8]</strong> 和 <strong>[1,2,3,6]</strong> 两个已经有序的子序列，合并为最终序列 <strong>[1,2,3,4,5,6,7,8]</strong>，来看下实现步骤</p>
+<p><img src="http://cdn.yanbingxu.com/20200827112022.png" alt="0015"></p>
+<p><img src="http://cdn.yanbingxu.com/20200827112031.png" alt="0016"></p>
+<h3 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
 <h2 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h2><hr>
 <h2 id="常用排序算法总结和对比"><a href="#常用排序算法总结和对比" class="headerlink" title="常用排序算法总结和对比"></a>常用排序算法总结和对比</h2><hr>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>[1] <a href="https://www.bilibili.com/video/BV1E4411H73v" target="_blank" rel="noopener">尚硅谷Java数据结构与算法 韩顺平</a></p>
