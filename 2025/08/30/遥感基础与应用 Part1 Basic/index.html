@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.24.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="遥感基础与应用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="遥感基础与应用 Part1 Basic">
+<meta property="og:url" content="http://example.com/2025/08/30/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80%E4%B8%8E%E5%BA%94%E7%94%A8%20Part1%20Basic/index.html">
+<meta property="og:site_name" content="Yuanzhibx">
+<meta property="og:description" content="遥感基础与应用">
+<meta property="og:locale" content="zh_CH">
+<meta property="article:published_time" content="2025-08-30T14:31:46.000Z">
+<meta property="article:modified_time" content="2025-08-30T14:35:52.591Z">
+<meta property="article:author" content="Yuanzhibx">
+<meta property="article:tag" content="遥感基础与应用">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2025/08/30/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80%E4%B8%8E%E5%BA%94%E7%94%A8%20Part1%20Basic/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CH","comments":true,"permalink":"http://example.com/2025/08/30/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80%E4%B8%8E%E5%BA%94%E7%94%A8%20Part1%20Basic/","path":"2025/08/30/遥感基础与应用 Part1 Basic/","title":"遥感基础与应用 Part1 Basic"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>遥感基础与应用 Part1 Basic | Yuanzhibx</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Yuanzhibx</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">欲渡黄河冰塞川，将登太行雪满山</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">第一章 绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E8%8A%82-%E9%81%A5%E6%84%9F%E4%B8%8E%E9%81%A5%E6%84%9F%E6%8A%80%E6%9C%AF"><span class="nav-number">1.1.</span> <span class="nav-text">第一节 遥感与遥感技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%81%A5%E6%84%9F%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.1.</span> <span class="nav-text">一、遥感概述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E8%8A%82-%E9%81%A5%E6%84%9F%E6%8A%80%E6%9C%AF%E7%B3%BB%E7%BB%9F%E7%BB%84%E6%88%90%E5%8F%8A%E5%85%B6%E9%81%A5%E6%84%9F%E8%BF%87%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">第二节 遥感技术系统组成及其遥感过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%81%A5%E6%84%9F%E6%8A%80%E6%9C%AF%E7%B3%BB%E7%BB%9F%E7%BB%84%E6%88%90"><span class="nav-number">1.2.1.</span> <span class="nav-text">一、遥感技术系统组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%81%A5%E6%84%9F%E8%BF%87%E7%A8%8B"><span class="nav-number">1.2.2.</span> <span class="nav-text">二、遥感过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E8%8A%82-%E9%81%A5%E6%84%9F%E7%9A%84%E5%8F%91%E5%B1%95%E6%A6%82%E5%86%B5%E5%8F%8A%E5%B1%95%E6%9C%9B"><span class="nav-number">1.3.</span> <span class="nav-text">第三节 遥感的发展概况及展望</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%81%A5%E6%84%9F%E7%9A%84%E5%8F%91%E5%B1%95%E6%A6%82%E5%86%B5"><span class="nav-number">1.3.1.</span> <span class="nav-text">一、遥感的发展概况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF%E4%B8%8E%E5%B1%95%E6%9C%9B"><span class="nav-number">1.3.2.</span> <span class="nav-text">二、发展趋势与展望</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E8%8A%82-%E9%81%A5%E6%84%9F%E6%8A%80%E6%9C%AF%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">1.4.</span> <span class="nav-text">第四节 遥感技术的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%9C%A8%E8%B5%84%E6%BA%90%E8%B0%83%E6%9F%A5%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">1.4.1.</span> <span class="nav-text">一、在资源调查中的应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%9C%A8%E7%8E%AF%E5%A2%83%E7%9B%91%E6%B5%8B%E8%AF%84%E4%BB%B7%E5%8F%8A%E5%AF%B9%E6%8A%97%E8%87%AA%E7%84%B6%E7%81%BE%E5%AE%B3%E6%96%B9%E9%9D%A2%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">1.4.2.</span> <span class="nav-text">二、在环境监测评价及对抗自然灾害方面的应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%9C%A8%E5%8C%BA%E5%9F%9F%E5%88%86%E6%9E%90%E5%8F%8A%E5%BB%BA%E8%AE%BE%E8%A7%84%E5%88%92%E6%96%B9%E9%9D%A2%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">1.4.3.</span> <span class="nav-text">三、在区域分析及建设规划方面的应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%9C%A8%E5%85%A8%E7%90%83%E6%80%A7%E5%AE%8F%E8%A7%82%E7%A0%94%E7%A9%B6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">1.4.4.</span> <span class="nav-text">四、在全球性宏观研究中的应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%9C%A8%E5%86%9C%E4%B8%9A%E3%80%81%E6%9E%97%E4%B8%9A%E3%80%81%E7%95%9C%E7%89%A7%E4%B8%9A%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">1.4.5.</span> <span class="nav-text">五、在农业、林业、畜牧业上的应用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E9%81%A5%E6%84%9F%E7%9A%84%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80"><span class="nav-number">2.</span> <span class="nav-text">第二章 遥感的物理基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E8%8A%82-%E7%94%B5%E7%A3%81%E6%B3%A2%E4%B8%8E%E7%94%B5%E7%A3%81%E6%B3%A2%E8%B0%B1"><span class="nav-number">2.1.</span> <span class="nav-text">第一节 电磁波与电磁波谱</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%94%B5%E7%A3%81%E6%B3%A2%E5%8F%8A%E5%85%B6%E7%89%B9%E6%80%A7"><span class="nav-number">2.1.1.</span> <span class="nav-text">一、电磁波及其特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%94%B5%E7%A3%81%E6%B3%A2%E8%B0%B1"><span class="nav-number">2.1.2.</span> <span class="nav-text">二、电磁波谱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E7%94%B5%E7%A3%81%E8%BE%90%E5%B0%84%E6%BA%90"><span class="nav-number">2.1.3.</span> <span class="nav-text">三、电磁辐射源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E8%8A%82-%E5%9C%B0%E7%89%A9%E7%9A%84%E5%85%89%E8%B0%B1%E7%89%B9%E6%80%A7"><span class="nav-number">2.2.</span> <span class="nav-text">第二节 地物的光谱特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%9C%B0%E7%89%A9%E7%9A%84%E5%8F%8D%E5%B0%84%E5%85%89%E8%B0%B1%E7%89%B9%E6%80%A7"><span class="nav-number">2.2.1.</span> <span class="nav-text">一、地物的反射光谱特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%9C%B0%E7%89%A9%E7%9A%84%E5%8F%91%E5%B0%84%E5%85%89%E8%B0%B1%E7%89%B9%E6%80%A7"><span class="nav-number">2.2.2.</span> <span class="nav-text">二、地物的发射光谱特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%9C%B0%E7%89%A9%E7%9A%84%E9%80%8F%E5%B0%84%E5%85%89%E8%B0%B1%E7%89%B9%E6%80%A7"><span class="nav-number">2.2.3.</span> <span class="nav-text">三、地物的透射光谱特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%9C%B0%E7%89%A9%E5%85%89%E8%B0%B1%E7%89%B9%E6%80%A7%E4%B8%8E%E9%81%A5%E6%84%9F%E5%9B%BE%E5%83%8F"><span class="nav-number">2.2.4.</span> <span class="nav-text">四、地物光谱特性与遥感图像</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E8%8A%82-%E5%A4%A7%E6%B0%94%E5%92%8C%E7%8E%AF%E5%A2%83%E5%AF%B9%E9%81%A5%E6%84%9F%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">2.3.</span> <span class="nav-text">第三节 大气和环境对遥感的影响</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%A4%A7%E6%B0%94%E6%88%90%E5%88%86%E4%B8%8E%E7%BB%93%E6%9E%84"><span class="nav-number">2.3.1.</span> <span class="nav-text">一、大气成分与结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%A4%A7%E6%B0%94%E5%AF%B9%E5%A4%AA%E9%98%B3%E8%BE%90%E5%B0%84%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">2.3.2.</span> <span class="nav-text">二、大气对太阳辐射的影响</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%A4%A7%E6%B0%94%E7%AA%97%E5%8F%A3"><span class="nav-number">2.3.3.</span> <span class="nav-text">三、大气窗口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%8E%AF%E5%A2%83%E5%AF%B9%E5%9C%B0%E7%89%A9%E5%85%89%E8%B0%B1%E7%89%B9%E6%80%A7%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">2.3.4.</span> <span class="nav-text">四、环境对地物光谱特性的影响</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E8%8A%82-%E5%9C%B0%E7%89%A9%E6%B3%A2%E8%B0%B1%E7%89%B9%E5%BE%81%E7%9A%84%E6%B5%8B%E5%AE%9A"><span class="nav-number">2.4.</span> <span class="nav-text">第四节 地物波谱特征的测定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%9C%B0%E7%89%A9%E6%B3%A2%E8%B0%B1%E7%89%B9%E5%BE%81%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">2.4.1.</span> <span class="nav-text">一、地物波谱特征的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%9C%B0%E7%89%A9%E6%B3%A2%E8%B0%B1%E7%89%B9%E5%BE%81%E7%9A%84%E6%B5%8B%E5%AE%9A%E5%8E%9F%E7%90%86"><span class="nav-number">2.4.2.</span> <span class="nav-text">二、地物波谱特征的测定原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%9C%B0%E7%89%A9%E6%B3%A2%E8%B0%B1%E7%89%B9%E5%BE%81%E7%9A%84%E6%B5%8B%E5%AE%9A%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.4.3.</span> <span class="nav-text">三、地物波谱特征的测定步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%B5%8B%E5%AE%9A%E5%9C%B0%E7%89%A9%E7%9A%84%E5%85%89%E8%B0%B1%E5%8F%8D%E5%B0%84%E7%8E%87%E5%AE%9E%E4%B9%A0"><span class="nav-number">2.4.4.</span> <span class="nav-text">四、测定地物的光谱反射率实习</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%88%AA%E7%A9%BA%E9%81%A5%E6%84%9F%E4%B8%8E%E8%88%AA%E6%B5%8B%E6%88%90%E5%9B%BE"><span class="nav-number">3.</span> <span class="nav-text">第三章 航空遥感与航测成图</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Yuanzhibx</p>
+  <div class="site-description" itemprop="description">6657</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CH">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/08/30/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80%E4%B8%8E%E5%BA%94%E7%94%A8%20Part1%20Basic/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yuanzhibx">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuanzhibx">
+      <meta itemprop="description" content="6657">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="遥感基础与应用 Part1 Basic | Yuanzhibx">
+      <meta itemprop="description" content="遥感基础与应用">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          遥感基础与应用 Part1 Basic
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-08-30 22:31:46 / Modified: 22:35:52" itemprop="dateCreated datePublished" datetime="2025-08-30T22:31:46+08:00">2025-08-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/885-%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80%E4%B8%8E%E5%BA%94%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">885 遥感基础与应用</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>8.7k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>16 mins.</span>
+    </span>
+</div>
+
+            <div class="post-description">遥感基础与应用</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h1><h2 id="第一节-遥感与遥感技术"><a href="#第一节-遥感与遥感技术" class="headerlink" title="第一节 遥感与遥感技术"></a>第一节 遥感与遥感技术</h2><h3 id="一、遥感概述"><a href="#一、遥感概述" class="headerlink" title="一、遥感概述"></a>一、遥感概述</h3><p>遥感技术是20世纪60年代兴起并迅速发展起来的一门综合性探测技术，它是在航空摄影测量的基础上，随着空间技术、电子计算机技术等现代科技的发展以及地学、生物学、环境科学等学科的需要发展形成的。其快速发展的重要原因与地球资源卫星（ERTS-1）试验成功有关。通过卫星，可以对地球表面任何一个角落反复探测，获取资源与环境的海量信息，使遥感研究成为世界性课题。</p>
+<p>（一）<strong>遥感的概念</strong>“遥感（Remote Sensing）”一词最早由美国地理学家伊瑞林·普鲁特等于1960年提出。</p>
+<ul>
+<li>含义：<strong>遥感【25年真题：名词解释】</strong> 即遥远的感知，通常指空对地遥感，即不直接接触物体本身，通过传感器探测和接收来自目标物体的电磁波、电场、磁场等信息，经传输和处理分析，识别物体属性和分布特征。</li>
+<li><strong>遥感技术</strong>：是指利用不同高度平台上的各种传感器接收地物电磁波信息，并进行加工处理，从而远距离探测和识别地物及其特性的综合技术。</li>
+</ul>
+<p>（二）<strong>遥感技术的特点</strong></p>
+<ol>
+<li><p><strong>宏观性和综合性强</strong></p>
+<ul>
+<li>强调大范围、大尺度获取自然资源与生态环境信息。</li>
+<li><strong>航空相片</strong>可提供大比例尺景观实况，<strong>卫星图像</strong>覆盖范围更大，适于区域、全球性研究。</li>
+<li>可避免障碍阻拦，影像清晰完整。</li>
+<li>涉及<strong>电磁学、仪器学、信息学、图像识别</strong>等多学科。</li>
+</ul>
+</li>
+<li><p><strong>综合效益高</strong></p>
+<ul>
+<li><strong>工作进度快、精度高、费用省</strong>。</li>
+<li>能调查难以到达区域，发现肉眼难察觉的细微变化。</li>
+<li>在社会、经济、生态环境方面均具高效益。</li>
+</ul>
+</li>
+<li><p><strong>信息量大，技术先进，准确性高</strong></p>
+<ul>
+<li>可获取<strong>紫外、可见光、红外、微波</strong>等多波段信息。</li>
+<li>不仅能摄影，还能扫描，信息量远超传统方法。</li>
+<li>图像细节清晰，能准确反映<strong>地貌、植被、水文、道路</strong>等信息。</li>
+</ul>
+</li>
+<li><p><strong>获取信息快，更新周期短，动态信息丰富</strong></p>
+<ul>
+<li>遥感成像为瞬时成像，能获取同一时刻大面积景观。</li>
+<li>卫星重复成像周期短，如<strong>陆地卫星4&#x2F;5号</strong>每16天覆盖全球，<strong>气象卫星</strong>每天覆盖全球。</li>
+<li>可监测<strong>病虫害、洪水、污染、火山、地震</strong>等，为灾害预警提供依据。</li>
+</ul>
+</li>
+<li><p><strong>应用领域广泛</strong></p>
+<ul>
+<li>广泛应用于<strong>农业、林业、地质、水文、军事</strong>等领域。</li>
+</ul>
+</li>
+</ol>
+<h2 id="第二节-遥感技术系统组成及其遥感过程"><a href="#第二节-遥感技术系统组成及其遥感过程" class="headerlink" title="第二节 遥感技术系统组成及其遥感过程"></a>第二节 遥感技术系统组成及其遥感过程</h2><h3 id="一、遥感技术系统组成"><a href="#一、遥感技术系统组成" class="headerlink" title="一、遥感技术系统组成"></a>一、遥感技术系统组成</h3><p>遥感技术系统主要由<strong>遥感平台、传感器和地面控制系统</strong>组成。</p>
+<p>（一）<strong>遥感平台</strong></p>
+<ul>
+<li><strong>近地面平台</strong>：汽车、轮船、高塔、支架等。既独立使用，也作为航空、航天遥感的校准。</li>
+<li><strong>航空平台</strong>：飞机、气球等。分辨率高，机动灵活，但成本较高。</li>
+<li><strong>航天平台</strong>：火箭、人造卫星、航天飞机等。优点是宏观性、动态性、快速性和经济性。</li>
+</ul>
+<p>（二）<strong>传感器</strong></p>
+<ul>
+<li>按工作方式分：<strong>主动式</strong>（自带辐射源，如雷达、激光雷达）、<strong>被动式</strong>（接收自然辐射或地物自辐射，如相机、扫描仪）。</li>
+<li>按记录方式分：<strong>成像方式</strong>（照片、影像）、<strong>非成像方式</strong>（辐射计、光谱仪）。</li>
+<li>成像方式又分为：<strong>摄影方式、扫描方式</strong>。</li>
+</ul>
+<p>（三）<strong>地面控制系统</strong></p>
+<ul>
+<li>指挥与控制传感器和平台，接收数据并进行预处理。</li>
+<li>现代遥感一般由<strong>计算机系统</strong>完成姿态控制、数据接收、预处理和分发。</li>
+</ul>
+<h3 id="二、遥感过程"><a href="#二、遥感过程" class="headerlink" title="二、遥感过程"></a>二、遥感过程</h3><p><strong>遥感过程</strong>是指遥感信息的<strong>获取、传输、处理以及分析判读和应用</strong>的全过程。其内容包括：</p>
+<ul>
+<li>遥感信息源（或地物）的物理性质、分布及运动状态；</li>
+<li>环境背景及电磁波光谱特性</li>
+<li>大气的干扰和大气窗口</li>
+<li>传感器的分辨能力、性能和信噪比</li>
+<li>图像处理及识别</li>
+<li>人们的视觉生理和心理及其专业素养</li>
+</ul>
+<p>按照技术实施划分，<strong>遥感技术系统</strong>主要由以下四部分组成：</p>
+<ol>
+<li><strong>遥感试验</strong>：提供地物<strong>光谱特性</strong>与各类校正所需信息，是整个遥感过程的<strong>基础</strong>。</li>
+<li><strong>遥感信息获取</strong>：以<strong>平台与传感器</strong>为物质保证，是系统的<strong>中心工作</strong>。</li>
+<li><strong>遥感信息处理</strong>：用于消除干扰、进行校正与增强、提取信息，是保证<strong>质量与精度</strong>的重要环节。</li>
+<li><strong>遥感信息应用</strong>：遥感的<strong>最终目的</strong>，按专业目标选择适宜信息与方法，以取得<strong>社会与经济效益</strong>。</li>
+</ol>
+<h2 id="第三节-遥感的发展概况及展望"><a href="#第三节-遥感的发展概况及展望" class="headerlink" title="第三节 遥感的发展概况及展望"></a>第三节 遥感的发展概况及展望</h2><h3 id="一、遥感的发展概况"><a href="#一、遥感的发展概况" class="headerlink" title="一、遥感的发展概况"></a>一、遥感的发展概况</h3><ol>
+<li><p><strong>萌芽及初期阶段</strong></p>
+<ul>
+<li>人类通过感官认识环境，后有<strong>伽利略望远镜（1610）、气球摄影（1858）</strong>。</li>
+</ul>
+</li>
+<li><p><strong>航空遥感（飞机遥感）阶段</strong></p>
+<ul>
+<li>1909年首次飞机航摄，1913年进入应用；一战中快速发展，战后用于<strong>测绘、地质等</strong>。</li>
+<li>二战中发展了<strong>红外与雷达技术</strong>。</li>
+</ul>
+</li>
+<li><p><strong>航天遥感（卫星遥感）阶段</strong></p>
+<ul>
+<li>二战后探空火箭拍摄地表。1957年苏联发射第一颗<strong>人造卫星</strong>，1959年实现<strong>月球探测</strong>，1960年美国发射<strong>气象卫星</strong>。</li>
+<li>1972年美国发射<strong>陆地卫星</strong>，1986年法国发射<strong>SPOT卫星</strong>。</li>
+</ul>
+</li>
+<li><p><strong>我国遥感发展概况</strong></p>
+<ul>
+<li>1970年我国成功发射第一颗人造卫星，标志着中国进入航天遥感时代。</li>
+<li>1970年代末至1980年代，开展了<strong>国土资源普查、农业遥感试验、航空摄影测量</strong>等，初步形成应用体系。</li>
+<li>1980年代以来，相继研制并应用了<strong>多光谱扫描仪、成像光谱仪、合成孔径雷达（SAR）</strong>等设备。</li>
+<li>进入21世纪后，<strong>风云系列气象卫星、资源系列卫星、环境减灾系列卫星、高分系列卫星</strong>相继发射，实现了多领域、多任务的遥感应用，缩小了与国际先进水平的差距。</li>
+</ul>
+</li>
+</ol>
+<h3 id="二、发展趋势与展望"><a href="#二、发展趋势与展望" class="headerlink" title="二、发展趋势与展望"></a>二、发展趋势与展望</h3><ol>
+<li>新一代传感器的研制，以获得分辨率更高、质量更好的遥感图像和数据<ul>
+<li><strong>空间、光谱、时间分辨率</strong>不断提高，发展<strong>成像光谱仪、SAR、激光雷达</strong>。</li>
+</ul>
+</li>
+<li>遥感信息处理技术的发展趋势<ul>
+<li>引入<strong>小波、分形、神经网络</strong>等方法，多源数据融合，推动<strong>3S技术一体化</strong>。</li>
+</ul>
+</li>
+<li>遥感应用领域拓展<ul>
+<li>由<strong>单一信息源 → 多源复合</strong>，由<strong>静态 → 动态</strong>，由<strong>定性 → 定量</strong>，由<strong>局部 → 全球</strong>。</li>
+</ul>
+</li>
+<li>地理信息系统（GIS）和土地管理信息系统（LIS）的发展与应用是遥感发展的新进展和新动向</li>
+</ol>
+<h2 id="第四节-遥感技术的应用"><a href="#第四节-遥感技术的应用" class="headerlink" title="第四节 遥感技术的应用"></a>第四节 遥感技术的应用</h2><h3 id="一、在资源调查中的应用"><a href="#一、在资源调查中的应用" class="headerlink" title="一、在资源调查中的应用"></a>一、在资源调查中的应用</h3><ol>
+<li><strong>土地和土壤资源调查</strong><ul>
+<li>土地资源、<strong>土地利用现状</strong>、土壤资源、<strong>土壤退化</strong>（干旱、盐化、沙化、侵蚀）等的调查与监测；典型做法为利用多景卫星影像进行类型划分、面积量算与制图</li>
+</ul>
+</li>
+<li><strong>地质矿产资源调查</strong><ul>
+<li>用于<strong>基础地质、矿产地质、工程&#x2F;地震&#x2F;灾害地质</strong>等综合调查；凭借宽视域与客观成像识别<strong>区域构造、断裂展布与走向</strong>等，为跨区域乃至全球的地质研究提供依据</li>
+</ul>
+</li>
+<li><strong>水文与水资源调查</strong><ul>
+<li>开展<strong>水资源调查、流域规划、水土流失、冰雪监测</strong>以及<strong>海岸带与浅海地形、海洋调查</strong>等；在高寒与荒漠区可有效补充地面考察，修正&#x2F;新增湖泊信息并判别<strong>淡水&#x2F;咸水</strong></li>
+</ul>
+</li>
+</ol>
+<h3 id="二、在环境监测评价及对抗自然灾害方面的应用"><a href="#二、在环境监测评价及对抗自然灾害方面的应用" class="headerlink" title="二、在环境监测评价及对抗自然灾害方面的应用"></a>二、在环境监测评价及对抗自然灾害方面的应用</h3><ol>
+<li><strong>环境监测评价</strong><ul>
+<li>对<strong>生态环境变化</strong>、<strong>大气&#x2F;水体&#x2F;土地&#x2F;海洋污染</strong>进行快速、客观、形象的监测与判读，定位污染源、判别污染物性质并跟踪其时空变化，为评价与治理提供依据（如热红外扫描判读污染异常点、绘制污染判读图）</li>
+</ul>
+</li>
+<li><strong>对抗自然灾害</strong><ul>
+<li>依托<strong>气象卫星与多时相遥感</strong>开展灾害性天气监测、<strong>洪水预警</strong>、<strong>滑坡&#x2F;泥石流</strong>调查、<strong>地震与地壳形变</strong>监测、<strong>灾后损失评估与重建规划</strong>等；“风云”系列等业务化观测显著提升<strong>时效性与准确性</strong></li>
+</ul>
+</li>
+</ol>
+<h3 id="三、在区域分析及建设规划方面的应用"><a href="#三、在区域分析及建设规划方面的应用" class="headerlink" title="三、在区域分析及建设规划方面的应用"></a>三、在区域分析及建设规划方面的应用</h3><ol>
+<li><strong>区域综合调查与规划</strong><ul>
+<li>以遥感图像的<strong>真实、客观、形象</strong>为基础，开展区域资源与环境综合调查，支撑<strong>分层次的近期—中期—远期规划</strong>与产业结构优化（如沿海滩涂资源调查与动态监测系统建设）。</li>
+</ul>
+</li>
+<li><strong>城市遥感与城建管理</strong>：<ul>
+<li>提供<strong>城市土地利用现状、用地分析、环境监测与评价、道路交通与人口、城市生态</strong>等基础信息；与<strong>城市 GIS</strong>集成，用于<strong>总体规划与辅助决策</strong>（如“北京航空遥感（8301 工程）”形成多项研究成果并推广至各大中城市）。</li>
+</ul>
+</li>
+</ol>
+<h3 id="四、在全球性宏观研究中的应用"><a href="#四、在全球性宏观研究中的应用" class="headerlink" title="四、在全球性宏观研究中的应用"></a>四、在全球性宏观研究中的应用</h3><ol>
+<li><strong>全球变化与圈层系统研究</strong><ul>
+<li>面向<strong>岩石圈—大气圈—水圈—生物圈</strong>的宏观、整体性研究；利用遥感开展<strong>板块运移与深大断裂活动、环形构造成因</strong>等地学问题研究。</li>
+</ul>
+</li>
+<li><strong>全球气象与灾情预报 &#x2F; 海洋与冰冻圈监测</strong><ul>
+<li>基于<strong>气象卫星资料</strong>进行全球气象研究与灾情预报；开展<strong>海洋动力学</strong>与地表固态水（<strong>冰川</strong>）变化监测及全球环境监测。</li>
+</ul>
+</li>
+<li><strong>国际协同</strong><ul>
+<li>参与 <strong>ISY、IGBP、国际减灾十年</strong> 等合作与项目，推进全球尺度的遥感应用与数据产品建设。</li>
+</ul>
+</li>
+</ol>
+<h3 id="五、在农业、林业、畜牧业上的应用"><a href="#五、在农业、林业、畜牧业上的应用" class="headerlink" title="五、在农业、林业、畜牧业上的应用"></a>五、在农业、林业、畜牧业上的应用</h3><ol>
+<li><strong>资源调查</strong><ul>
+<li>土地资源&#x2F;利用现状、土壤类型与低产田、<strong>林地与森林蓄积量</strong>、草场资源与<strong>水资源</strong>等调查与综合评价，形成基础图件与数据。</li>
+</ul>
+</li>
+<li><strong>资源监测（动态监测）</strong><ul>
+<li>作物长势、<strong>土地沙化&#x2F;盐渍化</strong>、渔场与鱼群、农业用地污染、草地退化、森林长势等<strong>持续性、动态性</strong>监测，为生产管理与决策提供时序信息。</li>
+</ul>
+</li>
+<li><strong>生物量估测（估产）</strong><ul>
+<li>结合<strong>农学与环境因子</strong>，估测小麦、水稻、玉米、棉花等作物产量以及<strong>森林蓄积量、草场产草量</strong>等；多国与国内试验表明总体精度**可达或超过 90%**。</li>
+</ul>
+</li>
+<li><strong>灾害预报与评估</strong><ul>
+<li>监测<strong>病虫害、草场雪灾、森林火灾、洪水</strong>等，进行<strong>预警、受灾面积测定与灾后评估</strong>；优势在于<strong>大范围、及时性强</strong>，利于制定防治与应急措施。</li>
+</ul>
+</li>
+<li><strong>特殊应用</strong><ul>
+<li>如<strong>农业人口与农村交通网调查</strong>、<strong>水土流失监测</strong>、<strong>野生动物调查</strong>等。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="第二章-遥感的物理基础"><a href="#第二章-遥感的物理基础" class="headerlink" title="第二章 遥感的物理基础"></a>第二章 遥感的物理基础</h1><h2 id="第一节-电磁波与电磁波谱"><a href="#第一节-电磁波与电磁波谱" class="headerlink" title="第一节 电磁波与电磁波谱"></a>第一节 电磁波与电磁波谱</h2><h3 id="一、电磁波及其特性"><a href="#一、电磁波及其特性" class="headerlink" title="一、电磁波及其特性"></a>一、电磁波及其特性</h3><p>（<strong>一</strong>）<strong>电磁波</strong><br>根据<strong>电磁场</strong>理论，<strong>电</strong>与<strong>磁</strong>是紧密联系的两种运动形式。</p>
+<p><strong>变化的电场</strong>能在其周围激起<strong>磁场</strong>的变化，<strong>变化的磁场</strong>也能在其周围激起<strong>电场</strong>的变化；这种<strong>交变电磁场</strong>由近及远在空间传播的过程称为<strong>电磁波</strong>。<strong>γ 射线、X 射线、紫外线、可见光、红外线、微波、无线电波</strong>等本质相同，仅因<strong>频率（或波长）</strong>不同而性质各异。</p>
+<p>（<strong>二</strong>）<strong>电磁波的特性</strong></p>
+<ol>
+<li><strong>电磁波是一个横波</strong></li>
+<li><strong>电磁波的波动性</strong></li>
+<li><strong>电磁波的粒子性（波粒二象性）</strong></li>
+<li><strong>电磁波的叠加原理</strong></li>
+<li><strong>电磁波的相干性和非相干性</strong></li>
+<li><strong>电磁波的衍射与偏振</strong></li>
+<li><strong>电磁波的多普勒效应</strong></li>
+</ol>
+<h3 id="二、电磁波谱"><a href="#二、电磁波谱" class="headerlink" title="二、电磁波谱"></a>二、电磁波谱</h3><p>（<strong>一</strong>）<strong>定义</strong><br>将各类电磁波按<strong>波长（或频率）</strong>依次排列形成<strong>电磁波谱</strong>。</p>
+<p>（<strong>二</strong>）<strong>共同性</strong></p>
+<ol>
+<li>各类电磁波在<strong>真空（或空气）</strong>中传播<strong>速度相同</strong>，都等于<strong>光速c（3*10¹⁰ cm&#x2F;s）</strong></li>
+<li>遵守同一的<strong>反射、折射、干涉、衍射、偏振</strong>定律。</li>
+</ol>
+<p>（<strong>二</strong>）<strong>遥感常用谱段与范围（表2-1）</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>名称</strong></th>
+<th><strong>子类</strong></th>
+<th><strong>波长范围</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>紫外线</strong></td>
+<td>—</td>
+<td><strong>0.01~0.38 μm</strong></td>
+</tr>
+<tr>
+<td><strong>可见光</strong></td>
+<td>—</td>
+<td><strong>0.38~0.76 μm</strong></td>
+</tr>
+<tr>
+<td><strong>红外线</strong></td>
+<td>近红外</td>
+<td><strong>0.76~3.0 μm</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>中红外</td>
+<td><strong>3.0~6.0 μm</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>远红外</td>
+<td><strong>6.0~15.0 μm</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>超远红外</td>
+<td><strong>15~1000 μm</strong></td>
+</tr>
+<tr>
+<td><strong>微波</strong></td>
+<td>毫米波</td>
+<td><strong>1~10 mm</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>厘米波</td>
+<td><strong>1~10 cm</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>分米波</td>
+<td><strong>10 cm~1 m</strong></td>
+</tr>
+</tbody></table>
+<p>（<strong>三</strong>）<strong>可见光各色的典型范围（表2-2，单位：μm）</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>颜色</strong></th>
+<th><strong>波长范围</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>紫</strong></td>
+<td><strong>0.38~0.43</strong></td>
+</tr>
+<tr>
+<td><strong>蓝</strong></td>
+<td><strong>0.43~0.47</strong></td>
+</tr>
+<tr>
+<td><strong>青</strong></td>
+<td><strong>0.47~0.50</strong></td>
+</tr>
+<tr>
+<td><strong>绿</strong></td>
+<td><strong>0.50~0.60</strong></td>
+</tr>
+<tr>
+<td><strong>黄</strong></td>
+<td><strong>0.60~0.62</strong></td>
+</tr>
+<tr>
+<td><strong>橙</strong></td>
+<td><strong>0.62~0.69</strong></td>
+</tr>
+<tr>
+<td><strong>红</strong></td>
+<td><strong>0.69~0.76</strong></td>
+</tr>
+</tbody></table>
+<p>（<strong>四</strong>）<strong>各谱段要点</strong></p>
+<ol>
+<li><strong>紫外（0.01–0.38 μm）</strong>：**&lt;0.3 μm** 基本被大气吸收；<strong>0.3–0.38 μm</strong> 到达地面能量少，常用于<strong>碳酸盐岩分布</strong>、<strong>海面油膜</strong>等监测。</li>
+<li><strong>可见光（0.38–0.76 μm）</strong>：<strong>摄影&#x2F;扫描</strong>常用，颜色信息丰富，是<strong>地物识别</strong>的重要波段。</li>
+<li><strong>红外（0.76–1000 μm）</strong>：<ul>
+<li><strong>近红外（0.76–3 μm）</strong>：又称<strong>反射红外</strong>，常用于摄影与扫描（感材摄影约 <strong>0.76–1.3 μm</strong>）。</li>
+<li><strong>中&#x2F;远红外</strong>：遥感多用<strong>3–5 μm</strong>与<strong>8–14 μm</strong>，可<strong>昼夜成像</strong>，对<strong>温度</strong>敏感。</li>
+</ul>
+</li>
+<li><strong>微波（1 mm–1 m）</strong>：可<strong>主动&#x2F;被动</strong>成像，<strong>全天候、全天时</strong>，对<strong>植被&#x2F;冰雪&#x2F;土壤</strong>等表层有<strong>一定穿透能力</strong>。</li>
+</ol>
+<p>（<strong>五</strong>）<strong>单位与换算</strong><br><strong>无线电波</strong>常用 <strong>km、m</strong>；<strong>微波</strong>用 <strong>cm、mm</strong>；<strong>红外</strong>用 <strong>μm</strong>；<strong>可见光&#x2F;紫外</strong>用 <strong>nm 或 μm</strong>。<br>换算：</p>
+<ul>
+<li><strong>1 nm &#x3D; 10⁻³ μm &#x3D; 10⁻⁷ cm &#x3D; 10⁻⁹ m</strong>；</li>
+<li><strong>1 μm &#x3D; 10⁻³ mm &#x3D; 10⁻⁴ cm &#x3D; 10⁻⁶ m</strong>。</li>
+</ul>
+<h3 id="三、电磁辐射源"><a href="#三、电磁辐射源" class="headerlink" title="三、电磁辐射源"></a>三、电磁辐射源</h3><p>（<strong>一</strong>）<strong>自然辐射源</strong></p>
+<p>自然辐射源主要包括<strong>太阳辐射</strong>和<strong>地物的热辐射</strong>。</p>
+<ul>
+<li>太阳辐射是<strong>可见光及近红外遥感</strong>的主要辐射源。</li>
+<li>地球是<strong>远红外遥感</strong>的主要辐射源。</li>
+</ul>
+<ol>
+<li><strong>太阳辐射</strong>：一般称为<strong>短波辐射</strong>。<ul>
+<li>太阳表面温度约 <strong>6000 K</strong>，大气上界的太阳光谱辐照度近似于<strong>黑体 5900 K</strong> 的分布，能量主要集中在 <strong>0.3–3 μm</strong>；大气上界对正对太阳的单位面积接收的辐射功率（<strong>太阳常数</strong>）约 <strong>1385±7 W·m⁻²</strong>。</li>
+</ul>
+</li>
+<li><strong>地球的电磁辐射</strong>：地球辐射可分为两部分，短波（0.3~2.5 μm）和长波（6 μm以上）<ul>
+<li>地表平均温度约 <strong>300 K</strong>，辐射峰值波长近 <strong>9.66 μm</strong>（约 <strong>9–10 μm</strong>）。<strong>3 μm 以下</strong>传感器接收为地物对太阳辐射的<strong>反射</strong>为主；<strong>6 μm 以上</strong>以地物<strong>自身热辐射</strong>为主；<strong>3–6 μm</strong> 两者均需考虑。</li>
+</ul>
+</li>
+</ol>
+<p><strong>表：微太阳辐射能量中各波段所占比例（表2-3）</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>波长（λ）</strong></th>
+<th><strong>波段</strong></th>
+<th><strong>能量（%）</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>&lt;0.001 μm</strong></td>
+<td><strong>X、γ射线</strong></td>
+<td><strong>0.02</strong></td>
+</tr>
+<tr>
+<td><strong>0.001~0.20 μm</strong></td>
+<td><strong>远紫外</strong></td>
+<td><strong>0.02</strong></td>
+</tr>
+<tr>
+<td><strong>0.20~0.31 μm</strong></td>
+<td><strong>中紫外</strong></td>
+<td><strong>1.95</strong></td>
+</tr>
+<tr>
+<td><strong>0.31~0.38 μm</strong></td>
+<td><strong>近紫外</strong></td>
+<td><strong>5.32</strong></td>
+</tr>
+<tr>
+<td><strong>0.38~0.76 μm</strong></td>
+<td><strong>可见光</strong></td>
+<td><strong>43.50</strong></td>
+</tr>
+<tr>
+<td><strong>0.76~1.5 μm</strong></td>
+<td><strong>近红外</strong></td>
+<td><strong>36.80</strong></td>
+</tr>
+<tr>
+<td><strong>1.5~5.6 μm</strong></td>
+<td><strong>中红外</strong></td>
+<td><strong>12.00</strong></td>
+</tr>
+<tr>
+<td><strong>5.6~1000 μm</strong></td>
+<td><strong>远红外</strong></td>
+<td><strong>0.41</strong></td>
+</tr>
+<tr>
+<td><strong>&gt;1000 μm</strong></td>
+<td><strong>（微波）</strong></td>
+<td><strong>0.41</strong></td>
+</tr>
+</tbody></table>
+<p>（<strong>二</strong>）<strong>人工辐射源</strong></p>
+<p>主动式遥感利用<strong>人工辐射源</strong>向目标发射特定波束并接收后向散射进行探测，典型如<strong>微波雷达</strong>与<strong>激光雷达</strong>。</p>
+<ul>
+<li><strong>微波辐射源</strong>：微波遥感常用 <strong>0.8–30 cm</strong> 波段，具有<strong>全天候、全天时</strong>与一定<strong>穿透能力</strong>等优势。应用特点如下<ol>
+<li>具有全天候全天时探测能力</li>
+<li>微波对某些物质具有一定的穿透能力</li>
+<li>某些物质的光谱在微波波段有较大的差异</li>
+</ol>
+</li>
+<li><strong>激光辐射源</strong></li>
+</ul>
+<p><strong>表：微波遥感的常用探测波段与频率（表2-4）</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>波段名称</strong></th>
+<th><strong>频率（GHz）</strong></th>
+<th><strong>波长 λ（cm）</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>P</strong></td>
+<td><strong>0.225–0.39</strong></td>
+<td><strong>133–76.9</strong></td>
+</tr>
+<tr>
+<td><strong>L</strong></td>
+<td><strong>0.39–1.55</strong></td>
+<td><strong>76.9–19.4</strong></td>
+</tr>
+<tr>
+<td><strong>S</strong></td>
+<td><strong>1.55–3.9</strong></td>
+<td><strong>19.4–7.69</strong></td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td><strong>3.9–5.75</strong></td>
+<td><strong>7.69–5.21</strong></td>
+</tr>
+<tr>
+<td><strong>X</strong></td>
+<td><strong>5.75–10.9</strong></td>
+<td><strong>5.21–2.75</strong></td>
+</tr>
+<tr>
+<td><strong>Ku</strong></td>
+<td><strong>10.9–18</strong></td>
+<td><strong>2.75–1.67</strong></td>
+</tr>
+<tr>
+<td><strong>K</strong></td>
+<td><strong>18–26.5</strong></td>
+<td><strong>1.67–1.13</strong></td>
+</tr>
+<tr>
+<td><strong>Ka</strong></td>
+<td><strong>26.5–40</strong></td>
+<td><strong>1.13–0.83</strong></td>
+</tr>
+<tr>
+<td><strong>Q</strong></td>
+<td><strong>40–46</strong></td>
+<td><strong>0.83–0.63</strong></td>
+</tr>
+<tr>
+<td><strong>V</strong></td>
+<td><strong>46–56</strong></td>
+<td><strong>0.63–0.53</strong></td>
+</tr>
+<tr>
+<td><strong>W</strong></td>
+<td><strong>56–100</strong></td>
+<td><strong>0.53–0.3</strong></td>
+</tr>
+</tbody></table>
+<h2 id="第二节-地物的光谱特性"><a href="#第二节-地物的光谱特性" class="headerlink" title="第二节 地物的光谱特性"></a>第二节 地物的光谱特性</h2><p>自然界中任何地物都具有其自身的电磁辐射规律，如具有反射，吸收外来的紫外线、可见光、红外线和微波的某些波段的特性；它们又都具有发射某些红外线、微波的特性；少数地物还具有透射电磁波的特性，这种特性称为地物的<strong>光谱特性</strong>。</p>
+<h3 id="一、地物的反射光谱特性"><a href="#一、地物的反射光谱特性" class="headerlink" title="一、地物的反射光谱特性"></a>一、地物的反射光谱特性</h3><p>当电磁辐射能量入射到地物表面上将会出现三种过程：</p>
+<ul>
+<li>一部分入射能量被地物反射；</li>
+<li>一部分入射能量被地物吸收，成为地物本身的内能或部分再发射出来；</li>
+<li>一部分入射能量被地物透射。</li>
+</ul>
+<p>根据能量守恒定律可得：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">P₀ = Pₚ + Pₐ + Pᵣ</span><br></pre></td></tr></table></figure>
+
+<p>式中：</p>
+<ul>
+<li><strong>P₀</strong>：入射的总能量；</li>
+<li><strong>Pₚ</strong>：地物的反射能量；</li>
+<li><strong>Pₐ</strong>：地物的吸收能量；</li>
+<li><strong>Pᵣ</strong>：地物的透射能量。</li>
+</ul>
+<p>（ <strong>一</strong> ） <strong>地物的反射率</strong></p>
+<ul>
+<li>反射率（或反射系数或亮度系数）来表示地物对某一波段电磁波的反射能量与入射的总能量之比。</li>
+<li>在遥感图像上色调的差异是判读遥感图像的重要标志。</li>
+</ul>
+<p>（ <strong>二</strong> ） <strong>地物的反射光谱</strong></p>
+<ul>
+<li>地物的反射率随入射波长变化的规律叫做地物反射光谱。</li>
+</ul>
+<ol>
+<li><strong>雪</strong>：<ul>
+<li>雪的反射光谱和太阳光谱很相似，在 <strong>0.4~0. 6µm</strong> 波段有一个很强的反射峰，反射率几乎接近<strong>100%</strong>,因而看上去是白色。</li>
+</ul>
+</li>
+<li><strong>沙漠</strong>：<ul>
+<li>在橙光波段<strong>0. 6µm</strong>附近有一个强反射峰，因而呈现出橙黄色，在波长达到<strong>0. 8µm</strong>以上的波长范围，其反射率比雪还强</li>
+</ul>
+</li>
+<li><strong>湿地</strong>：<ul>
+<li>潮湿地在整个波长范围内的反射率均较低，当含水量增加时，其反射率就会下降，尤其在水的各个吸收带处，反射率下降更为明显。因而，在黑白相片上，其色调常呈深暗色调。</li>
+</ul>
+</li>
+<li><strong>湿地</strong>：<ul>
+<li>在蓝光波段（中心波长为0. 45µm）和红光波段（中心波长为0. 65µm）上有两个吸收带，其反射率较低，在两个吸收带之间，即在0. 55µm附近有一个反射峰，这个反射峰的位置正好处千可见光的绿光波段，故而叶子的天然色调呈现绿色。大约在O. 7µm附近，由于绿色叶子很少吸收该波段的辐射能，其反射率骤然上升，至l.lµm近红外波段范围内反射率达到高峰。</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>同类地物的反射光谱是相似的，但随着该地物的内在差异而有所变化。这种差异可用来识别不同的植物类型。</li>
+<li>研究地物的光谱特性，还应考虑其<strong>时间特性</strong>和<strong>空间特性</strong>的变化。</li>
+</ul>
+<h3 id="二、地物的发射光谱特性"><a href="#二、地物的发射光谱特性" class="headerlink" title="二、地物的发射光谱特性"></a>二、地物的发射光谱特性</h3><p>任何地物当温度高于热力学温度0K时，组成物质的原子、分子等微粒在不停地做热运动，都有向周围空间辐射红外线和微波的能力。</p>
+<p>通常地物发射电磁辐射的能力是以发射率作为衡量标准。地物的发射率是以黑体辐射作为基准。</p>
+<p>（ <strong>一</strong> ） <strong>黑体辐射【25年真题：名词解释 &#x2F; 简答】</strong></p>
+<ul>
+<li><strong>黑体</strong>：<ol>
+<li>黑体是一个理想的辐射体，黑体也是一个可以与任何地物进行比较的最佳辐射体。</li>
+<li>是“绝对黑体”的简称，指在任何温度下，对千各种波长的电磁辐射的吸收系数恒等于1 (100%)的物体。</li>
+</ol>
+</li>
+<li><strong>黑体辐射</strong>：黑体的热辐射称为黑体辐射</li>
+</ul>
+<p>（ <strong>二</strong> ） <strong>黑体辐射定律</strong></p>
+<p><strong>普朗克定律</strong>：表示出了黑体辐射通量密度与温度关系以及按波长分布的情况</p>
+<ul>
+<li><strong>黑体辐射的三个特性</strong><ol>
+<li>辐射通量密度随波长连续变化，每条曲线只有一个最大值。</li>
+<li>温度愈高，辐射通量密度也愈大，不同温度的曲线是不相交的</li>
+<li>随着温度的升高，辐射最大值所对应的波长移向短波方向</li>
+</ol>
+</li>
+</ul>
+<p><strong>斯特藩–玻尔兹曼定律</strong>：黑体总辐射通量密度随温度的增加而迅速增大，它与温度的四次方成正比。</p>
+<p><strong>维恩位移定律</strong>：随着温度的升高，辐射最大值对应的峰值波长向短波方向移动。</p>
+<p>（ <strong>三</strong> ） <strong>地物的发射率和基尔霍夫定律</strong></p>
+<ul>
+<li><strong>发射率 ε</strong>：指<strong>地物的辐射出射度</strong>与同温度的<strong>黑体的辐射出射度</strong>的比值</li>
+</ul>
+<p><strong>表：一些地物的发射率（8~14µm）（表2-6）</strong></p>
+<table>
+<thead>
+<tr>
+<th>目标物</th>
+<th>温度(°C)</th>
+<th>发射率(ε)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>木材（橡木平板）</td>
+<td>20</td>
+<td>0.90</td>
+</tr>
+<tr>
+<td>水（蒸馏水）</td>
+<td>20</td>
+<td>0.96</td>
+</tr>
+<tr>
+<td>冰（表面光滑）</td>
+<td>-10</td>
+<td>0.96</td>
+</tr>
+<tr>
+<td>雪</td>
+<td>-10</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>沙</td>
+<td>20</td>
+<td>0.90</td>
+</tr>
+<tr>
+<td>岩石矿物</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>石英</td>
+<td>20</td>
+<td>0.627</td>
+</tr>
+<tr>
+<td>长石</td>
+<td>20</td>
+<td>0.819</td>
+</tr>
+<tr>
+<td>花岗岩</td>
+<td>20</td>
+<td>0.780</td>
+</tr>
+<tr>
+<td>玄武岩</td>
+<td>20</td>
+<td>0.906</td>
+</tr>
+<tr>
+<td>大理石</td>
+<td>20</td>
+<td>0.942</td>
+</tr>
+</tbody></table>
+<p><strong>依发射率与波长的关系</strong>，将地物分为三种类型</p>
+<ul>
+<li>黑体</li>
+<li>灰体</li>
+<li>选择性辐射体</li>
+</ul>
+<p>（ <strong>四</strong> ） <strong>黑体微波辐射</strong></p>
+<p><strong>表：不同地物微波波段与红外波段发射率的比较（2-7）</strong></p>
+<table>
+<thead>
+<tr>
+<th>波段</th>
+<th>微波 (λ&#x3D;3cm)</th>
+<th>微波 (λ&#x3D;3mm)</th>
+<th>红外 (λ&#x3D;10µm)</th>
+<th>红外 (λ&#x3D;4µm)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>钢水</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.6~0.9</td>
+<td>0.6~0.9</td>
+</tr>
+<tr>
+<td>水</td>
+<td>0.38</td>
+<td>0.63</td>
+<td>0.99</td>
+<td>0.96</td>
+</tr>
+<tr>
+<td>干沙</td>
+<td>0.90</td>
+<td>0.86</td>
+<td>0.95</td>
+<td>0.83</td>
+</tr>
+<tr>
+<td>混凝土</td>
+<td>0.86</td>
+<td>0.92</td>
+<td>0.90</td>
+<td>0.91</td>
+</tr>
+</tbody></table>
+<p>（ <strong>五</strong> ） <strong>地物发射光谱</strong></p>
+<ul>
+<li>地物的发射率随波长变化的规律称为地物的发射光谱。</li>
+</ul>
+<h3 id="三、地物的透射光谱特性"><a href="#三、地物的透射光谱特性" class="headerlink" title="三、地物的透射光谱特性"></a>三、地物的透射光谱特性</h3><ul>
+<li>有些地物（如水体和冰）具有透射一定波长的电磁波能力，通常把这些地物叫做透明地物。地物的透射能力一般用透射率表示。</li>
+<li>透射率就是入射光透射过地物的能量与入射总能量的百分比</li>
+</ul>
+<h3 id="四、地物光谱特性与遥感图像"><a href="#四、地物光谱特性与遥感图像" class="headerlink" title="四、地物光谱特性与遥感图像"></a>四、地物光谱特性与遥感图像</h3><p>在遥感图像上，目标地物特征包括 <strong>“色、形、位”</strong> 三大类，它们决定的光谱特征与遥感图像之间具有紧密的联系。</p>
+<ol>
+<li><p>色</p>
+<ul>
+<li>指目标地物在遥感图像上呈现的颜色特征，包括目标地物的颜色、阴影、纹理等。</li>
+</ul>
+</li>
+<li><p>形</p>
+<ul>
+<li>指目标地物在遥感图像上表现的形状特征，包括目标地物的形状、大小等。</li>
+</ul>
+</li>
+<li><p>位</p>
+<ul>
+<li>指目标地物在遥感图像上的空间位置特征，包括目标地物的分布位置、排列方式等。</li>
+</ul>
+</li>
+</ol>
+<h2 id="第三节-大气和环境对遥感的影响"><a href="#第三节-大气和环境对遥感的影响" class="headerlink" title="第三节 大气和环境对遥感的影响"></a>第三节 大气和环境对遥感的影响</h2><h3 id="一、大气成分与结构"><a href="#一、大气成分与结构" class="headerlink" title="一、大气成分与结构"></a>一、大气成分与结构</h3><p>（ <strong>一</strong> ） <strong>大气成分</strong>：</p>
+<p>地球大气是由多种气体、固态及液态悬浮的微粒混合组成的。</p>
+<ul>
+<li>N₂、O₂、H₂O、CO、CO₂、N₂O、CH₄、O₃</li>
+</ul>
+<p>（ <strong>二</strong> ） <strong>大气结构</strong></p>
+<ol>
+<li><strong>对流层</strong>：现代航空遥感主要活动的区域</li>
+<li><strong>平流层</strong></li>
+<li><strong>中间层</strong></li>
+<li><strong>热层（增温层）</strong>：人造地球卫星绕地球运行的主要空间</li>
+<li><strong>大气外层</strong></li>
+</ol>
+<h3 id="二、大气对太阳辐射的影响"><a href="#二、大气对太阳辐射的影响" class="headerlink" title="二、大气对太阳辐射的影响"></a>二、大气对太阳辐射的影响</h3><p>（ <strong>一</strong> ） <strong>大气的吸收作用</strong></p>
+<ol>
+<li><strong>氧（O₂）</strong>：大气中氧含量约占21%,它主要吸收小千0. 2µm的太阳辐射能量，在波长0. 155µm处吸收最强</li>
+<li><strong>臭氧（O₃）</strong>：大气中臭氧的含量只占o. 01%<del>0.1%,但对太阳辐射能量吸收很强。臭氧有两个吸收带：一个波长0.2</del>0. 36µm的强吸收带；另一个波长为0. 6µm附近的吸收带，该吸收带处千太阳辐射的最强部分，因此该带吸收最强。</li>
+<li><strong>水（H₂O）</strong>：水在大气中以气态和液态的形式存在，它是吸收太阳辐射能量最强的介质。从可见光、红外直至微波波段，到处都有水的吸收带，主要吸收带是处于红外和可见光中的红光波段，其中红外部分吸收最强。</li>
+<li><strong>二氧化碳（CO₂）</strong>：大气中二氧化碳含量占0. 03%,它的吸收作用主要在红外区内。由于太阳辐射在红外区能量很少，因此对太阳辐射而言，这一吸收带可忽略不计。</li>
+<li><strong>尘埃</strong>：对太阳辐射也有一定的吸收作用，但吸收量很少，当有沙暴、烟雾和火山爆发等发生时，大气中尘埃急剧增加，这时它的吸收作用才比较显著。</li>
+</ol>
+<p>（ <strong>二</strong> ） <strong>大气的散射作用</strong></p>
+<ol>
+<li><strong>瑞利散射</strong>（分子散射）：<strong>短波</strong>散射强（天空呈蓝色）。</li>
+<li><strong>米氏散射</strong>（气溶胶散射）：粒径与波长可比，致<strong>灰白浑浊</strong>。</li>
+<li><strong>非选择性散射</strong>：粒径远大于波长，各波段近似等强（<strong>云雾</strong>致亮白）。</li>
+</ol>
+<h3 id="三、大气窗口"><a href="#三、大气窗口" class="headerlink" title="三、大气窗口"></a>三、大气窗口</h3><p>通常把通过大气而较少被反射、吸收或散射的透射率较高的电磁辐射波段称为大气窗口</p>
+<p><strong>表：大气窗口与遥感光谱通道（2-7）</strong></p>
+<table>
+<thead>
+<tr>
+<th>电磁波性质</th>
+<th>大气窗口</th>
+<th>遥感光谱通道</th>
+<th>应用条件与成像方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>反射光谱</td>
+<td>0.3~1.3µm</td>
+<td>紫外波段</td>
+<td>必须在强光照下，采用摄影方式和扫描方式成像（即只能在白天作业）</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>0.300~0.315µm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>0.315~0.400µm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>可见光波段</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>0.4~0.7µm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>近红外波段</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>0.7~0.9µm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>0.9~1.1µm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>近红外</td>
+<td></td>
+</tr>
+<tr>
+<td>反射光谱</td>
+<td>1.5~1.8µm</td>
+<td>1.55~1.75µm</td>
+<td>强光照下白天扫描成像</td>
+</tr>
+<tr>
+<td></td>
+<td>2.0~3.5µm</td>
+<td>2.205~2.35µm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>中红外</td>
+<td></td>
+</tr>
+<tr>
+<td>反射和发射混合光谱</td>
+<td>3.5~5.5µm</td>
+<td>3.5~5.5µm</td>
+<td>白天和夜间都能扫描成像</td>
+</tr>
+<tr>
+<td>发射光谱</td>
+<td>8~14µm</td>
+<td>远红外</td>
+<td>白天和夜间都能扫描成像</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>10~11µm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>10.4~12.6µm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>8~14µm</td>
+<td></td>
+</tr>
+<tr>
+<td>发射光谱</td>
+<td>0.05~300cm</td>
+<td>V0.53~0.63cm</td>
+<td>有光照和无光照下都能扫描成像</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>V0.53~0.63cm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Q0.63~0.83cm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Kao.83~1.13cm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Kl.13~1.67cm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Kul.67~2.75cm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>X2.75~5.2cm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>C5.21~7.69cm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>S7.69~19.4cm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Ll9.4~76.9cm</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>P76.9~133cm</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="四、环境对地物光谱特性的影响"><a href="#四、环境对地物光谱特性的影响" class="headerlink" title="四、环境对地物光谱特性的影响"></a>四、环境对地物光谱特性的影响</h3><ol>
+<li><strong>与地物的物理性状有关</strong></li>
+<li><strong>与光源的辐射强度有关</strong></li>
+<li><strong>与季节有关</strong></li>
+<li><strong>与探测时间有关</strong></li>
+<li><strong>与气象条件有关</strong></li>
+</ol>
+<h2 id="第四节-地物波谱特征的测定"><a href="#第四节-地物波谱特征的测定" class="headerlink" title="第四节 地物波谱特征的测定"></a>第四节 地物波谱特征的测定</h2><h3 id="一、地物波谱特征的概念"><a href="#一、地物波谱特征的概念" class="headerlink" title="一、地物波谱特征的概念"></a>一、地物波谱特征的概念</h3><p>地物波谱也称地物光谱。地物波谱特征是指各种地物各自所具有的电磁波特性（发射辐射或反射辐射）。它是选择遥感波谱段、设计遥感仪器的依据，也是用户判读、识别、分析遥感图像的基础。</p>
+<p>地物波谱特征通常都是用地物反射辐射电磁波谱来描述</p>
+<h3 id="二、地物波谱特征的测定原理"><a href="#二、地物波谱特征的测定原理" class="headerlink" title="二、地物波谱特征的测定原理"></a>二、地物波谱特征的测定原理</h3><p>…</p>
+<h3 id="三、地物波谱特征的测定步骤"><a href="#三、地物波谱特征的测定步骤" class="headerlink" title="三、地物波谱特征的测定步骤"></a>三、地物波谱特征的测定步骤</h3><p>…</p>
+<h3 id="四、测定地物的光谱反射率实习"><a href="#四、测定地物的光谱反射率实习" class="headerlink" title="四、测定地物的光谱反射率实习"></a>四、测定地物的光谱反射率实习</h3><p>…</p>
+<hr>
+<h1 id="第三章-航空遥感与航测成图"><a href="#第三章-航空遥感与航测成图" class="headerlink" title="第三章 航空遥感与航测成图"></a>第三章 航空遥感与航测成图</h1>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80%E4%B8%8E%E5%BA%94%E7%94%A8/" rel="tag"># 遥感基础与应用</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/08/28/%E9%81%A5%E6%84%9F%E7%9C%9F%E9%A2%98/" rel="prev" title="遥感真题">
+                  <i class="fa fa-angle-left"></i> 遥感真题
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Yuanzhibx</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/yuanzhibx" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
