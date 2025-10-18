@@ -28,7 +28,7 @@
 <meta property="og:description" content="【数据库系统概论】1 - 5 Chapter">
 <meta property="og:locale" content="zh_CH">
 <meta property="article:published_time" content="2025-09-09T15:26:41.000Z">
-<meta property="article:modified_time" content="2025-09-09T15:34:05.161Z">
+<meta property="article:modified_time" content="2025-10-17T16:49:18.373Z">
 <meta property="article:author" content="Yuanzhibx">
 <meta property="article:tag" content="📘笔记">
 <meta name="twitter:card" content="summary">
@@ -209,9 +209,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2025-09-09 23:26:41 / Modified: 23:34:05" itemprop="dateCreated datePublished" datetime="2025-09-09T23:26:41+08:00">2025-09-09</time>
+      <time title="Created: 2025-09-09 23:26:41" itemprop="dateCreated datePublished" datetime="2025-09-09T23:26:41+08:00">2025-09-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-10-18 00:49:18" itemprop="dateModified" datetime="2025-10-18T00:49:18+08:00">2025-10-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -230,14 +236,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>12k</span>
+      <span>13k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>22 mins.</span>
+      <span>24 mins.</span>
     </span>
 </div>
 
@@ -645,7 +651,7 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> SCHEMA Yuanzhibx  CASCADE;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> SCHEMA Yuanzhibx CASCADE;</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-2-2-基本表"><a href="#3-2-2-基本表" class="headerlink" title="3.2.2 基本表"></a>3.2.2 基本表</h3><ol>
 <li><strong>定义基本表</strong></li>
@@ -660,8 +666,107 @@
 </li>
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE TABLE</span> Student (</span><br><span class="line">   Sno <span class="type">CHAR</span>(<span class="number">8</span>) <span class="keyword">PRIMARY KEY</span>, <span class="comment">/* 列级完整性约束条件，Sno是主码 */</span></span><br><span class="line">   Sname <span class="type">VARCHAR</span>(<span class="number">20</span>) <span class="keyword">UNIQUE</span>, <span class="comment">/* Sname 取唯一值 */</span></span><br><span class="line">   Ssex <span class="type">CHAR</span>(<span class="number">6</span>),</span><br><span class="line">   Sbirthdate <span class="type">Date</span>,</span><br><span class="line">   Smajor <span class="type">VARCHAR</span>(<span class="number">40</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> Course (</span><br><span class="line">   Cno <span class="type">CHAR</span>(<span class="number">5</span>) <span class="keyword">PRIMARY KEY</span>, <span class="comment">/* 列级完整性约束条件，Cno是主码 */</span></span><br><span class="line">   Cname <span class="type">VARCHAR</span>(<span class="number">20</span>) <span class="keyword">NOT NULL</span>, <span class="comment">/* 列级完整性约束条件，Cname 不能取空值 */</span></span><br><span class="line">   Crerdit <span class="type">SMALLINT</span>,</span><br><span class="line">   Cpno <span class="type">CHAR</span>(<span class="number">5</span>),</span><br><span class="line">   <span class="keyword">FOREIGN KEY</span> (Cpno) <span class="keyword">REFERENCES</span> Course(Cno)</span><br><span class="line">   <span class="comment">/* 表级完整性约束， Cpno是外码，被参考表是Course，被参考列是Cno */</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> SC (</span><br><span class="line">   Sno <span class="type">CHAR</span>(<span class="number">8</span>),</span><br><span class="line">   Cno <span class="type">CHAR</span>(<span class="number">5</span>),</span><br><span class="line">   Grade <span class="type">SMALLINT</span></span><br><span class="line">   Semester <span class="type">CHAR</span>(<span class="number">5</span>),</span><br><span class="line">   Teachingclass <span class="type">CHAR</span>(<span class="number">8</span>),</span><br><span class="line">   <span class="keyword">PRIMARY KEY</span>(Sno, Cno),</span><br><span class="line">      <span class="comment">/* 主码由两个属性构成，必须作为表级完整性进行定义 */</span></span><br><span class="line">   <span class="keyword">FOREIGN KEY</span> (Sno) <span class="keyword">REFERENCES</span> Student(Sno),</span><br><span class="line">      <span class="comment">/* 表级完整性约束， Sno是外码，被参考表是Student */</span></span><br><span class="line">   <span class="keyword">FOREIGN KEY</span> (Cno) <span class="keyword">REFERENCES</span> Course(Cno)</span><br><span class="line">      <span class="comment">/* 表级完整性约束， Cno是外码，被参考表是Course */</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
+<ul>
+<li><p><strong>Student</strong></p>
+<table>
+<thead>
+<tr>
+<th>Sno</th>
+<th>Sname</th>
+<th>Ssex</th>
+<th>Sbirthdate</th>
+<th>Smajor</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>20190009</td>
+<td>颜丙旭</td>
+<td>男</td>
+<td>1999-07-29</td>
+<td>计算机科学与技术</td>
+</tr>
+<tr>
+<td>20260001</td>
+<td>源志</td>
+<td>男</td>
+<td>1999-07-29</td>
+<td>农业工程与信息技术</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>Course</strong></p>
+<table>
+<thead>
+<tr>
+<th>Cno</th>
+<th>Cname</th>
+<th>Crerdit</th>
+<th>Cpno</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C001</td>
+<td>C程序设计</td>
+<td>3</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>C002</td>
+<td>数据库系统概论</td>
+<td>4</td>
+<td>C001</td>
+</tr>
+<tr>
+<td>C003</td>
+<td>计算机网络</td>
+<td>4</td>
+<td>C002</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>SC</strong></p>
+<table>
+<thead>
+<tr>
+<th>Sno</th>
+<th>Cno</th>
+<th>Grade</th>
+<th>Semester</th>
+<th>Teachingclass</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>20210001</td>
+<td>C001</td>
+<td>88</td>
+<td>2023秋</td>
+<td>计科1班</td>
+</tr>
+<tr>
+<td>20210001</td>
+<td>C002</td>
+<td>92</td>
+<td>2023秋</td>
+<td>计科1班</td>
+</tr>
+<tr>
+<td>20210002</td>
+<td>C002</td>
+<td>79</td>
+<td>2023秋</td>
+<td>软工2班</td>
+</tr>
+<tr>
+<td>20210003</td>
+<td>C003</td>
+<td>85</td>
+<td>2023秋</td>
+<td>数据1班</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<ol>
 <li><strong>修改基本表</strong></li>
 </ol>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER TABLE</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span></span><br><span class="line">    [<span class="keyword">ADD</span> [<span class="keyword">COLUMN</span>] <span class="operator">&lt;</span>新列名<span class="operator">&gt;</span> <span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span> [完整性约束]]</span><br><span class="line">    [<span class="keyword">ADD</span> <span class="operator">&lt;</span>表级完整性约束<span class="operator">&gt;</span>]</span><br><span class="line">    [<span class="keyword">DROP</span> [<span class="keyword">COLUMN</span>] <span class="operator">&lt;</span>列名<span class="operator">&gt;</span> [CASCADE<span class="operator">|</span>RESTRICT]]</span><br><span class="line">    [<span class="keyword">DROP</span> <span class="keyword">CONSTRAINT</span> <span class="operator">&lt;</span>完整性约束名<span class="operator">&gt;</span> [RESTRICT<span class="operator">|</span>CASCADE]]</span><br><span class="line">    [<span class="keyword">ALTER</span> <span class="keyword">COLUMN</span> <span class="operator">&lt;</span>列名<span class="operator">&gt;</span> <span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span>];</span><br></pre></td></tr></table></figure>
@@ -703,7 +808,8 @@
 <ul>
 <li>（3）查询经过计算的值：<br>例：查全体学生的姓名及其出生年份。（假设当年为 2014）</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname, <span class="number">2014</span> <span class="operator">-</span> Sage <span class="keyword">FROM</span> Student;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname, <span class="number">2014</span> <span class="operator">-</span> Sage <span class="keyword">FROM</span> Student;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p><strong>选择表中的若干元组</strong></p>
 <ul>
 <li>（1）消除取值重复的行<br>例：查询选修课程的学生学号。</li>
@@ -746,34 +852,34 @@
 </tr>
 </tbody></table>
 <p>① 比较大小<br>查询所有年龄在 20 岁以下的学生姓名及其年龄。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname, Sage <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sage <span class="operator">&lt;</span> <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname, Sage </span><br><span class="line"><span class="keyword">FROM</span> Student </span><br><span class="line"><span class="keyword">WHERE</span> Sage <span class="operator">&lt;</span> <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
 
 <p>② 确定范围<br>查询年龄在 20~23 岁（包括 20 岁和 23 岁）之间的学生的姓名、系别和年龄。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname, Sdept, Sage <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sage <span class="keyword">BETWEEN</span> <span class="number">20</span> <span class="keyword">AND</span> <span class="number">23</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname, Sdept, Sage </span><br><span class="line"><span class="keyword">FROM</span> Student </span><br><span class="line"><span class="keyword">WHERE</span> Sage <span class="keyword">BETWEEN</span> <span class="number">20</span> <span class="keyword">AND</span> <span class="number">23</span>;</span><br></pre></td></tr></table></figure>
 
 <p>③ 确定集合<br>查询计算机系、数学系和信息系学生的姓名和性别。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname，Ssex <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sdept <span class="keyword">IN</span>（<span class="string">&#x27;CS&#x27;</span>, <span class="string">&#x27;MA&#x27;</span>, <span class="string">&#x27;IS&#x27;</span>）;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname，Ssex </span><br><span class="line"><span class="keyword">FROM</span> Student </span><br><span class="line"><span class="keyword">WHERE</span> Sdept <span class="keyword">IN</span>（<span class="string">&#x27;CS&#x27;</span>, <span class="string">&#x27;MA&#x27;</span>, <span class="string">&#x27;IS&#x27;</span>）;</span><br></pre></td></tr></table></figure>
 
-<p>④ 字符匹配<br>查询所有姓刘的学生的姓名、学号和性别。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname，Sno，Ssex <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sname <span class="keyword">LIKE</span> <span class="string">&#x27;刘%&#x27;</span>；</span><br></pre></td></tr></table></figure>
+<p>④ 字符匹配<br>查询所有姓颜的学生的姓名、学号和性别。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname，Sno，Ssex </span><br><span class="line"><span class="keyword">FROM</span> Student </span><br><span class="line"><span class="keyword">WHERE</span> Sname <span class="keyword">LIKE</span> <span class="string">&#x27;颜%&#x27;</span>；</span><br></pre></td></tr></table></figure>
 
-<p>查询姓欧阳且全名为三个汉字的学生的姓名。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sname <span class="keyword">LIKE</span> <span class="string">&#x27;欧阳_&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>查询姓源志且全名为三个汉字的学生的姓名。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname </span><br><span class="line"><span class="keyword">FROM</span> Student </span><br><span class="line"><span class="keyword">WHERE</span> Sname <span class="keyword">LIKE</span> <span class="string">&#x27;源志_&#x27;</span>;</span><br></pre></td></tr></table></figure>
 
 <p>⑤ 涉及空值的查询<br>某些学生选修课程后没有参加考试，所以有选课记录，但没有考试成绩。查询缺少成绩的学生的学号和相应的课程号。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Cno <span class="keyword">FROM</span> SC <span class="keyword">WHERE</span> Grade <span class="keyword">IS</span> <span class="keyword">NULL</span> ;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Cno </span><br><span class="line"><span class="keyword">FROM</span> SC </span><br><span class="line"><span class="keyword">WHERE</span> Grade <span class="keyword">IS</span> <span class="keyword">NULL</span> ;</span><br></pre></td></tr></table></figure>
 
 <p>查询计算机系年龄在 20 岁以下的学生姓名。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sdept <span class="operator">=</span> <span class="string">&#x27;CS&#x27;</span> <span class="keyword">AND</span> Sage <span class="operator">&lt;</span> <span class="number">20</span> ;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname </span><br><span class="line"><span class="keyword">FROM</span> Student </span><br><span class="line"><span class="keyword">WHERE</span> Sdept <span class="operator">=</span> <span class="string">&#x27;CS&#x27;</span> <span class="keyword">AND</span> Sage <span class="operator">&lt;</span> <span class="number">20</span> ;</span><br></pre></td></tr></table></figure>
 
 <p>⑥ 多重条件查询<br>查询计算机科学系（CS）、数学系（MA）和信息系（IS）学生的姓名和性别。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname, Ssex <span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">WHERE</span> Sdept <span class="operator">=</span> <span class="string">&#x27;CS&#x27;</span> <span class="keyword">OR</span> Sdept <span class="operator">=</span> <span class="string">&#x27;MA&#x27;</span> <span class="keyword">OR</span> Sdept <span class="operator">=</span> <span class="string">&#x27;IS&#x27;</span> ;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname, Ssex </span><br><span class="line"><span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">WHERE</span> Sdept <span class="operator">=</span> <span class="string">&#x27;CS&#x27;</span> <span class="keyword">OR</span> </span><br><span class="line">      Sdept <span class="operator">=</span> <span class="string">&#x27;MA&#x27;</span> <span class="keyword">OR</span> </span><br><span class="line">      Sdept <span class="operator">=</span> <span class="string">&#x27;IS&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
 <li><p><strong>ORDER BY 子句</strong></p>
 <p>例：查询选修了 3 号课程的学生的学号及其成绩，查询结果按分数降序排列。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Grade <span class="keyword">FROM</span> SC <span class="keyword">WHERE</span> Cno <span class="operator">=</span> <span class="string">&#x27;3&#x27;</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> Grade <span class="keyword">DESC</span> ;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Grade </span><br><span class="line"><span class="keyword">FROM</span> SC </span><br><span class="line"><span class="keyword">WHERE</span> Cno <span class="operator">=</span> <span class="string">&#x27;3&#x27;</span> </span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> Grade <span class="keyword">DESC</span> ;</span><br></pre></td></tr></table></figure>
 
 <p>例：查询全体学生情况，查询结果按所在系的系号升序排列，同一系中的学生按年龄降序排列。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> student <span class="keyword">ORDER</span> <span class="keyword">BY</span> sdept, sage <span class="keyword">DESC</span> ;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> </span><br><span class="line"><span class="keyword">FROM</span> student </span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> sdept, sage <span class="keyword">DESC</span> ;</span><br></pre></td></tr></table></figure>
 
 <p>说明：升序：ASC，降序：DESC</p>
 </li>
@@ -787,31 +893,31 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>COUNT（*）</td>
+<td><strong>COUNT</strong>（*）</td>
 <td>统计元组个数</td>
 </tr>
 <tr>
-<td>COUNT([DISTINCT|ALL]&lt;列名&gt;)</td>
+<td><strong>COUNT</strong>([DISTINCT|ALL]&lt;列名&gt;)</td>
 <td>统计一列中值的个数</td>
 </tr>
 <tr>
-<td>SUM([DISTINCT|ALL]&lt;列名&gt;)</td>
+<td><strong>SUM</strong>([DISTINCT|ALL]&lt;列名&gt;)</td>
 <td>统计一列值的总和（此列必须是数值型）</td>
 </tr>
 <tr>
-<td>AVG([DISTINCT|ALL]&lt;列名&gt;)</td>
+<td><strong>AVG</strong>([DISTINCT|ALL]&lt;列名&gt;)</td>
 <td>统计一列值的平均值（此列必须是数值型）</td>
 </tr>
 <tr>
-<td>MAX([DISTINCT|ALL]&lt;列名&gt;)</td>
+<td><strong>MAX</strong>([DISTINCT|ALL]&lt;列名&gt;)</td>
 <td>求一列值中的最大值</td>
 </tr>
 <tr>
-<td>MIN([DISTINCT|ALL]&lt;列名&gt;)</td>
+<td><strong>MIN</strong>([DISTINCT|ALL]&lt;列名&gt;)</td>
 <td>求一列值中的最小值</td>
 </tr>
 </tbody></table>
-<p>指定 DISTINCT 短语可以表示在计算时要取消指定列中的重复值。<br>例：</p>
+<p>指定 <strong>DISTINCT</strong> 短语可以表示在计算时要取消指定列中的重复值。<br>例：</p>
 <ol>
 <li>查询学生总人数。</li>
 </ol>
@@ -825,28 +931,28 @@
 <ol start="3">
 <li>计算 1 号课程的学生平均成绩。</li>
 </ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">AVG</span>(GRADE) <span class="keyword">FROM</span> SC <span class="keyword">WHERE</span> CNO <span class="operator">=</span> <span class="string">&#x27;1&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">AVG</span>(GRADE) </span><br><span class="line"><span class="keyword">FROM</span> SC </span><br><span class="line"><span class="keyword">WHERE</span> CNO <span class="operator">=</span> <span class="string">&#x27;1&#x27;</span>;</span><br></pre></td></tr></table></figure>
 
 <ol start="4">
 <li>查询选修 1 号课程的学生最高分数。</li>
 </ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">MAX</span>(GRADE) <span class="keyword">FROM</span> SC <span class="keyword">WHERE</span> CNO <span class="operator">=</span> <span class="string">&#x27;1&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">MAX</span>(GRADE) </span><br><span class="line"><span class="keyword">FROM</span> SC </span><br><span class="line"><span class="keyword">WHERE</span> CNO <span class="operator">=</span> <span class="string">&#x27;1&#x27;</span>;</span><br></pre></td></tr></table></figure>
 
 <ol start="5">
 <li>查询学生 201215012 选修课程的总学分数。</li>
 </ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">SUM</span>(CCREDIT) <span class="keyword">FROM</span> SC, COURSE</span><br><span class="line"><span class="keyword">WHERE</span> CNO <span class="operator">=</span> <span class="string">&#x27;201215012&#x27;</span> <span class="keyword">AND</span> SC.CNO <span class="operator">=</span> COURSE.CNO;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">SUM</span>(CCREDIT) </span><br><span class="line"><span class="keyword">FROM</span> SC, Course</span><br><span class="line"><span class="keyword">WHERE</span> CNO <span class="operator">=</span> <span class="string">&#x27;201215012&#x27;</span> <span class="keyword">AND</span> </span><br><span class="line">      SC.CNO <span class="operator">=</span> Course.CNO;</span><br></pre></td></tr></table></figure>
 
-<p>说明：<br>① 当聚集函数遇到空值时，除 count（*）外，都跳过空值而只处理非空值。<br>② where 子句中是不能用聚集函数作为条件表达式的。聚集函数只能用于 select 子句和 group by 中的 having 子句。</p>
+<p>说明：<br>① 当聚集函数遇到空值时，除 count(*)外，都跳过空值而只处理非空值。<br>② WHERE 子句中是不能用聚集函数作为条件表达式的。聚集函数只能用于 SELECT 子句和 GROUP BY 中的 HAVING 子句。</p>
 </li>
-<li><p><strong>GROUP BY 子句</strong><br>group by 子句将查询结果按某一列或者多列的值分组，值相等的为一组。<br>例：求各个课程号及相应的选课人数。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Cno, <span class="built_in">COUNT</span>(Sno) <span class="keyword">FROM</span> SC <span class="keyword">GROUP</span> <span class="keyword">BY</span> Cno;</span><br></pre></td></tr></table></figure>
+<li><p><strong>GROUP BY 子句</strong><br>GROUP BY 子句将查询结果按某一列或者多列的值分组，值相等的为一组。<br>例：求各个课程号及相应的选课人数。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Cno, <span class="built_in">COUNT</span>(Sno) </span><br><span class="line"><span class="keyword">FROM</span> SC </span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> Cno;</span><br></pre></td></tr></table></figure>
 
 <p>该语句对查询结果按 Cno 的值分组，所有具有相同 Cno 值的元组为一组，然后对每一组作用聚集函数 count 进行计算，以求该组的学生人数。</p>
 <p>例：查询选修了 3 门以上课程的学生学号。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> Sno <span class="keyword">from</span> SC <span class="keyword">group</span> <span class="keyword">by</span> Sno <span class="keyword">having</span> <span class="built_in">count</span>(<span class="operator">*</span>) <span class="operator">&gt;</span> <span class="number">3</span> ;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno </span><br><span class="line"><span class="keyword">FROM</span> SC </span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> Sno </span><br><span class="line"><span class="keyword">HAVING</span> <span class="built_in">count</span>(<span class="operator">*</span>) <span class="operator">&gt;</span> <span class="number">3</span> ;</span><br></pre></td></tr></table></figure>
 
-<p>分组后可以使用 having 子句进行条件筛选。</p>
+<p>分组后可以使用 HAVING 子句进行条件筛选。</p>
 </li>
 </ol>
 <h3 id="3-3-2-连接查询"><a href="#3-3-2-连接查询" class="headerlink" title="3.3.2 连接查询"></a>3.3.2 连接查询</h3><p>若查询同时涉及两个以上的表，称为连接查询。</p>
@@ -863,22 +969,26 @@
 
 <p>非等值连接：查询选修 2 号课程且成绩在 90 分以上的所有学生的学号和姓名。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Student.Sno, Sname </span><br><span class="line"><span class="keyword">FROM</span> Student, SC</span><br><span class="line"><span class="keyword">WHERE</span> Student.Sno <span class="operator">=</span> SC.Sno </span><br><span class="line">   <span class="keyword">AND</span> SC.Cno <span class="operator">=</span> <span class="string">&#x27;2&#x27;</span> </span><br><span class="line">   <span class="keyword">AND</span> SC.Grade <span class="operator">&gt;</span> <span class="number">90</span> ;</span><br></pre></td></tr></table></figure></li>
-<li><p><strong>自身连接</strong><br>连接操作不仅可以在两个表之间进行，也可以是一个表与自己进行连接，称为表的自身连接。<br>例：查询每一门课的间接先修课（即先修课的先修课）。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FIRST.Cno, SECOND.Cpno</span><br><span class="line"><span class="keyword">FROM</span> Course <span class="keyword">first</span>, Course <span class="keyword">second</span></span><br><span class="line"><span class="keyword">WHERE</span> FIRST.Cpno <span class="operator">=</span> SECOND.Cno ;</span><br></pre></td></tr></table></figure>
+<li><p><strong>自身连接</strong><br>连接操作不仅可以在两个表之间进行，也可以是一个表与自己进行连接，称为表的自身连接。</p>
+<p>例：查询每一门课的间接先修课（即先修课的先修课）。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FIRST.Cno, SECOND.Cpno</span><br><span class="line"><span class="keyword">FROM</span> Course <span class="keyword">FIRST</span>, Course <span class="keyword">SECOND</span></span><br><span class="line"><span class="keyword">WHERE</span> FIRST.Cpno <span class="operator">=</span> SECOND.Cno;</span><br></pre></td></tr></table></figure>
 
 <p>需要为 Course 取两个别名，一个是 FIRST，另一个是 SECOND。</p>
 </li>
 <li><p><strong>外连接</strong><br>外连接仍把悬浮元组保存在结果关系中，但要加 null。左外连接列出左边关系中的所有元组，右外连接列出右边关系中的所有元组。</p>
+<p>例：查询以 Student 表为主体的每个学生基本情况及选课情况，没选课为 NULL</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Student.Sno, Sname, Ssex, Sbirthdate, Smajor, Cno, Grade</span><br><span class="line"><span class="keyword">FROM</span> Student <span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> SC <span class="keyword">ON</span> (Student.Sno <span class="operator">=</span> SC.Sno);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong>多表查询</strong><br>两个以上表的连接。<br>例：查询每个学生的学号、姓名、选修的课程名及成绩。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Student.Sno, Student.Sname, Course.Cname, SC.Grade</span><br><span class="line"><span class="keyword">FROM</span> Student, SC, Course</span><br><span class="line"><span class="keyword">WHERE</span> Student.Sno <span class="operator">=</span> SC.Sno <span class="keyword">AND</span> SC.Cno <span class="operator">=</span> Course.Cno ;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>多表查询</strong><br>两个以上表的连接。</p>
+<p>例：查询每个学生的学号、姓名、选修的课程名及成绩。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Student.Sno, Student.Sname, Course.Cname, SC.Grade</span><br><span class="line"><span class="keyword">FROM</span> Student, SC, Course</span><br><span class="line"><span class="keyword">WHERE</span> Student.Sno <span class="operator">=</span> SC.Sno <span class="keyword">AND</span> </span><br><span class="line">      SC.Cno <span class="operator">=</span> Course.Cno;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="3-3-3-嵌套查询"><a href="#3-3-3-嵌套查询" class="headerlink" title="3.3.3 嵌套查询"></a>3.3.3 嵌套查询</h3><p>一个 SELECT-FROM-WHERE 语句称为一个查询块，将一个查询块嵌套在另一个查询块的 WHERE 子句或 HAVING 短语的条件中的查询称为嵌套查询，上层的查询块称为外层查询或父查询，下层查询块称为内层查询或子查询，SQL 语言允许多层嵌套查询，即一个子查询中还可以嵌套其他子查询，子查询不能使用 ORDER BY 子句。</p>
 <ol>
 <li><p><strong>带有 IN 谓词的子查询</strong><br>例：查询与 “刘晨” 在同一个系学习的学生。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> Sno, Sname, Sdept</span><br><span class="line"><span class="keyword">from</span> Student</span><br><span class="line"><span class="keyword">where</span> Sdept <span class="keyword">in</span> (<span class="keyword">select</span> Sdept <span class="keyword">from</span> Student <span class="keyword">where</span> Sname <span class="operator">=</span> <span class="string">&#x27;刘晨&#x27;</span> ) ;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Sname, Sdept</span><br><span class="line"><span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">WHERE</span> Sdept <span class="keyword">IN</span> (</span><br><span class="line">      <span class="keyword">SELECT</span> Sdept </span><br><span class="line">      <span class="keyword">FROM</span> Student </span><br><span class="line">      <span class="keyword">WHERE</span> Sname <span class="operator">=</span> <span class="string">&#x27;刘晨&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
 <li><p><strong>带有比较运算符的子查询</strong><br>例：找出每个学生超过他选修课程平均成绩的课程号。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Cno</span><br><span class="line"><span class="keyword">FROM</span> SC X</span><br><span class="line"><span class="keyword">WHERE</span> Grade <span class="operator">&gt;=</span> (<span class="keyword">SELECT</span> <span class="built_in">AVG</span>(Grade) <span class="keyword">FROM</span> SC Y <span class="keyword">WHERE</span> y.Sno <span class="operator">=</span> x.Sno) ;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Cno</span><br><span class="line"><span class="keyword">FROM</span> SC x</span><br><span class="line"><span class="keyword">WHERE</span> Grade <span class="operator">&gt;=</span> (</span><br><span class="line">      <span class="keyword">SELECT</span> <span class="built_in">AVG</span>(Grade) </span><br><span class="line">      <span class="keyword">FROM</span> SC y</span><br><span class="line">      <span class="keyword">WHERE</span> y.Sno <span class="operator">=</span> x.Sno) ;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>带有 ANY 或 ALL 谓词的子查询</strong><br>使用 ANY 或 ALL 谓词时必须同时使用比较运算，语义如下表：</p>
 <table>
@@ -938,7 +1048,7 @@
 </tr>
 </tbody></table>
 <p>例：查询非计算机科学系中比计算机科学系任意一个学生年龄小的学生姓名和年龄。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> Sname, Sage <span class="keyword">from</span> Student</span><br><span class="line"><span class="keyword">where</span> Sage <span class="operator">&lt;</span> <span class="keyword">ANY</span> (<span class="keyword">select</span> Sage <span class="keyword">from</span> Student <span class="keyword">where</span> Sdept <span class="operator">=</span> <span class="string">&#x27;CS&#x27;</span>) <span class="keyword">and</span> Sdept <span class="operator">&lt;&gt;</span> <span class="string">&#x27;CS&#x27;</span> ;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname, Sage </span><br><span class="line"><span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">WHERE</span> Sage <span class="operator">&lt;</span> <span class="keyword">ANY</span> (</span><br><span class="line">      <span class="keyword">SELECT</span> Sage </span><br><span class="line">      <span class="keyword">FROM</span> Student </span><br><span class="line">      <span class="keyword">WHERE</span> Sdept <span class="operator">=</span> <span class="string">&#x27;CS&#x27;</span></span><br><span class="line">      ) </span><br><span class="line">      <span class="keyword">AND</span> Sdept <span class="operator">&lt;&gt;</span> <span class="string">&#x27;CS&#x27;</span> ;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>带有 EXISTS 谓词的子查询</strong><br>带有 EXISTS 谓词的子查询不返回任何数据，只产生逻辑真值 “true” 或逻辑假值 “false”。</p>
 <ul>
@@ -947,32 +1057,53 @@
 <li>若内层查询结果非空，则外层的 WHERE 子句返回假值。</li>
 <li>若内层查询结果为空，则外层的 WHERE 子句返回真值。<br>例：查询这样一个同学，没有一门课是他不选修的。</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> Sname <span class="keyword">from</span> Student</span><br><span class="line"><span class="keyword">where</span> <span class="keyword">not</span> <span class="keyword">exists</span> (<span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> Course</span><br><span class="line">    <span class="keyword">where</span> <span class="keyword">not</span> <span class="keyword">exists</span> (<span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> SC</span><br><span class="line">        <span class="keyword">where</span> Sno <span class="operator">=</span> Student.Sno <span class="keyword">and</span> Cno <span class="operator">=</span> Course.Cno));</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname </span><br><span class="line"><span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">WHERE</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> (</span><br><span class="line">   <span class="keyword">SELECT</span> <span class="operator">*</span> </span><br><span class="line">   <span class="keyword">FROM</span> Course</span><br><span class="line">   <span class="keyword">WHERE</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> (</span><br><span class="line">      <span class="keyword">SELECT</span> <span class="operator">*</span> </span><br><span class="line">      <span class="keyword">FROM</span> SC</span><br><span class="line">      <span class="keyword">WHERE</span> Sno <span class="operator">=</span> Student.Sno <span class="keyword">AND</span> </span><br><span class="line">            Cno <span class="operator">=</span> Course.Cno));</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="3-3-4-集合查询"><a href="#3-3-4-集合查询" class="headerlink" title="3.3.4 集合查询"></a>3.3.4 集合查询</h3><p>集合操作主要包括并操作 union、交操作 intersect 和差操作 except。<br>例：</p>
 <ol>
 <li>查询计算机科学系的学生及年龄不大于 19 岁的学生。</li>
 </ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> Student <span class="keyword">where</span> Sdept <span class="operator">=</span> <span class="string">&#x27;cs&#x27;</span></span><br><span class="line"><span class="keyword">union</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> Student <span class="keyword">where</span> Sage <span class="operator">&lt;=</span> <span class="number">19</span> ;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sdept <span class="operator">=</span> <span class="string">&#x27;cs&#x27;</span></span><br><span class="line"><span class="keyword">UNION</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sage <span class="operator">&lt;=</span> <span class="number">19</span> ;</span><br></pre></td></tr></table></figure>
 
-<p>union：将多个查询结果合并起来时，系统自动去掉重复元组。<br>union all：将多个查询结果合并起来时，保留重复元组。<br>2. 查询计算机科学系的学生与年龄不大于 19 岁的学生的交集。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span>  <span class="operator">*</span> <span class="keyword">from</span> Student <span class="keyword">where</span> Sdept <span class="operator">=</span> <span class="string">&#x27;cs&#x27;</span></span><br><span class="line"><span class="keyword">intersect</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> Student <span class="keyword">where</span> Sage <span class="operator">&lt;=</span> <span class="number">19</span> ;</span><br></pre></td></tr></table></figure>
+<p>UNION：将多个查询结果合并起来时，系统自动去掉重复元组。<br>UNION ALL：将多个查询结果合并起来时，保留重复元组。</p>
+<ol start="2">
+<li>查询计算机科学系的学生与年龄不大于 19 岁的学生的交集。</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>  <span class="operator">*</span> <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sdept <span class="operator">=</span> <span class="string">&#x27;cs&#x27;</span></span><br><span class="line"><span class="keyword">INTERSECT</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sage <span class="operator">&lt;=</span> <span class="number">19</span> ;</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
 <li>查询计算机科学系的学生与年龄不大于 19 岁的学生的差集。</li>
 </ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> Student <span class="keyword">where</span> Sdept <span class="operator">=</span> <span class="string">&#x27;cs&#x27;</span></span><br><span class="line"><span class="keyword">except</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> Student <span class="keyword">where</span> Sage <span class="operator">&lt;=</span> <span class="number">19</span> ;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sdept <span class="operator">=</span> <span class="string">&#x27;cs&#x27;</span></span><br><span class="line"><span class="keyword">EXCEPT</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sage <span class="operator">&lt;=</span> <span class="number">19</span> ;</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-3-5-基于派生表查询"><a href="#3-3-5-基于派生表查询" class="headerlink" title="3.3.5 基于派生表查询"></a>3.3.5 基于派生表查询</h3><h2 id="3-4-数据更新-（【2019-SQL题】SQL-插入-删除语句）"><a href="#3-4-数据更新-（【2019-SQL题】SQL-插入-删除语句）" class="headerlink" title="3.4 数据更新 （【2019 SQL题】SQL 插入&#x2F;删除语句）"></a>3.4 数据更新 （【2019 SQL题】SQL 插入&#x2F;删除语句）</h2><h3 id="3-4-1-插入数据"><a href="#3-4-1-插入数据" class="headerlink" title="3.4.1 插入数据"></a>3.4.1 插入数据</h3><p>格式：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert into</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> [ (<span class="operator">&lt;</span>属性列<span class="number">1</span><span class="operator">&gt;</span> [, <span class="operator">&lt;</span>属性列<span class="number">2</span><span class="operator">&gt;</span>…) ]</span><br><span class="line"><span class="keyword">values</span> (<span class="operator">&lt;</span>常量<span class="number">1</span><span class="operator">&gt;</span> [, <span class="operator">&lt;</span>常量<span class="number">2</span><span class="operator">&gt;</span> ]…) ;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT INTO</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> [ (<span class="operator">&lt;</span>属性列<span class="number">1</span><span class="operator">&gt;</span> [, <span class="operator">&lt;</span>属性列<span class="number">2</span><span class="operator">&gt;</span>…) ]</span><br><span class="line"><span class="keyword">VALUES</span> (<span class="operator">&lt;</span>常量<span class="number">1</span><span class="operator">&gt;</span> [, <span class="operator">&lt;</span>常量<span class="number">2</span><span class="operator">&gt;</span> ]…) ;</span><br></pre></td></tr></table></figure>
+
+<p>例：将一个新学生元组插入 Student 表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT INTO</span> Studnet(Sno, Sname, Ssex, Smajor, Sbirthdate)</span><br><span class="line"><span class="keyword">VALUES</span> (<span class="string">&#x27;20190009&#x27;</span>, <span class="string">&#x27;颜丙旭&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;计算机科学与技术&#x27;</span>, <span class="string">&#x27;1999-7-29&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>例：将学生源志的信息插入 Student 表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT INTO</span> Studnet</span><br><span class="line"><span class="keyword">VALUES</span> (<span class="string">&#x27;20260001&#x27;</span>, <span class="string">&#x27;源志&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;农业工程与信息技术&#x27;</span>, <span class="string">&#x27;1999-7-29&#x27;</span>);</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-4-2-修改数据"><a href="#3-4-2-修改数据" class="headerlink" title="3.4.2 修改数据"></a>3.4.2 修改数据</h3><p>格式：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">set</span> <span class="operator">&lt;</span>列名<span class="operator">&gt;</span> <span class="operator">=</span> <span class="operator">&lt;</span>表达式<span class="operator">&gt;</span> [, <span class="operator">&lt;</span>列名<span class="operator">&gt;</span> <span class="operator">=</span> <span class="operator">&lt;</span>表达式<span class="operator">&gt;</span> ] …</span><br><span class="line">[ <span class="keyword">where</span> <span class="operator">&lt;</span>条件<span class="operator">&gt;</span> ] ;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">SET</span> <span class="operator">&lt;</span>列名<span class="operator">&gt;</span> <span class="operator">=</span> <span class="operator">&lt;</span>表达式<span class="operator">&gt;</span> [, <span class="operator">&lt;</span>列名<span class="operator">&gt;</span> <span class="operator">=</span> <span class="operator">&lt;</span>表达式<span class="operator">&gt;</span> ] …</span><br><span class="line">[ <span class="keyword">WHERE</span> <span class="operator">&lt;</span>条件<span class="operator">&gt;</span> ] ;</span><br></pre></td></tr></table></figure>
+
+<p>例：将学生 20190009 的出生日期改为 2000 年 1 月 1 日</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> Student</span><br><span class="line"><span class="keyword">SET</span> Sbirthdate <span class="operator">=</span> <span class="string">&#x27;2000-1-1&#x27;</span></span><br><span class="line"><span class="keyword">WHERE</span> Sno <span class="operator">=</span> <span class="string">&#x27;20190009&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>例：将 2025 年第一学期选修 81002 课程所有学生成绩 - 5</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> SC</span><br><span class="line"><span class="keyword">SET</span> Grade <span class="operator">=</span> Grade <span class="operator">-</span> <span class="number">5</span></span><br><span class="line"><span class="keyword">WHERE</span> Semester <span class="operator">=</span> <span class="string">&#x27;20251&#x27;</span> <span class="keyword">AND</span></span><br><span class="line">      Cno <span class="operator">=</span> <span class="string">&#x27;81002&#x27;</span>;</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-4-3-删除数据"><a href="#3-4-3-删除数据" class="headerlink" title="3.4.3 删除数据"></a>3.4.3 删除数据</h3><p>格式：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span></span><br><span class="line">[<span class="keyword">where</span> <span class="operator">&lt;</span>条件<span class="operator">&gt;</span> ] ;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span></span><br><span class="line">[<span class="keyword">WHERE</span> <span class="operator">&lt;</span>条件<span class="operator">&gt;</span> ] ;</span><br></pre></td></tr></table></figure>
 
-<h2 id="3-5-空值的处理-（【2022-选择】NULL-判断）"><a href="#3-5-空值的处理-（【2022-选择】NULL-判断）" class="headerlink" title="3.5 空值的处理 （【2022 选择】NULL 判断）"></a>3.5 空值的处理 （【2022 选择】NULL 判断）</h2><h2 id="3-6-视图-（【2021-综合题】解释-SQL-定义视图语句）"><a href="#3-6-视图-（【2021-综合题】解释-SQL-定义视图语句）" class="headerlink" title="3.6 视图 （【2021 综合题】解释 SQL 定义视图语句）"></a>3.6 视图 （【2021 综合题】解释 SQL 定义视图语句）</h2><p><strong>概念</strong>：视图是从一个或几个基本表（或视图）导出的表。它与基本表不同，是一个虚表，是一组数据的逻辑表示。其本质是对应与一条 select 结果集被赋予一个名字，即视图名字。数据库只存放视图的定义，而不存放视图对应的数据，这些数据仍存放在原来的基本表中，一旦基本表中的数据发生变化，从视图中查询出的数据也就随之改变。</p>
+<p>例：删除学号为 20190009 的学生记录</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">WHERE</span> Sno <span class="operator">=</span> <span class="string">&#x27;20190009&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>例：删除所有学生选课记录</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> SC;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-5-空值的处理-（【2022-选择】NULL-判断）"><a href="#3-5-空值的处理-（【2022-选择】NULL-判断）" class="headerlink" title="3.5 空值的处理 （【2022 选择】NULL 判断）"></a>3.5 空值的处理 （【2022 选择】NULL 判断）</h2><h2 id="3-6-视图-（【2021-综合题】解释-SQL-定义视图语句）"><a href="#3-6-视图-（【2021-综合题】解释-SQL-定义视图语句）" class="headerlink" title="3.6 视图 （【2021 综合题】解释 SQL 定义视图语句）"></a>3.6 视图 （【2021 综合题】解释 SQL 定义视图语句）</h2><p><strong>概念</strong>：视图是从一个或几个基本表（或视图）导出的表。它与基本表不同，是一个虚表，是一组数据的逻辑表示。其本质是对应与一条 SELECT 结果集被赋予一个名字，即视图名字。数据库只存放视图的定义，而不存放视图对应的数据，这些数据仍存放在原来的基本表中，一旦基本表中的数据发生变化，从视图中查询出的数据也就随之改变。</p>
 <p><strong>作用（优点）</strong>：</p>
 <ul>
 <li>视图能够简化用户的操作。</li>
@@ -983,25 +1114,29 @@
 </ul>
 <h3 id="3-6-1-定义视图"><a href="#3-6-1-定义视图" class="headerlink" title="3.6.1 定义视图"></a>3.6.1 定义视图</h3><ol>
 <li><p><strong>建立视图</strong><br>格式：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> <span class="operator">&lt;</span>视图名<span class="operator">&gt;</span> [(<span class="operator">&lt;</span>列名<span class="operator">&gt;</span> [<span class="operator">&lt;</span>列名<span class="operator">&gt;</span>]...)]</span><br><span class="line"><span class="keyword">as</span> <span class="operator">&lt;</span>子查询<span class="operator">&gt;</span></span><br><span class="line">[<span class="keyword">with</span> <span class="keyword">check</span> option];</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> <span class="operator">&lt;</span>视图名<span class="operator">&gt;</span> [(<span class="operator">&lt;</span>列名<span class="operator">&gt;</span> [<span class="operator">&lt;</span>列名<span class="operator">&gt;</span>]...)]</span><br><span class="line"><span class="keyword">AS</span> <span class="operator">&lt;</span>子查询<span class="operator">&gt;</span></span><br><span class="line">[<span class="keyword">WITH</span> <span class="keyword">CHECK</span> OPTION];</span><br></pre></td></tr></table></figure>
 
-<p>说明：with check option 表示对视图进行 update、insert 和 delete 操作时要保证更新、插入或删除的行满足视图定义中的谓词条件（即子查询中的条件表达式）。<br>例：建立信息系学生的视图，并要求进行修改和插入操作时仍需保证该视图只有信息系的学生。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> IS_Student</span><br><span class="line"><span class="keyword">as</span> <span class="keyword">select</span> Sno, Sname, Sage <span class="keyword">from</span> Student <span class="keyword">where</span> Sdept <span class="operator">=</span> <span class="string">&#x27;IS&#x27;</span></span><br><span class="line"><span class="keyword">with</span> <span class="keyword">check</span> option</span><br></pre></td></tr></table></figure>
+<p>说明：WITH CHECK OPTION 表示对视图进行 UPDATE、INSERT 和 DELETE 操作时要保证更新、插入或删除的行满足视图定义中的谓词条件（即子查询中的条件表达式）。</p>
+<p>例：建立信息系学生的视图，并要求进行修改和插入操作时仍需保证该视图只有信息系的学生。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> IS_Student</span><br><span class="line"><span class="keyword">AS</span> <span class="keyword">SELECT</span> Sno, Sname, Sage </span><br><span class="line">   <span class="keyword">FROM</span> Student </span><br><span class="line">   <span class="keyword">WHERE</span> Sdept <span class="operator">=</span> <span class="string">&#x27;IS&#x27;</span></span><br><span class="line"><span class="keyword">WITH</span> <span class="keyword">CHECK</span> OPTION</span><br></pre></td></tr></table></figure>
 
 <p>注：由于在定义视图时加上了 with check option 子句，以后对该视图进行插入、修改和删除操作时，关系数据库管理系统会自动加上 Sdept&#x3D;’IS’ 的条件。</p>
 </li>
-<li><p><strong>删除视图</strong><br>格式：<br>sql</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">view</span> <span class="operator">&lt;</span>视图名<span class="operator">&gt;</span> [ <span class="operator">&lt;</span>cascade<span class="operator">&gt;</span> ];</span><br></pre></td></tr></table></figure>
+<li><p><strong>删除视图</strong><br>格式：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">VIEW</span> <span class="operator">&lt;</span>视图名<span class="operator">&gt;</span> [ <span class="operator">&lt;</span>CASCADE<span class="operator">&gt;</span> ];</span><br></pre></td></tr></table></figure>
 
+<p>例：删除信息系学生的视图，并级联删除从该视图导出的所有视图</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">VIEW</span> IS_Student CASCADE;</span><br></pre></td></tr></table></figure>
 <p>说明：视图删除后视图的定义将从数据字典中删除。如果该视图上还导出了其他视图则使用 cascade 级联删除语句把该视图和由它导出的所有视图一起删除。</p>
 </li>
 </ol>
 <h3 id="3-6-2-查询视图"><a href="#3-6-2-查询视图" class="headerlink" title="3.6.2 查询视图"></a>3.6.2 查询视图</h3><ol>
-<li><p><strong>查询视图</strong><br>例：在信息系学生的视图中找出年龄小于 20 岁的学生。<br>sql</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> Sno, Sage</span><br><span class="line"><span class="keyword">from</span> IS_Student</span><br><span class="line"><span class="keyword">where</span> Sage <span class="operator">&lt;</span> <span class="number">20</span>;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>查询视图</strong><br>例：在信息系学生的视图中找出年龄小于 20 岁的学生。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Sage</span><br><span class="line"><span class="keyword">FROM</span> IS_Student</span><br><span class="line"><span class="keyword">WHERE</span> Sage <span class="operator">&lt;</span> <span class="number">20</span>;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="3-6-3-更新视图"><a href="#3-6-3-更新视图" class="headerlink" title="3.6.3 更新视图"></a>3.6.3 更新视图</h3><ol>
-<li><p><strong>更新视图</strong><br>视图是不存在的，所以对视图的操作，最终要反映到对基本表的操作。<br>sql</p>
+<li><p><strong>更新视图</strong><br>视图是不存在的，所以对视图的操作，最终要反映到对基本表的操作。</p>
+<p>例：在信息系学生的视图中更改学号 20180005 的学生姓名为刘新奇</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> IS_Student</span><br><span class="line"><span class="keyword">SET</span> Sname <span class="operator">=</span> <span class="string">&#x27;刘新奇&#x27;</span></span><br><span class="line"><span class="keyword">WHERE</span> Sno <span class="operator">=</span> <span class="string">&#x27;20180005&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="3-6-4-视图的作用"><a href="#3-6-4-视图的作用" class="headerlink" title="3.6.4 视图的作用"></a>3.6.4 视图的作用</h3><ul>
