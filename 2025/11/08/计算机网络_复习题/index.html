@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.24.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="NULL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络_复习题">
+<meta property="og:url" content="http://example.com/2025/11/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_%E5%A4%8D%E4%B9%A0%E9%A2%98/index.html">
+<meta property="og:site_name" content="Yuanzhibx">
+<meta property="og:description" content="NULL">
+<meta property="og:locale" content="zh_CH">
+<meta property="article:published_time" content="2025-11-08T15:26:41.000Z">
+<meta property="article:modified_time" content="2025-11-07T17:27:47.068Z">
+<meta property="article:author" content="Yuanzhibx">
+<meta property="article:tag" content="📘笔记">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2025/11/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_%E5%A4%8D%E4%B9%A0%E9%A2%98/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CH","comments":true,"permalink":"http://example.com/2025/11/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_%E5%A4%8D%E4%B9%A0%E9%A2%98/","path":"2025/11/08/计算机网络_复习题/","title":"计算机网络_复习题"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>计算机网络_复习题 | Yuanzhibx</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","options":{"fontSize":14},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.9.0/mermaid.min.js","integrity":"sha256-Cz7UN0EXNjgV2u/a38wg/3BNfdRRO1XtgDq93L2GqJg="}}</script>
+  <script src="/js/third-party/tags/mermaid.js" defer></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Yuanzhibx</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">欲渡黄河冰塞川，将登太行雪满山</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%A0%94%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0%E9%A2%98%EF%BC%88%E7%BA%AF%E9%A2%98%E7%9B%AE%E7%89%88%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">考研计算机网络复习题（纯题目版）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%AF%95%E5%8D%B7%E4%B8%80"><span class="nav-number">1.1.</span> <span class="nav-text">网络试卷一</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%80%89%E6%8B%A9%E9%A2%98"><span class="nav-number">1.1.1.</span> <span class="nav-text">一、选择题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98"><span class="nav-number">1.1.2.</span> <span class="nav-text">二、简答题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E8%AE%A1%E7%AE%97%E9%A2%98"><span class="nav-number">1.1.3.</span> <span class="nav-text">三、计算题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%BB%BC%E5%90%88%E9%A2%98"><span class="nav-number">1.1.4.</span> <span class="nav-text">四、综合题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%BB%BC%E5%90%88%E9%A2%98"><span class="nav-number">1.1.5.</span> <span class="nav-text">五、综合题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%AF%95%E5%8D%B7%E4%BA%8C"><span class="nav-number">1.2.</span> <span class="nav-text">网络试卷二</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%80%89%E6%8B%A9%E9%A2%98-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">一、选择题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">二、简答题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E8%AE%A1%E7%AE%97%E9%A2%98-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">三、计算题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%BB%BC%E5%90%88%E9%A2%98-1"><span class="nav-number">1.2.4.</span> <span class="nav-text">四、综合题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%BB%BC%E5%90%88%E9%A2%98-1"><span class="nav-number">1.2.5.</span> <span class="nav-text">五、综合题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%AF%95%E5%8D%B7%E4%B8%89"><span class="nav-number">1.3.</span> <span class="nav-text">网络试卷三</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%80%89%E6%8B%A9%E9%A2%98-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">一、选择题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">二、简答题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E8%AE%A1%E7%AE%97%E9%A2%98-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">三、计算题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%BB%BC%E5%90%88%E9%A2%98-2"><span class="nav-number">1.3.4.</span> <span class="nav-text">四、综合题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%BB%BC%E5%90%88%E9%A2%98-2"><span class="nav-number">1.3.5.</span> <span class="nav-text">五、综合题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%AF%95%E5%8D%B7%E5%9B%9B"><span class="nav-number">1.4.</span> <span class="nav-text">网络试卷四</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%80%89%E6%8B%A9%E9%A2%98-3"><span class="nav-number">1.4.1.</span> <span class="nav-text">一、选择题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98-3"><span class="nav-number">1.4.2.</span> <span class="nav-text">二、简答题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E8%AE%A1%E7%AE%97%E9%A2%98-3"><span class="nav-number">1.4.3.</span> <span class="nav-text">三、计算题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%BB%BC%E5%90%88%E9%A2%98-3"><span class="nav-number">1.4.4.</span> <span class="nav-text">四、综合题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%BB%BC%E5%90%88%E9%A2%98-3"><span class="nav-number">1.4.5.</span> <span class="nav-text">五、综合题</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Yuanzhibx</p>
+  <div class="site-description" itemprop="description">6657</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CH">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/11/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_%E5%A4%8D%E4%B9%A0%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yuanzhibx">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuanzhibx">
+      <meta itemprop="description" content="6657">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="计算机网络_复习题 | Yuanzhibx">
+      <meta itemprop="description" content="&lt;p style&#x3D;&quot;text-align:center&quot;&gt;NULL&lt;&#x2F;p &gt;">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算机网络_复习题
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-11-08 23:26:41 / Modified: 01:27:47" itemprop="dateCreated datePublished" datetime="2025-11-08T23:26:41+08:00">2025-11-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/341-%E5%86%9C%E4%B8%9A%E7%9F%A5%E8%AF%86%E7%BB%BC%E5%90%88%E4%B8%89/" itemprop="url" rel="index"><span itemprop="name">341 农业知识综合三</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>14k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>25 mins.</span>
+    </span>
+</div>
+
+            <div class="post-description"><p style="text-align:center">NULL</p ></div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="考研计算机网络复习题（纯题目版）"><a href="#考研计算机网络复习题（纯题目版）" class="headerlink" title="考研计算机网络复习题（纯题目版）"></a>考研计算机网络复习题（纯题目版）</h1><h2 id="网络试卷一"><a href="#网络试卷一" class="headerlink" title="网络试卷一"></a>网络试卷一</h2><h3 id="一、选择题"><a href="#一、选择题" class="headerlink" title="一、选择题"></a>一、选择题</h3><ol>
+<li>下列对于ISP的解释错误的是<br>A. ISP是因特网服务提供者<br>B. ISP拥有从因特网管理机构申请到的多个IP地址<br>C. ISP向因特网管理机构租用通信线路和联网设备<br>D. 任何机构和个人只要向ISP缴纳规定的费用，就可以从ISP得到所需要的IP地址</li>
+<li>在封装数据时需要添加首部和尾部的是<br>A. 物理层<br>B. 数据链路层<br>C. 网络层<br>D. 运输层</li>
+<li>某信道的比特率为100Mb&#x2F;s，发送25000位数据需要的时间为<br>A. 25us<br>B. 250us<br>C. 2.5us<br>D. 2500us</li>
+<li>下面对于PPP帧中字段的解释错误的是<br>A. F是标识字段，用于帧定界<br>B. A是地址字段，规定为0xFF<br>C. 协议字段占2个字节<br>D. 信息部分应填充IP数据报，长度可变，但不能超过15000字节</li>
+<li>从通信协议的角度看，路由器是哪个层次上实现网络互联<br>A. 物理层<br>B. 链路层<br>C. 网络层<br>D. 传输层</li>
+<li>用来记录网络中被管对象的状态参数值的是<br>A. 管理对象<br>B. 管理协议<br>C. 管理进程<br>D. 管理信息库</li>
+<li>下面对于物理地址的描述错误的是<br>A. 物理地址是一个48位的接口标识符<br>B. 每个机器只能有一个物理地址<br>C. 组织唯一标识符共三个字节<br>D. 物理地址固化在适配器的ROM中</li>
+<li>在数据链路层扩展以太网使用<br>A. 集线器<br>B. 网桥<br>C. 路由器<br>D. 网关</li>
+<li>CSMA&#x2F;CD协议中，冲突窗口是指网络上最远的两个站点通信时<br>A. 从数据发送开始到数据到达接收方为止的时间<br>B. 从冲突发生开始到发送方检测到冲突为止的时间<br>C. 从冲突发生开始到接收方检测到冲突为止的时间<br>D. 从数据发送开始到数据到达接收方为止的时间的两倍</li>
+<li>以太网交换机进行转发决策时使用的PDU地址是<br>A. 目的物理地址<br>B. 目的IP地址<br>C. 源物理地址<br>D. 源IP地址</li>
+<li>三个吞吐量为10Mb&#x2F;s的以太网通过网桥相连后的吞吐量为<br>A. 10Mb&#x2F;s<br>B. 20Mb&#x2F;s<br>C. 30Mb&#x2F;s<br>D. 不确定</li>
+<li>100BASE-Tx网络采用的拓扑结构是<br>A. 总线型<br>B. 星型<br>C. 环型<br>D. 不规则型</li>
+<li>RARP的功能描述正确的是<br>A. 将IP地址解析为物理地址<br>B. 将物理地址解析为IP地址<br>C. 将域名解析为IP地址<br>D. 将IP地址解析为域名</li>
+<li>下列关于Cookie的说法中，错误的是<br>A. Cookie存储在服务器端<br>B. Cookie是服务器产生的<br>C. Cookie会威胁到客户隐私<br>D. Cookie的作用是跟踪客户的访问和状态</li>
+<li>在计算机网络中，路由选择协议的功能不包括<br>A. 发现下一跳的物理地址<br>B. 选择到达目的地的最佳路由<br>C. 更新路由表<br>D. 交换网络状态或通路信息</li>
+<li>根据IP数据报的哪些字段可以将数据包片重装成原来的数据报<br>A. 标识和标志<br>B. 标识和片偏移<br>C. 标志和片偏移<br>D. 标志和生存时间</li>
+<li>RIP协议设置的最大距离是，超过这个值则表示不可达<br>A. 50<br>B. 100<br>C. 15<br>D. 16</li>
+<li>下面对于RIP协议的特点描述错误的是<br>A. 仅和相邻的路由器交换信息<br>B. 路由器交换的信息是当前本路由器所知道的全部信息，即自己的路由表<br>C. 按固定的时间间隔交换路由信息<br>D. 好消息传的慢，坏消息传得快</li>
+<li>如果本地域名服务无缓存，当采用递归方法解析另一网络某主机域名时，用户主机和本地域名服务器发送的域名请求条数分别为<br>A. 1条，1条<br>B. 1条，多条<br>C. 多条，1条<br>D. 多条，多条</li>
+<li>OSPF向本自治系统中的所有路由器发送信息时使用的是<br>A. 洪泛法<br>B. 广播<br>C. 多播<br>D. IP多播</li>
+<li>文件传送协议TFTP使用的是运输层协议<br>A. IP<br>B. TCP<br>C. UDP<br>D. FTP</li>
+<li>下列对于TCP和UDP的异同点描述不正确的是<br>A. UDP是无连接的，而TCP是面向连接的<br>B. UDP是面向报文的，而TCP是面向字节流的<br>C. UDP没有拥塞控制，而TCP有拥塞控制<br>D. UDP和TCP都只支持一对一的交互通信</li>
+<li>某网络的IP地址为192.168.5.0&#x2F;24，采用变长子网划分，子网掩码为255.255.255.248，则该网络的最大子网个数、每个子网内的最大可分配地址个数为<br>A. 32，8<br>B. 32，6<br>C. 8，32<br>D. 8，30</li>
+<li>如果接收窗口大小为30，而拥塞窗口的大小为50，则发送窗口的大小应该为<br>A. 30<br>B. 50<br>C. 80<br>D. 20</li>
+<li>主机在进行域名查询时，首先应向发起查询请求<br>A. 根域名服务器<br>B. 顶级域名服务器<br>C. 权限域名服务器<br>D. 本地域名服务器</li>
+<li>HTTP的默认端口号是<br>A. 21<br>B. 80<br>C. 161<br>D. 8080</li>
+<li>HTTP是一个无状态协议，然而Web站点经常希望能够识别用户，这时候需要用到<br>A. Web缓存<br>B. Cookie<br>C. 条件GET<br>D. 持久连接</li>
+<li>基于万维网的电子邮件，在主机和邮件服务器之间使用的是协议<br>A. SMTP<br>B. POP3<br>C. HTTP<br>D. IMAP</li>
+<li>主机向DHCP服务器发送发现报文时使用的形式是<br>A. 广播<br>B. 多播<br>C. 单播<br>D. 洪泛</li>
+<li>可以实现网络连通性检查的常用应用程序是<br>A. PING<br>B. ARP<br>C. BIND<br>D. DNS</li>
+</ol>
+<h3 id="二、简答题"><a href="#二、简答题" class="headerlink" title="二、简答题"></a>二、简答题</h3><ol>
+<li>网络协议的三要素是什么，各有什么含义。</li>
+<li>为什么要使用信道复用技术？常用的信道复用技术有哪些？</li>
+<li>适配器的作用是什么，它工作在哪一层？</li>
+<li>网桥的工作原理和特点是什么？网桥和转发器以及以太网交换机有何异同？</li>
+<li>试说明IP地址与硬件地址的区别。为什么使用这两种不同的地址？</li>
+<li>简述TCP报文段中的时间戳选项的功能。</li>
+</ol>
+<h3 id="三、计算题"><a href="#三、计算题" class="headerlink" title="三、计算题"></a>三、计算题</h3><ol>
+<li>要发送的数据为101001001，用CRC的生成多项式为(P(X)&#x3D;X^{3}+X^{2}+1)，试计算在数据后面添加的校验码。</li>
+<li>假定要在网络上传送1.5MB的文件。设分组长度为1KB，往返时间RTT&#x3D;80ms，传送数据之前还需要有建立TCP连接的时间，这需要(2*RTT&#x3D;160ms)，试计算在以下几种情况下接收方收到该文件的最后一个比特所需的时间。<br>（1）数据发送速率为10Mb&#x2F;s，数据分组可以连续发送。<br>（2）数据发送速率为10Mb&#x2F;s，但每发完一个分组后要等待一个RTT的时间才能发送下一个分组。</li>
+<li>共有四个站进行码分多址CDMA通信。四个站的码片序列为：<br>A: (-1-1+1+1-1+1+1)<br>B: (-1-1+1-1+1+1+1-1)<br>C: (-1+1-1+1+1+1-1-1)<br>D: (-1+1-1-1-1+1+1-1)<br>现收到这样的码片序列(-1+1-3+1-1-3+1+1)，问哪个站发送了数据，发送的数据是1还是0？</li>
+<li>假定站点A和B在同一个10Mb&#x2F;s以太网网段上。这两个站点之间的传播时延为225比特时间。先假定A开始发送一帧，并且在A发送结束之前B也发送一帧。如果A发送的是以太网所容许的最短帧，那么A能否把自己的数据发送完毕？</li>
+<li>一个TCP连接总是以1KB的最大段发送TCP段，假定发送方有足够多的数据要发送。当拥塞窗口为16KB时发生了超时，如果接下来的4个RTT（往返时间）时间内的TCP传输都是成功的，那么当第4个RTT时间内发送的所有TCP段都得到确认时，拥塞窗口大小是多少？</li>
+</ol>
+<h3 id="四、综合题"><a href="#四、综合题" class="headerlink" title="四、综合题"></a>四、综合题</h3><p>在本题给出的8种情况下，画出发送窗口的变化，并标明可用窗口的位置。已知主机A要向主机B发送3KB的数据。在TCP连接建立后，A的发送窗口大小是2KB，A的初始序号是0。</p>
+<ol>
+<li>一开始A发送1KB的数据。</li>
+<li>接着A就一直发送数据，直到把发送窗口用完。</li>
+<li>发送方A收到对第1000号字节的确认报文段。</li>
+<li>发送方A再发送850B的数据。</li>
+<li>发送方A收到ack&#x3D;900的确认报文段。</li>
+<li>发送方A收到对2047号字节的确认报文段。</li>
+<li>发送方A把剩下的数据全部都发送完。</li>
+<li>发送方A收到ack&#x3D;3072的确认报文段。</li>
+</ol>
+<h3 id="五、综合题"><a href="#五、综合题" class="headerlink" title="五、综合题"></a>五、综合题</h3><p>如下图所示，网络有四个子网N1、N2、N3、N4，通过路由器R连接，R的接口分别为m0、m1、m2、m3，另通过接口m4连接到因特网。</p>
+<ol>
+<li>试给出路由器R的路由表，路由表格式如下：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>目的网络</th>
+<th>子网掩码</th>
+<th>下一跳IP地址</th>
+<th>接口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li>路由器R收到一个分组，其目的地址是145.13.160.7，试给出这个分组是怎样被转发的。</li>
+</ol>
+<h2 id="网络试卷二"><a href="#网络试卷二" class="headerlink" title="网络试卷二"></a>网络试卷二</h2><h3 id="一、选择题-1"><a href="#一、选择题-1" class="headerlink" title="一、选择题"></a>一、选择题</h3><ol>
+<li>现在得到广泛应用的网络体系结构是<br>A. OSI&#x2F;RM<br>B. TCP&#x2F;IP<br>C. ISO<br>D. 五层协议体系结构</li>
+<li>PPP协议中的零比特填充的做法是<br>A. 只要发现5个连续的1，则立即填入一个0<br>B. 只要发现5个连续的1，则立即填入两个0<br>C. 只要发现4个连续的1，则立即填入一个0<br>D. 只要发现4个连续的1，则立即填入两个0</li>
+<li>三个吞吐量为10Mb&#x2F;s的以太网通过集线器相连后的最大吞吐量为<br>A. 10Mb&#x2F;s<br>B. 20Mb&#x2F;s<br>C. 30Mb&#x2F;s<br>D. 不确定</li>
+<li>下列选项中，不属于网络体系结构中所描述的内容是<br>A. 网络的层次<br>B. 每一层使用的协议<br>C. 协议的内部实现细节<br>D. 每一层必须完成的功能</li>
+<li>下面对于PPP帧中字段的解释错误的是<br>A. F是标识字段，用于帧定界<br>B. A是地址字段，规定为0xFF<br>C. 协议字段占2个字节<br>D. 信息部分应填充IP数据报，长度可变，但不能超过15000字节</li>
+<li>以下哪个设备工作在物理层<br>A. 转发器<br>B. 网桥<br>C. 路由器<br>D. 网关</li>
+<li>下面对于IP数据报中的标识字段描述不正确的是<br>A. 标识字段占2个字节<br>B. 新的数据报的标识字段的值是上一个数据报的标识字段值加一<br>C. 分片后的每个数据报片的标识字段的值按顺序递增<br>D. 根据标识字段的值可以识别那些数据报片属于同一个数据报</li>
+<li>下面哪个协议是自治系统内部使用的路由选择协议<br>A. RIP<br>B. BGP<br>C. EGP<br>D. MIB</li>
+<li>下列对于TCP和UDP的异同点描述不正确的是<br>A. UDP是无连接的，而TCP是面向连接的<br>B. UDP是面向报文的，而TCP是面向字节流的<br>C. UDP没有拥塞控制，而TCP有拥塞控制<br>D. UDP和TCP都只支持一对一的交互通信</li>
+<li>FTP服务器进程中负责接受新的请求的是<br>A. 主进程<br>B. 从属进程<br>C. 控制进程<br>D. 数据传送进程</li>
+<li>下列对于HTTP响应报文中的状态码的描述错误的是<br>A. 状态码都是三位数字的<br>B. 状态码分为5大类<br>C. 以2开头的状态码表示成功<br>D. 以4开头的状态码表示重定向</li>
+<li>下列对于MIME的描述错误的是<br>A. MIME能够实现中文邮件的传送<br>B. MIME完全改变了SMTP协议的内容<br>C. MIME对多媒体电子邮件的表示方法进行了标准化<br>D. MIME定义了传送编码</li>
+<li>以下对计算机网络体系结构中协议的描述错误的是<br>A. 协议是控制两个对等实体间通信的规则的集合<br>B. 网络协议的三要素是语法、语义、时序<br>C. 协议对通信过程中事件的实现顺序不作规定，而是由实现该协议的程序员根据实际情况具体掌握<br>D. 协议规定了对等实体间所交换的信息的格式和含义</li>
+<li>数据链路层协议<br>A. 定义数据格式<br>B. 提供端到端的可靠性传输<br>C. 控制对物理传输介质的访问<br>D. 为终端节点隐蔽物理拓扑的细节</li>
+<li>10Mbps以太网的争用期为<br>A. 51.2ms<br>B. 512us<br>C. 5.12ms<br>D. 5.12s</li>
+<li>一个最大吞吐量为200Mb&#x2F;s的以太网和两个吞吐量为10Mb&#x2F;s的以太网通过网桥相连后的最大吞吐量为<br>A. 10Mb&#x2F;s<br>B. 120Mb&#x2F;s<br>C. 30Mb&#x2F;s<br>D. 不能互连</li>
+<li>下面哪种不是802.3标准规定的无效MAC帧<br>A. 帧长度不是整数个字节<br>B. 收到的帧检验序列FCS查出有差错<br>C. 帧的MAC客户数据字段的长度不在46~1500字节之间<br>D. 帧中的目的地址为FF-FF-FF-FF-FF-FF</li>
+<li>下列可分配给因特网主机的地址是（假定采用缺省子网掩码）<br>A. 192.46.10.0<br>B. 211.60.26.21<br>C. 127.10.10.17<br>D. 110.47.10.0</li>
+<li>某网络的IP地址为192.168.5.0&#x2F;24，采用变长子网划分，子网掩码为255.255.255.248，该网络的最大子网个数、每个子网内的最大可分配地址个数为<br>A. 32，8<br>B. 32，6<br>C. 8，32<br>D. 8，30</li>
+<li>下面对于RIP协议的特点描述错误的是<br>A. 仅和相邻的路由器交换信息<br>B. 路由器交换的信息是当前本路由器所知道的全部信息，即自己的路由表<br>C. 按固定的时间间隔交换路由信息<br>D. 好消息传的慢，坏消息传得快</li>
+<li>路由选择协议的功能不包括<br>A. 交换网络状态或通路信息<br>B. 选择到达目的地的最佳路径<br>C. 更新路由表<br>D. 发现下一跳物理地址</li>
+<li>域名系统采用层次结构，处于最高层次的域名是<br>A. 根域名<br>B. 顶级域名<br>C. 权限域名<br>D. 本地域名</li>
+<li>TCP的滑动窗口流量控制（窗口大小为8）中，收到确认报文段中ACK号为300，意味着接收方期待的下一字节是<br>A. 300<br>B. 301<br>C. 3<br>D. 4</li>
+<li>下列能反映出网络中发生了拥塞现象的是<br>A. 网络节点接受和发出的分组越来越少<br>B. 网络节点接受和发出的分组越来越多<br>C. 随着网络负载增加，吞吐量也增加<br>D. 随着网络负载增加，吞吐量减少</li>
+<li>统一资源定位符URL由4部分组成，分别为协议、、端口号和文件路径。<br>A. 主机域名<br>B. 路径<br>C. 设备名<br>D. 文件属性</li>
+<li>以太网交换机进行转发决策时使用的PDU地址是<br>A. 目的物理地址<br>B. 目的IP地址<br>C. 源物理地址<br>D. 源IP地址</li>
+<li>将物理信道的总频带宽分割成若干个子信道，每个子信道传输一路信号，这就是<br>A. 同步时分多路复用<br>B. 空分多路复用<br>C. 异步时分多路复用<br>D. 频分多路复用</li>
+<li>在因特网电子邮件系统中，电子邮件应用程序<br>A. 发送邮件和接收邮件都采用SMTP协议<br>B. 发送邮件通常使用SMTP协议，接收邮件用POP3协议<br>C. 发送邮件通常使用POP3协议，接收邮件用SMTP协议<br>D. 发送邮件和接收邮件都用POP3协议</li>
+<li>RIP协议设置的最大距离是，超过这个值则表示不可达<br>A. 50<br>B. 100<br>C. 15<br>D. 16</li>
+<li>TCP&#x2F;IP协议簇中，属于自上而下的第二层的是<br>A. ICMP<br>B. SNMP<br>C. UDP<br>D. IP</li>
+<li>下列哪一个不是分类搜索引擎<br>A. 雅虎<br>B. 搜狐<br>C. 网易<br>D. 百度</li>
+</ol>
+<h3 id="二、简答题-1"><a href="#二、简答题-1" class="headerlink" title="二、简答题"></a>二、简答题</h3><ol>
+<li>协议与服务有何区别？有何关系？</li>
+<li>什么是碰撞域，由网桥连接的各个网段是否属于同一个碰撞域？</li>
+<li>IP地址的编址方法经历了哪三个阶段，简要介绍各自的编址方式。</li>
+<li>简要描述停止等待协议中无差错情况和超时重传的执行过程。</li>
+<li>简述TCP连接建立的过程。</li>
+<li>域名的解析过程分为哪两种，简述其执行过程。</li>
+</ol>
+<h3 id="三、计算题-1"><a href="#三、计算题-1" class="headerlink" title="三、计算题"></a>三、计算题</h3><ol>
+<li>在无噪声情况下，若某通信链路的带宽为3kHz，采用4个相位，每个相位具有4种振幅的QAM调制技术，则该通信链路的最大数据传输速率是多少？</li>
+<li>假定使用CSMA&#x2F;CD协议的10Mb&#x2F;s以太网中某个站在发送数据时检测到碰撞，执行退避算法时选择了随机数r&#x3D;100，试问这个站需要等待多长时间后才能再次发送数据？如果是100Mb&#x2F;s的以太网呢？</li>
+<li>假定要在网络上传送1.5MB的文件。设分组长度为1KB，往返时间RTT&#x3D;80ms，传送数据之前还需要有建立TCP连接的时间，这需要(2*RTT&#x3D;160ms)。假设数据发送速率极快，可以不考虑发送数据所需的时间，但规定在每一个RTT往返时间内只能发送20个分组。试计算接收方收到该文件的最后一个比特所需的时间。</li>
+<li>一个UDP用户数据包的数据字段为8192字节。在链路层要使用以太网来传送。试问应当划分为几个IP数据报片？说明每一个IP数据报片的数据字段长度和片偏移字段的值。</li>
+<li>某单位分配到一个地址块是136.23.12.64&#x2F;26。现在需要进一步划分为4个一样大的子网。试问：<br>（1）每个子网的网络前缀有多长？<br>（2）每个子网的地址块是什么？<br>（3）每个子网有多少个地址？<br>（4）每一个子网可分配给主机使用的最小地址和最大地址是什么？</li>
+</ol>
+<h3 id="四、综合题-1"><a href="#四、综合题-1" class="headerlink" title="四、综合题"></a>四、综合题</h3><p>假定网络中的路由器运行RIP协议，路由器A的路由表有如下的项目（这三列分别表示“目的网络”、“距离”和“下一跳路由器”）：</p>
+<table>
+<thead>
+<tr>
+<th>目的网络</th>
+<th>距离</th>
+<th>下一跳路由器</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>N1</td>
+<td>5</td>
+<td>-</td>
+</tr>
+<tr>
+<td>N2</td>
+<td>4</td>
+<td>-</td>
+</tr>
+<tr>
+<td>N6</td>
+<td>2</td>
+<td>-</td>
+</tr>
+<tr>
+<td>N7</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p>现在A收到从C发来的路由信息（这两列分别表示“目的网络”和“距离”）：</p>
+<table>
+<thead>
+<tr>
+<th>目的网络</th>
+<th>距离</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>N7</td>
+<td>3</td>
+</tr>
+<tr>
+<td>N6</td>
+<td>4</td>
+</tr>
+<tr>
+<td>N3</td>
+<td>7</td>
+</tr>
+<tr>
+<td>N2</td>
+<td>3</td>
+</tr>
+</tbody></table>
+<p>试求出路由器A更新后的路由表。（注明理由）</p>
+<h3 id="五、综合题-1"><a href="#五、综合题-1" class="headerlink" title="五、综合题"></a>五、综合题</h3><p>某公司网络拓扑图如下图所示，路由器R1通过接口E1、E2分别连接局域网1、局域网2，通过接口LO连接路由器R2，并通过路由器R2连接域名服务器与互联网。R1的LO接口的IP地址是202.118.2.1；R2的LO接口的IP地址是202.118.2.2，L1接口的IP地址是130.11.120.1，B0接口的IP地址是202.118.3.1；域名服务器的IP地址是202.118.3.2。R1和R2的路由表结构为：</p>
+<table>
+<thead>
+<tr>
+<th>目的网络IP地址</th>
+<th>子网掩码</th>
+<th>下一跳IP地址</th>
+<th>接口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ol>
+<li>将IP地址空间202.118.1.0&#x2F;24划分为两个子网，分配给局域网1、局域网2，每个局域网分配的地址数不少于120个，请给出子网划分结果。说明理由或给出必要的计算过程。</li>
+<li>请给出R1的路由表，使其明确包括到局域网1的路由、局域网2的路由、域名服务器的主机路由和互联网的路由。</li>
+<li>请采用路由聚合技术，给出R2到局域网1和局域网2的路由。</li>
+</ol>
+<h2 id="网络试卷三"><a href="#网络试卷三" class="headerlink" title="网络试卷三"></a>网络试卷三</h2><h3 id="一、选择题-2"><a href="#一、选择题-2" class="headerlink" title="一、选择题"></a>一、选择题</h3><ol>
+<li>以下对计算机网络体系结构中协议的描述错误的是<br>A. 网络协议的三要素是语法、语义、时序<br>B. 协议是控制两个对等实体间通信的规则的集合<br>C. 协议规定了对等实体间所交换的信息的格式和含义<br>D. 在OSI中，要实现第N层协议，需要使用第N+1层提供的服务</li>
+<li>在OSI参考模型中，自下而上第一个提供端到端服务的层次是<br>A. 数据链路层<br>B. 传输层<br>C. 会话层<br>D. 应用层</li>
+<li>TCP&#x2F;IP协议族中属于网络层协议的是<br>A. IP、UDP<br>B. ARP、IP、DNS<br>C. ARP、IP、ICMP<br>D. DNS、SMTP</li>
+<li>相对于ISO&#x2F;OSI的7层参考模型的低四层，TCP&#x2F;IP协议集中对应的层次有<br>A. 传输层、互联网层、网络接口层和物理层<br>B. 传输层、互联网层、网络接口层<br>C. 传输层、互联网层、ATM层和物理层<br>D. 传输层、网络层、数据链路层和物理层</li>
+<li>如果要实现半双工通信，那么通信双方之间至少需要<br>A. 1条信道<br>B. 2条物理线路<br>C. 2条信道<br>D. 1条物理线路</li>
+<li>有关曼彻斯特编码的正确叙述是<br>A. 每个信号起始边界作为时钟信号有利于同步<br>B. 将时钟与数据取值都包含在信号中<br>C. 这种模拟信号的编码机制特别适合传输声音<br>D. 每位的中间不跳变表示信号的取值为0</li>
+<li>某信道带宽为10kHz，编码采用32种不同的物理状态来表示数据，则无噪声环境下，该信道的最大传输速率是<br>A. 50kbps<br>B. 100kbps<br>C. 200kbps<br>D. 400kbps</li>
+<li>数据交换过程中，报文的内容不被中间节点修改的是<br>A. 电路交换<br>B. 报文交换<br>C. 虚电路<br>D. 数据报</li>
+<li>调制解调技术主要使用在通信方式中<br>A. 模拟信道传输数字数据<br>B. 模拟信道传输模拟数据<br>C. 数字信道传输数字数据<br>D. 数字信道传输模拟数据</li>
+<li>波特率等于<br>A. 每秒传输的比特数<br>B. 每秒可能发生的信号变化次数<br>C. 每秒传输的周期数<br>D. 每秒传输的字节数</li>
+<li>将物理信道的总频带宽分割成若干个子信道，每个子信道传输一路信号，这就是<br>A. 同步时分多路复用<br>B. 空分多路复用<br>C. 异步时分多路复用<br>D. 频分多路复用</li>
+<li>下列不是数据链路层功能的是<br>A. 帧定界功能<br>B. 电路管理功能<br>C. 差错检测功能<br>D. 链路管理功能</li>
+<li>在数据链路层中，网络互联表现为<br>A. 在电缆段之间复制比特流<br>B. 在网段之间转发数据帧<br>C. 在网络之间转发报文<br>D. 连接不同体系结构的网络</li>
+<li>流量控制实际上是对的控制<br>A. 发送方、接收方数据流量<br>B. 接收方数据流量<br>C. 发送方数据流量<br>D. 链路上任意两结点间的数据流量</li>
+<li>网络中的广播信息太多时能使整个网络性能急剧恶化，这种现象称为<br>A. 网络拥塞<br>B. IP多播<br>C. 广播风暴<br>D. 以上均不正确</li>
+<li>在10Mb&#x2F;s以太网中，一个工作站在发送时由于冲突前两次都发送失败，那么它最多等待多长时间就可以开始下一次重传过程<br>A. 51.2微妙<br>B. 102.4微妙<br>C. 153.6微妙<br>D. 以上均不正确</li>
+<li>下面对于物理地址的描述错误的是<br>A. 物理地址是一个48位的接口标识符<br>B. 每个机器只能有一个物理地址<br>C. 组织唯一标识符共三个字节<br>D. 物理地址固化在适配器的ROM中</li>
+<li>三个吞吐量为10Mb&#x2F;s的以太网通过集线器相连后的最大吞吐量为<br>A. 10Mb&#x2F;s<br>B. 20Mb&#x2F;s<br>C. 30Mb&#x2F;s<br>D. 不确定</li>
+<li>网络中发生了拥塞，根据是<br>A. 随着通信子网负载的增加，吞吐量也增加<br>B. 网络结点接收和发出的分组越来越少<br>C. 网络结点接收和发出的分组越来越多<br>D. 随着通信子网负载的增加，吞吐量反而降低</li>
+<li>位于不同子网中的主机之间相互通信，下面说法中正确的是<br>A. 路由器在转发IP数据报时，重新封装源IP地址和目的IP地址<br>B. 路由器在转发IP数据报时，重新封装目的IP地址和目的硬件地址<br>C. 路由器在转发IP数据报时，重新封装源硬件地址和目的硬件地址<br>D. 源站点可以直接进行ARP广播得到目的站的硬件地址</li>
+<li>一个主机有两个IP地址，一个地址是192.168.11.12&#x2F;24，另一个地址可能是<br>A. 192.168.11.0&#x2F;24<br>B. 192.168.1.26&#x2F;24<br>C. 192.168.13.25&#x2F;24<br>D. 192.168.24.12&#x2F;24</li>
+<li>根据IP数据报的哪些字段可以将数据报片重装成原来的数据报<br>A. 标识和标志<br>B. 标识和片偏移<br>C. 标志和片偏移<br>D. 标志和生存时间</li>
+<li>下面对于RIP协议的特点描述错误的是<br>A. 仅和相邻的路由器交换信息<br>B. 路由器交换的信息是当前本路由器所知道的全部信息，即自己的路由表<br>C. 按固定的时间间隔交换路由信息<br>D. 好消息传的慢，坏消息传得快</li>
+<li>路由器由哪几个部分构成<br>A. 路由选择部分和分组转发部分<br>B. 输入部分和输出部分<br>C. 路由选择部分和交换结构<br>D. 交换结构和分组转发部分</li>
+<li>TCP的滑动窗口控制（窗口大小为8）中，收到确认报文段中ACK为300，意味着接收方期待的下一字节是<br>A. 300<br>B. 301<br>C. 3<br>D. 4</li>
+<li>下列有关DNS的说法中正确的是<br>A. DNS是应用层的一种服务<br>B. 可以为WWW、电子邮件、文件传输提供域名解析<br>C. DNS使用运输层的TCP服务<br>D. 采用层次域名服务器体系结构</li>
+<li>FTP客户和服务器间传递FTP命令时，使用的连接是<br>A. 建立在TCP之上的控制连接<br>B. 建立在TCP之上的数据连接<br>C. 建立在UDP之上的控制连接<br>D. 建立在UDP之上的数据连接</li>
+<li>支持在电子邮件中传递汉字信息的协议是<br>A. EMAIL<br>B. POP3<br>C. SMTP<br>D. MIME</li>
+<li>下列对于TCP和UDP的异同点描述不正确的是<br>A. UDP是无连接的，而TCP是面向连接的<br>B. UDP是面向报文的，而TCP是面向字节流的<br>C. UDP没有拥塞控制，而TCP有拥塞控制<br>D. UDP和TCP都只支持一对一的交互通信</li>
+<li>在因特网中，请求域名解析的应用程序必须知道<br>A. 根域名服务器的IP地址<br>B. 任意一个域名服务器的IP地址<br>C. 根域名服务器的域名<br>D. 任意一个域名服务器的域名</li>
+</ol>
+<h3 id="二、简答题-2"><a href="#二、简答题-2" class="headerlink" title="二、简答题"></a>二、简答题</h3><ol>
+<li>试解释以下名词：协议栈、对等层、协议数据单元。</li>
+<li>试写出英文缩写FDM和TDM的全文，并简单解释其工作原理。</li>
+<li>常用的局域网的网络拓扑有哪些种类，现在最流行的是哪种结构？</li>
+<li>试说明IP地址与硬件地址的区别，为什么要使用这两种不同的地址？</li>
+<li>运输层端口的作用是什么，端口号有哪几种？</li>
+<li>简述域名服务器的高速缓存的功能，以及使用高速缓存的好处？</li>
+</ol>
+<h3 id="三、计算题-2"><a href="#三、计算题-2" class="headerlink" title="三、计算题"></a>三、计算题</h3><ol>
+<li>试在下列条件下比较电路交换和分组交换。要传送的报文共x(bit)。从原点到终点共经过k段链路，每段链路的传播时延为d(s)，数据率为b(b&#x2F;s)。在电路交换时电路的建立时间为s(s)。在分组交换时分组长度为p(bit)，且各结点的排队等待时间可忽略不计。问在怎样的条件下，分组交换的时延比电路交换的要小？</li>
+<li>共有四个站进行码分多址CDMA通信。四个站的码片序列为：<br>A: (-1,-1,-1,+1,+1,-1,+1,+1)<br>B: (-1,-1,+1,-1,+1,+1,+1,-1)<br>C: (-1,+1,-1,+1,+1,+1,-1,-1)<br>D: (-1,+1,-1,-1,-1,+1,-1,+1)<br>现收到这样的码片序列(-1,+1,-3,+1,-1,-3,+1,+1)。问各站分别发送了什么数据？</li>
+<li>要发送的数据为110101101，用CRC的生成多项式是(p(x)&#x3D;x^{4}+x+1)，试求应添加在数据后面的余数？若数据在传输过程中最后两个1都变成了0，问接收端能否发现，为什么？</li>
+<li>试辨认以下IP地址的网络类别，并说明原因。<br>（1）128.36.199.3<br>（2）21.12.240.17<br>（3）183.194.76.253<br>（4）192.12.69.248</li>
+<li>一个UDP用户数据报的数据字段为8192字节。在链路层要使用以太网来传送。试问应当划分为几个IP数据报片？为什么？说明每一个IP数据报片的数据字段长度和片偏移字段的值。</li>
+</ol>
+<h3 id="四、综合题-2"><a href="#四、综合题-2" class="headerlink" title="四、综合题"></a>四、综合题</h3><p>设某路由器建立了如下路由表：</p>
+<table>
+<thead>
+<tr>
+<th>目的网络</th>
+<th>子网掩码</th>
+<th>下一跳</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>128.96.39.0</td>
+<td>255.255.255.128</td>
+<td>接口m0</td>
+</tr>
+<tr>
+<td>128.96.39.128</td>
+<td>255.255.255.128</td>
+<td>接口m1</td>
+</tr>
+<tr>
+<td>128.96.40.0</td>
+<td>255.255.255.128</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>192.4.153.0</td>
+<td>255.255.255.192</td>
+<td>R3</td>
+</tr>
+<tr>
+<td>（默认）</td>
+<td></td>
+<td>R4</td>
+</tr>
+</tbody></table>
+<p>现收到5个分组，其目的地址分别为：<br>（1）128.96.39.10<br>（2）128.96.40.12<br>（3）128.96.40.151<br>（4）192.4.153.17<br>（5）192.4.153.90<br>试分别判断每个分组的下一跳。</p>
+<h3 id="五、综合题-2"><a href="#五、综合题-2" class="headerlink" title="五、综合题"></a>五、综合题</h3><p>TCP的拥塞窗口cwnd大小与传输轮次n的关系如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cwnd</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td>8</td>
+<td>16</td>
+<td>32</td>
+<td>33</td>
+<td>34</td>
+<td>35</td>
+<td>36</td>
+<td>37</td>
+<td>38</td>
+<td>39</td>
+</tr>
+<tr>
+<td>n</td>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+</tr>
+<tr>
+<td>cwnd</td>
+<td>40</td>
+<td>41</td>
+<td>42</td>
+<td>21</td>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td>8</td>
+</tr>
+</tbody></table>
+<ol>
+<li>试画出拥塞窗口与传输轮次的关系曲线。</li>
+<li>指明TCP工作在慢开始阶段的时间间隔。</li>
+<li>指明TCP工作在拥塞避免阶段的时间间隔。</li>
+<li>在第16轮次和第22轮次之后发送方是通过收到三个重复的确认还是通过超时检测到丢失了报文段？</li>
+<li>在第1轮次、第18轮次和第24轮次发送时，门限ssthresh分别被设置为多大？</li>
+<li>在第几轮次发送出第70个报文段？</li>
+<li>假定在第26轮次之后收到了三个重复的确认，因而检测出了报文段的丢失，那么拥塞窗口cwnd和门限ssthresh应设置为多大？</li>
+</ol>
+<h2 id="网络试卷四"><a href="#网络试卷四" class="headerlink" title="网络试卷四"></a>网络试卷四</h2><h3 id="一、选择题-3"><a href="#一、选择题-3" class="headerlink" title="一、选择题"></a>一、选择题</h3><ol>
+<li>计算机网络可以被理解为<br>A. 执行计算机数据处理的软件模块<br>B. 由自主计算机互联起来的集合体<br>C. 多个处理器通过共享内存实现的紧耦合系统<br>D. 用于共同完成一项任务的分布式系统</li>
+<li>网络协议是计算机网络和分布系统中互相通信的之间交换信息时必须遵守的规则的集合。<br>A. 相邻层实体<br>B. 同等层实体<br>C. 同样实体<br>D. 不同层实体</li>
+<li>网络体系结构是<br>A. 网络各层及层中协议的集合<br>B. 网络各层协议及具体描述<br>C. 网络层间接口及其具体描述<br>D. 网络各层、层中协议和层间接口的集合</li>
+<li>IEEE802参考模型仿照了ISO的OSI&#x2F;RM，它的对应于OSI&#x2F;RM的数据链路层，两者的物理层相互对应。<br>A. AAL和ATM<br>B. LLC和MAC<br>C. CS和SAR<br>D. TC和PMD</li>
+<li>下面哪个层在封装数据时需要添加首部和尾部<br>A. 物理层<br>B. 数据链路层<br>C. 网络层<br>D. 运输层</li>
+<li>在脉冲起始时刻，有无跳变来表示“0”和“1”，在脉冲中间时刻始终发生跳变的编码是<br>A. 非归零码<br>B. 曼彻斯特编码<br>C. 差分曼彻斯特编码<br>D. 8B&#x2F;10B</li>
+<li>某信道的比特率为100Mb&#x2F;s，发送25000位数据需要的时间为<br>A. 25us<br>B. 250us<br>C. 2.5us<br>D. 2500us</li>
+<li>在通信子网中，不采用“存储-转发”的交换技术是<br>A. 电路交换<br>B. 报文交换<br>C. 虚电路<br>D. 数据报</li>
+<li>在物理接口特性中，用于描述完成每种功能的事件发生顺序的是<br>A. 机械特性<br>B. 功能特性<br>C. 过程特性<br>D. 电气特性</li>
+<li>误码率最低的传输介质是<br>A. 双绞线<br>B. 光纤<br>C. 同轴电缆<br>D. 无线电</li>
+<li>目前常用的双绞线的通用连接器接口标准是<br>A. RS-232<br>B. RJ-45<br>C. RG-62<br>D. EIA-568</li>
+<li>组帧的主要目的是什么<br>A. 可以提高传输效率<br>B. 进行差错控制<br>C. 进行拥塞控制<br>D. 进行寻址</li>
+<li>下列关于循环冗余校验的说法中，错误的是<br>A. 带r个校验位的多项式编码可以检测到所有长度小于或等于r的突发性错误<br>B. 通信双方可以无需商定就直接使用多项式编码<br>C. CRC校验可以使用硬件来完成<br>D. 有一些特殊的多项式，因为其有很好的特性，而成为了国际标准</li>
+<li>在IEEE802.3以太网中，小于字节的帧称为碎片帧<br>A. 64<br>B. 128<br>C. 256<br>D. 512</li>
+<li>PPP协议中的零比特填充的做法是<br>A. 只要发现5个连续的1，则立即填入一个0<br>B. 只要发现5个连续的1，则立即填入两个0<br>C. 只要发现4个连续的1，则立即填入一个0<br>D. 只要发现4个连续的1，则立即填入两个0</li>
+<li>PPP协议是运行在哪段链路上<br>A. 用户到ISP<br>B. ISP到因特网<br>C. 用户到WWW服务器<br>D. 用户到DNS服务器</li>
+<li>100BASE-Tx网络采用的拓扑结构是<br>A. 总线型<br>B. 星型<br>C. 环型<br>D. 不规则型</li>
+<li>在数据链路层扩展以太网使用<br>A. 集线器<br>B. 网桥<br>C. 路由器<br>D. 网关</li>
+<li>在Internet中，IP数据报的传输需要经过源主机和中间路由器到达目的主机，通常<br>A. 源主机和中间路由器都知道IP数据报到达目的主机需要经过的完整路径<br>B. 源主机知道IP数据报到达目的主机需要经过的完整路径，而中间路由器不知道<br>C. 中间路由器知道IP数据报到达目的主机需要经过的完整路径，而源主机不知道<br>D. 源主机和中间路由器都不知道IP数据报到达目的主机需要经过的完整路径</li>
+<li>下面属于路由选择协议的功能是<br>A. 获取网络拓扑结构的信息<br>B. 选择到达每个目的网络的最优路径<br>C. 构建路由表<br>D. 发现下一跳的物理地址</li>
+<li>用于自治系统域间的路由协议是<br>A. RIP<br>B. BGP<br>C. ARP<br>D. OSPF</li>
+<li>下面哪个不是ICMP差错报告报文<br>A. 终点不可达<br>B. 源点抑制<br>C. 参数问题<br>D. 时间戳</li>
+<li>OSPF向本自治系统中的所有路由器发送信息时使用的是<br>A. 洪泛法<br>B. 广播<br>C. 多播<br>D. IP多播</li>
+<li>路由器的分组转发部分由哪三个部分组成<br>A. 交换结构、输入端口和输出端口<br>B. 输入端口、输出端口、转发表<br>C. 交换结构、路由选择处理机<br>D. 路由表和转发表</li>
+<li>下述关于滑动窗口的叙述中不正确的是<br>A. 发送窗口可以对发送方进行流量控制<br>B. 当接收到的数据帧序号落在接收窗口之外时，接收方将其丢弃<br>C. 只有接收窗口向前滑动时，发送窗口才有可能向前滑动<br>D. 发送窗口的大小是由应用程序设定的</li>
+<li>TELNET工作于<br>A. 应用层<br>B. 传输层<br>C. 会话层<br>D. 网络层</li>
+<li>下列说法中正确的是<br>A. WWW信息服务的基础是HTML语言和HTTP协议<br>B. WWW浏览器环境里，只能使用WWW信息服务<br>C. 使用Windows平台下的浏览器IE，只能浏览基于Windows平台的WWW服务信息<br>D. WWW信息服务只能提供单纯的文本信息</li>
+<li>文件传送协议（TFTP）使用哪种运输层协议<br>A. IP<br>B. TCP<br>C. UDP<br>D. RJP</li>
+<li>下面关于客户&#x2F;服务器模型的描述，存在错误的是<br>A. 客户端必须知道服务器的地址，而服务器不需要知道客户端的地址<br>B. 客户端主要实现如何显示信息与收集用户的输入，而服务器主要实现数据的处理<br>C. 浏览器的内容来自服务器<br>D. 客户端是请求方，即使连接建立后，服务器也不能主动发送数据</li>
+<li>使用WWW浏览器浏览网页时，用户可用鼠标单击某个超链接，从协议分析的角度看，此时，浏览器首先需要进行<br>A. IP地址到MAC地址的解析<br>B. 建立TCP连接<br>C. 域名到IP地址的解析<br>D. 建立会话连接，发出获取某个文件的命令</li>
+</ol>
+<h3 id="二、简答题-3"><a href="#二、简答题-3" class="headerlink" title="二、简答题"></a>二、简答题</h3><ol>
+<li>试解释以下名词：协议栈、实体、服务访问点。</li>
+<li>试写出英文缩写STDM和CDMA的全文，并简单解释其工作原理。</li>
+<li>什么是数据链路（即逻辑链路）和链路（即物理链路），两者有何区别？</li>
+<li>IP地址分为几类？各如何表示？</li>
+<li>什么是静态万维网文档和动态万维网文档，简述其区别。</li>
+<li>简述域名服务器迭代查询的过程。</li>
+</ol>
+<h3 id="三、计算题-3"><a href="#三、计算题-3" class="headerlink" title="三、计算题"></a>三、计算题</h3><ol>
+<li>试计算一个包括五段链路的运输连接的单程端到端时延。五段链路中有两段是卫星链路，有三段是广域网链路。每条卫星链路又由上行链路和下行链路两部分组成，可以取两部分的传播时延之和为250ms；每一个广域网的范围为1500km，其传播时延可按150000km&#x2F;s来计算。各数据链路速率为48kb&#x2F;s，帧长为960位。</li>
+<li>要发送的数据为101110，采用CRC的生成多项式是(P(X)&#x3D;X^{3}+1)。试求应添加在数据后面的余数。</li>
+<li>一个数据报长度为4000字节（固定首部长度）。现在经过一个网络传送，但此网络能够传送的最大数据长度为1500字节。试问应当划分为几个短些的数据报片？各数据报片的数据字段长度、片偏移字段和MF标志应为何数值？</li>
+<li>试找出可产生以下数目的A类子网的子网掩码（采用连续掩码），并说明原因。<br>（1）2<br>（2）30<br>（3）122<br>（4）250</li>
+<li>一个UDP用户数据报的首部的十六进制表示是：0632 0045 001C B217。试求源端口、目的端口、用户数据报的总长度、数据部分长度。这个用户数据报是从客户发送给服务器还是从服务器发送给客户？使用UDP的这个服务器程序是什么？</li>
+</ol>
+<h3 id="四、综合题-3"><a href="#四、综合题-3" class="headerlink" title="四、综合题"></a>四、综合题</h3><p>假定网络中的路由器运行RIP协议，路由器A的路由表有如下的项目（这三列分别表示“目的网络”、“距离”和“下一跳路由器”）：</p>
+<table>
+<thead>
+<tr>
+<th>目的网络</th>
+<th>距离</th>
+<th>下一跳路由器</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>N3</td>
+<td>4</td>
+<td>-</td>
+</tr>
+<tr>
+<td>N4</td>
+<td>2</td>
+<td>-</td>
+</tr>
+<tr>
+<td>N5</td>
+<td>7</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p>现在A收到从C发来的路由信息（这两列分别表示“目的网络”和“距离”）：</p>
+<table>
+<thead>
+<tr>
+<th>目的网络</th>
+<th>距离</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>N1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>N6</td>
+<td>7</td>
+</tr>
+</tbody></table>
+<p>试求出路由器A更新后的路由表。（注明理由）</p>
+<h3 id="五、综合题-3"><a href="#五、综合题-3" class="headerlink" title="五、综合题"></a>五、综合题</h3><p>用TCP传送512字节的数据。设窗口为100字节，而TCP报文段每次也是传送100字节的数据。再设发送方和接收方的起始序号分别为100和200，试画出从连接建立阶段到连接释放阶段的工作示意图。标注关键字段的取值。</p>
+<p>要不要我帮你整理一份<strong>按题型分类的精简版复习题</strong>，方便你针对性刷题？</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%F0%9F%93%98%E7%AC%94%E8%AE%B0/" rel="tag"># 📘笔记</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/10/25/C_Code/" rel="prev" title="C_Code">
+                  <i class="fa fa-angle-left"></i> C_Code
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/11/09/%E6%95%B0%E6%8D%AE%E5%BA%93_%E5%A4%8D%E4%B9%A0%E9%A2%98/" rel="next" title="数据库_复习题">
+                  数据库_复习题 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Yuanzhibx</span>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/yuanzhibx" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

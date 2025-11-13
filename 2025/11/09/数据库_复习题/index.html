@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.24.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="【数据库系统概论】复习题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库_复习题">
+<meta property="og:url" content="http://example.com/2025/11/09/%E6%95%B0%E6%8D%AE%E5%BA%93_%E5%A4%8D%E4%B9%A0%E9%A2%98/index.html">
+<meta property="og:site_name" content="Yuanzhibx">
+<meta property="og:description" content="【数据库系统概论】复习题">
+<meta property="og:locale" content="zh_CH">
+<meta property="article:published_time" content="2025-11-09T15:26:41.000Z">
+<meta property="article:modified_time" content="2025-11-06T18:25:56.128Z">
+<meta property="article:author" content="Yuanzhibx">
+<meta property="article:tag" content="📘笔记">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2025/11/09/%E6%95%B0%E6%8D%AE%E5%BA%93_%E5%A4%8D%E4%B9%A0%E9%A2%98/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CH","comments":true,"permalink":"http://example.com/2025/11/09/%E6%95%B0%E6%8D%AE%E5%BA%93_%E5%A4%8D%E4%B9%A0%E9%A2%98/","path":"2025/11/09/数据库_复习题/","title":"数据库_复习题"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>数据库_复习题 | Yuanzhibx</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","options":{"fontSize":14},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.9.0/mermaid.min.js","integrity":"sha256-Cz7UN0EXNjgV2u/a38wg/3BNfdRRO1XtgDq93L2GqJg="}}</script>
+  <script src="/js/third-party/tags/mermaid.js" defer></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Yuanzhibx</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">欲渡黄河冰塞川，将登太行雪满山</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0%E9%A2%98%EF%BC%88%E6%97%A0%E7%AD%94%E6%A1%88%E7%89%88%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">数据库复习题（无答案版）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%A1%AB%E7%A9%BA%E9%A2%98%EF%BC%88%E6%9C%AC%E9%A2%9810%E7%A9%BA%EF%BC%8C%E6%AF%8F%E7%A9%BA1%E5%88%86%EF%BC%8C%E5%85%B110%E5%88%86%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">一、填空题（本题10空，每空1分，共10分）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%8D%95%E9%A1%B9%E9%80%89%E6%8B%A9%E9%A2%98%EF%BC%88%E8%AF%B7%E5%9C%A8%E6%AF%8F%E5%B0%8F%E9%A2%98%E7%9A%844%E4%B8%AA%E5%A4%87%E9%80%89%E7%AD%94%E6%A1%88%E4%B8%AD%EF%BC%8C%E9%80%89%E5%87%BA%E4%B8%80%E4%B8%AA%E6%9C%80%E4%BD%B3%E7%AD%94%E6%A1%88%EF%BC%8C%E5%85%B115%E5%B0%8F%E9%A2%98%EF%BC%9B%E6%AF%8F%E5%B0%8F%E9%A2%981%E5%88%86%EF%BC%8C%E5%85%B115%E5%88%86%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">二、单项选择题（请在每小题的4个备选答案中，选出一个最佳答案，共15小题；每小题1分，共15分）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98%EF%BC%88%E6%9C%AC%E9%A2%98%E5%85%B15%E5%B0%8F%E9%A2%98%EF%BC%8C%E6%AF%8F%E5%B0%8F%E9%A2%985%E5%88%86%EF%BC%8C%E5%85%B125%E5%88%86%EF%BC%89"><span class="nav-number">1.3.</span> <span class="nav-text">三、简答题（本题共5小题，每小题5分，共25分）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81SQL%E8%AF%AD%E8%A8%80%EF%BC%88%E6%9C%AC%E9%A2%98%E5%85%B110%E5%B0%8F%E9%A2%98%EF%BC%8C%E6%AF%8F%E9%A2%983%E5%88%86%EF%BC%8C%E5%85%B130%E5%88%86%EF%BC%89"><span class="nav-number">1.4.</span> <span class="nav-text">四、SQL语言（本题共10小题，每题3分，共30分）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E8%AE%BE%E5%AD%A6%E7%94%9F%E8%AF%BE%E7%A8%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9C%89%E5%A6%82%E4%B8%8B%E5%85%B3%E7%B3%BB%E8%A1%A8%EF%BC%8C%E8%AF%B7%E7%94%A8SQL%E5%AE%8C%E6%88%90%E4%B8%8B%E9%9D%A2%E7%9A%84%E6%9F%A5%E8%AF%A2%E5%8F%8A%E6%95%B0%E6%8D%AE%E6%93%8D%E7%BA%B5"><span class="nav-number">1.4.1.</span> <span class="nav-text">（一）设学生课程数据库有如下关系表，请用SQL完成下面的查询及数据操纵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E8%AE%BE%E5%AD%A6%E7%94%9F%E8%AF%BE%E7%A8%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9C%89%E5%A6%82%E4%B8%8B%E5%85%B3%E7%B3%BB%E8%A1%A8%EF%BC%8C%E8%AF%B7%E7%94%A8SQL%E5%AE%8C%E6%88%90%E4%B8%8B%E9%9D%A2%E7%9A%84%E6%9F%A5%E8%AF%A2%E5%8F%8A%E6%95%B0%E6%8D%AE%E6%93%8D%E7%BA%B5"><span class="nav-number">1.4.2.</span> <span class="nav-text">（二）设学生课程数据库有如下关系表，请用SQL完成下面的查询及数据操纵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E8%AE%BE%E9%9B%B6%E4%BB%B6%E4%BE%9B%E5%BA%94%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E5%A6%82%E4%B8%8B%EF%BC%8C%E8%AF%B7%E7%94%A8SQL%E8%AF%AD%E8%A8%80%E5%AE%8C%E6%88%90%E4%B8%8B%E5%88%97%E8%A6%81%E6%B1%82%E7%9A%84%E6%9F%A5%E8%AF%A2%E5%8F%8A%E6%95%B0%E6%8D%AE%E6%93%8D%E7%BA%B5"><span class="nav-number">1.4.3.</span> <span class="nav-text">（三）设零件供应数据库的关系模式如下，请用SQL语言完成下列要求的查询及数据操纵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8F%8A%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E9%A2%98%EF%BC%88%E6%9C%AC%E9%A2%982%E5%B0%8F%E9%A2%98%EF%BC%8C%E5%85%B120%E5%88%86%EF%BC%89"><span class="nav-number">1.5.</span> <span class="nav-text">五、数据库及程序设计题（本题2小题，共20分）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA"><span class="nav-number">2.</span> <span class="nav-text">第一章 绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%80%89%E6%8B%A9%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">一、选择题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98"><span class="nav-number">2.2.</span> <span class="nav-text">二、简答题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">第二章 关系数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%80%89%E6%8B%A9%E9%A2%98-1"><span class="nav-number">3.1.</span> <span class="nav-text">一、选择题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98-1"><span class="nav-number">3.2.</span> <span class="nav-text">二、简答题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-SQL%E8%AF%AD%E8%A8%80"><span class="nav-number">4.</span> <span class="nav-text">第三章 SQL语言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%80%89%E6%8B%A9%E9%A2%98-2"><span class="nav-number">4.1.</span> <span class="nav-text">一、选择题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98-2"><span class="nav-number">4.2.</span> <span class="nav-text">二、简答题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7"><span class="nav-number">5.</span> <span class="nav-text">第四章 数据库安全性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%80%89%E6%8B%A9%E9%A2%98-3"><span class="nav-number">5.1.</span> <span class="nav-text">一、选择题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98-3"><span class="nav-number">5.2.</span> <span class="nav-text">二、简答题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-number">6.</span> <span class="nav-text">第五章 数据库完整性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%80%89%E6%8B%A9%E9%A2%98-4"><span class="nav-number">6.1.</span> <span class="nav-text">一、选择题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98-4"><span class="nav-number">6.2.</span> <span class="nav-text">二、简答题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E7%90%86%E8%AE%BA"><span class="nav-number">7.</span> <span class="nav-text">第六章 关系数据理论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%80%89%E6%8B%A9%E9%A2%98-5"><span class="nav-number">7.1.</span> <span class="nav-text">一、选择题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98-5"><span class="nav-number">7.2.</span> <span class="nav-text">二、简答题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1"><span class="nav-number">8.</span> <span class="nav-text">第七章 数据库设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%80%89%E6%8B%A9%E9%A2%98-6"><span class="nav-number">8.1.</span> <span class="nav-text">一、选择题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98-6"><span class="nav-number">8.2.</span> <span class="nav-text">二、简答题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E5%85%B3%E7%B3%BB%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8C%96"><span class="nav-number">9.</span> <span class="nav-text">第九章 关系系统及其优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%80%89%E6%8B%A9%E9%A2%98-7"><span class="nav-number">9.1.</span> <span class="nav-text">一、选择题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98-7"><span class="nav-number">9.2.</span> <span class="nav-text">二、简答题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%81%A2%E5%A4%8D%E6%8A%80%E6%9C%AF"><span class="nav-number">10.</span> <span class="nav-text">第十章 数据库恢复技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%80%89%E6%8B%A9%E9%A2%98-8"><span class="nav-number">10.1.</span> <span class="nav-text">一、选择题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98-8"><span class="nav-number">10.2.</span> <span class="nav-text">二、简答题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6"><span class="nav-number">11.</span> <span class="nav-text">第十一章 数据库并发控制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%80%89%E6%8B%A9%E9%A2%98-9"><span class="nav-number">11.1.</span> <span class="nav-text">一、选择题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98-9"><span class="nav-number">11.2.</span> <span class="nav-text">二、简答题</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Yuanzhibx</p>
+  <div class="site-description" itemprop="description">6657</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CH">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/11/09/%E6%95%B0%E6%8D%AE%E5%BA%93_%E5%A4%8D%E4%B9%A0%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yuanzhibx">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuanzhibx">
+      <meta itemprop="description" content="6657">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="数据库_复习题 | Yuanzhibx">
+      <meta itemprop="description" content="&lt;p style&#x3D;&quot;text-align:center&quot;&gt;【数据库系统概论】复习题&lt;&#x2F;p &gt;">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数据库_复习题
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-11-09 23:26:41" itemprop="dateCreated datePublished" datetime="2025-11-09T23:26:41+08:00">2025-11-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-11-07 02:25:56" itemprop="dateModified" datetime="2025-11-07T02:25:56+08:00">2025-11-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/341-%E5%86%9C%E4%B8%9A%E7%9F%A5%E8%AF%86%E7%BB%BC%E5%90%88%E4%B8%89/" itemprop="url" rel="index"><span itemprop="name">341 农业知识综合三</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>21k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>38 mins.</span>
+    </span>
+</div>
+
+            <div class="post-description"><p style="text-align:center">【数据库系统概论】复习题</p ></div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="数据库复习题（无答案版）"><a href="#数据库复习题（无答案版）" class="headerlink" title="数据库复习题（无答案版）"></a>数据库复习题（无答案版）</h1><h2 id="一、填空题（本题10空，每空1分，共10分）"><a href="#一、填空题（本题10空，每空1分，共10分）" class="headerlink" title="一、填空题（本题10空，每空1分，共10分）"></a>一、填空题（本题10空，每空1分，共10分）</h2><ol>
+<li>数据管理经历了人工管理、________、________三个发展阶段。</li>
+<li>数据管理经历了人工管理、文件系统、________三个发展阶段。</li>
+<li>在文件系统阶段，数据管理的三个主要缺陷是________、________和________。</li>
+<li>物理数据独立性是指数据库的物理结构改变时，尽量不影响整体逻辑结构、用户的逻辑结构以及________。</li>
+<li>逻辑数据独立性是数据库的整体逻辑结构改变时，尽量不影响用户的逻辑结构以及________。</li>
+<li>数据库系统提供的数据控制功能主要包括数据完整性控制、________、数据库的恢复和________。</li>
+<li>用户与操作系统之间的数据管理软件是________。</li>
+<li>根据不同的数据模型，数据库管理系统可以分为________、________、________和面向对象型。</li>
+<li>现实世界中，事物的个体在信息世界中称为________，在机器世界中称为________。</li>
+<li>现实世界中，事物的每一个特性在信息世界中称为________，在机器世界中称为________。</li>
+<li>两个不同实体集的实体间有________、________和多对多三种情况联系。</li>
+<li>表示实体类型和实体间联系的模型，称为________。</li>
+<li>常用的结构数据模型有层次模型、网状模型和________。</li>
+<li>数据模型的三要素包含数据结构、数据操纵和________三部分。</li>
+<li>用树型结构表示实体类型及实体间联系的数据模型称为________。在该模型中，上一层记录类型和下一层记录类型间的联系是________。</li>
+<li>数据库的体系结构分为外模式、________和内模式三级。</li>
+<li>DBMS提供了三级模式和________功能，保证了数据库系统具有较高的数据独立性。</li>
+<li>在数据库的三级模型中，单个用户使用的数据视图的描述，称为________；全局数据视图的描述，称为________；物理存储数据视图的描述，称为________。</li>
+<li>数据独立性是指应用程序和________之间相互独立，不受影响。</li>
+<li>数据独立性分成________和________两级。</li>
+<li>关系代数运算中________、________、________、________和________是5个基本关系运算，其他运算可以从基本的运算中导出。</li>
+<li>关系代数的连接运算中当________为“&#x3D;”的连接称为________，且当比较的分量是相同的属性组时，则称为________。</li>
+<li>数据库设计的步骤通常分为六个阶段：需求分析、概念结构设计、________、________、________、数据库运行和维护。</li>
+<li>从数据库的完整性定义看是指数据的________和________。</li>
+<li>数据库系统提供的数据控制功能主要包括________、________和并发控制。</li>
+</ol>
+<h2 id="二、单项选择题（请在每小题的4个备选答案中，选出一个最佳答案，共15小题；每小题1分，共15分）"><a href="#二、单项选择题（请在每小题的4个备选答案中，选出一个最佳答案，共15小题；每小题1分，共15分）" class="headerlink" title="二、单项选择题（请在每小题的4个备选答案中，选出一个最佳答案，共15小题；每小题1分，共15分）"></a>二、单项选择题（请在每小题的4个备选答案中，选出一个最佳答案，共15小题；每小题1分，共15分）</h2><ol>
+<li>下面哪个不是数据库的特征（）<br>A. 可为各种用户共享，冗余度较小<br>B. 数据独立性较高<br>C. 按一定数据模型组织、描述和储存<br>D. 不易扩展</li>
+<li>现实世界中客观存在并能相互区别的事物称为（）<br>A. 实体<br>B. 实体集<br>C. 字段<br>D. 记录</li>
+<li>现实世界中事物的特性在信息世界中称为（）<br>A. 实体<br>B. 实体标识符<br>C. 属性<br>D. 关键码</li>
+<li>下列实体类型的联系中，属于一对一联系的是（）<br>A. 教研室对教师的所属联系<br>B. 父亲对孩子的亲生联系<br>C. 省对省会的所属联系<br>D. 供应商与工程项目的供货联系</li>
+<li>层次模型必须满足的一个条件是（）<br>A. 每个结点均可以有一个以上的父结点<br>B. 有且仅有一个结点无父结点<br>C. 不能有结点无父结点<br>D. 可以有一个以上的结点无父结点</li>
+<li>采用二维表格结构表达实体类型及实体间联系的数据模型是（）<br>A. 层次模型<br>B. 网状模型<br>C. 关系模型<br>D. 实体联系模型</li>
+<li>逻辑数据独立性是指（）<br>A. 概念模式改变，外模式和应用程序不变<br>B. 概念模式改变，内模式不变<br>C. 内模式改变，概念模式不变<br>D. 内模式改变，外模式和应用程序不变</li>
+<li>数据库（DB）、DBMS、DBS三者之间的关系是（）<br>A. DB包括DBMS和DBS<br>B. DBS包括DB和DBMS<br>C. DBMS包括DB和DBS<br>D. DBS与DB和DBMS无关</li>
+<li>数据库系统中，用（）描述全部数据的整体逻辑结构<br>A. 外模式<br>B. 存储模式<br>C. 内模式<br>D. 概念模式</li>
+<li>数据库系统中，用户使用的数据视图用（）描述，它是用户与数据库之间的接口<br>A. 外模式<br>B. 存储模式<br>C. 内模式<br>D. 概念模式</li>
+<li>数据库系统中，物理存储视图用（）描述<br>A. 外模式<br>B. 用户模式<br>C. 内模式<br>D. 概念模式</li>
+<li>数据库系统达到了数据独立性是因为采用了（）<br>A. 层次模型<br>B. 网状模型<br>C. 关系模型<br>D. 三级模式结构</li>
+<li>物理数据独立性是指（）<br>A. 概念模式改变，外模式和应用程序不变<br>B. 概念模式改变，内模式不变<br>C. 内模式改变，概念模式不变<br>D. 内模式改变，外模式和应用程序不变</li>
+<li>下列语言中，不是宿主语言的是（）<br>A. C<br>B. FORTRAN<br>C. SQL<br>D. COBOL</li>
+<li>数据库系统中，负责物理结构与逻辑结构的定义和修改的人员是（）<br>A. 数据库管理员<br>B. 专业用户<br>C. 应用程序员<br>D. 最终用户</li>
+<li>数据库系统中，使用专用的查询语言操作数据的人员是（）<br>A. 数据库管理员<br>B. 专业用户<br>C. 应用程序员<br>D. 最终用户</li>
+<li>数据库系统中，使用宿主语言和DML编写应用程序的人员是（）<br>A. 数据库管理员<br>B. 专业用户<br>C. 应用程序员<br>D. 最终用户</li>
+<li>当关系由多个候选码时，则选定一个作为主码，但若主码为全码时应包含（）<br>A. 单个属性<br>B. 两个属性<br>C. 多个属性<br>D. 全部属性</li>
+<li>在基本的关系中，下列说法正确的是（）<br>A. 行列顺序有关<br>B. 属性名允许重名<br>C. 任意2个元组不允许重复<br>D. 列是非同质的</li>
+<li>关系代数的5个基本操作是（）<br>A. 并、交、差、笛卡儿积、除法<br>B. 并、交、选取、笛卡儿积、除法<br>C. 并、交、选取、投影、除法<br>D. 并、差、选取、笛卡儿积、投影</li>
+<li>关系代数的四个组合操作是（）<br>A. 交、连接、自然连接、除法<br>B. 投影、连接、选取、除法<br>C. 投影、自然连接、选取、除法<br>D. 投影、自然连接、选取、连接</li>
+<li>4元关系R为：R(A,B,C,D)，则（）<br>A. πA,C(R)为取属性值为A,C的两列组成<br>B. πA,C(R)为取属性值为1、3的两列组成<br>C. π1,3(R)和πA,C(R)是等价的<br>D. π1,3(R)和πC,A(R)是不等价的</li>
+<li>δ₃&lt;₂(S)表示（）<br>A. 表示从S关系中挑选3的值小于第二个分量的元组<br>B. 表示从S关系中挑选第三个分量的值小于“2”的元组<br>C. 表示从S关系中挑选第三个分量的值小于第二个分量的元组<br>D. δ₃&lt;₂(S)是向关系垂直方向的运算</li>
+<li>R为4元关系R(A,B,C,D)，S为三元关系S(B,C,D)，R与S全连接成的结果集是（）元关系<br>A. 4<br>B. 3<br>C. 7<br>D. 6</li>
+<li>R为4元关系R(A,B,C,D)，S为三元关系S(B,C,D)，R与S自然连接成的结果集是（）元关系<br>A. 4<br>B. 3<br>C. 7<br>D. 6</li>
+<li>与δ₃&lt;₂(S)等价的SQL语句是（）<br>A. SELECT * FROM S WHERE C&lt;2<br>B. SELECT * FROM S WHILE C&lt;2<br>C. SELECT B,C FROM S HAVING C&lt;2<br>D. SELECT * FROM S WHILE 3&lt;B</li>
+<li>笛卡尔积是（）进行运算<br>A. 向关系的垂直方向<br>B. 向关系的水平方向<br>C. 即向关系的水平方向也向关系的垂直方向<br>D. 先向关系的垂直方向，然后再向关系的水平方向</li>
+<li>自然连接是（）进行运算<br>A. 向关系的垂直方向<br>B. 向关系的水平方向<br>C. 即向关系的水平方向也向关系的垂直方向<br>D. 先向关系的垂直方向，然后再向关系的水平方向</li>
+<li>关系模型中三类完整性约束分别是实体完整性、（）和用户定义完整性<br>A. 系统完整性<br>B. 操作完整性<br>C. 参照完整性<br>D. 关系完整性</li>
+</ol>
+<h2 id="三、简答题（本题共5小题，每小题5分，共25分）"><a href="#三、简答题（本题共5小题，每小题5分，共25分）" class="headerlink" title="三、简答题（本题共5小题，每小题5分，共25分）"></a>三、简答题（本题共5小题，每小题5分，共25分）</h2><ol>
+<li>数据独立性包括哪两种独立性？请分别描述这两种独立性的含义。</li>
+<li>什么是日志文件？简述每个日志记录的内容包括哪些？</li>
+<li>什么是事务？说明事务的四个特性？</li>
+<li>数据库恢复的基本技术有哪些？并发操作可能会产生哪几类数据不一致？用什么方法避免不一致的情况？</li>
+<li>什么是数据库的安全性？数据库安全性控制有哪些常用方法？</li>
+<li>进行数据库系统需求分析时，数据字典的内容和作用是什么？</li>
+<li>试述数据库中为什么要有恢复子系统？数据库恢复的依据是什么？</li>
+<li>试述数据库系统三级模式结构，这种结构的优点是什么？</li>
+<li>什么是封锁？基本的封锁类型有几种？试叙述它们的含义？</li>
+<li>数据库运行可能产生的故障有哪几类？哪些故障影响事务的正常执行？哪些故障破坏数据库中的数据？</li>
+<li>什么是游标？请写出嵌入式SQL使用游标的步骤。</li>
+<li>试述实现数据库安全性控制的常用方法？</li>
+<li>试述事务的概念及事务的四个特性。恢复技术能保证事务的哪些特性？</li>
+<li>数据库运行可能产生的故障有哪几类？哪些故障影响事务的正常执行？哪些故障破坏数据库数据？</li>
+<li>数据库恢复的基本技术有哪些？</li>
+<li>什么是日志文件？为什么要设立日志文件？</li>
+<li>登记日志文件时为什么必须先写日志文件，后写数据库？</li>
+<li>并发操作可能会产生哪几类数据不一致？用什么方法能避免各种不一致的情况？</li>
+</ol>
+<h2 id="四、SQL语言（本题共10小题，每题3分，共30分）"><a href="#四、SQL语言（本题共10小题，每题3分，共30分）" class="headerlink" title="四、SQL语言（本题共10小题，每题3分，共30分）"></a>四、SQL语言（本题共10小题，每题3分，共30分）</h2><h3 id="（一）设学生课程数据库有如下关系表，请用SQL完成下面的查询及数据操纵"><a href="#（一）设学生课程数据库有如下关系表，请用SQL完成下面的查询及数据操纵" class="headerlink" title="（一）设学生课程数据库有如下关系表，请用SQL完成下面的查询及数据操纵"></a>（一）设学生课程数据库有如下关系表，请用SQL完成下面的查询及数据操纵</h3><p>STUDENT(SNO, SNAME, SEX, BIRTHDAY, ADDRESS)；&#x2F;&#x2F;学生（学生号，学生名，性别，出生日期，地址）<br>COURSE (CNO, CNAME, LHOUR, CREDIT)；&#x2F;&#x2F;课程（课程号，课程名，学时，学分）<br>SC_SCORE (SNO, CNO, GRADE)；&#x2F;&#x2F;学生选课（学生号，课程号，成绩）</p>
+<ol>
+<li>查询学生的学号、姓名、性别、出生日期（学生表的投影）。</li>
+<li>查询所有女生的学号、姓名（学生表的选择和投影）。</li>
+<li>查询1980年以前出生的学生学号、姓名、性别、出生日期（学生表的选择和投影）。</li>
+<li>查询1979年到1981年出生的学生姓名、性别及出生日期。</li>
+<li>查询所有姓李学生的学号、姓名、住址、电话（模糊查询）。</li>
+<li>查询所有不姓李学生的学号、姓名、住址、电话（模糊查询）。</li>
+<li>查询计算机系所开课程（课程号以CS开头）的课程号、课程名和学分数（模糊查询）。</li>
+<li>查询至少选修一门计算机系课程的女生的姓名。</li>
+<li>查询学生选修课程的学生名、课程名、成绩（连接查询）。</li>
+<li>查询学生选修课程的总分SUM(SCORE)和课程数COUNT()（统计查询）。</li>
+</ol>
+<h3 id="（二）设学生课程数据库有如下关系表，请用SQL完成下面的查询及数据操纵"><a href="#（二）设学生课程数据库有如下关系表，请用SQL完成下面的查询及数据操纵" class="headerlink" title="（二）设学生课程数据库有如下关系表，请用SQL完成下面的查询及数据操纵"></a>（二）设学生课程数据库有如下关系表，请用SQL完成下面的查询及数据操纵</h3><p>STUDENT (SNO, SNAME, SEX, BDATE, HEIGHT)；&#x2F;&#x2F;学生（学生号，学生名，性别，出生日期，身高）<br>COURSE (CNO, CNAME, LHOUR, CREDIT, SEMESTER)；&#x2F;&#x2F;课程（课程号，课程名，学时，学分，学期）<br>SC(SNO, CNO, GRADE)；&#x2F;&#x2F;选课（学生号，课程号，成绩）</p>
+<ol>
+<li>查询身高大于1.80米的男生的学号和姓名。</li>
+<li>查询计算机系所开课程（课程号以CS开头）的课程号和学分数。</li>
+<li>查询选修计算机系课程的女生姓名。</li>
+<li>查询每门课选课的学生人数、最高成绩、最低成绩和平均成绩。</li>
+<li>查询所有课程的成绩都在80分以上的学生的姓名、学号，并按学号升序排列。</li>
+</ol>
+<h3 id="（三）设零件供应数据库的关系模式如下，请用SQL语言完成下列要求的查询及数据操纵"><a href="#（三）设零件供应数据库的关系模式如下，请用SQL语言完成下列要求的查询及数据操纵" class="headerlink" title="（三）设零件供应数据库的关系模式如下，请用SQL语言完成下列要求的查询及数据操纵"></a>（三）设零件供应数据库的关系模式如下，请用SQL语言完成下列要求的查询及数据操纵</h3><p>S(SNO, SNAME, STATUS, CITY)；&#x2F;&#x2F;供应商<br>P(PNO, PNAME, COLOR, WEIGHT)；&#x2F;&#x2F;零件<br>J(JNO, JNAME, CITY)；&#x2F;&#x2F;工程<br>SPJ(SNO, PNO, JNO, QTY)；&#x2F;&#x2F;供应关系</p>
+<ol>
+<li>找出所有供应商的姓名和所在城市。</li>
+<li>找出所有零件的名称、颜色、重量。</li>
+<li>找出使用供应商S1所供应零件的工程号。</li>
+<li>找出上海供应商供应的所有零件号码。</li>
+<li>找出工程项目J2使用的各种零件的名称及其数量。</li>
+<li>找出使用上海产的零件的工程名。</li>
+<li>找出没有使用天津产的零件的工程号。</li>
+<li>把全部红色零件的颜色改成蓝色。</li>
+<li>由S5供给J4的零件P6改为由S3供应，请作必要的修改。</li>
+<li>从供应商关系中删除S2的记录，并从供应情况关系中删除相应的记录。</li>
+<li>请将(S2,J6,P4,200)插入供应情况关系。</li>
+<li>请为三建工程项目建立一个供应情况的视图，包括供应商代码(SNO)、零件代码(PNO)、供应数量(QTY)。</li>
+<li>把对表S的INSERT权限授予用户张勇，并允许他再将此权限授予其他用户。</li>
+<li>把查询SPJ和修改QTY属性的权限授予用户李明。</li>
+</ol>
+<h2 id="五、数据库及程序设计题（本题2小题，共20分）"><a href="#五、数据库及程序设计题（本题2小题，共20分）" class="headerlink" title="五、数据库及程序设计题（本题2小题，共20分）"></a>五、数据库及程序设计题（本题2小题，共20分）</h2><ol>
+<li>已知各实体及联系如下：学校（学校名，地址，电话，邮编）、系（系编号，系名，电话，学校名）、班级（班级编号，班级名，系编号）、教研室（教研室编号，教研室名，系编号）、学生（学号，姓名，性别，班级编号，导师职工号）、教员（职工号，姓名，职称，教研室编号）、课程（课程号，课程名）、选修（学号，课程号，成绩）。一对多联系将一方的主键加入多方的关系模式中，多对多联系单独转换为一关系模式。请构建相应的关系模式。</li>
+<li>已知各实体及联系如下：产品（产品编号，产品名称）、零件（零件号，零件名称）、原材料（原材料编号，原材料名称，类别，仓库编号，库存量）、仓库（仓库编号，仓库名）、产品组成（产品号，零件号，使用零件量）、零件制造（零件号，原材料编号，使用原材料量）、零件储存（零件号，仓库号，存储量）。请构建相应的关系模式。</li>
+</ol>
+<h1 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h1><h2 id="一、选择题"><a href="#一、选择题" class="headerlink" title="一、选择题"></a>一、选择题</h2><ol>
+<li>DBS是采用了数据库技术的计算机系统，DBS是一个集合体，包含数据库、计算机硬件、软件和（）<br>A. 系统分析员<br>B. 程序员<br>C. 数据库管理员<br>D. 操作员</li>
+<li>下列关于DB、DBMS、DBS三者关系的说法，正确的是（）<br>A. DBS包括DB和DBMS<br>B. DBMS包括DB和DBS<br>C. DB包括DBS和DBMS<br>D. DBS就是DB，也就是DBMS</li>
+<li>下面列出的数据库管理技术发展的三个阶段中，没有专门的软件对数据进行管理的是（）<br>I. 人工管理阶段<br>II. 文件系统阶段<br>III. 数据库阶段<br>A. I和II<br>B. 只有II<br>C. II和III<br>D. 只有I</li>
+<li>下列四项中，不属于数据库系统特点的是（）<br>A. 数据共享<br>B. 数据完整性<br>C. 数据冗余度高<br>D. 数据独立性高</li>
+<li>数据库系统的数据独立性体现在（）<br>A. 不会因为数据的变化而影响到应用程序<br>B. 不会因为系统数据存储结构与数据逻辑结构的变化而影响应用程序<br>C. 不会因为存储策略的变化而影响存储结构<br>D. 不会因为某些存储结构的变化而影响其他的存储结构</li>
+<li>描述数据库全体数据的全局逻辑结构和特性的是（）<br>A. 模式<br>B. 内模式<br>C. 外模式<br>D. 用户模式</li>
+<li>要保证数据的独立性，需要依靠的是（）<br>A. 模式与外模式<br>B. 模式与内模式<br>C. 三层之间的两种映射<br>D. 三层模式</li>
+<li>要保证数据库的逻辑数据独立性，需要修改的是（）<br>A. 模式与外模式的映射<br>B. 模式与内模式之间的映射<br>C. 模式<br>D. 三层模式</li>
+<li>用户或应用程序能看到的那部分局部逻辑结构和特征的描述是（），它是模式的逻辑子集。<br>A. 模式<br>B. 物理模式<br>C. 子模式<br>D. 内模式</li>
+<li>下述（）不是DBA（数据库管理员）的职责<br>A. 完整性约束说明<br>B. 定义数据库模式<br>C. 数据库安全<br>D. 数据库管理系统设计</li>
+</ol>
+<h2 id="二、简答题"><a href="#二、简答题" class="headerlink" title="二、简答题"></a>二、简答题</h2><ol>
+<li>试述数据、数据库、数据库系统、数据库管理系统的概念。</li>
+<li>使用数据库系统有什么好处？</li>
+<li>试比较文件系统与数据库系统的区别和联系。</li>
+<li>举出适合用文件系统而不是数据库系统的例子；再举出适合用数据库系统的应用例子。</li>
+<li>试述数据库系统的特点。</li>
+<li>试述数据库管理系统的主要功能。</li>
+<li>试述数据模型的概念、数据模型的作用和数据模型的三个要素。</li>
+<li>试述概念模型的作用。</li>
+<li>定义并解释概念模型中以下术语：实体、实体型、实体集、属性、码、实体联系图（E-R图）。</li>
+<li>试给出三个实际部门的E-R图，要求实体型之间具有一对一、一对多、多对多各种不同的联系。</li>
+</ol>
+<h1 id="第二章-关系数据库"><a href="#第二章-关系数据库" class="headerlink" title="第二章 关系数据库"></a>第二章 关系数据库</h1><h2 id="一、选择题-1"><a href="#一、选择题-1" class="headerlink" title="一、选择题"></a>一、选择题</h2><ol>
+<li>下面的选项不是关系数据库基本特征的是（）<br>A. 不同的列应有不同的数据类型<br>B. 不同的列应有不同的列名<br>C. 与行的次序无关<br>D. 与列的次序无关</li>
+<li>一个关系只有一个（）<br>A. 候选码<br>B. 外码<br>C. 超码<br>D. 主码</li>
+<li>关系模型中，一个码是（）<br>A. 可以由多个任意属性组成<br>B. 至多由一个属性组成<br>C. 可有多个或者一个其值能够唯一表示该关系模式中任何元组的属性组成<br>D. 以上都不是</li>
+<li>现有如下关系：患者（患者编号，患者姓名，性别，出生日期，所在单位）、医疗（患者编号，患者姓名，医生编号，医生姓名，诊断日期，诊断结果），其中，医疗关系中的码是（）<br>A. 患者编号<br>B. 患者姓名<br>C. 患者编号和患者姓名<br>D. 医生编号和患者编号</li>
+<li>现有一个关系：借阅（书号，书名，库存数，读者号，借期，还期），假如同一本书允许一个读者多次借阅，但不能同时对一种书借多本，则该关系模式的外码是（）<br>A. 书号<br>B. 读者号<br>C. 书号+读者号<br>D. 书号+读者号+借期</li>
+<li>关系中实体间的联系是通过增加一个（）实现<br>A. 关系<br>B. 属性<br>C. 关系或一个属性<br>D. 关系和一个属性</li>
+<li>关系代数运算是以（）为基础的运算<br>A. 关系运算<br>B. 谓词演算<br>C. 集合运算<br>D. 代数运算</li>
+<li>关系数据库管理系统应能实现的专门关系运算包括（）<br>A. 排序、索引、统计<br>B. 选择、投影、连接<br>C. 关联、更新、排序<br>D. 显示、打印、制表</li>
+<li>五种基本关系代数运算是（）<br>A. ∪、-、×、π、σ<br>B. ∪、∩、×、π、σ<br>C. ∪、∩、-、π、σ<br>D. ∪、∩、×、π、-</li>
+<li>关系代数表达式的优化策略中，首先要做的是（）<br>A. 对文件进行预处理<br>B. 尽早执行选择运算<br>C. 执行笛卡尔积运算<br>D. 执行投影运算</li>
+<li>关系数据库中的投影操作是指从关系中（）<br>A. 抽出特定记录<br>B. 抽出特定字段<br>C. 建立相应的影像<br>D. 建立相应的图形</li>
+<li>从一个数据库文件中取出满足某个条件的所有记录形成一个新的数据库文件的操作是（）操作<br>A. 投影<br>B. 联接<br>C. 选择<br>D. 复制</li>
+<li>关系代数中的联接操作是由（）操作组合而成<br>A. 选择和投影<br>B. 选择和笛卡尔积<br>C. 投影、选择、笛卡尔积<br>D. 投影和笛卡尔积</li>
+<li>自然联接是构成新关系的有效方法。一般情况下，当对关系R和S使用自然联接时，要求R和S含有一个或多个共有的（）<br>A. 记录<br>B. 行<br>C. 属性<br>D. 元组</li>
+<li>假设有关系R和S，在下列的关系运算中，（）运算不要求R和S具有相同的元数，且它们的对应属性的数据类型也相同<br>A. R∩S<br>B. R∪S<br>C. R-S<br>D. R×S</li>
+<li>假设有关系R和S，关系代数表达式R - (R - S)表示的是（）<br>A. R∩S<br>B. R∪S<br>C. R-S<br>D. R×S</li>
+<li>下面列出的关系代数表达式中，那些式子能够成立（）<br>①σf1(σf2(E))&#x3D;σf1∧f2(E)<br>②E1∞E2&#x3D;E2∞E1<br>③(E1∞E2)∞E3&#x3D;E1∞(E2∞E3)<br>④σf1(σf2(E))&#x3D;σf2(σf1(E))<br>A. 全部<br>B. ②和③<br>C. 没有<br>D. ①和④</li>
+<li>下面四个关系代数表达式是等价的，试判别它们的执行效率（）<br>E1&#x3D;πA(σB&#x3D;C∧D&#x3D;E’(R×S))<br>E2&#x3D;πA(σB&#x3D;C(R×σD&#x3D;E’(S)))<br>E3&#x3D;πA(R∞B&#x3D;CσD&#x3D;E’(S))<br>E4&#x3D;πA(σD&#x3D;E’(R∞B&#x3D;C S))<br>A. E3最快<br>B. E2最快<br>C. E4最快<br>D. E1最快</li>
+<li>有关系SC(S_ID,C_ID,AGE,SCORE)，查找年龄大于22岁的学生的学号和分数，正确的关系代数表达式是（）<br>①πS_ID,SCORE(σAGE&gt;22(SC))<br>②σAGE&gt;22(πS_ID,SCORE(SC))<br>③πS_ID,SCORE(σAGE&gt;22(πS_ID,SCORE,AGE(SC)))<br>A. ①和②<br>B. 只有①正确<br>C. 只有③正确<br>D. ①和③正确</li>
+</ol>
+<h2 id="二、简答题-1"><a href="#二、简答题-1" class="headerlink" title="二、简答题"></a>二、简答题</h2><ol>
+<li>试述关系模型的三个组成部分。</li>
+<li>试述关系数据语言的特点和分类。</li>
+<li>设有一个SPJ数据库，包括S、P、J、SPJ四个关系模式：<br>S(SNO,SNAME,STATUS,CITY)；P(PNO,PNAME,COLOR,WEIGHT)；J(JNO,JNAME,CITY)；SPJ(SNO,PNO,JNO,QTY)；<br>供应商表S由供应商代码(SNO)、供应商姓名(SNAME)、供应商状态(STATUS)、供应商所在城市(CITY)组成；零件表P由零件代码(PNO)、零件名(PNAME)、颜色(COLOR)、重量(WEIGHT)组成；工程项目表J由工程项目代码(JNO)、工程项目名(JNAME)、工程项目所在城市(CITY)组成；供应情况表SPJ由供应商代码(SNO)、零件代码(PNO)、工程项目代码(JNO)、供应数量(QTY)组成，表示某供应商供应某种零件给某工程项目的数量为QTY。<br>试用关系代数完成如下查询：<br>（1）求供应工程J1零件的供应商号码SNO；<br>（2）求供应工程J1零件P1的供应商号码SNO；<br>（3）求供应工程J1零件为红色的供应商号码SNO；<br>（4）求没有使用天津供应商生产的红色零件的工程号JNO；<br>（5）求至少用了供应商S1所供应的全部零件的工程号JNO。</li>
+<li>定义并理解下列术语，说明它们之间的联系与区别：<br>（1）域，笛卡尔积，关系，元组，属性；<br>（2）主码，候选码，外码；<br>（3）关系模式，关系，关系数据库。</li>
+<li>试述关系模型的完整性规则。在参照完整性中，为什么外码属性的值有时也可以为空？什么情况下才可以为空？</li>
+<li>试述等值连接与自然连接的区别和联系。</li>
+<li>关系代数的基本运算有哪些？</li>
+<li>试用关系代数的基本运算来表示其他运算。</li>
+</ol>
+<h1 id="第三章-SQL语言"><a href="#第三章-SQL语言" class="headerlink" title="第三章 SQL语言"></a>第三章 SQL语言</h1><h2 id="一、选择题-2"><a href="#一、选择题-2" class="headerlink" title="一、选择题"></a>一、选择题</h2><ol>
+<li>SQL语言是（）的语言，容易学习<br>A. 过程化<br>B. 非过程化<br>C. 格式化<br>D. 导航式</li>
+<li>SQL语言的数据操纵语句包括SELECT、INSERT、UPDATE、DELETE等。其中最重要的，也是使用最频繁的语句是（）<br>A. SELECT<br>B. INSERT<br>C. UPDATE<br>D. DELETE</li>
+<li>在视图上不能完成的操作是（）<br>A. 更新视图<br>B. 查询<br>C. 在视图上定义新的表<br>D. 在视图上定义新的视图</li>
+<li>SQL语言集数据查询、数据操纵、数据定义和数据控制功能于一体，其中，CREATE、DROP、ALTER语句是实现哪种功能（）<br>A. 数据查询<br>B. 数据操纵<br>C. 数据定义<br>D. 数据控制</li>
+<li>在SQL语言中，删除一个表的命令是（）<br>A. DELETE<br>B. DROP<br>C. CLEAR<br>D. REMOVE</li>
+<li>在SQL语言中的视图VIEW是数据库的（）<br>A. 外模式<br>B. 模式<br>C. 内模式<br>D. 存储模式</li>
+<li>下列的SQL语句中，（）不是数据定义语句<br>A. CREATE TABLE<br>B. DROP VIEW<br>C. CREATE VIEW<br>D. GRANT</li>
+<li>若要撤销数据库中已经存在的表S，可用（）<br>A. DELETE TABLE S<br>B. DELETE S<br>C. DROP TABLE S<br>D. DROP S</li>
+<li>若要在基本表S中增加一列CN（课程名），可用（）<br>A. ADD TABLE S(CN CHAR(8))<br>B. ADD TABLE S ALTER (CN CHAR(8))<br>C. ALTER TABLE S ADD (CN CHAR(8))<br>D. ALTER TABLE S (ADD CN CHAR(8))</li>
+<li>学生关系模式S(S#,Sname,Sex,Age)，S的属性分别表示学生的学号、姓名、性别、年龄，要在表S中删除一个属性“年龄”，可选用的SQL语句是（）<br>A. DELETE Age from S<br>B. ALTER TABLE S DROP Age<br>C. UPDATE S Age<br>D. ALTER TABLE S Age</li>
+<li>有关系S(S#,SNAME,SAGE)，C(C#,CNAME)，SC(S#,C#,GRADE)。其中S#是学生号，SNAME是学生姓名，SAGE是学生年龄，C#是课程号，CNAME是课程名称。要查询选修“ACCESS”课的年龄不小于20的全体学生姓名的SQL语句是SELECT SNAME FROM S,C,SC WHERE子句。这里的WHERE子句的内容是（）<br>A. S.S#&#x3D;SC.S# and C.C#&#x3D;SC.C# and SAGE&gt;&#x3D;20 and CNAME&#x3D;’ACCESS’<br>B. S.S#&#x3D;SC.S# and C.C#&#x3D;SC.C# and SAGE in &gt;&#x3D;20 and CNAME in ‘ACCESS’<br>C. SAGE in &gt;&#x3D;20 and CNAME in ‘ACCESS’<br>D. SAGE &gt;&#x3D;20 and CNAME&#x3D;’ACCESS’</li>
+<li>设关系数据库中一个表的结构为S(SN,CN,grade)，其中SN为学生名，CN为课程名，二者均为字符型；grade为成绩，数值型，取值范围0-100。若要把“张二的化学成绩80分”插入S中，则可用（）<br>A. ADD INTO S VALUES (‘张二’,’化学’,’80’)<br>B. INSERT INTO S VALUES (‘张二’,’化学’,80)<br>C. ADD INTO S VALUES (‘张二’,’化学’,80)<br>D. INSERT INTO S VALUES (‘张二’,’化学’,80)</li>
+<li>设关系数据库中一个表S的结构为：S(SN,CN,grade)，其中SN为学生名，CN为课程名，二者均为字符型；grade为成绩，数值型，取值范围0-100。若要更正王二的化学成绩为85分，则可用（）<br>A. UPDATE S SET grade&#x3D;85 WHERE SN&#x3D;’王二’ AND CN&#x3D;’化学’<br>B. UPDATE S SET grade&#x3D;’85’ WHERE SN&#x3D;’王二’ AND CN&#x3D;’化学’<br>C. UPDATE grade&#x3D;85 WHERE SN&#x3D;’王二’ AND CN&#x3D;’化学’<br>D. UPDATE grade&#x3D;’85’ WHERE SN&#x3D;’王二’ AND CN&#x3D;’化学’</li>
+<li>在SQL语言中，子查询是（）<br>A. 返回单表中数据子集的查询语言<br>B. 选取多表中字段子集的查询语句<br>C. 选取单表中字段子集的查询语句<br>D. 嵌入到另一个查询语句之中的查询语句</li>
+<li>SQL是一种（）语言<br>A. 高级算法<br>B. 人工智能<br>C. 关系数据库<br>D. 函数型</li>
+<li>有关系S(S#,SNAME,SEX)，C(C#,CNAME)，SC(S#,C#,GRADE)。其中S#是学生号，SNAME是学生姓名，SEX是性别，C#是课程号，CNAME是课程名称。要查询选修“数据库”课的全体男生姓名的SQL语句是SELECT SNAME FROM S,C,SC WHERE子句。这里的WHERE子句的内容是（）<br>A. S.S#&#x3D;SC.S# and C.C#&#x3D;SC.C# and SEX&#x3D;’男’ and CNAME&#x3D;’数据库’<br>B. S.S#&#x3D;SC.S# and C.C#&#x3D;SC.C# and SEX in ‘男’ and CNAME in ‘数据库’<br>C. SEX&#x3D;’男’ and CNAME&#x3D;’数据库’<br>D. S.SEX&#x3D;’男’ and CNAME&#x3D;’数据库’</li>
+<li>若用如下的SQL语句创建了一个表SC：CREATE TABLE SC(S# CHAR(6) NOT NULL, C# CHAR(3) NOT NULL, SCORE INTEGER, NOTE CHAR(20))；向SC表插入如下行时，（）行可以被插入<br>A. (“201009”,111,60,’必修’)<br>B. (“200823”,”101”,NULL,NULL)<br>C. (“NJLC”,103,80,’选修’)<br>D. (“201132”,NULL,86,””)</li>
+<li>假设学生关系S(S#,SNAME,SEX)，课程关系C(C#,CNAME)，学生选课关系SC(S#,C#,GRADE)。要查询选修“Computer”课的男生姓名，将涉及到关系（）<br>A. S<br>B. S,SC<br>C. C,SC<br>D. S,C,SC</li>
+</ol>
+<h2 id="二、简答题-2"><a href="#二、简答题-2" class="headerlink" title="二、简答题"></a>二、简答题</h2><ol>
+<li>试述SQL语言的特点。</li>
+<li>试述SQL的定义功能。</li>
+<li>用SQL语句建立第3章习题3中的四个表（S、P、J、SPJ）。</li>
+<li>针对上题中建立的四个表，试用SQL语言完成第3章习题3中的查询（供应工程J1零件的供应商号码等5个查询）。</li>
+<li>针对习题3中的四个表，试用SQL语言完成以下各项操作：<br>（1）找出所有供应商的姓名和所在城市；<br>（2）找出所有零件的名称、颜色、重量；<br>（3）找出使用供应商S1所供应零件的工程号码；<br>（4）找出工程项目J2使用的各种零件的名称及其数量；<br>（5）找出上海厂商供应的所有零件号码；<br>（6）找出使用上海产的零件的工程名称；<br>（7）找出没有使用天津产的零件的工程号码；<br>（8）把全部红色零件的颜色改成蓝色；<br>（9）由S5供给J4的零件P6改为由S3供应，请作必要的修改；<br>（10）从供应商关系中删除S2的记录，并从供应情况关系中删除相应的记录；<br>（11）请将(S2,J6,P4,200)插入供应情况关系。</li>
+<li>什么是基本表？什么是视图？两者的区别和联系是什么？</li>
+<li>试述视图的优点。</li>
+<li>所有的视图是否都可以更新？为什么？</li>
+<li>哪类视图是可以更新的，哪类视图是不可更新的？各举一例说明。</li>
+<li>试述某个你熟悉的实际系统中对视图更新的规定。</li>
+<li>请为三建工程项目建立一个供应情况的视图，包括供应商代码(SNO)、零件代码(PNO)、供应数量(QTY)。针对该视图完成下列查询：<br>（1）找出三建工程项目使用的各种零件代码及其数量；<br>（2）找出供应商S1的供应情况。</li>
+</ol>
+<h1 id="第四章-数据库安全性"><a href="#第四章-数据库安全性" class="headerlink" title="第四章 数据库安全性"></a>第四章 数据库安全性</h1><h2 id="一、选择题-3"><a href="#一、选择题-3" class="headerlink" title="一、选择题"></a>一、选择题</h2><ol>
+<li>以下（）不属于实现数据库系统安全性的主要技术和方法<br>A. 存取控制技术<br>B. 视图技术<br>C. 审计技术<br>D. 出入机房登记和加锁</li>
+<li>SQL中的视图提高了数据库系统的（）<br>A. 完整性<br>B. 并发控制<br>C. 隔离性<br>D. 安全性</li>
+<li>SQL语言的GRANT和REVOKE语句主要是用来维护数据库的（）<br>A. 完整性<br>B. 可靠性<br>C. 安全性<br>D. 一致性</li>
+<li>数据库的安全性控制中，授权的数据对象的（），被授权系统就越灵活<br>A. 范围越小<br>B. 约束越细致<br>C. 范围越大<br>D. 约束范围大</li>
+</ol>
+<h2 id="二、简答题-3"><a href="#二、简答题-3" class="headerlink" title="二、简答题"></a>二、简答题</h2><ol>
+<li>什么是数据库的安全性？</li>
+<li>数据库安全性和计算机系统的安全性有什么关系？</li>
+<li>试述实现数据库安全性控制的常用方法和技术。</li>
+<li>什么是数据库中的自主存取控制方法和强制存取控制方法？</li>
+<li>SQL语言中提供了哪些数据控制（自主存取控制）的语句？请试举几例说明它们的使用方法。</li>
+<li>今有两个关系模式：<br>职工（职工号，姓名，年龄，职务，工资，部门号）<br>部门（部门号，名称，经理名，地址，电话号）<br>请用SQL的GRANT和REVOKE语句（加上视图机制）完成以下授权定义或存取控制功能：<br>（a）用户王明对两个表有SELECT权力；<br>（b）用户李勇对两个表有INSERT和DELETE权力；<br>（c）每个职工只对自己的记录有SELECT权力；<br>（d）用户刘星对职工表有SELECT权力，对工资字段具有更新权力；<br>（e）用户张新具有修改这两个表的结构的权力；<br>（f）用户周平具有对两个表所有权限（读，插，改，删数据），并具有给其他用户授权的权力；<br>（g）用户杨兰具有从每个部门职工中SELECT最高工资、最低工资、平均工资的权力，他不能查看每个人的工资。</li>
+<li>把习题6中（a）~（g）的每一种情况，撤销各用户所授予的权力。</li>
+<li>为什么强制存取控制提供了更高级别的数据库安全性？</li>
+<li>理解并解释MAC机制中主体、客体、敏感度标记的含义。</li>
+<li>什么是数据库的审计功能，为什么要提供审计功能？</li>
+<li>统计数据库中存在何种特殊的安全性问题？</li>
+<li>试述你了解的某一个实际的DBMS产品的安全性措施。</li>
+</ol>
+<h1 id="第五章-数据库完整性"><a href="#第五章-数据库完整性" class="headerlink" title="第五章 数据库完整性"></a>第五章 数据库完整性</h1><h2 id="一、选择题-4"><a href="#一、选择题-4" class="headerlink" title="一、选择题"></a>一、选择题</h2><ol>
+<li>完整性检查和控制的防范对象是（），防止它们进入数据库；安全性控制的防范对象是（），防止他们对数据库数据的存取<br>A. 不合语义的数据<br>B. 非法用户<br>C. 不正确的数据<br>D. 非法操作</li>
+<li>下述哪个是SQL语言中的数据控制命令（）<br>A. GRANT<br>B. COMMIT<br>C. UPDATE<br>D. SELECT</li>
+<li>下述SQL语言中的权限，哪一个允许用户定义关系时，引用其他关系的主码作为外码（）<br>A. INSERT<br>B. DELETE<br>C. REFERENCES<br>D. SELECT</li>
+</ol>
+<h2 id="二、简答题-4"><a href="#二、简答题-4" class="headerlink" title="二、简答题"></a>二、简答题</h2><ol>
+<li>什么是数据库的完整性？</li>
+<li>数据库的完整性概念与数据库的安全性概念有什么区别和联系？</li>
+<li>什么是数据库的完整性约束条件？可分为哪几类？</li>
+<li>DBMS的完整性控制机制应具有哪些功能？</li>
+<li>RDBMS在实现参照完整性时需要考虑哪些方面？</li>
+<li>假设有下面两个关系模式：<br>职工（职工号，姓名，年龄，职务，工资，部门号），其中职工号为主码；<br>部门（部门号，名称，经理名，电话），其中部门号为主码；<br>用SQL语言定义这两个关系模式，要求在模式中完成以下完整性约束条件的定义：定义每个模式的主码；定义参照完整性；定义职工年龄不得超过60岁。</li>
+<li>关系系统中，当操作违反实体完整性、参照完整性和用户定义的完整性约束条件时，一般是如何分别进行处理的？</li>
+<li>试述你了解的某一个实际的DBMS产品的完整性控制策略。</li>
+</ol>
+<h1 id="第六章-关系数据理论"><a href="#第六章-关系数据理论" class="headerlink" title="第六章 关系数据理论"></a>第六章 关系数据理论</h1><h2 id="一、选择题-5"><a href="#一、选择题-5" class="headerlink" title="一、选择题"></a>一、选择题</h2><ol>
+<li><p>为了设计出性能较优的关系模式，必须进行规范化，规范化主要的理论依据是（）<br>A. 关系规范化理论<br>B. 关系代数理论<br>C. 数理逻辑<br>D. 关系运算理论</p>
+</li>
+<li><p>规范化理论是关系数据库进行逻辑设计的理论依据，根据这个理论，关系数据库中的关系必须满足：每一个属性都是（）<br>A. 长度不变的<br>B. 不可分解的<br>C. 互相关联的<br>D. 互不相关的</p>
+</li>
+<li><p>已知关系模式R(A,B,C,D,E)及其上的函数相关性集合F&#x3D;{A→D,B→C,E→A}，该关系模式的候选关键字是（）<br>A. AB<br>B. BE<br>C. CD<br>D. DE</p>
+</li>
+<li><p>设学生关系S(SNO,SNAME,SSEX,SAGE,SDPART)的主键为SNO，学生选课关系SC(SNO,CNO,SCORE)的主键为SNO和CNO，则关系R(SNO,CNO,SSEX,SAGE,SDPART,SCORE)的主键为SNO和CNO，其满足（）<br>A. 1NF<br>B. 2NF<br>C. 3NF<br>D. BCNF</p>
+</li>
+<li><p>设有关系模式W(C,P,S,G,T,R)，其中各属性的含义是：C表示课程，P表示教师，S表示学生，G表示成绩，T表示时间，R表示教室，根据语义有如下数据依赖集：D&#x3D;{C→P,(S,C)→G,(T,R)→C,(T,P)→R,(T,S)→R}，关系模式W的一个关键字是（）<br>A. (S,C)<br>B. (T,R)<br>C. (T,P)<br>D. (T,S)</p>
+</li>
+<li><p>关系模式中，满足2NF的模式（）<br>A. 可能是1NF<br>B. 必定是1NF<br>C. 必定是3NF<br>D. 必定是BCNF</p>
+</li>
+<li><p>关系模式R中的属性全是主属性，则R的最高范式必定是（）<br>A. 1NF<br>B. 2NF<br>C. 3NF<br>D. BCNF</p>
+</li>
+<li><p>消除了部分函数依赖的1NF的关系模式，必定是（）<br>A. 1NF<br>B. 2NF<br>C. 3NF<br>D. BCNF</p>
+</li>
+<li><p>如果A→→B，那么属性A和属性B的联系是（）<br>A. 一对多<br>B. 多对一<br>C. 多对多<br>D. 以上都不是</p>
+</li>
+<li><p>关系模式的候选关键字可以有1个或多个，而主关键字有（）<br>A. 多个<br>B. 0个<br>C. 1个<br>D. 1个或多个</p>
+</li>
+<li><p>候选关键字的属性可以有（）<br>A. 多个<br>B. 0个<br>C. 1个<br>D. 1个或多个</p>
+</li>
+<li><p>关系模式的任何属性（）<br>A. 不可再分<br>B. 可以再分<br>C. 命名在关系模式上可以不唯一<br>D. 以上都不是</p>
+</li>
+<li><p>设有关系模式W(C,P,S,G,T,R)，其中各属性的含义是：C表示课程，P表示教师，S表示学生，G表示成绩，T表示时间，R表示教室，根据语义有如下数据依赖集：D&#x3D;{C→P,(S,C)→G,(T,R)→C,(T,P)→R,(T,S)→R}，若将关系模式W分解为三个关系模式W1(C,P)，W2(S,C,G)，W3(S,T,R,C)，则W1的规范化程度最高达到（）<br>A. 1NF<br>B. 2NF<br>C. 3NF<br>D. BCNF</p>
+</li>
+<li><p>在关系数据库中，任何二元关系模式的最高范式必定是（）<br>A. 1NF<br>B. 2NF<br>C. 3NF<br>D. BCNF</p>
+</li>
+<li><p>在关系规范式中，分解关系的基本原则是（）<br>I. 实现无损连接<br>II. 分解后的关系相互独立<br>III. 保持原有的依赖关系<br>A. I和II<br>B. I和III<br>C. I<br>D. II</p>
+</li>
+<li><p>不能使一个关系从第一范式转化为第二范式的条件是（）<br>A. 每一个非主属性都完全函数依赖主属性<br>B. 每一个非主属性都部分函数依赖主属性<br>C. 在一个关系中没有非主属性存在<br>D. 主键由一个属性构成</p>
+</li>
+<li><p>任何一个满足2NF但不满足3NF的关系模式都不存在（）<br>A. 主属性对键的部分依赖<br>B. 非主属性对键的部分依赖<br>C. 主属性对键的传递依赖<br>D. 非主属性对键的传递依赖</p>
+</li>
+<li><p>设数据库关系模式R&#x3D;(A,B,C,D,E)，有下列函数依赖：A→BC,D→E,C→D；下述对R的分解中，哪些分解是无损连接分解（）<br>I. (A,B,C),(C,D,E)<br>II. (A,B),(A,C,D,E)<br>III. (A,C),(B,C,D,E)<br>IV. (A,B),(C,D,E)<br>A. 只有IV<br>B. I和II<br>C. I、II和III<br>D. 都不是</p>
+</li>
+<li><p>设U是所有属性的集合，X、Y、Z都是U的子集，且Z&#x3D;U-X-Y。下面关于多值依赖的叙述中，不正确的是（）<br>A. 若X→→Y，则X→→Z<br>B. 若X→Y，则X→→Y<br>C. 若X→→Y，且Y’⊂Y，则X→→Y’<br>D. 若Z&#x3D;∅，则X→→Y</p>
+</li>
+<li><p>若关系模式R(U,F)属于3NF，则（）<br>A. 一定属于BCNF<br>B. 消除了插入和删除异常<br>C. 仍存在一定的插入和删除异常<br>D. 属于BCNF且消除了插入和删除异常</p>
+</li>
+<li><p>下列说法不正确的是（）<br>A. 任何一个包含两个属性的关系模式一定满足3NF<br>B. 任何一个包含两个属性的关系模式一定满足BCNF<br>C. 任何一个包含三个属性的关系模式一定满足3NF<br>D. 任何一个关系模式都一定有码</p>
+</li>
+<li><p>设关系模式R(A,B,C)，F是R上成立的FD集，F&#x3D;{B→C}，则分解P&#x3D;{AB,BC}相对于F（）<br>A. 是无损联接，也是保持FD的分解<br>B. 是无损联接，不是保持FD的分解<br>C. 不是无损联接，是保持FD的分解<br>D. 不是无损联接，也不是保持FD的分解</p>
+</li>
+<li><p>关系数据库规范化是为了解决关系数据库中（）的问题而引入的<br>A. 插入、删除和数据冗余<br>B. 提高查询速度<br>C. 减少数据操作的复杂性<br>D. 保证数据的安全性和完整性</p>
+</li>
+<li><p>关系的规范化中，各个范式之间的关系是（）<br>A. 1NF⊇2NF⊇3NF<br>B. 3NF⊇2NF⊇1NF<br>C. 1NF&#x3D;2NF&#x3D;3NF<br>D. 1NF⊇2NF⊇BCNF⊇3NF</p>
+</li>
+<li><p>数据库中的冗余数据是指可（）的数据<br>A. 容易产生错误<br>B. 容易产生冲突<br>C. 无关紧要<br>D. 由基本数据导出</p>
+</li>
+<li><p>学生表（id，name，sex，age，depart_id，depart_name），存在函数依赖是id→name，id→sex，id→age，id→depart_id；depart_id→depart_name，其满足（）<br>A. 1NF<br>B. 2NF<br>C. 3NF<br>D. BCNF</p>
+</li>
+<li><p>设有关系模式R(S,D,M)，其函数依赖集F&#x3D;{S→D，D→M}，则关系模式R的规范化程度最高达到（）<br>A. 1NF<br>B. 2NF<br>C. 3NF<br>D. BCNF</p>
+</li>
+<li><p>设有关系模式R(A,B,C,D)，其数据依赖集F&#x3D;{(A,B)→C，C→D}，则关系模式R的规范化程度最高达到（）<br>A. 1NF<br>B. 2NF<br>C. 3NF<br>D. BCNF</p>
+</li>
+<li><p>下列关于函数依赖的叙述中，哪一条是不正确的（）<br>A. 由X→Y，Y→Z，可得X→Z<br>B. 由X→YZ，可得X→Y，Y→Z<br>C. 由X→Y，WY→Z，可得XW→Z<br>D. 由X→Y，Z⊆Y，可得X→Z</p>
+</li>
+<li><p>X→Y，当下列哪一条成立时，称为平凡的函数依赖（）<br>A. X⊆Y<br>B. Y⊆X<br>C. X∩Y&#x3D;∅<br>D. X∩Y≠∅</p>
+</li>
+<li><p>关系数据库的规范化理论指出：关系数据库中的关系应该满足一定的要求，最起码的要求是达到1NF，即满足（）<br>A. 每个非主键属性都完全依赖于主键属性<br>B. 主键属性唯一标识关系中的元组<br>C. 关系中的元组不可重复<br>D. 每个属性都是不可分解的</p>
+</li>
+<li><p>根据关系数据库规范化理论，关系数据库中的关系要满足第一范式，部门（部门号，部门名，部门成员，部门总经理）关系中，因哪个属性而使它不满足第一范式（）<br>A. 部门总经理<br>B. 部门成员<br>C. 部门名<br>D. 部门号</p>
+</li>
+<li><p>有关系模式A(C,T,H,R,S)，其中各属性的含义是：C-课程，T-教员，H-上课时间，R-教室，S-学生；根据语义有如下函数依赖集F&#x3D;{(C→T)，(H,R)→C，(H,T)→R，(H,S)→R}<br>（1）关系模式A的码是（）<br>A. C<br>B. (H,S)<br>C. (H,R)<br>D. (H,T)<br>（2）关系模式A的规范化程度最高达到（）<br>A. 1NF<br>B. 2NF<br>C. 3NF<br>D. BCNF<br>（3）现将关系模式A分解为两个关系模式A1(C,T)，A2(H,R,S)，则其中A1的规范化程度达到（）<br>A. 1NF<br>B. 2NF<br>C. 3NF<br>D. BCNF</p>
+</li>
+</ol>
+<h2 id="二、简答题-5"><a href="#二、简答题-5" class="headerlink" title="二、简答题"></a>二、简答题</h2><ol>
+<li>理解并给出下列术语的定义：函数依赖、部分函数依赖、完全函数依赖、候选码、主码、外码、全码。</li>
+<li>建立一个关于系、学生、班级、学会等诸信息的关系数据库。描述学生的属性有：学号、姓名、出生年月、系名、班号、宿舍区；描述班级的属性有：班号、专业名、系名、人数、入校年份；描述系的属性有：系名、系号、系办公室地点、人数；描述学会的属性有：学会名、成立年份、地点、人数。有关语义如下：一个系有若干专业，每个专业每年只招一个班，每个班有若干学生；一个系的学生住在同一宿舍区；每个学生可参加若干学会，每个学会有若干学生；学生参加某学会有一个入会年份。请给出关系模式，写出每个关系模式的极小函数依赖集，指出是否存在传递函数依赖，对于函数依赖左部是多属性的情况讨论函数依赖是完全函数依赖还是部分函数依赖；指出各关系的候选码、外部码；有没有全码存在？</li>
+<li>试由Armstrong公理系统推导出下面三条推理规则：<br>（1）合并规则：若X→Z，X→Y，则有X→YZ<br>（2）伪传递规则：由X→Y，WY→Z，有XW→Z<br>（3）分解规则：X→Y，Z⊆Y，有X→Z</li>
+<li>试举出三个多值依赖的实例。</li>
+<li>下面的结论哪些是正确的，哪些是错误的？对于错误的结论请给出理由或给出一个反例说明之。<br>（1）任何一个二元关系都是属于3NF的。<br>（2）任何一个二元关系都是属于BCNF的。<br>（3）任何一个二元关系都是属于4NF的。<br>（5）若R.A→R.B，R.B→R.C，则R.A→R.C。<br>（6）若R.A→R.B，R.A→R.C，则R.A→R.(B,C)。<br>（7）若R.B→R.A，R.C→R.A，则R.(B,C)→R.A。<br>（8）若R.(B,C)→R.A，则R.B→R.A，R.C→R.A。</li>
+</ol>
+<h1 id="第七章-数据库设计"><a href="#第七章-数据库设计" class="headerlink" title="第七章 数据库设计"></a>第七章 数据库设计</h1><h2 id="一、选择题-6"><a href="#一、选择题-6" class="headerlink" title="一、选择题"></a>一、选择题</h2><ol>
+<li>数据流程图是用于描述结构化方法中（）阶段的工具<br>A. 概要设计<br>B. 可行性分析<br>C. 程序编码<br>D. 需求分析</li>
+<li>数据库设计中，用E-R图描述信息结构但不涉及信息在计算机中的表示，这是数据库设计的（）<br>A. 需求分析阶段<br>B. 逻辑设计阶段<br>C. 概念设计阶段<br>D. 物理设计阶段</li>
+<li>在数据库设计中，将E-R图转换成关系数据模型的过程属于（）<br>A. 需求分析阶段<br>B. 逻辑设计阶段<br>C. 概念设计阶段<br>D. 物理设计阶段</li>
+<li>子模式DDL是用来描述（）<br>A. 数据库的总体逻辑结构<br>B. 数据库的局部逻辑结构<br>C. 数据库的物理存储结构<br>D. 数据库的概念结构</li>
+<li>数据库设计的概念设计阶段，表示概念结构的常用方法和描述工具是（）<br>A. 层次分析法和层次结构图<br>B. 数据流程分析法和数据流程图<br>C. 实体联系法和实体联系图<br>D. 结构分析法和模块结构图</li>
+<li>在E-R模型向关系模型转换时，M:N的联系转换为关系模式时，其关键字是（）<br>A. M端实体的关键字<br>B. N端实体的关键字<br>C. M、N端实体的关键字组合<br>D. 重新选取其他属性</li>
+<li>某学校规定，每一个班级最多有50名学生，至少有10名学生；每一名学生必须属于一个班级。在班级与学生实体的联系中，学生实体的基数是（）<br>A. (0,1)<br>B. (1,1)<br>C. (1,10)<br>D. (10,50)</li>
+<li>在关系数据库设计中，设计关系模式是数据库设计中（）阶段的任务<br>A. 逻辑设计阶段<br>B. 概念设计阶段<br>C. 物理设计阶段<br>D. 需求分析阶段</li>
+<li>关系数据库的规范化理论主要解决的问题是（）<br>A. 如何构造合适的数据逻辑结构<br>B. 如何构造合适的数据物理结构<br>C. 如何构造合适的应用程序界面<br>D. 如何控制不同用户的数据操作权限</li>
+<li>数据库设计可划分为七个阶段，每个阶段都有自己的设计内容，“为哪些关系，在哪些属性上建立什么样的索引”这一设计内容应该属于（）设计阶段<br>A. 概念设计<br>B. 逻辑设计<br>C. 物理设计<br>D. 全局设计</li>
+<li>假设设计数据库性能用“开销”，即时间、空间及可能的费用来衡量，则在数据库应用系统生存期中存在很多开销。其中，对物理设计者来说，主要考虑的是（）<br>A. 规划开销<br>B. 设计开销<br>C. 操作开销<br>D. 维护开销</li>
+<li>数据库物理设计完成后，进入数据库实施阶段，下述工作中，（）一般不属于实施阶段的工作<br>A. 建立库结构<br>B. 系统调试<br>C. 加载数据<br>D. 扩充功能</li>
+<li>从E-R图导出关系模型时，如果实体间的联系是M:N的，下列说法中正确的是（）<br>A. 将N方关键字和联系的属性纳入M方的属性中<br>B. 将M方关键字和联系的属性纳入N方的属性中<br>C. 增加一个关系表示联系，其中纳入M方和N方的关键字<br>D. 在M方属性和N方属性中均增加一个表示级别的属性</li>
+<li>在E-R模型中，如果有3个不同的实体集，3个M:N联系，根据E-R模型转换为关系模型的规则，转换为关系的数目是（）<br>A. 4<br>B. 5<br>C. 6<br>D. 7</li>
+</ol>
+<h2 id="二、简答题-6"><a href="#二、简答题-6" class="headerlink" title="二、简答题"></a>二、简答题</h2><ol>
+<li>试述数据库设计过程。</li>
+<li>试述数据库设计过程的各个阶段上的设计描述。</li>
+<li>数据库结构设计的不同阶段形成数据库的各级模式，请说明各级模式是在数据库设计的哪些阶段形成的。</li>
+<li>试述数据库设计的特点。</li>
+<li>需求分析阶段的设计目标是什么？调查的内容是什么？</li>
+<li>数据字典的内容和作用是什么？</li>
+<li>什么是数据库的概念结构？试述其特点和设计策略。</li>
+<li>什么叫数据抽象？试举例说明。</li>
+<li>试述数据库概念结构设计的重要性和设计步骤。</li>
+<li>什么是E-R图？构成E-R图的基本要素是什么？</li>
+<li>为什么要视图集成？视图集成的方法是什么？</li>
+<li>什么是数据库的逻辑结构设计？试述其设计步骤。</li>
+<li>试述把E-R图转换为DBTG模型和关系模型的转换规则。</li>
+<li>你能给出由E-R图转换为IMS模型的转换规则吗？</li>
+</ol>
+<h1 id="第九章-关系系统及其优化"><a href="#第九章-关系系统及其优化" class="headerlink" title="第九章 关系系统及其优化"></a>第九章 关系系统及其优化</h1><h2 id="一、选择题-7"><a href="#一、选择题-7" class="headerlink" title="一、选择题"></a>一、选择题</h2><ol>
+<li>概念模型是现实世界的第一层抽象，这一类最著名的模型是（）<br>A. 层次模型<br>B. 关系模型<br>C. 网状模型<br>D. 实体-关系模型</li>
+<li>区分不同实体的依据是（）<br>A. 名称<br>B. 属性<br>C. 对象<br>D. 概念</li>
+<li>关系数据模型是目前最重要的一种数据模型，它的三个要素分别为（）<br>A. 实体完整、参照完整、用户自定义完整<br>B. 数据结构、关系操作、完整性约束<br>C. 数据增加、数据修改、数据查询<br>D. 外模式、模式、内模式</li>
+<li>在（）中一个结点可以有多个双亲，节点之间可以有多种联系<br>A. 网状模型<br>B. 关系模型<br>C. 层次模型<br>D. 以上都有</li>
+<li>（）的存取路径对用户透明，从而具有更高的数据独立性、更好的安全保密性，也简化了程序员的工作和数据库开发建立的工作<br>A. 网状模型<br>B. 关系模型<br>C. 层次模型<br>D. 以上都有</li>
+<li>在关系数据库中，要求基本关系中所有的主属性上不能有空值，其遵守的约束规则是（）<br>A. 数据依赖完整性规则<br>B. 用户定义完整性规则<br>C. 实体完整性规则<br>D. 域完整性规则</li>
+</ol>
+<h2 id="二、简答题-7"><a href="#二、简答题-7" class="headerlink" title="二、简答题"></a>二、简答题</h2><ol>
+<li>试述关系模型的三个组成部分。</li>
+<li>试述关系数据语言的特点和分类。</li>
+<li>定义并理解下列术语，说明它们之间的联系与区别：<br>（1）域，关系，元组，属性<br>（2）主码，候选码，外部码<br>（3）关系模式，关系，关系数据库</li>
+<li>试述关系模型的完整性规则。在参照完整性中，为什么外部码属性的值也可以为空？什么情况下可以为空？</li>
+<li>等值连接与自然连接的区别是什么？</li>
+</ol>
+<h1 id="第十章-数据库恢复技术"><a href="#第十章-数据库恢复技术" class="headerlink" title="第十章 数据库恢复技术"></a>第十章 数据库恢复技术</h1><h2 id="一、选择题-8"><a href="#一、选择题-8" class="headerlink" title="一、选择题"></a>一、选择题</h2><ol>
+<li>一个事务的执行，要么全部完成，要么全部不做，一个事务中对数据库的所有操作都是一个不可分割的操作序列的属性是（）<br>A. 原子性<br>B. 一致性<br>C. 独立性<br>D. 持久性</li>
+<li>表示两个或多个事务可以同时运行而不互相影响的是（）<br>A. 原子性<br>B. 一致性<br>C. 隔离性<br>D. 持久性</li>
+<li>事务的持续性是指（）<br>A. 事务中包括的所有操作要么都做，要么都不做<br>B. 事务一旦提交，对数据库的改变是永久的<br>C. 一个事务内部的操作对并发的其他事务是隔离的<br>D. 事务必须是使数据库从一个一致性状态变到另一个一致性状态</li>
+<li>SQL语言中的COMMIT语句的主要作用是（）<br>A. 结束程序<br>B. 返回系统<br>C. 提交事务<br>D. 存储数据</li>
+<li>SQL语言中用（）语句实现事务的回滚<br>A. CREATE TABLE<br>B. ROLLBACK<br>C. GRANT 和 REVOKE<br>D. COMMIT</li>
+<li>若系统在运行过程中，由于某种硬件故障，使存储在外存上的数据部分损失或全部损失，这种情况称为（）<br>A. 介质故障<br>B. 运行故障<br>C. 系统故障<br>D. 事务故障</li>
+<li>在DBMS中实现事务持久性的子系统是（）<br>A. 安全管理子系统<br>B. 完整性管理子系统<br>C. 并发控制子系统<br>D. 恢复管理子系统</li>
+<li>后援副本的作用是（）<br>A. 保障安全性<br>B. 一致性控制<br>C. 故障后的恢复<br>D. 数据的转储</li>
+<li>事务日志用于保存（）<br>A. 程序运行过程<br>B. 程序的执行结果<br>C. 对数据的更新操作<br>D. 数据操作</li>
+<li>数据库恢复的基础是利用转储的冗余数据。这些转储的冗余数据包括（）<br>A. 数据字典、应用程序、审计档案、数据库后备副本<br>B. 数据字典、应用程序、审计档案、日志文件<br>C. 日志文件、数据库后备副本<br>D. 数据字典、应用程序、数据库后备副本</li>
+</ol>
+<h2 id="二、简答题-8"><a href="#二、简答题-8" class="headerlink" title="二、简答题"></a>二、简答题</h2><ol>
+<li>试述事务的概念及事务的四个特性。</li>
+<li>为什么事务非正常结束时会影响数据库数据的正确性？请列举一例说明之。</li>
+<li>数据库中为什么要有恢复子系统？它的功能是什么？</li>
+<li>数据库运行中可能产生的故障有哪几类？哪些故障影响事务的正常执行？哪些故障破坏数据库数据？</li>
+<li>数据库恢复的基本技术有哪些？</li>
+<li>数据库转储的意义是什么？试比较各种数据转储方法。</li>
+<li>什么是日志文件？为什么要设立日志文件？</li>
+<li>登记日志文件时为什么必须先写日志文件，后写数据库？</li>
+<li>针对不同的故障，试给出恢复的策略和方法（即如何进行事务故障的恢复？系统故障的恢复？介质故障恢复？）。</li>
+<li>具有检查点的恢复技术有什么优点？</li>
+<li>试述使用检查点方法进行恢复的步骤。</li>
+<li>什么是数据库镜像？它有什么用途？</li>
+<li>试述你了解的某一个实际的DBMS产品中采用的恢复策略。</li>
+<li>试用恢复的基本技术设计一个恢复子系统，给出这个子系统的恢复策略，包括：<br>（a）当产生某一类故障时如何恢复数据库的方法；<br>（b）日志文件的结构；<br>（c）登记日志文件的方法；<br>（d）利用日志文件恢复事务的方法；<br>（e）转储的类型；<br>（f）转储的后备副本和日志文件如何配合使用。</li>
+</ol>
+<h1 id="第十一章-数据库并发控制"><a href="#第十一章-数据库并发控制" class="headerlink" title="第十一章 数据库并发控制"></a>第十一章 数据库并发控制</h1><h2 id="一、选择题-9"><a href="#一、选择题-9" class="headerlink" title="一、选择题"></a>一、选择题</h2><ol>
+<li>为了防止一个用户的工作不适当地影响另一个用户，应该采取（）<br>A. 完整性控制<br>B. 访问控制<br>C. 安全性控制<br>D. 并发控制</li>
+<li>解决并发操作带来的数据不一致问题普遍采用（）技术<br>A. 封锁<br>B. 存取控制<br>C. 恢复<br>D. 协商</li>
+<li>下列不属于并发操作带来的问题是（）<br>A. 丢失修改<br>B. 不可重复读<br>C. 死锁<br>D. 脏读</li>
+<li>DBMS普遍采用（）方法来保证调度的正确性<br>A. 索引<br>B. 授权<br>C. 封锁<br>D. 日志</li>
+<li>事务T在修改数据R之前必须先对其加X锁，直到事务结束才释放，这是（）<br>A. 一级封锁协议<br>B. 二级封锁协议<br>C. 三级封锁协议<br>D. 零级封锁协议</li>
+<li>如果事务T获得了数据项Q上的排他锁，则T对Q（）<br>A. 只能读不能写<br>B. 只能写不能读<br>C. 既可读又可写<br>D. 不能读也不能写</li>
+<li>设事务T1和T2，对数据库中的数据A进行操作，可能有以下几种情况，请问哪一种不会发生冲突操作（）<br>A. T1正在写A，T2要读A<br>B. T1正在写A，T2也要写A<br>C. T1正在读A，T2要写A<br>D. T1正在读A，T2也要读A</li>
+<li>如果有两个事务，同时对数据库中同一数据进行操作，不会引起冲突的操作是（）<br>A. 一个是DELETE，一个是SELECT<br>B. 一个是SELECT，一个是DELETE<br>C. 两个都是UPDATE<br>D. 两个都是SELECT</li>
+<li>在数据库系统中，死锁属于（）<br>A. 系统故障<br>B. 事务故障<br>C. 介质故障<br>D. 程序故障</li>
+</ol>
+<h2 id="二、简答题-9"><a href="#二、简答题-9" class="headerlink" title="二、简答题"></a>二、简答题</h2><ol>
+<li>在数据库中为什么要并发控制？</li>
+<li>并发操作可能会产生哪几类数据不一致？用什么方法能避免各种不一致的情况？</li>
+<li>什么是封锁？</li>
+<li>基本的封锁类型有几种？试述它们的含义。</li>
+<li>什么是封锁协议？不同级别的封锁协议的主要区别是什么？</li>
+<li>不同封锁协议与系统一致性级别的关系是什么？</li>
+<li>试述活锁的产生原因和解决方法。</li>
+<li>请给出预防死锁的若干方法。</li>
+<li>请给出检测死锁发生的一种方法，当发生死锁后如何解除死锁？</li>
+<li>什么样的并发调度是正确的调度？</li>
+<li>试述两段锁协议的概念。</li>
+<li>为什么要引进意向锁？意向锁的含义是什么？</li>
+<li>试述常用的意向锁：IS锁、IX锁、SIX锁，给出这些锁的相容矩阵。</li>
+<li>理解并解释下列术语的含义：封锁、活锁、死锁、排它锁、共享锁、并发事务的调度、可串行化的调度、两段锁协议。</li>
+<li>试述你了解的某一个实际的DBMS产品的并发控制机制。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%F0%9F%93%98%E7%AC%94%E8%AE%B0/" rel="tag"># 📘笔记</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/11/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_%E5%A4%8D%E4%B9%A0%E9%A2%98/" rel="prev" title="计算机网络_复习题">
+                  <i class="fa fa-angle-left"></i> 计算机网络_复习题
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Yuanzhibx</span>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/yuanzhibx" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
