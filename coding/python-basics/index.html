@@ -1,0 +1,926 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Python 基础笔记：从变量和循环到类、文件与测试 · Yuanzhibx</title><meta name="description" content="将 Python 基础学习材料整理为可查阅的笔记，包含核心概念、独立示例、常见错误和语法速查，并连接文件处理与数据统计练习。"><meta name="theme-color" content="#ffffff"><meta property="og:title" content="Python 基础笔记：从变量和循环到类、文件与测试"><meta property="og:description" content="将 Python 基础学习材料整理为可查阅的笔记，包含核心概念、独立示例、常见错误和语法速查，并连接文件处理与数据统计练习。"><meta property="og:type" content="website"><link rel="canonical" href="https://yuanzhibx.github.io/coding/python-basics/"><meta property="og:url" content="https://yuanzhibx.github.io/coding/python-basics/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="stylesheet" href="/_astro/Base.Cj1Nx5ap.css"><link rel="stylesheet" href="/_astro/_..C3PRKcpH.css"></head><body><a class="skip-link" href="#main">跳转到主要内容</a><header class="site-header"><div class="container header-inner"><a class="brand" href="/" aria-label="Yuanzhibx Home">Yuanzhibx</a><button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" hidden>Menu <span aria-hidden="true">☰</span></button><nav id="main-navigation" aria-label="Main navigation"><a href="/">Home</a><a href="/study/">Study</a><a href="/coding/" aria-current="page">Coding</a><a href="/tools/">Tools</a><a href="/about/">About</a></nav></div></header><main id="main" tabindex="-1"><div class="container page-shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/coding/">Coding</a><span aria-hidden="true">/</span><span>Entry</span></nav><div class="article-grid"><article class="article-main"><header class="article-header"><p class="eyebrow">Coding · Articles</p><h1>Python 基础笔记：从变量和循环到类、文件与测试</h1><time datetime="2026-10-02">2026年10月2日</time><ul class="article-tags" aria-label="文章标签"><li><a href="/coding/?tag=Python">Python</a></li><li><a href="/coding/?tag=%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95">基础语法</a></li></ul><p class="article-summary">将 Python 基础学习材料整理为可查阅的笔记，包含核心概念、独立示例、常见错误和语法速查，并连接文件处理与数据统计练习。</p></header><div class="prose"><p>这是一份根据个人 Obsidian《Python Basics》重新编排的基础笔记，覆盖原学习材料 P6–P37 的主题。适合一边运行示例，一边查阅语法；内容整理不代表已经完成所有练习或项目。</p>
+<p>每个 Python 代码块均可单独保存为 <code>.py</code> 文件运行。本文采用 Python 3.10 及以上语法，只用标准库；<code>input()</code> 示例需要交互输入，<code>unittest</code> 示例会输出测试报告。人物、成绩、温度和日期均是教学数据。</p>
+<p>第一次阅读可按章节顺序推进，复习时使用右侧目录或文末速查。含“语法格式”的 <code>text</code> 代码块是说明性模板，不应直接作为程序执行。</p>
+<h2 id="输入变量与数据类型">输入、变量与数据类型</h2>
+<h3 id="输出函数-print">输出函数 print</h3>
+<p><strong>核心概念</strong></p>
+<p><code>print()</code> 是 Python 的内置输出函数，用于把文本、数字、变量值或表达式结果显示到终端。圆括号中放要输出的对象；字符串需要使用单引号或双引号包围，数字和表达式可以直接写。一次调用可以输出多个对象，Python 会先把它们转换成适合显示的文本。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>print(对象1, 对象2, ...)</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 输出文字、变量和计算结果</span></span>
+<span class="line"><span style="color:#E1E4E8">course </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "Python"</span></span>
+<span class="line"><span style="color:#E1E4E8">hours </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 3</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"开始学习 Python"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"课程："</span><span style="color:#E1E4E8">, course)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"预计分钟数："</span><span style="color:#E1E4E8">, hours </span><span style="color:#F97583">*</span><span style="color:#79B8FF"> 60</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+<code>print</code> 后必须使用英文圆括号。输出文字时不能漏掉引号；变量名则不能加引号，否则打印的是变量名本身，而不是变量保存的值。Python 字符串可以使用单引号或双引号，但开头和结尾必须匹配。</p>
+</blockquote>
+<h3 id="print-的分隔换行与转义">print 的分隔、换行与转义</h3>
+<p><strong>核心概念</strong></p>
+<p><code>print()</code> 默认用一个空格分隔多个对象，并在结尾添加换行。可以通过 <code>sep</code> 修改分隔符，通过 <code>end</code> 修改结尾字符。字符串中的反斜杠可引入转义字符，例如 <code>\n</code> 表示换行、<code>\t</code> 表示制表符、<code>\\</code> 表示一个反斜杠。三引号字符串适合保存跨多行文本。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>print(对象1, 对象2, sep="分隔符", end="结尾字符")</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 控制分隔符与结尾字符</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"2026"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"10"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"02"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">sep</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"-"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"加载中"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">end</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"..."</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"完成"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#a3aebb"># 转义字符和多行字符串</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"姓名</span><span style="color:#79B8FF">\t</span><span style="color:#9ECBFF">成绩"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"小林</span><span style="color:#79B8FF">\t</span><span style="color:#9ECBFF">95"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">poem </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> """第一行</span></span>
+<span class="line"><span style="color:#9ECBFF">第二行"""</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(poem)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+<code>sep</code> 和 <code>end</code> 是关键字参数，必须写在普通输出对象之后。<code>\n</code> 只有位于字符串中才表示换行；若路径中包含大量反斜杠，可以使用原始字符串，如 <code>r"C:\\data\\file.txt"</code>，但原始字符串不能以单个反斜杠结尾。</p>
+</blockquote>
+<h3 id="变量与赋值">变量与赋值</h3>
+<p><strong>核心概念</strong></p>
+<p>变量是指向某个值的名称。赋值语句 <code>名称 = 值</code> 会先计算右侧，再让左侧名称引用计算结果。Python 是动态类型语言，同一个变量可以在不同时刻引用不同类型的对象，但频繁改变变量含义会降低可读性。变量可以重新赋值，也可以使用同步赋值一次交换两个值。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>变量名 = 值</span></span>
+<span class="line"><span>变量1, 变量2 = 值1, 值2</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 创建变量并更新变量</span></span>
+<span class="line"><span style="color:#E1E4E8">name </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "小林"</span></span>
+<span class="line"><span style="color:#E1E4E8">score </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 90</span></span>
+<span class="line"><span style="color:#E1E4E8">score </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> score </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 5</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#a3aebb"># 同步赋值与变量交换</span></span>
+<span class="line"><span style="color:#E1E4E8">left, right </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "A"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"B"</span></span>
+<span class="line"><span style="color:#E1E4E8">left, right </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> right, left</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(name, score)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(left, right)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+<code>=</code> 表示赋值，不表示数学中的恒等关系；判断两个值是否相等要使用 <code>==</code>。第一次使用变量前必须先赋值，否则会触发 <code>NameError</code>。<code>score = score + 5</code> 的含义是读取旧值、加 5、再把新值赋回 <code>score</code>。</p>
+</blockquote>
+<h3 id="标识符与命名规范">标识符与命名规范</h3>
+<p><strong>核心概念</strong></p>
+<p>变量名、函数名和类名都属于标识符。常用英文标识符由字母、数字和下划线组成，不能以数字开头；Python 也支持符合规则的 Unicode 标识符，也不能使用 <code>if</code>、<code>for</code>、<code>class</code> 等 Python 关键字。Python 区分大小写，因此 <code>name</code>、<code>Name</code> 和 <code>NAME</code> 是三个不同名称。好名称应准确表达数据含义，而不是只写 <code>a</code>、<code>x1</code> 等含糊缩写。</p>
+<p><strong>语法格式与代码示例</strong></p>
+<ul>
+<li>变量和函数：小写加下划线，如 <code>student_score</code>、<code>calculate_average</code>。</li>
+<li>类：大驼峰命名，如 <code>StudentRecord</code>。</li>
+<li>常量：全大写加下划线，如 <code>MAX_RETRY</code>。</li>
+<li>布尔变量：使用 <code>is_</code>、<code>has_</code>、<code>can_</code> 等前缀表达真假含义。</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 名称直接表达用途</span></span>
+<span class="line"><span style="color:#E1E4E8">student_name </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "小林"</span></span>
+<span class="line"><span style="color:#E1E4E8">final_score </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 92</span></span>
+<span class="line"><span style="color:#E1E4E8">is_passed </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> final_score </span><span style="color:#F97583">>=</span><span style="color:#79B8FF"> 60</span></span>
+<span class="line"><span style="color:#79B8FF">MAX_RETRY</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> 3</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(student_name, final_score, is_passed, </span><span style="color:#79B8FF">MAX_RETRY</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+不要使用 <code>list</code>、<code>str</code>、<code>sum</code>、<code>input</code> 等内置名称作为变量名，否则会遮蔽原有函数。中文变量名在语法上可用，但协作和跨平台场景通常采用有意义的英文名称。</p>
+</blockquote>
+<h3 id="数学运算与优先级">数学运算与优先级</h3>
+<p><strong>核心概念</strong></p>
+<p>Python 支持加 <code>+</code>、减 <code>-</code>、乘 <code>*</code>、真除 <code>/</code>、整除 <code>//</code>、取余 <code>%</code> 和幂运算 <code>**</code>。<code>/</code> 的结果通常是浮点数；<code>//</code> 取得向下取整后的商；<code>%</code> 取得余数。常见用途包括判断奇偶、循环分组和单位换算。运算优先级大致为：括号、幂、正负号、乘除整除取余、加减。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 常用数学运算</span></span>
+<span class="line"><span style="color:#E1E4E8">a </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 17</span></span>
+<span class="line"><span style="color:#E1E4E8">b </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 5</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(a </span><span style="color:#F97583">+</span><span style="color:#E1E4E8"> b)   </span><span style="color:#a3aebb"># 22</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(a </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> b)   </span><span style="color:#a3aebb"># 3.4</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(a </span><span style="color:#F97583">//</span><span style="color:#E1E4E8"> b)  </span><span style="color:#a3aebb"># 3</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(a </span><span style="color:#F97583">%</span><span style="color:#E1E4E8"> b)   </span><span style="color:#a3aebb"># 2</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(b </span><span style="color:#F97583">**</span><span style="color:#79B8FF"> 2</span><span style="color:#E1E4E8">)  </span><span style="color:#a3aebb"># 25</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#a3aebb"># 使用括号明确运算顺序</span></span>
+<span class="line"><span style="color:#E1E4E8">average </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (</span><span style="color:#79B8FF">88</span><span style="color:#F97583"> +</span><span style="color:#79B8FF"> 92</span><span style="color:#F97583"> +</span><span style="color:#79B8FF"> 95</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">/</span><span style="color:#79B8FF"> 3</span></span>
+<span class="line"><span style="color:#E1E4E8">is_even </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> a </span><span style="color:#F97583">%</span><span style="color:#79B8FF"> 2</span><span style="color:#F97583"> ==</span><span style="color:#79B8FF"> 0</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(average, is_even)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+<code>^</code> 不是幂运算，而是按位异或；平方应写 <code>x ** 2</code>。负数的 <code>//</code> 会向负无穷方向取整，例如 <code>-7 // 3</code> 等于 <code>-3</code>。复杂表达式不要只依赖记忆优先级，使用括号更清楚。</p>
+</blockquote>
+<h3 id="注释与代码说明">注释与代码说明</h3>
+<p><strong>核心概念</strong></p>
+<p>注释用于解释代码意图，不参与程序执行。单行注释以 <code>#</code> 开始，可以独占一行，也可以写在代码之后。多行说明通常使用多行 <code>#</code>；三引号字符串只有放在模块、类或函数开头时才是文档字符串，并不等同于普通注释。好的注释解释“为什么这样做”，而不是重复代码已经表达的动作。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> calculate_discount</span><span style="color:#E1E4E8">(price: </span><span style="color:#79B8FF">float</span><span style="color:#E1E4E8">, is_member: </span><span style="color:#79B8FF">bool</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">float</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#9ECBFF">    """计算会员折后价格。"""</span></span>
+<span class="line"><span style="color:#a3aebb">    # 会员统一享受九折，规则变化时只需修改此处</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> is_member:</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> price </span><span style="color:#F97583">*</span><span style="color:#79B8FF"> 0.9</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> price</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">original_price </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 100.0</span></span>
+<span class="line"><span style="color:#E1E4E8">final_price </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> calculate_discount(original_price, </span><span style="color:#79B8FF">True</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(final_price)</span></span></code></pre>
+<blockquote>
+<p><strong>编写原则</strong>
+变量名和函数名应先做到自解释，再用注释补充业务规则、边界条件和设计原因。代码修改后要同步更新注释；错误或过期的注释比没有注释更容易误导读者。</p>
+</blockquote>
+<h3 id="基本数据类型与类型转换">基本数据类型与类型转换</h3>
+<p><strong>核心概念</strong></p>
+<p>基础阶段最常用的类型包括整数 <code>int</code>、浮点数 <code>float</code>、字符串 <code>str</code>、布尔值 <code>bool</code> 和空值 <code>None</code>。<code>type()</code> 可查看对象类型，<code>isinstance()</code> 更适合在程序中判断类型。<code>int()</code>、<code>float()</code>、<code>str()</code> 和 <code>bool()</code> 可以创建或转换数据，但转换必须满足目标类型的格式要求。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 查看类型并进行转换</span></span>
+<span class="line"><span style="color:#E1E4E8">age_text </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "20"</span></span>
+<span class="line"><span style="color:#E1E4E8">age </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> int</span><span style="color:#E1E4E8">(age_text)</span></span>
+<span class="line"><span style="color:#E1E4E8">height </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> float</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"1.75"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">message </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "年龄："</span><span style="color:#F97583"> +</span><span style="color:#79B8FF"> str</span><span style="color:#E1E4E8">(age)</span></span>
+<span class="line"><span style="color:#E1E4E8">is_adult </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> age </span><span style="color:#F97583">>=</span><span style="color:#79B8FF"> 18</span></span>
+<span class="line"><span style="color:#E1E4E8">missing_value </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> None</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">type</span><span style="color:#E1E4E8">(age).</span><span style="color:#79B8FF">__name__</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(height, message, is_adult, missing_value)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">isinstance</span><span style="color:#E1E4E8">(age, </span><span style="color:#79B8FF">int</span><span style="color:#E1E4E8">))</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+<code>int("3.5")</code> 会触发 <code>ValueError</code>，应先转为 <code>float</code>，再根据需求处理。浮点数采用二进制近似表示，<code>0.1 + 0.2</code> 不一定精确等于 <code>0.3</code>。<code>bool("False")</code> 仍为 <code>True</code>，因为任何非空字符串都是真值；不能把字符串内容直接当作布尔含义。</p>
+</blockquote>
+<h3 id="交互模式与脚本模式">交互模式与脚本模式</h3>
+<p><strong>核心概念</strong></p>
+<p>交互模式（REPL）会读取一条语句、立即执行并显示结果，适合试验表达式、查看函数行为和快速排错。脚本模式把代码保存在 <code>.py</code> 文件中，再整体运行，适合可重复使用的程序。正式学习成果应保存为脚本；交互模式中的试验不会自动成为项目文件。</p>
+<p><strong>语法格式与代码示例</strong></p>
+<p>终端执行 <code>python3</code> 可进入交互模式，执行 <code>python3 文件名.py</code> 可运行脚本。编辑器中的运行按钮本质上也是选择解释器并执行脚本。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 这段代码保存为脚本后可以重复运行</span></span>
+<span class="line"><span style="color:#E1E4E8">numbers </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">total </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> sum</span><span style="color:#E1E4E8">(numbers)</span></span>
+<span class="line"><span style="color:#E1E4E8">average </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> total </span><span style="color:#F97583">/</span><span style="color:#79B8FF"> len</span><span style="color:#E1E4E8">(numbers)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"总和："</span><span style="color:#E1E4E8">, total)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"平均值："</span><span style="color:#E1E4E8">, average)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+交互模式常显示表达式的返回值，而脚本不会自动显示；脚本中需要显式调用 <code>print()</code>。若编辑器与终端使用了不同解释器，可能出现“终端可导入、编辑器却找不到模块”的情况，应先核对 Python 解释器路径。</p>
+</blockquote>
+<h3 id="使用-input-获取输入">使用 input 获取输入</h3>
+<p><strong>核心概念</strong></p>
+<p><code>input()</code> 会显示提示文字，暂停程序并等待用户输入；按下回车后，它返回一个字符串。即使用户输入的是数字，得到的也仍是 <code>str</code>，进行数学计算前必须显式转换。<code>strip()</code> 可移除输入首尾多余空白，适合处理姓名、命令等文本。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>变量 = input("提示信息")</span></span>
+<span class="line"><span>数字 = int(input("提示信息"))</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 获取文字和数值输入</span></span>
+<span class="line"><span style="color:#E1E4E8">name </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> input</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"请输入姓名："</span><span style="color:#E1E4E8">).strip()</span></span>
+<span class="line"><span style="color:#E1E4E8">age </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> int</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">input</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"请输入年龄："</span><span style="color:#E1E4E8">))</span></span>
+<span class="line"><span style="color:#E1E4E8">next_age </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> age </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 1</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">name</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">，你明年 </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">next_age</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF"> 岁。"</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+不要写成 <code>int(input)(...)</code>，转换函数必须包住 <code>input()</code> 的返回值。用户可能输入空字符串或非数字文本，真实应用需要配合异常处理。不要使用 <code>eval(input())</code> 解析普通输入，因为它会执行用户提供的代码，存在安全风险。</p>
+</blockquote>
+<h2 id="条件判断与逻辑运算">条件判断与逻辑运算</h2>
+<h3 id="条件语句-if">条件语句 if</h3>
+<p><strong>核心概念</strong></p>
+<p>条件语句根据布尔表达式决定是否执行某段代码。<code>if</code> 后写条件并以冒号结尾，属于该分支的语句必须保持一致缩进。<code>else</code> 在条件为假时执行。比较运算包括 <code>==</code>、<code>!=</code>、<code>></code>、<code>>=</code>、<code>&#x3C;</code>、<code>&#x3C;=</code>，运算结果都是布尔值。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>if 条件:</span></span>
+<span class="line"><span>    条件为真时执行</span></span>
+<span class="line"><span>else:</span></span>
+<span class="line"><span>    条件为假时执行</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 判断成绩是否及格</span></span>
+<span class="line"><span style="color:#E1E4E8">score </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 76</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">if</span><span style="color:#E1E4E8"> score </span><span style="color:#F97583">>=</span><span style="color:#79B8FF"> 60</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    result </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "及格"</span></span>
+<span class="line"><span style="color:#F97583">else</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    result </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "不及格"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(result)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+<code>if score = 60</code> 是错误语法，相等比较必须使用 <code>==</code>。冒号和缩进都是语法的一部分，推荐每层使用 4 个空格，不要混用 Tab 与空格。条件不需要写成 <code>if is_ready == True</code>，直接写 <code>if is_ready</code> 更清楚。</p>
+</blockquote>
+<h3 id="多分支与嵌套判断">多分支与嵌套判断</h3>
+<p><strong>核心概念</strong></p>
+<p>当结果超过两种时使用 <code>if / elif / else</code>。Python 会从上到下检查条件，只执行第一个成立的分支，因此条件顺序直接影响结果。嵌套 <code>if</code> 适合第二个判断确实依赖第一个判断的情况；如果多个条件处于同一层级，优先使用 <code>elif</code>，避免过深缩进。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 先校验范围，再从高到低判断等级</span></span>
+<span class="line"><span style="color:#E1E4E8">score </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 86</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">if</span><span style="color:#F97583"> not</span><span style="color:#79B8FF"> 0</span><span style="color:#F97583"> &#x3C;=</span><span style="color:#E1E4E8"> score </span><span style="color:#F97583">&#x3C;=</span><span style="color:#79B8FF"> 100</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    level </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "无效成绩"</span></span>
+<span class="line"><span style="color:#F97583">elif</span><span style="color:#E1E4E8"> score </span><span style="color:#F97583">>=</span><span style="color:#79B8FF"> 90</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    level </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "优秀"</span></span>
+<span class="line"><span style="color:#F97583">elif</span><span style="color:#E1E4E8"> score </span><span style="color:#F97583">>=</span><span style="color:#79B8FF"> 80</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    level </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "良好"</span></span>
+<span class="line"><span style="color:#F97583">elif</span><span style="color:#E1E4E8"> score </span><span style="color:#F97583">>=</span><span style="color:#79B8FF"> 60</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    level </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "及格"</span></span>
+<span class="line"><span style="color:#F97583">else</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    level </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "不及格"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(level)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+若先写 <code>score >= 60</code>，那么 95 分也会在该分支停止，后面的优秀条件永远没有机会执行。连续区间通常从高到低或从低到高排列。嵌套层级超过两三层时，应考虑提前返回、合并条件或拆分函数。</p>
+</blockquote>
+<h3 id="逻辑运算与短路求值">逻辑运算与短路求值</h3>
+<p><strong>核心概念</strong></p>
+<p><code>and</code> 要求两侧都为真，<code>or</code> 只需一侧为真，<code>not</code> 用于取反。优先级通常是 <code>not</code> 高于 <code>and</code>，<code>and</code> 高于 <code>or</code>，但复杂条件应使用括号表达意图。Python 使用短路求值：<code>and</code> 左侧为假时不再计算右侧，<code>or</code> 左侧为真时不再计算右侧。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 组合多个条件</span></span>
+<span class="line"><span style="color:#E1E4E8">age </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 20</span></span>
+<span class="line"><span style="color:#E1E4E8">has_ticket </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> True</span></span>
+<span class="line"><span style="color:#E1E4E8">is_banned </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> False</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">can_enter </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> age </span><span style="color:#F97583">>=</span><span style="color:#79B8FF"> 18</span><span style="color:#F97583"> and</span><span style="color:#E1E4E8"> has_ticket </span><span style="color:#F97583">and</span><span style="color:#F97583"> not</span><span style="color:#E1E4E8"> is_banned</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"允许进入："</span><span style="color:#E1E4E8">, can_enter)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#a3aebb"># 短路求值避免空字符串索引错误</span></span>
+<span class="line"><span style="color:#E1E4E8">name </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "小林"</span></span>
+<span class="line"><span style="color:#E1E4E8">starts_with_xiao </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> bool</span><span style="color:#E1E4E8">(name) </span><span style="color:#F97583">and</span><span style="color:#E1E4E8"> name[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "小"</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(starts_with_xiao)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+不要写 <code>age >= 18 and &#x3C;= 60</code>，每个比较对象都要明确，或使用链式比较 <code>18 &#x3C;= age &#x3C;= 60</code>。<code>and</code>、<code>or</code> 返回的不一定是布尔值，而可能是参与运算的对象；需要明确布尔结果时可以使用 <code>bool()</code>。</p>
+</blockquote>
+<h2 id="容器与循环">容器与循环</h2>
+<h3 id="列表">列表</h3>
+<p><strong>核心概念</strong></p>
+<p>列表 <code>list</code> 用于保存一组有顺序、可修改的数据，可以包含重复元素。索引从 0 开始，负索引从末尾开始；切片 <code>[start:stop]</code> 包含起点、不包含终点。常见修改方法包括 <code>append()</code>、<code>insert()</code>、<code>remove()</code> 和 <code>pop()</code>；<code>sort()</code> 原地排序，<code>sorted()</code> 返回新列表。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 创建、查询和修改列表</span></span>
+<span class="line"><span style="color:#E1E4E8">scores </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">88</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">95</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">76</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">scores.append(</span><span style="color:#79B8FF">91</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">scores[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 90</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">first </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> scores[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">last_two </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> scores[</span><span style="color:#F97583">-</span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">:]</span></span>
+<span class="line"><span style="color:#E1E4E8">ordered </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> sorted</span><span style="color:#E1E4E8">(scores)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"第一项："</span><span style="color:#E1E4E8">, first)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"最后两项："</span><span style="color:#E1E4E8">, last_two)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"原列表："</span><span style="color:#E1E4E8">, scores)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"排序副本："</span><span style="color:#E1E4E8">, ordered)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+访问不存在的索引会触发 <code>IndexError</code>。<code>append([1, 2])</code> 会把整个列表作为一个元素加入；若要逐项合并，使用 <code>extend([1, 2])</code>。<code>scores = scores.sort()</code> 会让 <code>scores</code> 变成 <code>None</code>，因为 <code>sort()</code> 修改原列表而不返回排序结果。</p>
+</blockquote>
+<h3 id="字典">字典</h3>
+<p><strong>核心概念</strong></p>
+<p>字典 <code>dict</code> 保存“键—值”映射，适合通过唯一标识快速查找数据。键必须可哈希，常用字符串、数字或只包含可哈希元素的元组；值可以是任意类型。使用方括号读取不存在的键会触发 <code>KeyError</code>，<code>get()</code> 可以提供默认值。字典保持插入顺序，但核心含义仍是按键访问，而不是按位置访问。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 创建、查询、更新和遍历字典</span></span>
+<span class="line"><span style="color:#E1E4E8">student </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">"name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"小林"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"score"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">88</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">student[</span><span style="color:#9ECBFF">"score"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 93</span></span>
+<span class="line"><span style="color:#E1E4E8">student[</span><span style="color:#9ECBFF">"city"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "北京"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(student[</span><span style="color:#9ECBFF">"name"</span><span style="color:#E1E4E8">])</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(student.get(</span><span style="color:#9ECBFF">"age"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"未填写"</span><span style="color:#E1E4E8">))</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> key, value </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> student.items():</span></span>
+<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">key</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">: </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">value</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+字典键不能是列表，因为列表可变且不可哈希。判断键是否存在应写 <code>if key in data</code>，而不是在 <code>data.values()</code> 中查找。<code>get()</code> 适合读取可缺省字段；若缺少某键代表程序错误，则直接使用方括号更容易及时暴露问题。</p>
+</blockquote>
+<h3 id="for-循环">for 循环</h3>
+<p><strong>核心概念</strong></p>
+<p><code>for</code> 循环从可迭代对象中依次取出元素，适合遍历列表、字符串、字典和明确次数的范围。<code>range(stop)</code> 生成从 0 到 <code>stop - 1</code> 的整数序列；<code>range(start, stop, step)</code> 可指定起点和步长。需要索引和值时使用 <code>enumerate()</code>，比手动维护计数器更可靠。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 遍历数据并筛选异常值</span></span>
+<span class="line"><span style="color:#E1E4E8">temperatures </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">18.5</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">27.8</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">18.7</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">28.2</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> index, temperature </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> enumerate</span><span style="color:#E1E4E8">(temperatures, </span><span style="color:#FFAB70">start</span><span style="color:#F97583">=</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> temperature </span><span style="color:#F97583">>=</span><span style="color:#79B8FF"> 25</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">        print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"第 </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">index</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF"> 条演示温度超过阈值：</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">temperature</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">℃"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#a3aebb"># range 的终点不包含在结果中</span></span>
+<span class="line"><span style="color:#E1E4E8">total </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> number </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">6</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">    total </span><span style="color:#F97583">+=</span><span style="color:#E1E4E8"> number</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"1 到 5 的和："</span><span style="color:#E1E4E8">, total)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+<code>range(1, 5)</code> 只产生 1、2、3、4。不要在遍历列表时随意删除其中元素，否则可能跳过数据；可以遍历副本或用列表推导式生成新列表。循环变量在每轮会被重新赋值，修改它本身不会自动修改原容器。</p>
+</blockquote>
+<h3 id="while-循环与循环控制">while 循环与循环控制</h3>
+<p><strong>核心概念</strong></p>
+<p><code>while</code> 在条件为真时重复执行，适合循环次数事先不确定的任务，例如持续接收命令、重试和逐步逼近。循环体必须能够改变条件，否则可能形成无限循环。<code>break</code> 立即结束最近一层循环，<code>continue</code> 跳过本轮剩余语句并进入下一轮。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 在限定次数内寻找第一个满足条件的值</span></span>
+<span class="line"><span style="color:#E1E4E8">number </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">while</span><span style="color:#E1E4E8"> number </span><span style="color:#F97583">&#x3C;</span><span style="color:#79B8FF"> 10</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    number </span><span style="color:#F97583">+=</span><span style="color:#79B8FF"> 1</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> number </span><span style="color:#F97583">%</span><span style="color:#79B8FF"> 2</span><span style="color:#F97583"> !=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        continue</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> number </span><span style="color:#F97583">></span><span style="color:#79B8FF"> 6</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        break</span></span>
+<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"偶数："</span><span style="color:#E1E4E8">, number)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"循环结束时 number ="</span><span style="color:#E1E4E8">, number)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+使用 <code>continue</code> 前要确认计数器已经更新，否则程序可能永远停在同一轮。<code>break</code> 只退出最内层循环，不会自动退出外层循环或整个函数。若循环本质上是在遍历一个已有序列，通常优先使用 <code>for</code>，表达更直接。</p>
+</blockquote>
+<h2 id="字符串格式化与函数">字符串格式化与函数</h2>
+<h3 id="格式化字符串">格式化字符串</h3>
+<p><strong>核心概念</strong></p>
+<p>格式化字符串把变量嵌入文本，并控制数字精度、宽度和对齐方式。现代 Python 首选 f-string：在字符串引号前加 <code>f</code>，用 <code>{表达式}</code> 插入结果。冒号后的格式说明符可控制显示形式，如 <code>.2f</code> 保留两位小数、<code>,</code> 添加千位分隔符、<code>>10</code> 右对齐到宽度 10。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>f"固定文字{变量:格式说明符}"</span></span>
+<span class="line"><span>"模板{}".format(值)</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 使用 f-string 组织清晰的输出</span></span>
+<span class="line"><span style="color:#E1E4E8">name </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "小林"</span></span>
+<span class="line"><span style="color:#E1E4E8">score </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 92.456</span></span>
+<span class="line"><span style="color:#E1E4E8">income </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 1234567.8</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">name</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">的成绩是 </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">score</span><span style="color:#F97583">:.2f</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"收入：</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">income</span><span style="color:#F97583">:,.2f</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF"> 元"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF">{</span><span style="color:#9ECBFF">'项目'</span><span style="color:#F97583">:&#x3C;8</span><span style="color:#79B8FF">}{</span><span style="color:#9ECBFF">'分数'</span><span style="color:#F97583">:>8</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF">{</span><span style="color:#9ECBFF">'Python'</span><span style="color:#F97583">:&#x3C;8</span><span style="color:#79B8FF">}{</span><span style="color:#E1E4E8">score</span><span style="color:#F97583">:>8.1f</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+忘记字符串前的 <code>f</code> 会原样输出花括号。格式化只改变显示结果，不会修改变量本身；<code>score</code> 仍保存原来的浮点数。需要输出字面量花括号时写 <code>{{</code> 和 <code>}}</code>。外部输入不要直接拼成格式模板，固定模板、只替换值更安全。</p>
+</blockquote>
+<h3 id="函数基础">函数基础</h3>
+<p><strong>核心概念</strong></p>
+<p>函数把一段有明确职责的代码封装起来，通过名称重复调用。定义以 <code>def</code> 开始，函数名后是参数列表，函数体使用缩进。参数是函数接收输入的局部名称。良好函数通常只完成一件事，名称使用动词表达行为，从而减少重复代码并提高可测试性。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>def 函数名(参数1, 参数2):</span></span>
+<span class="line"><span>    函数体</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 定义函数后可以多次调用</span></span>
+<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> greet</span><span style="color:#E1E4E8">(name: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#9ECBFF">    """向指定用户问好。"""</span></span>
+<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"你好，</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">name</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">！"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">greet(</span><span style="color:#9ECBFF">"小林"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">greet(</span><span style="color:#9ECBFF">"小周"</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+定义函数不会自动执行函数体，必须在定义之后调用。函数调用时的参数数量要与定义匹配。不要把所有代码都塞进一个巨型函数；输入、计算和输出可以分开，使核心计算函数不依赖终端交互。</p>
+</blockquote>
+<h3 id="参数返回值与作用域">参数、返回值与作用域</h3>
+<p><strong>核心概念</strong></p>
+<p><code>return</code> 把结果交还给调用者，并立即结束当前函数。没有显式 <code>return</code> 的函数返回 <code>None</code>。参数可使用位置传递或关键字传递，还可以设置默认值。函数内部创建的普通变量属于局部作用域，外部不能直接访问；应优先用参数传入数据、用返回值传出结果，而不是依赖全局变量。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 参数、默认值、关键字调用和返回值</span></span>
+<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> calculate_price</span><span style="color:#E1E4E8">(price: </span><span style="color:#79B8FF">float</span><span style="color:#E1E4E8">, discount: </span><span style="color:#79B8FF">float</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> 1.0</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">float</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#9ECBFF">    """返回折后价格。"""</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> price </span><span style="color:#F97583">&#x3C;</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        raise</span><span style="color:#79B8FF"> ValueError</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"价格不能为负数"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> price </span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> discount</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">normal_price </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> calculate_price(</span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">member_price </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> calculate_price(</span><span style="color:#FFAB70">price</span><span style="color:#F97583">=</span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">discount</span><span style="color:#F97583">=</span><span style="color:#79B8FF">0.9</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(normal_price, member_price)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+<code>print(result)</code> 是显示结果，<code>return result</code> 才是把结果交给调用者。默认参数应放在无默认值参数之后。不要使用列表、字典等可变对象作为默认值；需要时使用 <code>None</code>，再在函数内部创建新对象。局部变量与全局变量同名时，局部名称会遮蔽全局名称。</p>
+</blockquote>
+<h2 id="模块与面向对象">模块与面向对象</h2>
+<h3 id="模块的导入与使用">模块的导入与使用</h3>
+<p><strong>核心概念</strong></p>
+<p>模块通常是一个 <code>.py</code> 文件，用来组织可复用代码。<code>import 模块</code> 保留模块命名空间，调用时写 <code>模块.成员</code>；<code>from 模块 import 成员</code> 可直接使用指定成员；<code>as</code> 用于设置常见别名。标准库随 Python 安装，第三方库需要在当前解释器环境中另行安装。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 使用标准库模块</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> math</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> random </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> Random</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">radius </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 3</span></span>
+<span class="line"><span style="color:#E1E4E8">area </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> math.pi </span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> radius </span><span style="color:#F97583">**</span><span style="color:#79B8FF"> 2</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#a3aebb"># 独立随机数生成器便于复现结果</span></span>
+<span class="line"><span style="color:#E1E4E8">rng </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Random(</span><span style="color:#79B8FF">42</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">sample </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> rng.randint(</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"圆面积：</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">area</span><span style="color:#F97583">:.2f</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"随机整数："</span><span style="color:#E1E4E8">, sample)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+不推荐 <code>from module import *</code>，因为来源不清且容易发生名称冲突。脚本名不要写成 <code>random.py</code>、<code>math.py</code> 等标准库名称，否则可能导入自己的文件。遇到 <code>ModuleNotFoundError</code> 时先确认包是否安装在当前运行脚本所用的解释器中。</p>
+</blockquote>
+<h3 id="面向对象的核心概念">面向对象的核心概念</h3>
+<p><strong>核心概念</strong></p>
+<p>面向对象把相关数据和操作数据的行为组合在对象中。类是创建对象的规则，对象（实例）是按规则产生的具体实体。属性保存状态，方法描述行为。封装用于把实现细节收拢在类中；继承用于复用和扩展已有类；多态表示不同对象能以统一接口响应同一种操作。</p>
+<p><strong>语法格式与代码示例</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 同一接口作用于不同对象，体现简单多态</span></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> Cat</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> speak</span><span style="color:#E1E4E8">(self) -> </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#9ECBFF"> "喵"</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> Dog</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> speak</span><span style="color:#E1E4E8">(self) -> </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#9ECBFF"> "汪"</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">animals </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [Cat(), Dog()]</span></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> animal </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> animals:</span></span>
+<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(animal.speak())</span></span></code></pre>
+<blockquote>
+<p><strong>使用判断</strong>
+不是所有程序都需要类。一次性的纯计算通常用函数更简单；当多个数据必须保持一致，并且围绕这些数据存在一组稳定行为时，类更有价值。学习算法时应先写清数据结构和步骤，不必为了“面向对象”强行增加类。</p>
+</blockquote>
+<h3 id="类实例与初始化">类、实例与初始化</h3>
+<p><strong>核心概念</strong></p>
+<p>使用 <code>class</code> 定义类，调用类名会创建实例。<code>__init__()</code> 在实例创建后负责初始化属性，<code>self</code> 指向当前实例。实例属性通常写成 <code>self.属性 = 值</code>，每个对象都有各自的数据。类名采用大驼峰命名，实例名仍使用小写加下划线。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> Student</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#79B8FF"> __init__</span><span style="color:#E1E4E8">(self, name: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">, score: </span><span style="color:#79B8FF">float</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.name </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> name</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.score </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> score</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">student_a </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Student(</span><span style="color:#9ECBFF">"小林"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">92</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">student_b </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Student(</span><span style="color:#9ECBFF">"小周"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">85</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(student_a.name, student_a.score)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(student_b.name, student_b.score)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+实例方法定义中的第一个参数必须接收当前实例，惯例命名为 <code>self</code>；调用 <code>student_a.method()</code> 时 Python 会自动传入它。<code>__init__</code> 前后各有两个下划线，不应拼错。<code>__init__</code> 通常不返回其他值，只负责建立有效的初始状态。</p>
+</blockquote>
+<h3 id="属性与实例方法">属性与实例方法</h3>
+<p><strong>核心概念</strong></p>
+<p>实例方法通过 <code>self</code> 读取或修改对象属性，使数据和行为保持在同一处。对象状态应尽量由方法维护，避免外部代码随意制造无效值。可以在初始化或更新方法中校验数据。以下示例把成绩合法性检查集中在类内，并提供判断及格和显示信息的方法。</p>
+<p><strong>语法格式与代码示例</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> Student</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#79B8FF"> __init__</span><span style="color:#E1E4E8">(self, name: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">, score: </span><span style="color:#79B8FF">float</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.name </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> name</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.update_score(score)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> update_score</span><span style="color:#E1E4E8">(self, score: </span><span style="color:#79B8FF">float</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#F97583"> not</span><span style="color:#79B8FF"> 0</span><span style="color:#F97583"> &#x3C;=</span><span style="color:#E1E4E8"> score </span><span style="color:#F97583">&#x3C;=</span><span style="color:#79B8FF"> 100</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">            raise</span><span style="color:#79B8FF"> ValueError</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"成绩必须在 0～100 之间"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.score </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> score</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> is_passed</span><span style="color:#E1E4E8">(self) -> </span><span style="color:#79B8FF">bool</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.score </span><span style="color:#F97583">>=</span><span style="color:#79B8FF"> 60</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> describe</span><span style="color:#E1E4E8">(self) -> </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#F97583"> f</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF">{self</span><span style="color:#E1E4E8">.name</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">：</span><span style="color:#79B8FF">{self</span><span style="color:#E1E4E8">.score</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF"> 分"</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">student </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Student(</span><span style="color:#9ECBFF">"小林"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">88</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">student.update_score(</span><span style="color:#79B8FF">93</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(student.describe(), student.is_passed())</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+调用方法要使用圆括号：<code>student.is_passed()</code> 得到结果，<code>student.is_passed</code> 只是方法对象。不要在方法中遗漏 <code>self.</code>，否则创建的是局部变量，不会更新实例属性。</p>
+</blockquote>
+<h3 id="继承与方法重写">继承与方法重写</h3>
+<p><strong>核心概念</strong></p>
+<p>继承允许子类复用父类的属性和方法，并添加新能力。定义形式是 <code>class 子类(父类)</code>。子类的 <code>__init__()</code> 可用 <code>super().__init__()</code> 完成父类初始化；当子类定义同名方法时，会重写父类行为。继承表达“是一个”的关系，若只是“拥有一个”对象，组合通常更合适。</p>
+<p><strong>语法格式与代码示例</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> Animal</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#79B8FF"> __init__</span><span style="color:#E1E4E8">(self, name: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.name </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> name</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> speak</span><span style="color:#E1E4E8">(self) -> </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#9ECBFF"> "未知声音"</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> Dog</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">Animal</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#79B8FF"> __init__</span><span style="color:#E1E4E8">(self, name: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">, breed: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">        super</span><span style="color:#E1E4E8">().</span><span style="color:#79B8FF">__init__</span><span style="color:#E1E4E8">(name)</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.breed </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> breed</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> speak</span><span style="color:#E1E4E8">(self) -> </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#9ECBFF"> "汪"</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">dog </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Dog(</span><span style="color:#9ECBFF">"豆豆"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"柯基"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(dog.name, dog.breed, dog.speak())</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">isinstance</span><span style="color:#E1E4E8">(dog, Animal))</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+子类重写 <code>__init__()</code> 后不会自动执行父类初始化，需要显式调用 <code>super()</code>。不要建立过深继承层次；当复用只是为了调用某个工具对象时，优先把它作为属性组合进来。</p>
+</blockquote>
+<h2 id="文件路径读写与异常">文件路径、读写与异常</h2>
+<h3 id="文件路径">文件路径</h3>
+<p><strong>核心概念</strong></p>
+<p>文件路径描述文件在文件系统中的位置。绝对路径从磁盘或根目录开始，完整但不便迁移；相对路径以程序当前工作目录为基准，更适合项目内部文件。<code>pathlib.Path</code> 能以跨平台方式拼接、检查和规范处理路径，比手写斜杠更可靠。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> pathlib </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> Path</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#a3aebb"># 构造跨平台路径，不要求目标必须存在</span></span>
+<span class="line"><span style="color:#E1E4E8">project_dir </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Path.cwd()</span></span>
+<span class="line"><span style="color:#E1E4E8">data_dir </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> project_dir </span><span style="color:#F97583">/</span><span style="color:#9ECBFF"> "data"</span></span>
+<span class="line"><span style="color:#E1E4E8">score_file </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> data_dir </span><span style="color:#F97583">/</span><span style="color:#9ECBFF"> "scores.csv"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"工作目录："</span><span style="color:#E1E4E8">, project_dir)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"数据文件路径："</span><span style="color:#E1E4E8">, score_file)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"文件名："</span><span style="color:#E1E4E8">, score_file.name)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"扩展名："</span><span style="color:#E1E4E8">, score_file.suffix)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"是否为绝对路径："</span><span style="color:#E1E4E8">, score_file.is_absolute())</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+相对路径取决于“从哪里启动程序”，不一定取决于 <code>.py</code> 文件所在位置。Windows 路径中的反斜杠可能被当作转义字符，优先使用 <code>Path</code> 或原始字符串。不要把只适用于自己电脑的绝对路径写死在可复用代码中。</p>
+</blockquote>
+<h3 id="读取文件">读取文件</h3>
+<p><strong>核心概念</strong></p>
+<p><code>open()</code> 用于打开文件，读取模式是 <code>"r"</code>。<code>with</code> 语句会在代码块结束后自动关闭文件，即使中途出现异常也能释放资源。<code>read()</code> 读取全部内容，<code>readline()</code> 读取一行，直接遍历文件对象适合逐行处理大文件。文本文件应明确指定编码，中文通常使用 UTF-8。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> pathlib </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> Path</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> tempfile </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> TemporaryDirectory</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#a3aebb"># 示例在临时目录中创建并读取文件，可独立运行</span></span>
+<span class="line"><span style="color:#F97583">with</span><span style="color:#E1E4E8"> TemporaryDirectory() </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> directory:</span></span>
+<span class="line"><span style="color:#E1E4E8">    path </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Path(directory) </span><span style="color:#F97583">/</span><span style="color:#9ECBFF"> "scores.txt"</span></span>
+<span class="line"><span style="color:#E1E4E8">    path.write_text(</span><span style="color:#9ECBFF">"小林,92</span><span style="color:#79B8FF">\n</span><span style="color:#9ECBFF">小周,85</span><span style="color:#79B8FF">\n</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">encoding</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"utf-8"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    with</span><span style="color:#E1E4E8"> path.open(</span><span style="color:#9ECBFF">"r"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">encoding</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"utf-8"</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">as</span><span style="color:#FFAB70"> file</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        for</span><span style="color:#E1E4E8"> line </span><span style="color:#F97583">in</span><span style="color:#FFAB70"> file</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">            name, score </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> line.strip().split(</span><span style="color:#9ECBFF">","</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">            print</span><span style="color:#E1E4E8">(name, </span><span style="color:#79B8FF">int</span><span style="color:#E1E4E8">(score))</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+<code>read()</code> 执行后文件指针位于末尾，再读会得到空字符串；需要重读可重新打开文件或使用 <code>seek(0)</code>。逐行读取时通常用 <code>strip()</code> 去掉行尾换行，但若首尾空格本身有意义，应改用 <code>rstrip("\n")</code>。</p>
+</blockquote>
+<h3 id="写入文件">写入文件</h3>
+<p><strong>核心概念</strong></p>
+<p>写入模式 <code>"w"</code> 会创建文件或清空已有内容，追加模式 <code>"a"</code> 会把新内容放到末尾。<code>write()</code> 不会自动添加换行，需要显式写入 <code>\n</code>；<code>writelines()</code> 也不会替每项补换行。保存结构化数据时要稳定规定字段顺序和编码，读取端使用相同规则。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> pathlib </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> Path</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> tempfile </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> TemporaryDirectory</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">with</span><span style="color:#E1E4E8"> TemporaryDirectory() </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> directory:</span></span>
+<span class="line"><span style="color:#E1E4E8">    path </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Path(directory) </span><span style="color:#F97583">/</span><span style="color:#9ECBFF"> "notes.txt"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    with</span><span style="color:#E1E4E8"> path.open(</span><span style="color:#9ECBFF">"w"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">encoding</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"utf-8"</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">as</span><span style="color:#FFAB70"> file</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#FFAB70">        file</span><span style="color:#E1E4E8">.write(</span><span style="color:#9ECBFF">"第一条记录</span><span style="color:#79B8FF">\n</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    with</span><span style="color:#E1E4E8"> path.open(</span><span style="color:#9ECBFF">"a"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">encoding</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"utf-8"</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">as</span><span style="color:#FFAB70"> file</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#FFAB70">        file</span><span style="color:#E1E4E8">.write(</span><span style="color:#9ECBFF">"第二条记录</span><span style="color:#79B8FF">\n</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(path.read_text(</span><span style="color:#FFAB70">encoding</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"utf-8"</span><span style="color:#E1E4E8">))</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+对重要文件使用 <code>"w"</code> 前要确认是否允许覆盖。读写模式不是文件扩展名：<code>.csv</code> 仍是文本文件，只是内容遵循逗号分隔规则。真实程序可先写入临时文件，完成后再替换目标，以降低写到一半导致文件损坏的风险。</p>
+</blockquote>
+<h3 id="异常处理">异常处理</h3>
+<p><strong>核心概念</strong></p>
+<p>异常表示程序运行时发生了无法按正常流程完成的情况。<code>try</code> 放可能失败的操作，<code>except</code> 处理指定异常，<code>else</code> 在未发生异常时执行，<code>finally</code> 无论是否异常都会执行。应捕获能够合理处理的具体异常；无法恢复时让异常继续传播，或使用 <code>raise</code> 主动报告无效状态。</p>
+<p><strong>语法格式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> safe_divide</span><span style="color:#E1E4E8">(left_text: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">, right_text: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">float</span><span style="color:#F97583"> |</span><span style="color:#79B8FF"> None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    try</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">        left </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> float</span><span style="color:#E1E4E8">(left_text)</span></span>
+<span class="line"><span style="color:#E1E4E8">        right </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> float</span><span style="color:#E1E4E8">(right_text)</span></span>
+<span class="line"><span style="color:#E1E4E8">        result </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> left </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> right</span></span>
+<span class="line"><span style="color:#F97583">    except</span><span style="color:#79B8FF"> ValueError</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">        print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"输入必须是数字"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#79B8FF"> None</span></span>
+<span class="line"><span style="color:#F97583">    except</span><span style="color:#79B8FF"> ZeroDivisionError</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">        print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"除数不能为零"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#79B8FF"> None</span></span>
+<span class="line"><span style="color:#F97583">    else</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> result</span></span>
+<span class="line"><span style="color:#F97583">    finally</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">        print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"本次计算结束"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(safe_divide(</span><span style="color:#9ECBFF">"12"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"3"</span><span style="color:#E1E4E8">))</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(safe_divide(</span><span style="color:#9ECBFF">"12"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"0"</span><span style="color:#E1E4E8">))</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+不要用空的 <code>except:</code> 静默吞掉所有错误，这会隐藏编程缺陷。<code>try</code> 块应尽量小，只包住真正可能失败的语句。异常信息应说明失败原因，不要把密码、令牌或其他敏感数据完整写进日志。</p>
+</blockquote>
+<h2 id="测试高阶函数与练习方向">测试、高阶函数与练习方向</h2>
+<h3 id="测试基础与-assert">测试基础与 assert</h3>
+<p><strong>核心概念</strong></p>
+<p>测试通过固定输入检查程序是否得到预期输出，帮助发现回归错误。基本流程可概括为“准备数据—执行操作—断言结果”。测试应覆盖正常情况、边界值和预期异常。<code>assert</code> 适合学习阶段和测试代码中的快速断言，不应替代正式输入校验，因为优化运行时断言可能被禁用。</p>
+<p><strong>语法格式与代码示例</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> classify_score</span><span style="color:#E1E4E8">(score: </span><span style="color:#79B8FF">int</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#F97583"> not</span><span style="color:#79B8FF"> 0</span><span style="color:#F97583"> &#x3C;=</span><span style="color:#E1E4E8"> score </span><span style="color:#F97583">&#x3C;=</span><span style="color:#79B8FF"> 100</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        raise</span><span style="color:#79B8FF"> ValueError</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"成绩超出范围"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#9ECBFF"> "及格"</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8"> score </span><span style="color:#F97583">>=</span><span style="color:#79B8FF"> 60</span><span style="color:#F97583"> else</span><span style="color:#9ECBFF"> "不及格"</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#a3aebb"># 正常值和边界值测试</span></span>
+<span class="line"><span style="color:#F97583">assert</span><span style="color:#E1E4E8"> classify_score(</span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "及格"</span></span>
+<span class="line"><span style="color:#F97583">assert</span><span style="color:#E1E4E8"> classify_score(</span><span style="color:#79B8FF">60</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "及格"</span></span>
+<span class="line"><span style="color:#F97583">assert</span><span style="color:#E1E4E8"> classify_score(</span><span style="color:#79B8FF">59</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "不及格"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">try</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    classify_score(</span><span style="color:#79B8FF">101</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">except</span><span style="color:#79B8FF"> ValueError</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    pass</span></span>
+<span class="line"><span style="color:#F97583">else</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    raise</span><span style="color:#79B8FF"> AssertionError</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"101 分应触发 ValueError"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"全部断言通过"</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+只测试一个正常样例远远不够，边界通常最容易出错。测试失败时先确认需求和期望值是否正确，再判断实现问题；不要为了让测试变绿而随意修改正确的业务规则。</p>
+</blockquote>
+<h3 id="使用-unittest-组织测试">使用 unittest 组织测试</h3>
+<p><strong>核心概念</strong></p>
+<p><code>unittest</code> 是 Python 标准库中的测试框架。测试类继承 <code>unittest.TestCase</code>，测试方法名以 <code>test_</code> 开头。框架自动发现测试并报告通过、失败或错误。常用断言包括 <code>assertEqual()</code>、<code>assertTrue()</code> 和 <code>assertRaises()</code>；重复准备工作可放进 <code>setUp()</code>。</p>
+<p><strong>语法格式与代码示例</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> unittest</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> add_tax</span><span style="color:#E1E4E8">(price: </span><span style="color:#79B8FF">float</span><span style="color:#E1E4E8">, rate: </span><span style="color:#79B8FF">float</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> 0.06</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">float</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> price </span><span style="color:#F97583">&#x3C;</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        raise</span><span style="color:#79B8FF"> ValueError</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"价格不能为负数"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> price </span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> (</span><span style="color:#79B8FF">1</span><span style="color:#F97583"> +</span><span style="color:#E1E4E8"> rate)</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> AddTaxTests</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">unittest</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">TestCase</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> test_default_rate</span><span style="color:#E1E4E8">(self) -> </span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.assertAlmostEqual(add_tax(</span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">), </span><span style="color:#79B8FF">106.0</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> test_zero_price</span><span style="color:#E1E4E8">(self) -> </span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.assertEqual(add_tax(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">), </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> test_negative_price</span><span style="color:#E1E4E8">(self) -> </span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        with</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.assertRaises(</span><span style="color:#79B8FF">ValueError</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">            add_tax(</span><span style="color:#F97583">-</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">if</span><span style="color:#79B8FF"> __name__</span><span style="color:#F97583"> ==</span><span style="color:#9ECBFF"> "__main__"</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    unittest.main()</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+浮点数比较宜用 <code>assertAlmostEqual()</code>，不要直接要求所有小数位完全一致。测试之间应相互独立，不能依赖执行顺序。测试名称要表达场景和期望行为，便于失败时迅速定位。</p>
+</blockquote>
+<h3 id="高阶函数与-lambda">高阶函数与 lambda</h3>
+<p><strong>核心概念</strong></p>
+<p>Python 中函数也是对象，可以赋给变量、作为参数传入或作为返回值传出。接收函数或返回函数的函数称为高阶函数。<code>lambda 参数: 表达式</code> 创建一个仅包含单个表达式的匿名函数，常用于 <code>sorted()</code> 的 <code>key</code>、<code>map()</code> 和 <code>filter()</code> 等需要简短回调的场景。</p>
+<p><strong>语法格式与代码示例</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#a3aebb"># 使用函数作为排序规则</span></span>
+<span class="line"><span style="color:#E1E4E8">students </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span><span style="color:#9ECBFF">"name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"小林"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"score"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">88</span><span style="color:#E1E4E8">},</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span><span style="color:#9ECBFF">"name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"小周"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"score"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">95</span><span style="color:#E1E4E8">},</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span><span style="color:#9ECBFF">"name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"小吴"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"score"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">76</span><span style="color:#E1E4E8">},</span></span>
+<span class="line"><span style="color:#E1E4E8">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">ordered </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> sorted</span><span style="color:#E1E4E8">(students, </span><span style="color:#FFAB70">key</span><span style="color:#F97583">=lambda</span><span style="color:#E1E4E8"> item: item[</span><span style="color:#9ECBFF">"score"</span><span style="color:#E1E4E8">], </span><span style="color:#FFAB70">reverse</span><span style="color:#F97583">=</span><span style="color:#79B8FF">True</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">passed_names </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [item[</span><span style="color:#9ECBFF">"name"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> item </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> students </span><span style="color:#F97583">if</span><span style="color:#E1E4E8"> item[</span><span style="color:#9ECBFF">"score"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">>=</span><span style="color:#79B8FF"> 60</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(ordered)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(passed_names)</span></span></code></pre>
+<blockquote>
+<p><strong>易错点</strong>
+<code>lambda</code> 只能写一个表达式，复杂逻辑应定义普通函数并写清名称。对于简单筛选和转换，列表推导式通常比嵌套 <code>map()</code>、<code>filter()</code> 更易读。传递函数时写函数名 <code>key=rule</code>，写成 <code>key=rule()</code> 会提前调用并传递返回值。</p>
+</blockquote>
+<h3 id="从基础走向算法与应用">从基础走向算法与应用</h3>
+<p><strong>核心概念</strong></p>
+<p>完成基础语法后，下一阶段应从“继续看”转为“持续写”。算法学习重点是数据结构、问题分解、复杂度和边界测试；应用学习则要逐步接触项目结构、虚拟环境、第三方库、数据持久化和调试工具。遇到陌生语法先查本笔记，再查 Python 官方文档，并用最小代码验证理解。</p>
+<p><strong>推荐路径</strong></p>
+<ol>
+<li>熟练使用字符串、列表、字典、集合和函数解决小问题。</li>
+<li>学习排序、查找、递归、栈、队列、哈希表等算法基础。</li>
+<li>选择一个应用方向：数据分析、自动化、Web、GIS 或机器学习。</li>
+<li>用小项目串联文件、异常、模块、测试和第三方库。</li>
+</ol>
+<p><strong>语法格式与代码示例</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> main</span><span style="color:#E1E4E8">() -> </span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#9ECBFF">    """程序入口：后续项目可以从这一结构扩展。"""</span></span>
+<span class="line"><span style="color:#E1E4E8">    data </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"排序结果："</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">sorted</span><span style="color:#E1E4E8">(data))</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">if</span><span style="color:#79B8FF"> __name__</span><span style="color:#F97583"> ==</span><span style="color:#9ECBFF"> "__main__"</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    main()</span></span></code></pre>
+<blockquote>
+<p><strong>学习判断</strong>
+能看懂示例不等于能够独立编程。真正掌握的标准是：不看答案完成一个小功能，能解释每一步，能根据报错定位问题，并能为边界情况补充测试。</p>
+</blockquote>
+<h2 id="python-语法速查表">Python 语法速查表</h2>
+<p><strong>输入、输出与类型</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>需求</th><th>写法</th><th>说明</th></tr></thead><tbody><tr><td>输出</td><td><code>print(value)</code></td><td>默认末尾换行</td></tr><tr><td>多项输出</td><td><code>print(a, b, sep=",")</code></td><td><code>sep</code> 控制分隔符</td></tr><tr><td>获取输入</td><td><code>text = input("提示：")</code></td><td>返回值一定是字符串</td></tr><tr><td>查看类型</td><td><code>type(value)</code></td><td>返回类型对象</td></tr><tr><td>类型判断</td><td><code>isinstance(value, int)</code></td><td>程序判断时更常用</td></tr><tr><td>转整数</td><td><code>int(text)</code></td><td>文本必须符合整数格式</td></tr><tr><td>转浮点数</td><td><code>float(text)</code></td><td>文本必须符合数字格式</td></tr><tr><td>转字符串</td><td><code>str(value)</code></td><td>便于拼接或保存</td></tr></tbody></table>
+<p><strong>运算与判断</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>需求</th><th>写法</th></tr></thead><tbody><tr><td>加、减、乘、除</td><td><code>+</code>、<code>-</code>、<code>*</code>、<code>/</code></td></tr><tr><td>整除、取余、幂</td><td><code>//</code>、<code>%</code>、<code>**</code></td></tr><tr><td>相等、不等</td><td><code>==</code>、<code>!=</code></td></tr><tr><td>大小比较</td><td><code>&#x3C;</code>、<code>&#x3C;=</code>、<code>></code>、<code>>=</code></td></tr><tr><td>逻辑与、或、非</td><td><code>and</code>、<code>or</code>、<code>not</code></td></tr><tr><td>区间判断</td><td><code>0 &#x3C;= score &#x3C;= 100</code></td></tr><tr><td>成员判断</td><td><code>item in container</code></td></tr><tr><td>身份判断</td><td><code>value is None</code></td></tr></tbody></table>
+<p><strong>控制结构</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#E1E4E8">condition </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> False</span></span>
+<span class="line"><span style="color:#E1E4E8">other_condition </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> False</span></span>
+<span class="line"><span style="color:#E1E4E8">iterable </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> []</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">if</span><span style="color:#E1E4E8"> condition:</span></span>
+<span class="line"><span style="color:#F97583">    pass</span></span>
+<span class="line"><span style="color:#F97583">elif</span><span style="color:#E1E4E8"> other_condition:</span></span>
+<span class="line"><span style="color:#F97583">    pass</span></span>
+<span class="line"><span style="color:#F97583">else</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    pass</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> item </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> iterable:</span></span>
+<span class="line"><span style="color:#F97583">    pass</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">while</span><span style="color:#E1E4E8"> condition:</span></span>
+<span class="line"><span style="color:#F97583">    pass</span></span></code></pre>
+<p><strong>常用容器</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类型</th><th>创建</th><th>常用操作</th></tr></thead><tbody><tr><td>列表</td><td><code>items = []</code></td><td><code>append</code>、<code>extend</code>、<code>pop</code>、切片、<code>sorted</code></td></tr><tr><td>元组</td><td><code>point = (1, 2)</code></td><td>索引、解包；不可修改</td></tr><tr><td>字典</td><td><code>data = {}</code></td><td><code>get</code>、<code>items</code>、<code>keys</code>、<code>values</code>、<code>pop</code></td></tr><tr><td>集合</td><td><code>seen = set()</code></td><td><code>add</code>、<code>remove</code>、交并差运算</td></tr><tr><td>字符串</td><td><code>text = "Python"</code></td><td><code>strip</code>、<code>split</code>、<code>join</code>、<code>replace</code>、切片</td></tr></tbody></table>
+<blockquote>
+<p><strong>补充说明</strong>
+视频主线重点介绍列表和字典；元组与集合在此速查表中只作为后续算法学习所需的基础入口。元组适合固定记录，集合适合去重和快速成员判断。</p>
+</blockquote>
+<p><strong>函数</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> function_name</span><span style="color:#E1E4E8">(required, optional</span><span style="color:#F97583">=</span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#9ECBFF">    """一句话说明函数职责。"""</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> optional </span><span style="color:#F97583">is</span><span style="color:#79B8FF"> None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">        optional </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> []</span></span>
+<span class="line"><span style="color:#E1E4E8">    result </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> required</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> result</span></span></code></pre>
+<p><strong>字符串格式化</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>需求</th><th>写法</th><th>示例结果</th></tr></thead><tbody><tr><td>插入变量</td><td><code>f"姓名：{name}"</code></td><td><code>姓名：小林</code></td></tr><tr><td>两位小数</td><td><code>f"{value:.2f}"</code></td><td><code>3.14</code></td></tr><tr><td>千位分隔</td><td><code>f"{value:,}"</code></td><td><code>1,000,000</code></td></tr><tr><td>右对齐</td><td><code>f"{text:>10}"</code></td><td>宽度不足时左侧填空格</td></tr><tr><td>居中</td><td><code>f"{text:^10}"</code></td><td>两侧填充</td></tr></tbody></table>
+<p><strong>文件与异常</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> pathlib </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> Path</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">path </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Path(</span><span style="color:#9ECBFF">"data.txt"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">try</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    with</span><span style="color:#E1E4E8"> path.open(</span><span style="color:#9ECBFF">"r"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">encoding</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"utf-8"</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">as</span><span style="color:#FFAB70"> file</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">        content </span><span style="color:#F97583">=</span><span style="color:#FFAB70"> file</span><span style="color:#E1E4E8">.read()</span></span>
+<span class="line"><span style="color:#F97583">except</span><span style="color:#79B8FF"> FileNotFoundError</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    content </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> ""</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(content)</span></span></code></pre>
+<p><strong>类与测试</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> unittest</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> Counter</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#79B8FF"> __init__</span><span style="color:#E1E4E8">(self) -> </span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.value </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> increase</span><span style="color:#E1E4E8">(self) -> </span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.value </span><span style="color:#F97583">+=</span><span style="color:#79B8FF"> 1</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> CounterTests</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">unittest</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">TestCase</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> test_increase</span><span style="color:#E1E4E8">(self) -> </span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">        counter </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Counter()</span></span>
+<span class="line"><span style="color:#E1E4E8">        counter.increase()</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.assertEqual(counter.value, </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">if</span><span style="color:#79B8FF"> __name__</span><span style="color:#F97583"> ==</span><span style="color:#9ECBFF"> "__main__"</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    unittest.main()</span></span></code></pre>
+<h2 id="后续练习与来源">后续练习与来源</h2>
+<p>先尝试独立完成一个小功能，再检查边界条件。可以按下面的顺序继续：</p>
+<ol>
+<li><a href="/coding/python-file-paths/">文件路径与工作目录</a>：解决程序找不到文件的问题。</li>
+<li><a href="/coding/python-csv-basics/">CSV 读取与保存</a>：把文本字段转换为可计算数据。</li>
+<li><a href="/coding/python-basic-statistics/">平均值、中位数和样本标准差</a>：用函数完成统计并核对结果。</li>
+<li><a href="/coding/python-word-frequency/">英文词频统计</a>：练习字符串处理、计数与排序。</li>
+</ol>
+<p>本文保留原笔记的学习主线，并将 Obsidian 提示框和内部链接改为网站可读形式。原学习来源为 <a href="https://www.bilibili.com/video/BV1Jgf6YvE8e/">《3小时超快速入门 Python｜动画教学》</a>，不是视频逐字稿。语法与标准库用法可继续查阅 <a href="https://docs.python.org/3/tutorial/">Python 官方教程</a>；示例为学习材料中的独立演示，不代表真实业务规则。</p></div><p class="copy-status sr-only" role="status" aria-live="polite"></p><footer class="article-footer"><a class="text-link" href="/coding/">← Back to Coding</a></footer><section class="related"><h2>Related Entries</h2><ul><li><a href="/coding/python-basic-statistics/">用 Python 计算平均值、中位数和样本标准差<span aria-hidden="true">↗</span></a></li><li><a href="/coding/python-csv-basics/">用 Python 读写 CSV：编码、数字转换与常见错误<span aria-hidden="true">↗</span></a></li><li><a href="/coding/python-file-paths/">Python 文件路径：为什么换个位置运行就找不到文件<span aria-hidden="true">↗</span></a></li></ul></section></article><aside class="toc sidebar"><nav aria-label="文章目录"><h2>On this page</h2><ol><li style="--depth:0"><a href="#输入变量与数据类型">输入、变量与数据类型</a></li><li style="--depth:0"><a href="#条件判断与逻辑运算">条件判断与逻辑运算</a></li><li style="--depth:0"><a href="#容器与循环">容器与循环</a></li><li style="--depth:0"><a href="#字符串格式化与函数">字符串格式化与函数</a></li><li style="--depth:0"><a href="#模块与面向对象">模块与面向对象</a></li><li style="--depth:0"><a href="#文件路径读写与异常">文件路径、读写与异常</a></li><li style="--depth:0"><a href="#测试高阶函数与练习方向">测试、高阶函数与练习方向</a></li><li style="--depth:0"><a href="#python-语法速查表">Python 语法速查表</a></li><li style="--depth:0"><a href="#后续练习与来源">后续练习与来源</a></li></ol></nav></aside></div></div><script type="module">document.querySelectorAll(`.prose pre`).forEach((e,t)=>{let n=e.querySelector(`code`);if(!n)return;let r=document.createElement(`div`);r.className=`code-frame`;let i=document.createElement(`div`);i.className=`code-toolbar`;let a=document.createElement(`span`);a.textContent=e.dataset.language??`Code`;let o=document.createElement(`button`);o.type=`button`,o.textContent=`Copy`,o.setAttribute(`aria-label`,`复制第 ${t+1} 个代码块`),i.append(a,o),e.before(r),r.append(i,e),e.setAttribute(`aria-label`,`${a.textContent} 代码，可横向滚动`),o.addEventListener(`click`,async()=>{let e=document.querySelector(`.copy-status`);try{await navigator.clipboard.writeText(n.textContent??``),o.textContent=`Copied!`,e&&(e.textContent=`第 ${t+1} 个代码块已复制`)}catch{let t=document.createRange();t.selectNodeContents(n);let r=window.getSelection();r?.removeAllRanges(),r?.addRange(t),o.textContent=`Press ⌘/Ctrl+C`,e&&(e.textContent=`浏览器未允许复制，已选中代码，请按 Command+C 或 Ctrl+C。`)}window.setTimeout(()=>{o.textContent=`Copy`},3e3)})});</script></main><footer class="site-footer"><div class="container footer-inner"><a class="email-link" href="mailto:ybx0729@gmail.com"><svg width="24" height="22" viewBox="0 0 24 22" fill="none" aria-hidden="true"><rect x="1.5" y="3" width="21" height="16" rx="1" stroke="currentColor" stroke-width="1.5"></rect><path d="m2 4 10 8L22 4" stroke="currentColor" stroke-width="1.5"></path></svg>ybx0729@gmail.com</a><span>Yuanzhibx</span></div></footer><script type="module">var e=document.querySelector(`.menu-toggle`),t=document.querySelector(`#main-navigation`);if(e&&t){e.hidden=!1,document.documentElement.classList.add(`navigation-ready`);let n=()=>{e.setAttribute(`aria-expanded`,`false`),t.classList.remove(`is-open`)};e.addEventListener(`click`,()=>{let n=e.getAttribute(`aria-expanded`)!==`true`;e.setAttribute(`aria-expanded`,String(n)),t.classList.toggle(`is-open`,n)}),t.addEventListener(`click`,e=>{e.target.closest(`a`)&&n()}),document.addEventListener(`keydown`,t=>{t.key===`Escape`&&e.getAttribute(`aria-expanded`)===`true`&&(n(),e.focus())}),matchMedia(`(min-width: 761px)`).addEventListener(`change`,n)}</script></body></html>
