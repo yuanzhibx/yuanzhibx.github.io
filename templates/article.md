@@ -1,7 +1,8 @@
 ---
 title: "在这里填写文章标题"
 summary: "用一两句话说明本文的内容。"
-date: "2026-09-27"
+# 填写本篇文章真实的发布日期，例如 2026-10-04。
+date: ""
 section: study
 type: note
 tags: [GIS]

@@ -149,8 +149,10 @@ try {
     await expect(page.locator('.toc a')).not.toHaveCount(0);
     const body = await page.locator('.prose').innerText();
     assert.equal(/\[\[|\/Users\/|DRAFT_SENTINEL|临时验证/.test(body), false);
-    for (const link of await page.locator('.prose a[href^="/"], .related a').all()) {
-      assert.equal((await context.request.get(production + await link.getAttribute('href'))).status(), 200);
+    for (const link of await page.locator('.prose a[href^="/"], .prose a[href^="https://yuanzhibx.github.io/"], .related a').all()) {
+      // 完整网站网址也在本次本地构建中检查，避免旧线上页面掩盖断链。
+      const target = new URL(await link.getAttribute('href'), production);
+      assert.equal((await context.request.get(production + target.pathname + target.search)).status(), 200);
     }
     for (const button of await page.getByRole('button', { name: /^复制第/ }).all()) {
       const code = await button.locator('xpath=ancestor::div[contains(@class,"code-frame")]').locator('pre code').textContent();

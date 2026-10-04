@@ -15,7 +15,7 @@ draft: false
 
 例如，演示数据 `[1, 2, 3, 4, 100]` 的平均值为 22，中位数为 3。两者差别很大，是因为平均值对这里的极大值更敏感，而不是哪一个计算错了。
 
-本篇接续 [CSV 读写笔记](/coding/python-csv-basics/)，集中练习计算函数。下面都是教学数值，不是实验观测或实际成绩。
+本篇接续 [CSV 读写笔记](https://yuanzhibx.github.io/coding/python-csv-basics/)，集中练习计算函数。下面都是教学数值，不是实验观测或实际成绩。
 
 ## 先明确公式与输入约定
 
@@ -123,4 +123,4 @@ print("边界检查通过")
 
 手写实现有助于看懂公式，常规工作则可以使用 `statistics.mean()`、`median()`、`stdev()`；总体标准差对应 `pstdev()`。具体行为与输入要求见 [Python statistics 官方文档](https://docs.python.org/3/library/statistics.html)。
 
-本文根据个人 Obsidian《课本实例学习路线》实例 9 重新组织，原材料参考《Python语言程序设计基础》第三版。网站版本补充了输入校验、标准库对照与边界测试；语法不熟悉时可回查 [Python 基础笔记](/coding/python-basics/)。
+本文根据个人 Obsidian《课本实例学习路线》实例 9 重新组织，原材料参考《Python语言程序设计基础》第三版。网站版本补充了输入校验、标准库对照与边界测试；语法不熟悉时可回查 [Python 基础笔记](https://yuanzhibx.github.io/coding/python-basics/)。

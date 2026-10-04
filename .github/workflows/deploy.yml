@@ -31,7 +31,7 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - name: 检查提交中没有草稿或私人附件
+      - name: 检查提交中没有草稿或未引用附件
         run: npm run check:publication
       - name: 检查同步及草稿隔离规则
         run: npm run test:publishing

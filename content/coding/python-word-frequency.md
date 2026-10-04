@@ -90,6 +90,6 @@ helps: 1
 
 ## 改成读取文件时
 
-把已经读取到的字符串交给 `top_words()` 即可，文件定位与文本编码应单独处理。可以结合 [文件路径笔记](/coding/python-file-paths/) 完成扩展，再用自己允许公开的短文本检查结果。
+把已经读取到的字符串交给 `top_words()` 即可，文件定位与文本编码应单独处理。可以结合 [文件路径笔记](https://yuanzhibx.github.io/coding/python-file-paths/) 完成扩展，再用自己允许公开的短文本检查结果。
 
-本文根据个人 Obsidian《课本实例学习路线》实例 10 整理，原材料参考《Python语言程序设计基础》第三版。网站版本重新设计演示文本、撇号规则和边界测试，不转载书中的长篇文学语料；函数与字典用法可回查 [Python 基础笔记](/coding/python-basics/)。
+本文根据个人 Obsidian《课本实例学习路线》实例 10 整理，原材料参考《Python语言程序设计基础》第三版。网站版本重新设计演示文本、撇号规则和边界测试，不转载书中的长篇文学语料；函数与字典用法可回查 [Python 基础笔记](https://yuanzhibx.github.io/coding/python-basics/)。

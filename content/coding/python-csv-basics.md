@@ -118,7 +118,7 @@ with TemporaryDirectory() as temporary:
 
 先保留输入文件，再把结果另存为新文件；不要让输入和输出指向同一个路径。还应检查没有有效记录时的处理，避免空列表求平均导致除零。
 
-如果首先遇到的是“文件找不到”，可以先看 [Python 文件路径笔记](/coding/python-file-paths/)，把路径起点确认清楚，再排查文件内容。
+如果首先遇到的是“文件找不到”，可以先看 [Python 文件路径笔记](https://yuanzhibx.github.io/coding/python-file-paths/)，把路径起点确认清楚，再排查文件内容。
 
 ## 整理来源
 

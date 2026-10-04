@@ -1047,9 +1047,9 @@ if __name__ == "__main__":
 
 先尝试独立完成一个小功能，再检查边界条件。可以按下面的顺序继续：
 
-1. [文件路径与工作目录](/coding/python-file-paths/)：解决程序找不到文件的问题。
-2. [CSV 读取与保存](/coding/python-csv-basics/)：把文本字段转换为可计算数据。
-3. [平均值、中位数和样本标准差](/coding/python-basic-statistics/)：用函数完成统计并核对结果。
-4. [英文词频统计](/coding/python-word-frequency/)：练习字符串处理、计数与排序。
+1. [文件路径与工作目录](https://yuanzhibx.github.io/coding/python-file-paths/)：解决程序找不到文件的问题。
+2. [CSV 读取与保存](https://yuanzhibx.github.io/coding/python-csv-basics/)：把文本字段转换为可计算数据。
+3. [平均值、中位数和样本标准差](https://yuanzhibx.github.io/coding/python-basic-statistics/)：用函数完成统计并核对结果。
+4. [英文词频统计](https://yuanzhibx.github.io/coding/python-word-frequency/)：练习字符串处理、计数与排序。
 
 本文保留原笔记的学习主线，并将 Obsidian 提示框和内部链接改为网站可读形式。原学习来源为 [《3小时超快速入门 Python｜动画教学》](https://www.bilibili.com/video/BV1Jgf6YvE8e/)，不是视频逐字稿。语法与标准库用法可继续查阅 [Python 官方教程](https://docs.python.org/3/tutorial/)；示例为学习材料中的独立演示，不代表真实业务规则。

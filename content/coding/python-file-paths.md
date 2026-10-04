@@ -90,7 +90,7 @@ Jupyter Notebook 和交互式控制台通常没有 `__file__`，不能直接套�
 
 排查时可以打印 `path.resolve()`，查看程序最终寻找的位置。`resolve()` 能帮助理解路径，但不会替你创建缺失的文件。
 
-定位文件之后，结构化表格应交给相应解析工具处理。下一篇 [Python CSV 读写笔记](/coding/python-csv-basics/) 使用标准库完成读取、数值转换和保存。
+定位文件之后，结构化表格应交给相应解析工具处理。下一篇 [Python CSV 读写笔记](https://yuanzhibx.github.io/coding/python-csv-basics/) 使用标准库完成读取、数值转换和保存。
 
 ## 整理来源
 
