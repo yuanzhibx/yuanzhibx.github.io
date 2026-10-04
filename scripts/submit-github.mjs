@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process';
-import { mkdir, readFile, writeFile, mkdtemp, rm } from 'node:fs/promises';
+import { mkdir, readFile, writeFile, mkdtemp, rm, chmod } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -29,6 +29,7 @@ try {
   for (const [name, bytes] of snapshot) {
     await mkdir(dirname(join(stage, name)), { recursive: true });
     await writeFile(join(stage, name), bytes);
+    if (name.endsWith('.command')) await chmod(join(stage, name), 0o755);
   }
   // 对将要上传的快照构建，避免本地未上传的草稿附件掩盖缺失文件。
   execFileSync(process.execPath, [join(root, 'node_modules/astro/bin/astro.mjs'), 'check', '--root', stage], { cwd: root, env, stdio: 'inherit' });
