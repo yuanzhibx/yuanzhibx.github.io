@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import Arrow from '../components/Arrow.astro';
+---
+<Base title="404 · Page not found" description="页面不存在，请返回首页继续浏览。" noindex>
+  <section class="container not-found">
+    <p class="eyebrow">404</p>
+    <h1>Page not found</h1>
+    <p>这个页面不存在，或地址已经更改。</p>
+    <a class="button" href="/">Back to Home <Arrow /></a>
+  </section>
+</Base>

@@ -1,0 +1,89 @@
+---
+import { render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import { sections, typeLabels } from '../../config/sections';
+import { publishedPosts, postHref, formatDate, type Post } from '../../lib/posts';
+import 'katex/dist/katex.min.css';
+import '../../styles/article.css';
+export async function getStaticPaths() {
+  return (await publishedPosts()).map((post) => ({
+    params: { section: post.data.section, slug: post.id.split('/').slice(1).join('/') },
+    props: { post },
+  }));
+}
+interface Props { post: Post; }
+const { post } = Astro.props;
+const section = sections[post.data.section];
+const { Content, headings } = await render(post);
+// 长笔记仅列出主要章节，避免重复的小标题占满导航。
+const headingDepth = headings.length > 24 ? 2 : 4;
+const toc = headings.filter((heading) => heading.depth >= 2 && heading.depth <= headingDepth);
+const related = (await publishedPosts()).filter((other) =>
+  other.id !== post.id && other.data.section === post.data.section &&
+  other.data.tags.some((tag) => post.data.tags.includes(tag)),
+).sort((a, b) => {
+  const score = (entry: Post) => entry.data.tags.filter((tag) => post.data.tags.includes(tag)).length;
+  return score(b) - score(a) || b.data.date.localeCompare(a.data.date);
+}).slice(0, 3);
+---
+<Base title={post.data.title} description={post.data.summary}>
+  <div class="container page-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href={`/${post.data.section}/`}>{section.title}</a><span aria-hidden="true">/</span><span>Entry</span></nav>
+    <div class="article-grid">
+      <article class="article-main">
+        <header class="article-header">
+          <p class="eyebrow">{section.title} · {typeLabels[post.data.type]}</p>
+          <h1>{post.data.title}</h1>
+          <time datetime={post.data.date}>{formatDate(post.data.date)}</time>
+          {post.data.tags.length > 0 && <ul class="article-tags" aria-label="文章标签">{post.data.tags.map((tag) => <li><a href={`/${post.data.section}/?tag=${encodeURIComponent(tag)}`}>{tag}</a></li>)}</ul>}
+          <p class="article-summary">{post.data.summary}</p>
+          {post.data.cover && <Image class="article-cover" src={post.data.cover} alt={post.data.coverAlt!} widths={[480, 960, 1440]} sizes="(max-width: 760px) 90vw, 840px" width={960} loading="eager" />}
+        </header>
+        <div class="prose"><Content /></div>
+        <p class="copy-status sr-only" role="status" aria-live="polite"></p>
+        <footer class="article-footer"><a class="text-link" href={`/${post.data.section}/`}>← Back to {section.title}</a></footer>
+        {related.length > 0 && <section class="related"><h2>Related Entries</h2><ul>{related.map((entry) => <li><a href={postHref(entry)}>{entry.data.title}<span aria-hidden="true">↗</span></a></li>)}</ul></section>}
+      </article>
+      {toc.length > 0 && <aside class="toc sidebar"><nav aria-label="文章目录"><h2>On this page</h2><ol>{toc.map((heading) => <li style={`--depth:${heading.depth - 2}`}><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol></nav></aside>}
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll<HTMLElement>('.prose pre').forEach((pre, index) => {
+      const code = pre.querySelector('code');
+      if (!code) return;
+      const frame = document.createElement('div');
+      frame.className = 'code-frame';
+      const toolbar = document.createElement('div');
+      toolbar.className = 'code-toolbar';
+      const language = document.createElement('span');
+      language.textContent = pre.dataset.language ?? 'Code';
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = 'Copy';
+      button.setAttribute('aria-label', `复制第 ${index + 1} 个代码块`);
+      toolbar.append(language, button);
+      pre.before(frame);
+      frame.append(toolbar, pre);
+      pre.setAttribute('aria-label', `${language.textContent} 代码，可横向滚动`);
+      button.addEventListener('click', async () => {
+        const status = document.querySelector<HTMLElement>('.copy-status');
+        try {
+          await navigator.clipboard.writeText(code.textContent ?? '');
+          button.textContent = 'Copied!';
+          if (status) status.textContent = `第 ${index + 1} 个代码块已复制`;
+        } catch {
+          // 剪贴板被浏览器阻止时选中代码，提供真实可执行的后备操作。
+          const range = document.createRange();
+          range.selectNodeContents(code);
+          const selection = window.getSelection();
+          selection?.removeAllRanges();
+          selection?.addRange(range);
+          button.textContent = 'Press ⌘/Ctrl+C';
+          if (status) status.textContent = '浏览器未允许复制，已选中代码，请按 Command+C 或 Ctrl+C。';
+        }
+        window.setTimeout(() => { button.textContent = 'Copy'; }, 3000);
+      });
+    });
+  </script>
+</Base>

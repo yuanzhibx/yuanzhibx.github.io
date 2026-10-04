@@ -1,0 +1,14 @@
+---
+import { site } from '../config/site';
+---
+<div class="hero-art" aria-hidden="true">
+  <svg class="hero-geometry" viewBox="0 0 460 370" fill="none">
+    <circle cx="285" cy="202" r="128" fill="#E1ECFF"/>
+    <circle cx="160" cy="165" r="124" stroke="#0057FF" stroke-width="1.8"/>
+    <path d="M101 346 438 61" stroke="#0057FF" stroke-width="1.8"/>
+  </svg>
+  <div class="art-labels">
+    <div>{site.decorationTopics.map((word) => <span>{word}</span>)}</div>
+    <div>{site.decorationMotto.map((word) => <span>{word}</span>)}</div>
+  </div>
+</div>

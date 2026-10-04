@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import Arrow from './Arrow.astro';
+import { typeLabels } from '../config/sections';
+import { postHref, formatDate, type Post } from '../lib/posts';
+interface Props { post: Post; featured?: boolean; }
+const { post, featured = false } = Astro.props;
+---
+<article class:list={['post-card', featured && 'featured-card']} data-post data-type={post.data.type} data-tags={JSON.stringify(post.data.tags)}>
+  {featured && post.data.cover && <a href={postHref(post)} class="post-cover" tabindex="-1" aria-hidden="true"><Image src={post.data.cover} alt="" widths={[400, 800]} sizes="(max-width: 760px) 90vw, 360px" width={800} loading="lazy" /></a>}
+  <div class="post-heading">
+    <p class="eyebrow">{typeLabels[post.data.type]}{post.data.tags.length > 0 && ` · ${post.data.tags.join(' / ')}`}</p>
+    <h3><a href={postHref(post)}>{post.data.title}</a></h3>
+    <time datetime={post.data.date}>{formatDate(post.data.date)}</time>
+  </div>
+  <p class="post-summary">{post.data.summary}</p>
+  <a class="text-link post-read" href={postHref(post)} aria-label={`Read more：${post.data.title}`}><span>Read more</span><Arrow /></a>
+</article>

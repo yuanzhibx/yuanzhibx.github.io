@@ -1,0 +1,105 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostCard from '../../components/PostCard.astro';
+import { sections, typeLabels, type Section } from '../../config/sections';
+import { publishedPosts } from '../../lib/posts';
+export function getStaticPaths() {
+  return Object.keys(sections).map((section) => ({ params: { section } }));
+}
+const key = Astro.params.section as Section;
+const section = sections[key];
+const posts = (await publishedPosts()).filter((post) => post.data.section === key);
+const tags = [...new Set(posts.flatMap((post) => post.data.tags))].sort((a, b) => a.localeCompare(b, 'zh-CN'));
+const types = section.types.filter((type) => posts.some((post) => post.data.type === type));
+const featured = posts.filter((post) => post.data.featured);
+const latest = posts.filter((post) => !post.data.featured);
+---
+<Base title={section.title} description={section.description}>
+  <div class="container page-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>{section.title}</span></nav>
+    <div class="content-grid">
+      <div class="section-main">
+        <header class="section-header">
+          <h1 class="page-title">{section.title}</h1>
+          <p class="section-description">{section.description}</p>
+          <svg class="small-geometry" viewBox="0 0 140 90" fill="none" aria-hidden="true"><circle cx="43" cy="42" r="31" stroke="#0057ff"/><path d="M74 48h59" stroke="#0057ff"/><circle cx="60" cy="60" r="6" fill="#5794ff"/></svg>
+        </header>
+        {posts.length === 0 ? (
+          <section class="empty-state" aria-labelledby="empty-title">
+            <span class="empty-mark" aria-hidden="true"></span>
+            <h2 id="empty-title">A space for what’s next.</h2>
+            <p>这里暂时还没有发布内容。<br />{section.empty}</p>
+            <a class="text-link" href="/">Back to Home <span aria-hidden="true">↗</span></a>
+          </section>
+        ) : (
+          <div data-post-browser>
+            <div class="filters" data-filters hidden>
+              {tags.length > 0 && <fieldset class="tag-filter"><legend class="sr-only">按主题筛选</legend><button type="button" data-tag="" aria-pressed="true">All topics</button>{tags.map((tag) => <button type="button" data-tag={tag} aria-pressed="false">{tag}</button>)}</fieldset>}
+              {types.length > 1 && <fieldset class="type-filter"><legend class="sr-only">按内容类型筛选</legend><button type="button" data-type-filter="" aria-pressed="true">All</button>{types.map((type) => <button type="button" data-type-filter={type} aria-pressed="false">{typeLabels[type]}</button>)}</fieldset>}
+            </div>
+            <p class="sr-only" role="status" data-result-count></p>
+            {featured.length > 0 && <section class="post-group" data-post-group><h2>Featured</h2>{featured.map((post) => <PostCard post={post} featured />)}</section>}
+            {latest.length > 0 && <section class="post-group" data-post-group><h2>Latest Entries</h2>{latest.map((post) => <PostCard post={post} />)}</section>}
+            <section class="empty-state" data-no-results hidden>
+              <h2>No matching entries</h2><p>没有同时符合当前主题和类型的内容，请试试其他条件。</p>
+              <button type="button" class="button" data-clear-filters>Clear filters</button>
+            </section>
+          </div>
+        )}
+      </div>
+      <aside class="sidebar">
+        <section><h2>Focus</h2><ul>{section.focus.map((focus) => <li>{focus}</li>)}</ul></section>
+        <section><h2>About this space</h2><p>{section.about}</p></section>
+      </aside>
+    </div>
+  </div>
+  <script>
+    const browser = document.querySelector<HTMLElement>('[data-post-browser]');
+    if (browser) {
+      const controls = browser.querySelector<HTMLElement>('[data-filters]');
+      const cards = [...browser.querySelectorAll<HTMLElement>('[data-post]')];
+      const tagButtons = [...browser.querySelectorAll<HTMLButtonElement>('[data-tag]')];
+      const typeButtons = [...browser.querySelectorAll<HTMLButtonElement>('[data-type-filter]')];
+      const noResults = browser.querySelector<HTMLElement>('[data-no-results]')!;
+      let tag = '';
+      let type = '';
+      if (controls) controls.hidden = !controls.querySelector('button');
+      const apply = () => {
+        let count = 0;
+        cards.forEach((card) => {
+          const tags = JSON.parse(card.dataset.tags ?? '[]') as string[];
+          card.hidden = !((!tag || tags.includes(tag)) && (!type || card.dataset.type === type));
+          if (!card.hidden) count++;
+        });
+        tagButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.tag === tag)));
+        typeButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.typeFilter === type)));
+        browser.querySelectorAll<HTMLElement>('[data-post-group]').forEach((group) => {
+          group.hidden = !group.querySelector('[data-post]:not([hidden])');
+        });
+        noResults.hidden = count > 0;
+        browser.querySelector('[data-result-count]')!.textContent = `显示 ${count} 篇内容`;
+      };
+      const fromUrl = () => {
+        const params = new URLSearchParams(location.search);
+        tag = params.get('tag') ?? '';
+        type = params.get('type') ?? '';
+        apply();
+      };
+      const updateUrl = () => {
+        const url = new URL(location.href);
+        tag ? url.searchParams.set('tag', tag) : url.searchParams.delete('tag');
+        type ? url.searchParams.set('type', type) : url.searchParams.delete('type');
+        history.pushState(null, '', url);
+        apply();
+      };
+      tagButtons.forEach((button) => button.addEventListener('click', () => { tag = button.dataset.tag ?? ''; updateUrl(); }));
+      typeButtons.forEach((button) => button.addEventListener('click', () => { type = button.dataset.typeFilter ?? ''; updateUrl(); }));
+      browser.querySelector('[data-clear-filters]')?.addEventListener('click', () => {
+        tag = ''; type = ''; updateUrl();
+        (tagButtons[0] ?? typeButtons[0])?.focus();
+      });
+      window.addEventListener('popstate', fromUrl);
+      fromUrl();
+    }
+  </script>
+</Base>

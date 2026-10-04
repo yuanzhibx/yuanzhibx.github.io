@@ -1,0 +1,64 @@
+name: 检查并发布网站
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: website-${{ github.ref }}
+  # 正式发布不被后续提交中断；排队时 GitHub 会保留最新等待任务。
+  cancel-in-progress: false
+
+jobs:
+  check:
+    name: 检查文章与网页
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      ASTRO_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: 检查提交中没有草稿或私人附件
+        run: npm run check:publication
+      - name: 检查同步及草稿隔离规则
+        run: npm run test:publishing
+      - name: 安装浏览器
+        run: npx playwright install --with-deps chromium
+      - name: 类型检查、构建及浏览器验收
+        run: npm test
+      - name: 上传正式网站
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+          include-hidden-files: true
+
+  deploy:
+    name: 发布到 GitHub Pages
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 发布
+        id: deployment
+        uses: actions/deploy-pages@v4

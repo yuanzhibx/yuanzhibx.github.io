@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+.verification/
+.deploy/
+.DS_Store
+.env
+.env.*
+.obsidian-publish.json

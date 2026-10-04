@@ -1,0 +1,4 @@
+---
+import { site } from '../config/site';
+---
+<p class="introduction">{site.introduction.map((part) => part.strong ? <strong>{part.text}</strong> : part.text)}</p>

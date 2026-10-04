@@ -1,0 +1,68 @@
+---
+import { site, navigation } from '../config/site';
+import '../styles/global.css';
+interface Props { title: string; description: string; wide?: boolean; noindex?: boolean; }
+const { title, description, wide = false, noindex = false } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title === site.name ? title : `${title} · ${site.name}`}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    {!noindex && Astro.site && <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />}
+    {!noindex && Astro.site && <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />}
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class:list={[wide && 'wide-layout']}>
+    <a class="skip-link" href="#main">跳转到主要内容</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Yuanzhibx Home">{site.name}</a>
+        <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" hidden>Menu <span aria-hidden="true">☰</span></button>
+        <nav id="main-navigation" aria-label="Main navigation">
+          {navigation.map((item) => {
+            const active = item.href === '/' ? currentPath === '/' : currentPath.startsWith(item.href);
+            return <a href={item.href} aria-current={active ? 'page' : undefined}>{item.label}</a>;
+          })}
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1"><slot /></main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="email-link" href={`mailto:${site.email}`}>
+          <svg width="24" height="22" viewBox="0 0 24 22" fill="none" aria-hidden="true"><rect x="1.5" y="3" width="21" height="16" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="m2 4 10 8L22 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          {site.email}
+        </a>
+        <span>{site.name}</span>
+      </div>
+    </footer>
+    <script>
+      const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+      const nav = document.querySelector<HTMLElement>('#main-navigation');
+      if (toggle && nav) {
+        toggle.hidden = false;
+        document.documentElement.classList.add('navigation-ready');
+        const close = () => { toggle.setAttribute('aria-expanded', 'false'); nav.classList.remove('is-open'); };
+        toggle.addEventListener('click', () => {
+          const open = toggle.getAttribute('aria-expanded') !== 'true';
+          toggle.setAttribute('aria-expanded', String(open));
+          nav.classList.toggle('is-open', open);
+        });
+        nav.addEventListener('click', (event) => { if ((event.target as Element).closest('a')) close(); });
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') { close(); toggle.focus(); }
+        });
+        matchMedia('(min-width: 761px)').addEventListener('change', close);
+      }
+    </script>
+  </body>
+</html>

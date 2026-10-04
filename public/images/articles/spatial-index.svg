@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360">
+  <title>空间索引候选与精确命中示意</title>
+  <desc>灰色弯折线的矩形包围盒包含蓝色查询窗口，但线本身不与窗口相交。蓝色点位于窗口内部。</desc>
+  <rect width="720" height="360" fill="white"/>
+  <g font-family="sans-serif" font-size="20" fill="#273444">
+    <rect x="85" y="65" width="405" height="240" fill="none" stroke="#737f8d" stroke-width="2" stroke-dasharray="8 6"/>
+    <path d="M85 65V305H490" fill="none" stroke="#52606e" stroke-width="5"/>
+    <rect x="255" y="140" width="150" height="100" fill="#e9f0ff" stroke="#0055ff" stroke-width="3"/>
+    <circle cx="305" cy="190" r="8" fill="#0055ff"/>
+    <text x="85" y="40">弯折线与它的包围盒</text>
+    <text x="515" y="175">查询窗口</text>
+    <path d="M410 165H500" stroke="#0055ff" stroke-width="2"/>
+    <text x="325" y="198">点</text>
+    <text x="515" y="260">线未命中</text>
+    <text x="515" y="292">点已命中</text>
+  </g>
+</svg>
