@@ -148,7 +148,14 @@ try {
     await expect(page.locator('h1')).toHaveCount(1);
     await expect(page.locator('.toc a')).not.toHaveCount(0);
     const body = await page.locator('.prose').innerText();
-    assert.equal(/\[\[|\/Users\/|DRAFT_SENTINEL|临时验证/.test(body), false);
+    assert.equal(/\/Users\/|DRAFT_SENTINEL|临时验证/.test(body), false);
+    // 双链检查排除代码，避免将 Python 二维数组的 [[ 误判为 Obsidian 双链。
+    const proseWithoutCode = await page.locator('.prose').evaluate((element) => {
+      const copy = element.cloneNode(true);
+      copy.querySelectorAll('pre, code').forEach((node) => node.remove());
+      return copy.textContent;
+    });
+    assert.equal(/\[\[/.test(proseWithoutCode), false);
     for (const link of await page.locator('.prose a[href^="/"], .prose a[href^="https://yuanzhibx.github.io/"], .related a').all()) {
       // 完整网站网址也在本次本地构建中检查，避免旧线上页面掩盖断链。
       const target = new URL(await link.getAttribute('href'), production);
