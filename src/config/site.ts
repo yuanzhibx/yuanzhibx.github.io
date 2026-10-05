@@ -1,7 +1,8 @@
-// 个人信息只在这里维护；首页和 About 共用同一份文案。
+// 个人信息集中维护；首页简介与 About 文案分别配置。
 export const site = {
   name: 'Yuanzhibx',
   tagline: 'ALL IN AI.',
+  homeIntroduction: '我是 Yuanzhibx，一名农业工程与信息技术专业的硕士研究生。在这里记录学习过程，分享编程实践与工具使用经验，探索如何用代码与 AI 解决学习中的具体问题。',
   email: 'ybx0729@gmail.com',
   socialLinks: [
     { label: 'GitHub', handle: '@yuanzhibx', href: 'https://github.com/yuanzhibx' },

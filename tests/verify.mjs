@@ -170,7 +170,7 @@ try {
   passed(`已检查 ${productionArticles.length} 篇正式文章的目录、内部链接、代码复制及桌面和手机布局`);
   await page.goto(production);
   await expect(page.locator('.hero h1')).toHaveText('Yuanzhibx');
-  await expect(page.locator('.hero .introduction strong')).toHaveText('Java AI');
+  await expect(page.locator('.hero .introduction')).toHaveText('我是 Yuanzhibx，一名农业工程与信息技术专业的硕士研究生。在这里记录学习过程，分享编程实践与工具使用经验，探索如何用代码与 AI 解决学习中的具体问题。');
   assert.equal((await page.locator('body').innerText()).includes('颜丙旭'), false);
   await page.getByRole('link', { name: 'Explore My Journey' }).click();
   await expect(page).toHaveURL(/#journey$/);

@@ -1,17 +1,16 @@
 ---
 import Base from '../layouts/Base.astro';
-import Introduction from '../components/Introduction.astro';
 import Geometry from '../components/Geometry.astro';
 import Arrow from '../components/Arrow.astro';
-import { site, introductionText } from '../config/site';
+import { site } from '../config/site';
 import { sections } from '../config/sections';
 ---
-<Base title={site.name} description={introductionText} wide>
+<Base title={site.name} description={site.homeIntroduction} wide>
   <section class="hero container" aria-labelledby="hero-title">
     <div class="hero-copy">
       <h1 id="hero-title">{site.name}</h1>
       <p class="tagline">{site.tagline}</p>
-      <Introduction />
+      <p class="introduction">{site.homeIntroduction}</p>
       <a class="button" href="#journey">Explore My Journey <Arrow /></a>
     </div>
     <Geometry />
