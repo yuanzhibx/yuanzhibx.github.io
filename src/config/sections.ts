@@ -5,7 +5,7 @@ export const sections = {
     focus: ['Soil', 'GIS', 'Remote Sensing'],
     about: '整理阶段性成果，也记录学习过程中的问题与思考。',
     empty: '学习记录与阶段性成果将在整理完成后发布。',
-    image: { src: '/images/study.webp', alt: '河流与农田交织的俯瞰景观' },
+    image: { src: '/images/study.webp', alt: '千早爱音站在教室黑板前微笑' },
     types: ['project', 'note'],
   },
   coding: {
@@ -14,7 +14,7 @@ export const sections = {
     focus: ['Programming', 'AI', 'Projects'],
     about: '记录编程中的理解与实践，积累可以复用的代码、脚本与工具。',
     empty: '技术文章与代码项目将在整理完成后发布。',
-    image: { src: '/images/coding.webp', alt: '深色代码编辑器中的程序代码' },
+    image: { src: '/images/coding.webp', alt: '丰川祥子戴着客服耳机，在电脑前工作' },
     types: ['article', 'project'],
   },
   tools: {
@@ -23,7 +23,7 @@ export const sections = {
     focus: ['Software', 'Setup', 'Workflows'],
     about: '整理具体的操作步骤与使用经验，让每一次配置和尝试都有迹可循。',
     empty: '软件教程、配置方法与实用攻略将在整理完成后发布。',
-    image: { src: '/images/tools.webp', alt: '浅色桌面上的笔记本电脑与绿植' },
+    image: { src: '/images/tools.webp', alt: '长崎素世（Soyorin）在咖啡店双手托着下巴微笑' },
     types: ['tutorial', 'guide'],
   },
 } as const;
