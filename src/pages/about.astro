@@ -12,12 +12,6 @@ import { site, introductionText } from '../config/site';
         <h2 class="about-name">{site.name}</h2>
         <p class="about-tagline">{site.tagline}</p>
         <Introduction />
-        {site.aboutSections.map((section) => (
-          <section class="about-section" aria-labelledby={section.id}>
-            <h2 id={section.id}>{section.title}</h2>
-            {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
-          </section>
-        ))}
       </section>
       <aside class="sidebar">
         <section>
@@ -39,10 +33,6 @@ import { site, introductionText } from '../config/site';
 </Base>
 
 <style>
-  .about-section { max-width: 680px; margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--line); }
-  .about-section h2 { font-size: 24px; letter-spacing: -.025em; margin-bottom: 16px; }
-  .about-section p { color: var(--body); font-size: 16px; line-height: 1.9; }
-  .about-section p + p { margin-top: 14px; }
   .sidebar .profile-links { display: block; margin-top: 20px; }
   .profile-link { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 6px; }
   .profile-label { display: block; color: var(--blue); font-size: 16px; }
