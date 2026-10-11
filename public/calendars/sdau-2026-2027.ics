@@ -168,28 +168,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:智慧耕地保育技术与应用【暂定】
+SUMMARY:智慧耕地保育技术与应用
 DTSTART;TZID=Asia/Shanghai:20261102T140000
 DTEND;TZID=Asia/Shanghai:20261102T174000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:eac6e7af2584537d8f9419677f101a3a@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第9周\n教师：诸葛玉平
- \n地点：待通知\n原表为初步安排。按用户要求占据下午
- 第5—8节（14:00—17:40），具体起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
-STATUS:TENTATIVE
+ \n地点：3#302\n学院课表明确第9—12周，周一、周三第5—8
+ 节，14:00—17:40。时间重叠：本次课与现代农业概论同为
+ 周一第5—8节，需向任课教师核实安排。\n来源：资源与
+ 环境学院2026—2027学年秋季学期硕士课表（2026-10-11提供
+ ）；用户已确认的校历和秋冬季作息表。\n教学周统一按
+ 2026-09-07为第1周周一计算。时间包含课间休息。暂无节假
+ 日停课、调课通知，按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#302
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用【暂定
- 】
+DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -219,28 +219,27 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:智慧耕地保育技术与应用【暂定】
+SUMMARY:智慧耕地保育技术与应用
 DTSTART;TZID=Asia/Shanghai:20261104T140000
 DTEND;TZID=Asia/Shanghai:20261104T174000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:ce0c0314c1abb024e5665a3fc1f43f7b@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第9周\n教师：诸葛玉平
- \n地点：待通知\n原表为初步安排。按用户要求占据下午
- 第5—8节（14:00—17:40），具体起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
-STATUS:TENTATIVE
+ \n地点：3#302\n学院课表明确第9—12周，周一、周三第5—8
+ 节，14:00—17:40。\n来源：资源与环境学院2026—2027学年秋
+ 季学期硕士课表（2026-10-11提供）；用户已确认的校历和
+ 秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计算
+ 。时间包含课间休息。暂无节假日停课、调课通知，按
+ 课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#302
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用【暂定
- 】
+DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -269,28 +268,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:智慧耕地保育技术与应用【暂定】
+SUMMARY:智慧耕地保育技术与应用
 DTSTART;TZID=Asia/Shanghai:20261109T140000
 DTEND;TZID=Asia/Shanghai:20261109T174000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:c45ba31bc5350f995dddf6336c396443@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第10周\n教师：诸葛玉
- 平\n地点：待通知\n原表为初步安排。按用户要求占据下
- 午第5—8节（14:00—17:40），具体起止时间及教室待通知
- 。\n来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的
- 校历和作息时间表。\n教学周统一按2026-09-07为第1周周一
- 计算。暂无节假日停课、调课通知，按原课表保留；不
- 推定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
-STATUS:TENTATIVE
+ 平\n地点：3#302\n学院课表明确第9—12周，周一、周三第5
+ —8节，14:00—17:40。时间重叠：本次课与现代农业概论同
+ 为周一第5—8节，需向任课教师核实安排。\n来源：资源
+ 与环境学院2026—2027学年秋季学期硕士课表（2026-10-11提
+ 供）；用户已确认的校历和秋冬季作息表。\n教学周统一
+ 按2026-09-07为第1周周一计算。时间包含课间休息。暂无节
+ 假日停课、调课通知，按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#302
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用【暂定
- 】
+DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -320,28 +319,27 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:智慧耕地保育技术与应用【暂定】
+SUMMARY:智慧耕地保育技术与应用
 DTSTART;TZID=Asia/Shanghai:20261111T140000
 DTEND;TZID=Asia/Shanghai:20261111T174000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:d6aeafaa6a9d3d4db6e189818f4ddd66@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第10周\n教师：诸葛玉
- 平\n地点：待通知\n原表为初步安排。按用户要求占据下
- 午第5—8节（14:00—17:40），具体起止时间及教室待通知
- 。\n来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的
- 校历和作息时间表。\n教学周统一按2026-09-07为第1周周一
- 计算。暂无节假日停课、调课通知，按原课表保留；不
- 推定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
-STATUS:TENTATIVE
+ 平\n地点：3#302\n学院课表明确第9—12周，周一、周三第5
+ —8节，14:00—17:40。\n来源：资源与环境学院2026—2027学
+ 年秋季学期硕士课表（2026-10-11提供）；用户已确认的校
+ 历和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一
+ 计算。时间包含课间休息。暂无节假日停课、调课通知
+ ，按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#302
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用【暂定
- 】
+DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -370,32 +368,6 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业遥感理论与技术【暂定】
-DTSTART;TZID=Asia/Shanghai:20261113T080000
-DTEND;TZID=Asia/Shanghai:20261113T114000
-DTSTAMP:20261004T013410Z
-UID:84dae44ca2bd829f460bdbbcc47c6f7b@sdau-calendar.yuanzhibx
-SEQUENCE:0
-CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第10周\n教师：王瑞燕\n
- 地点：资环320会议室\n按本次更新版 Excel 的周五上午、
- 周日晚上排课。原表当前状态仍注明上课安排待通知，
- 整体标为暂定；上午占第1—4节，晚上占第9—10节。\n来
- 源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历
- 和作息时间表。\n教学周统一按2026-09-07为第1周周一计算
- 。暂无节假日停课、调课通知，按原课表保留；不推定
- 实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:资环320会议室
-STATUS:TENTATIVE
-TRANSP:OPAQUE
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业遥感理论与技术【暂定】
-TRIGGER:-PT30M
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:深度学习技术及应用
 DTSTART;TZID=Asia/Shanghai:20261115T140000
 DTEND;TZID=Asia/Shanghai:20261115T170000
@@ -420,79 +392,54 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业遥感理论与技术【暂定】
-DTSTART;TZID=Asia/Shanghai:20261115T190000
-DTEND;TZID=Asia/Shanghai:20261115T204000
-DTSTAMP:20261004T013410Z
-UID:5d35f1707c46fe51da72b1949c5bebe0@sdau-calendar.yuanzhibx
-SEQUENCE:0
-CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第10周\n教师：王瑞燕\n
- 地点：资环320会议室\n按本次更新版 Excel 的周五上午、
- 周日晚上排课。原表当前状态仍注明上课安排待通知，
- 整体标为暂定；上午占第1—4节，晚上占第9—10节。\n来
- 源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历
- 和作息时间表。\n教学周统一按2026-09-07为第1周周一计算
- 。暂无节假日停课、调课通知，按原课表保留；不推定
- 实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:资环320会议室
-STATUS:TENTATIVE
-TRANSP:OPAQUE
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业遥感理论与技术【暂定】
-TRIGGER:-PT30M
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:智慧耕地保育技术与应用【暂定】
+SUMMARY:智慧耕地保育技术与应用
 DTSTART;TZID=Asia/Shanghai:20261116T140000
 DTEND;TZID=Asia/Shanghai:20261116T174000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:d5563c927a121beebc15b7916090f920@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第11周\n教师：诸葛玉
- 平\n地点：待通知\n原表为初步安排。按用户要求占据下
- 午第5—8节（14:00—17:40），具体起止时间及教室待通知
- 。\n来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的
- 校历和作息时间表。\n教学周统一按2026-09-07为第1周周一
- 计算。暂无节假日停课、调课通知，按原课表保留；不
- 推定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
-STATUS:TENTATIVE
+ 平\n地点：3#302\n学院课表明确第9—12周，周一、周三第5
+ —8节，14:00—17:40。时间重叠：本次课与现代农业概论同
+ 为周一第5—8节，需向任课教师核实安排。\n来源：资源
+ 与环境学院2026—2027学年秋季学期硕士课表（2026-10-11提
+ 供）；用户已确认的校历和秋冬季作息表。\n教学周统一
+ 按2026-09-07为第1周周一计算。时间包含课间休息。暂无节
+ 假日停课、调课通知，按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#302
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用【暂定
- 】
+DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:GIS与空间信息分析（理论）【暂定】
+SUMMARY:GIS与空间信息分析（理论）
 DTSTART;TZID=Asia/Shanghai:20261117T080000
 DTEND;TZID=Asia/Shanghai:20261117T114000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:658601940c7be9b069515c6893b4ea9b@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第11周\n教师：陈红艳\n
- 地点：3#302\n原表只注明上午。按用户要求占据上午第1—
- 4节（08:00—11:40）；准确起止时间待通知。\n来源：2026-20
- 27学年课程汇总_更新版.xlsx；用户提供的校历和作息时间
- 表。\n教学周统一按2026-09-07为第1周周一计算。暂无节假
- 日停课、调课通知，按原课表保留；不推定实际开课。
-LAST-MODIFIED:20261004T013410Z
+ 地点：3#302\n学院课表明确第11—14周，周二第1—4节理论
+ 、周三第1—4节实验，08:00—11:40。英语已免修，不加入
+ 英语事件。\n来源：资源与环境学院2026—2027学年秋季学
+ 期硕士课表（2026-10-11提供）；用户已确认的校历和秋冬
+ 季作息表。\n教学周统一按2026-09-07为第1周周一计算。时
+ 间包含课间休息。暂无节假日停课、调课通知，按课表
+ 保留。
+LAST-MODIFIED:20261011T111204Z
 LOCATION:3#302
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：GIS与空间信息分析（理论）【暂
- 定】
+DESCRIPTION:30分钟后上课：GIS与空间信息分析（理论）
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -522,54 +469,53 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:GIS与空间信息分析（实验）【暂定】
+SUMMARY:GIS与空间信息分析（实验）
 DTSTART;TZID=Asia/Shanghai:20261118T080000
 DTEND;TZID=Asia/Shanghai:20261118T114000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:2b633f66719ab5d786612ce481ab566e@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第11周\n教师：陈红艳\n
- 地点：文理大楼502\n原表只注明上午。按用户要求占据上
- 午第1—4节（08:00—11:40）；准确起止时间待通知。\n来源
- ：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历和
- 作息时间表。\n教学周统一按2026-09-07为第1周周一计算。
- 暂无节假日停课、调课通知，按原课表保留；不推定实
- 际开课。
-LAST-MODIFIED:20261004T013410Z
+ 地点：文理大楼502\n学院课表明确第11—14周，周二第1—4
+ 节理论、周三第1—4节实验，08:00—11:40。英语已免修，
+ 不加入英语事件。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
 LOCATION:文理大楼502
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：GIS与空间信息分析（实验）【暂
- 定】
+DESCRIPTION:30分钟后上课：GIS与空间信息分析（实验）
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:智慧耕地保育技术与应用【暂定】
+SUMMARY:智慧耕地保育技术与应用
 DTSTART;TZID=Asia/Shanghai:20261118T140000
 DTEND;TZID=Asia/Shanghai:20261118T174000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:f03f31c742f8146933ee3f5a1dd46cac@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第11周\n教师：诸葛玉
- 平\n地点：待通知\n原表为初步安排。按用户要求占据下
- 午第5—8节（14:00—17:40），具体起止时间及教室待通知
- 。\n来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的
- 校历和作息时间表。\n教学周统一按2026-09-07为第1周周一
- 计算。暂无节假日停课、调课通知，按原课表保留；不
- 推定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
-STATUS:TENTATIVE
+ 平\n地点：3#302\n学院课表明确第9—12周，周一、周三第5
+ —8节，14:00—17:40。\n来源：资源与环境学院2026—2027学
+ 年秋季学期硕士课表（2026-10-11提供）；用户已确认的校
+ 历和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一
+ 计算。时间包含课间休息。暂无节假日停课、调课通知
+ ，按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#302
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用【暂定
- 】
+DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -623,28 +569,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业遥感理论与技术【暂定】
+SUMMARY:农业遥感理论与技术
 DTSTART;TZID=Asia/Shanghai:20261120T080000
 DTEND;TZID=Asia/Shanghai:20261120T114000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:530605b4ae108dbce70fa7596487bd07@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第11周\n教师：王瑞燕\n
- 地点：资环320会议室\n按本次更新版 Excel 的周五上午、
- 周日晚上排课。原表当前状态仍注明上课安排待通知，
- 整体标为暂定；上午占第1—4节，晚上占第9—10节。\n来
- 源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历
- 和作息时间表。\n教学周统一按2026-09-07为第1周周一计算
- 。暂无节假日停课、调课通知，按原课表保留；不推定
- 实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:资环320会议室
-STATUS:TENTATIVE
+ 地点：3#320\n学院课表明确第11—16周，周五第1—4节（08:0
+ 0—11:40）、周日第9—10节（19:00—20:40）。起始周由第10
+ 周调整为第11周。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业遥感理论与技术【暂定】
+DESCRIPTION:30分钟后上课：农业遥感理论与技术
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -673,79 +619,80 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业遥感理论与技术【暂定】
+SUMMARY:农业遥感理论与技术
 DTSTART;TZID=Asia/Shanghai:20261122T190000
 DTEND;TZID=Asia/Shanghai:20261122T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:d1765c7a758cad9b56bbfba6a7c6606c@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第11周\n教师：王瑞燕\n
- 地点：资环320会议室\n按本次更新版 Excel 的周五上午、
- 周日晚上排课。原表当前状态仍注明上课安排待通知，
- 整体标为暂定；上午占第1—4节，晚上占第9—10节。\n来
- 源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历
- 和作息时间表。\n教学周统一按2026-09-07为第1周周一计算
- 。暂无节假日停课、调课通知，按原课表保留；不推定
- 实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:资环320会议室
-STATUS:TENTATIVE
+ 地点：3#320\n学院课表明确第11—16周，周五第1—4节（08:0
+ 0—11:40）、周日第9—10节（19:00—20:40）。起始周由第10
+ 周调整为第11周。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业遥感理论与技术【暂定】
+DESCRIPTION:30分钟后上课：农业遥感理论与技术
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:智慧耕地保育技术与应用【暂定】
+SUMMARY:智慧耕地保育技术与应用
 DTSTART;TZID=Asia/Shanghai:20261123T140000
 DTEND;TZID=Asia/Shanghai:20261123T174000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:d41731fe2b79959c268f1447541c8042@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第12周\n教师：诸葛玉
- 平\n地点：待通知\n原表为初步安排。按用户要求占据下
- 午第5—8节（14:00—17:40），具体起止时间及教室待通知
- 。\n来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的
- 校历和作息时间表。\n教学周统一按2026-09-07为第1周周一
- 计算。暂无节假日停课、调课通知，按原课表保留；不
- 推定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
-STATUS:TENTATIVE
+ 平\n地点：3#302\n学院课表明确第9—12周，周一、周三第5
+ —8节，14:00—17:40。时间重叠：本次课与现代农业概论同
+ 为周一第5—8节，需向任课教师核实安排。\n来源：资源
+ 与环境学院2026—2027学年秋季学期硕士课表（2026-10-11提
+ 供）；用户已确认的校历和秋冬季作息表。\n教学周统一
+ 按2026-09-07为第1周周一计算。时间包含课间休息。暂无节
+ 假日停课、调课通知，按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#302
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用【暂定
- 】
+DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:GIS与空间信息分析（理论）【暂定】
+SUMMARY:GIS与空间信息分析（理论）
 DTSTART;TZID=Asia/Shanghai:20261124T080000
 DTEND;TZID=Asia/Shanghai:20261124T114000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:66ab90eb4bfee63b01ee3bf7ed7e3b4b@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第12周\n教师：陈红艳\n
- 地点：3#302\n原表只注明上午。按用户要求占据上午第1—
- 4节（08:00—11:40）；准确起止时间待通知。\n来源：2026-20
- 27学年课程汇总_更新版.xlsx；用户提供的校历和作息时间
- 表。\n教学周统一按2026-09-07为第1周周一计算。暂无节假
- 日停课、调课通知，按原课表保留；不推定实际开课。
-LAST-MODIFIED:20261004T013410Z
+ 地点：3#302\n学院课表明确第11—14周，周二第1—4节理论
+ 、周三第1—4节实验，08:00—11:40。英语已免修，不加入
+ 英语事件。\n来源：资源与环境学院2026—2027学年秋季学
+ 期硕士课表（2026-10-11提供）；用户已确认的校历和秋冬
+ 季作息表。\n教学周统一按2026-09-07为第1周周一计算。时
+ 间包含课间休息。暂无节假日停课、调课通知，按课表
+ 保留。
+LAST-MODIFIED:20261011T111204Z
 LOCATION:3#302
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：GIS与空间信息分析（理论）【暂
- 定】
+DESCRIPTION:30分钟后上课：GIS与空间信息分析（理论）
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -775,54 +722,53 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:GIS与空间信息分析（实验）【暂定】
+SUMMARY:GIS与空间信息分析（实验）
 DTSTART;TZID=Asia/Shanghai:20261125T080000
 DTEND;TZID=Asia/Shanghai:20261125T114000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:5ce993c8108638962ba0aeebb7b1a7b0@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第12周\n教师：陈红艳\n
- 地点：文理大楼502\n原表只注明上午。按用户要求占据上
- 午第1—4节（08:00—11:40）；准确起止时间待通知。\n来源
- ：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历和
- 作息时间表。\n教学周统一按2026-09-07为第1周周一计算。
- 暂无节假日停课、调课通知，按原课表保留；不推定实
- 际开课。
-LAST-MODIFIED:20261004T013410Z
+ 地点：文理大楼502\n学院课表明确第11—14周，周二第1—4
+ 节理论、周三第1—4节实验，08:00—11:40。英语已免修，
+ 不加入英语事件。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
 LOCATION:文理大楼502
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：GIS与空间信息分析（实验）【暂
- 定】
+DESCRIPTION:30分钟后上课：GIS与空间信息分析（实验）
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:智慧耕地保育技术与应用【暂定】
+SUMMARY:智慧耕地保育技术与应用
 DTSTART;TZID=Asia/Shanghai:20261125T140000
 DTEND;TZID=Asia/Shanghai:20261125T174000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:32f186833725805c1714525cb5b75168@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第12周\n教师：诸葛玉
- 平\n地点：待通知\n原表为初步安排。按用户要求占据下
- 午第5—8节（14:00—17:40），具体起止时间及教室待通知
- 。\n来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的
- 校历和作息时间表。\n教学周统一按2026-09-07为第1周周一
- 计算。暂无节假日停课、调课通知，按原课表保留；不
- 推定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
-STATUS:TENTATIVE
+ 平\n地点：3#302\n学院课表明确第9—12周，周一、周三第5
+ —8节，14:00—17:40。\n来源：资源与环境学院2026—2027学
+ 年秋季学期硕士课表（2026-10-11提供）；用户已确认的校
+ 历和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一
+ 计算。时间包含课间休息。暂无节假日停课、调课通知
+ ，按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#302
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用【暂定
- 】
+DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -876,28 +822,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业遥感理论与技术【暂定】
+SUMMARY:农业遥感理论与技术
 DTSTART;TZID=Asia/Shanghai:20261127T080000
 DTEND;TZID=Asia/Shanghai:20261127T114000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:2d047ef56bd6a2d931e3e582cc99fcab@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第12周\n教师：王瑞燕\n
- 地点：资环320会议室\n按本次更新版 Excel 的周五上午、
- 周日晚上排课。原表当前状态仍注明上课安排待通知，
- 整体标为暂定；上午占第1—4节，晚上占第9—10节。\n来
- 源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历
- 和作息时间表。\n教学周统一按2026-09-07为第1周周一计算
- 。暂无节假日停课、调课通知，按原课表保留；不推定
- 实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:资环320会议室
-STATUS:TENTATIVE
+ 地点：3#320\n学院课表明确第11—16周，周五第1—4节（08:0
+ 0—11:40）、周日第9—10节（19:00—20:40）。起始周由第10
+ 周调整为第11周。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业遥感理论与技术【暂定】
+DESCRIPTION:30分钟后上课：农业遥感理论与技术
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -926,28 +872,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业遥感理论与技术【暂定】
+SUMMARY:农业遥感理论与技术
 DTSTART;TZID=Asia/Shanghai:20261129T190000
 DTEND;TZID=Asia/Shanghai:20261129T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:10fea3087ad528fff3c59922ff6590ac@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第12周\n教师：王瑞燕\n
- 地点：资环320会议室\n按本次更新版 Excel 的周五上午、
- 周日晚上排课。原表当前状态仍注明上课安排待通知，
- 整体标为暂定；上午占第1—4节，晚上占第9—10节。\n来
- 源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历
- 和作息时间表。\n教学周统一按2026-09-07为第1周周一计算
- 。暂无节假日停课、调课通知，按原课表保留；不推定
- 实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:资环320会议室
-STATUS:TENTATIVE
+ 地点：3#320\n学院课表明确第11—16周，周五第1—4节（08:0
+ 0—11:40）、周日第9—10节（19:00—20:40）。起始周由第10
+ 周调整为第11周。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业遥感理论与技术【暂定】
+DESCRIPTION:30分钟后上课：农业遥感理论与技术
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -978,27 +924,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:GIS与空间信息分析（理论）【暂定】
+SUMMARY:GIS与空间信息分析（理论）
 DTSTART;TZID=Asia/Shanghai:20261201T080000
 DTEND;TZID=Asia/Shanghai:20261201T114000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:d608d09a5e81b2d50f22106ecbed5160@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第13周\n教师：陈红艳\n
- 地点：3#302\n原表只注明上午。按用户要求占据上午第1—
- 4节（08:00—11:40）；准确起止时间待通知。\n来源：2026-20
- 27学年课程汇总_更新版.xlsx；用户提供的校历和作息时间
- 表。\n教学周统一按2026-09-07为第1周周一计算。暂无节假
- 日停课、调课通知，按原课表保留；不推定实际开课。
-LAST-MODIFIED:20261004T013410Z
+ 地点：3#302\n学院课表明确第11—14周，周二第1—4节理论
+ 、周三第1—4节实验，08:00—11:40。英语已免修，不加入
+ 英语事件。\n来源：资源与环境学院2026—2027学年秋季学
+ 期硕士课表（2026-10-11提供）；用户已确认的校历和秋冬
+ 季作息表。\n教学周统一按2026-09-07为第1周周一计算。时
+ 间包含课间休息。暂无节假日停课、调课通知，按课表
+ 保留。
+LAST-MODIFIED:20261011T111204Z
 LOCATION:3#302
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：GIS与空间信息分析（理论）【暂
- 定】
+DESCRIPTION:30分钟后上课：GIS与空间信息分析（理论）
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1028,28 +975,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:GIS与空间信息分析（实验）【暂定】
+SUMMARY:GIS与空间信息分析（实验）
 DTSTART;TZID=Asia/Shanghai:20261202T080000
 DTEND;TZID=Asia/Shanghai:20261202T114000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:3aabf4c1fa376cea0bbc76c965b8ed17@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第13周\n教师：陈红艳\n
- 地点：文理大楼502\n原表只注明上午。按用户要求占据上
- 午第1—4节（08:00—11:40）；准确起止时间待通知。\n来源
- ：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历和
- 作息时间表。\n教学周统一按2026-09-07为第1周周一计算。
- 暂无节假日停课、调课通知，按原课表保留；不推定实
- 际开课。
-LAST-MODIFIED:20261004T013410Z
+ 地点：文理大楼502\n学院课表明确第11—14周，周二第1—4
+ 节理论、周三第1—4节实验，08:00—11:40。英语已免修，
+ 不加入英语事件。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
 LOCATION:文理大楼502
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：GIS与空间信息分析（实验）【暂
- 定】
+DESCRIPTION:30分钟后上课：GIS与空间信息分析（实验）
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1129,28 +1076,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业遥感理论与技术【暂定】
+SUMMARY:农业遥感理论与技术
 DTSTART;TZID=Asia/Shanghai:20261204T080000
 DTEND;TZID=Asia/Shanghai:20261204T114000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:435c9207d30f49e572d6d9347bcf9cc0@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第13周\n教师：王瑞燕\n
- 地点：资环320会议室\n按本次更新版 Excel 的周五上午、
- 周日晚上排课。原表当前状态仍注明上课安排待通知，
- 整体标为暂定；上午占第1—4节，晚上占第9—10节。\n来
- 源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历
- 和作息时间表。\n教学周统一按2026-09-07为第1周周一计算
- 。暂无节假日停课、调课通知，按原课表保留；不推定
- 实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:资环320会议室
-STATUS:TENTATIVE
+ 地点：3#320\n学院课表明确第11—16周，周五第1—4节（08:0
+ 0—11:40）、周日第9—10节（19:00—20:40）。起始周由第10
+ 周调整为第11周。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业遥感理论与技术【暂定】
+DESCRIPTION:30分钟后上课：农业遥感理论与技术
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1179,28 +1126,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业遥感理论与技术【暂定】
+SUMMARY:农业遥感理论与技术
 DTSTART;TZID=Asia/Shanghai:20261206T190000
 DTEND;TZID=Asia/Shanghai:20261206T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:e4687dfb74f8670b8b87f2ff46d0859b@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第13周\n教师：王瑞燕\n
- 地点：资环320会议室\n按本次更新版 Excel 的周五上午、
- 周日晚上排课。原表当前状态仍注明上课安排待通知，
- 整体标为暂定；上午占第1—4节，晚上占第9—10节。\n来
- 源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历
- 和作息时间表。\n教学周统一按2026-09-07为第1周周一计算
- 。暂无节假日停课、调课通知，按原课表保留；不推定
- 实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:资环320会议室
-STATUS:TENTATIVE
+ 地点：3#320\n学院课表明确第11—16周，周五第1—4节（08:0
+ 0—11:40）、周日第9—10节（19:00—20:40）。起始周由第10
+ 周调整为第11周。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业遥感理论与技术【暂定】
+DESCRIPTION:30分钟后上课：农业遥感理论与技术
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1231,27 +1178,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:GIS与空间信息分析（理论）【暂定】
+SUMMARY:GIS与空间信息分析（理论）
 DTSTART;TZID=Asia/Shanghai:20261208T080000
 DTEND;TZID=Asia/Shanghai:20261208T114000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:b3a8a242bc700f22900fb8dbc12ef59d@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第14周\n教师：陈红艳\n
- 地点：3#302\n原表只注明上午。按用户要求占据上午第1—
- 4节（08:00—11:40）；准确起止时间待通知。\n来源：2026-20
- 27学年课程汇总_更新版.xlsx；用户提供的校历和作息时间
- 表。\n教学周统一按2026-09-07为第1周周一计算。暂无节假
- 日停课、调课通知，按原课表保留；不推定实际开课。
-LAST-MODIFIED:20261004T013410Z
+ 地点：3#302\n学院课表明确第11—14周，周二第1—4节理论
+ 、周三第1—4节实验，08:00—11:40。英语已免修，不加入
+ 英语事件。\n来源：资源与环境学院2026—2027学年秋季学
+ 期硕士课表（2026-10-11提供）；用户已确认的校历和秋冬
+ 季作息表。\n教学周统一按2026-09-07为第1周周一计算。时
+ 间包含课间休息。暂无节假日停课、调课通知，按课表
+ 保留。
+LAST-MODIFIED:20261011T111204Z
 LOCATION:3#302
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：GIS与空间信息分析（理论）【暂
- 定】
+DESCRIPTION:30分钟后上课：GIS与空间信息分析（理论）
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1281,28 +1229,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:GIS与空间信息分析（实验）【暂定】
+SUMMARY:GIS与空间信息分析（实验）
 DTSTART;TZID=Asia/Shanghai:20261209T080000
 DTEND;TZID=Asia/Shanghai:20261209T114000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:e8c9232b354f2ccbbfef638324625565@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第14周\n教师：陈红艳\n
- 地点：文理大楼502\n原表只注明上午。按用户要求占据上
- 午第1—4节（08:00—11:40）；准确起止时间待通知。\n来源
- ：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历和
- 作息时间表。\n教学周统一按2026-09-07为第1周周一计算。
- 暂无节假日停课、调课通知，按原课表保留；不推定实
- 际开课。
-LAST-MODIFIED:20261004T013410Z
+ 地点：文理大楼502\n学院课表明确第11—14周，周二第1—4
+ 节理论、周三第1—4节实验，08:00—11:40。英语已免修，
+ 不加入英语事件。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
 LOCATION:文理大楼502
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：GIS与空间信息分析（实验）【暂
- 定】
+DESCRIPTION:30分钟后上课：GIS与空间信息分析（实验）
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1382,28 +1330,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业遥感理论与技术【暂定】
+SUMMARY:农业遥感理论与技术
 DTSTART;TZID=Asia/Shanghai:20261211T080000
 DTEND;TZID=Asia/Shanghai:20261211T114000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:95b51eebaa43449c65ee0df6e3dc37ff@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第14周\n教师：王瑞燕\n
- 地点：资环320会议室\n按本次更新版 Excel 的周五上午、
- 周日晚上排课。原表当前状态仍注明上课安排待通知，
- 整体标为暂定；上午占第1—4节，晚上占第9—10节。\n来
- 源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历
- 和作息时间表。\n教学周统一按2026-09-07为第1周周一计算
- 。暂无节假日停课、调课通知，按原课表保留；不推定
- 实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:资环320会议室
-STATUS:TENTATIVE
+ 地点：3#320\n学院课表明确第11—16周，周五第1—4节（08:0
+ 0—11:40）、周日第9—10节（19:00—20:40）。起始周由第10
+ 周调整为第11周。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业遥感理论与技术【暂定】
+DESCRIPTION:30分钟后上课：农业遥感理论与技术
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1432,28 +1380,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业遥感理论与技术【暂定】
+SUMMARY:农业遥感理论与技术
 DTSTART;TZID=Asia/Shanghai:20261213T190000
 DTEND;TZID=Asia/Shanghai:20261213T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:d0c7bf2448568c1ea0abf5e5f8190351@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第14周\n教师：王瑞燕\n
- 地点：资环320会议室\n按本次更新版 Excel 的周五上午、
- 周日晚上排课。原表当前状态仍注明上课安排待通知，
- 整体标为暂定；上午占第1—4节，晚上占第9—10节。\n来
- 源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历
- 和作息时间表。\n教学周统一按2026-09-07为第1周周一计算
- 。暂无节假日停课、调课通知，按原课表保留；不推定
- 实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:资环320会议室
-STATUS:TENTATIVE
+ 地点：3#320\n学院课表明确第11—16周，周五第1—4节（08:0
+ 0—11:40）、周日第9—10节（19:00—20:40）。起始周由第10
+ 周调整为第11周。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业遥感理论与技术【暂定】
+DESCRIPTION:30分钟后上课：农业遥感理论与技术
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1584,28 +1532,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业遥感理论与技术【暂定】
+SUMMARY:农业遥感理论与技术
 DTSTART;TZID=Asia/Shanghai:20261218T080000
 DTEND;TZID=Asia/Shanghai:20261218T114000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:714c70a8d2d8fc0d3e776918268242a4@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第15周\n教师：王瑞燕\n
- 地点：资环320会议室\n按本次更新版 Excel 的周五上午、
- 周日晚上排课。原表当前状态仍注明上课安排待通知，
- 整体标为暂定；上午占第1—4节，晚上占第9—10节。\n来
- 源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历
- 和作息时间表。\n教学周统一按2026-09-07为第1周周一计算
- 。暂无节假日停课、调课通知，按原课表保留；不推定
- 实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:资环320会议室
-STATUS:TENTATIVE
+ 地点：3#320\n学院课表明确第11—16周，周五第1—4节（08:0
+ 0—11:40）、周日第9—10节（19:00—20:40）。起始周由第10
+ 周调整为第11周。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业遥感理论与技术【暂定】
+DESCRIPTION:30分钟后上课：农业遥感理论与技术
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1634,28 +1582,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业遥感理论与技术【暂定】
+SUMMARY:农业遥感理论与技术
 DTSTART;TZID=Asia/Shanghai:20261220T190000
 DTEND;TZID=Asia/Shanghai:20261220T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:42b8b0a812285976b059dc562685a4a0@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第15周\n教师：王瑞燕\n
- 地点：资环320会议室\n按本次更新版 Excel 的周五上午、
- 周日晚上排课。原表当前状态仍注明上课安排待通知，
- 整体标为暂定；上午占第1—4节，晚上占第9—10节。\n来
- 源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历
- 和作息时间表。\n教学周统一按2026-09-07为第1周周一计算
- 。暂无节假日停课、调课通知，按原课表保留；不推定
- 实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:资环320会议室
-STATUS:TENTATIVE
+ 地点：3#320\n学院课表明确第11—16周，周五第1—4节（08:0
+ 0—11:40）、周日第9—10节（19:00—20:40）。起始周由第10
+ 周调整为第11周。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业遥感理论与技术【暂定】
+DESCRIPTION:30分钟后上课：农业遥感理论与技术
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1786,28 +1734,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业遥感理论与技术【暂定】
+SUMMARY:农业遥感理论与技术
 DTSTART;TZID=Asia/Shanghai:20261225T080000
 DTEND;TZID=Asia/Shanghai:20261225T114000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:130a5062c54496fba7149dae452107fc@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第16周\n教师：王瑞燕\n
- 地点：资环320会议室\n按本次更新版 Excel 的周五上午、
- 周日晚上排课。原表当前状态仍注明上课安排待通知，
- 整体标为暂定；上午占第1—4节，晚上占第9—10节。\n来
- 源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历
- 和作息时间表。\n教学周统一按2026-09-07为第1周周一计算
- 。暂无节假日停课、调课通知，按原课表保留；不推定
- 实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:资环320会议室
-STATUS:TENTATIVE
+ 地点：3#320\n学院课表明确第11—16周，周五第1—4节（08:0
+ 0—11:40）、周日第9—10节（19:00—20:40）。起始周由第10
+ 周调整为第11周。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业遥感理论与技术【暂定】
+DESCRIPTION:30分钟后上课：农业遥感理论与技术
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1836,28 +1784,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业遥感理论与技术【暂定】
+SUMMARY:农业遥感理论与技术
 DTSTART;TZID=Asia/Shanghai:20261227T190000
 DTEND;TZID=Asia/Shanghai:20261227T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261011T111204Z
 UID:f879400eda26f9820bc06d7c3d73a3ef@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第16周\n教师：王瑞燕\n
- 地点：资环320会议室\n按本次更新版 Excel 的周五上午、
- 周日晚上排课。原表当前状态仍注明上课安排待通知，
- 整体标为暂定；上午占第1—4节，晚上占第9—10节。\n来
- 源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校历
- 和作息时间表。\n教学周统一按2026-09-07为第1周周一计算
- 。暂无节假日停课、调课通知，按原课表保留；不推定
- 实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:资环320会议室
-STATUS:TENTATIVE
+ 地点：3#320\n学院课表明确第11—16周，周五第1—4节（08:0
+ 0—11:40）、周日第9—10节（19:00—20:40）。起始周由第10
+ 周调整为第11周。\n来源：资源与环境学院2026—2027学年
+ 秋季学期硕士课表（2026-10-11提供）；用户已确认的校历
+ 和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计
+ 算。时间包含课间休息。暂无节假日停课、调课通知，
+ 按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业遥感理论与技术【暂定】
+DESCRIPTION:30分钟后上课：农业遥感理论与技术
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -2244,6 +2192,210 @@ BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:30分钟后上课：农业工程与信息技术案例【暂定
  】
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:现代农业概论
+DTSTART;TZID=Asia/Shanghai:20261005T140000
+DTEND;TZID=Asia/Shanghai:20261005T174000
+DTSTAMP:20261011T111204Z
+UID:e10d38603ab5d6f858e3e5d6b7e8f7ec@sdau-calendar.yuanzhibx
+SEQUENCE:0
+CATEGORIES:课程
+DESCRIPTION:2026—2027学年第一学期，第5周\n教师：朱西存\n
+ 地点：3#320\n学院课表明确第5—12周，周一第5—8节，14:00
+ —17:40。\n来源：资源与环境学院2026—2027学年秋季学期
+ 硕士课表（2026-10-11提供）；用户已确认的校历和秋冬季
+ 作息表。\n教学周统一按2026-09-07为第1周周一计算。时间
+ 包含课间休息。暂无节假日停课、调课通知，按课表保
+ 留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:30分钟后上课：现代农业概论
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:现代农业概论
+DTSTART;TZID=Asia/Shanghai:20261012T140000
+DTEND;TZID=Asia/Shanghai:20261012T174000
+DTSTAMP:20261011T111204Z
+UID:8970ec77d4b26528799aa64373def899@sdau-calendar.yuanzhibx
+SEQUENCE:0
+CATEGORIES:课程
+DESCRIPTION:2026—2027学年第一学期，第6周\n教师：朱西存\n
+ 地点：3#320\n学院课表明确第5—12周，周一第5—8节，14:00
+ —17:40。\n来源：资源与环境学院2026—2027学年秋季学期
+ 硕士课表（2026-10-11提供）；用户已确认的校历和秋冬季
+ 作息表。\n教学周统一按2026-09-07为第1周周一计算。时间
+ 包含课间休息。暂无节假日停课、调课通知，按课表保
+ 留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:30分钟后上课：现代农业概论
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:现代农业概论
+DTSTART;TZID=Asia/Shanghai:20261019T140000
+DTEND;TZID=Asia/Shanghai:20261019T174000
+DTSTAMP:20261011T111204Z
+UID:61cc2a8d71ad540f35b77dafc3bc650c@sdau-calendar.yuanzhibx
+SEQUENCE:0
+CATEGORIES:课程
+DESCRIPTION:2026—2027学年第一学期，第7周\n教师：朱西存\n
+ 地点：3#320\n学院课表明确第5—12周，周一第5—8节，14:00
+ —17:40。\n来源：资源与环境学院2026—2027学年秋季学期
+ 硕士课表（2026-10-11提供）；用户已确认的校历和秋冬季
+ 作息表。\n教学周统一按2026-09-07为第1周周一计算。时间
+ 包含课间休息。暂无节假日停课、调课通知，按课表保
+ 留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:30分钟后上课：现代农业概论
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:现代农业概论
+DTSTART;TZID=Asia/Shanghai:20261026T140000
+DTEND;TZID=Asia/Shanghai:20261026T174000
+DTSTAMP:20261011T111204Z
+UID:b161981f647ec05ad6e378f3eab5e8de@sdau-calendar.yuanzhibx
+SEQUENCE:0
+CATEGORIES:课程
+DESCRIPTION:2026—2027学年第一学期，第8周\n教师：朱西存\n
+ 地点：3#320\n学院课表明确第5—12周，周一第5—8节，14:00
+ —17:40。\n来源：资源与环境学院2026—2027学年秋季学期
+ 硕士课表（2026-10-11提供）；用户已确认的校历和秋冬季
+ 作息表。\n教学周统一按2026-09-07为第1周周一计算。时间
+ 包含课间休息。暂无节假日停课、调课通知，按课表保
+ 留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:30分钟后上课：现代农业概论
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:现代农业概论
+DTSTART;TZID=Asia/Shanghai:20261102T140000
+DTEND;TZID=Asia/Shanghai:20261102T174000
+DTSTAMP:20261011T111204Z
+UID:0cbbbc46e892632310f0164c715d2981@sdau-calendar.yuanzhibx
+SEQUENCE:0
+CATEGORIES:课程
+DESCRIPTION:2026—2027学年第一学期，第9周\n教师：朱西存\n
+ 地点：3#320\n学院课表明确第5—12周，周一第5—8节，14:00
+ —17:40。时间重叠：本次课与智慧耕地保育技术与应用同
+ 为周一第5—8节，需向任课教师核实安排。\n来源：资源
+ 与环境学院2026—2027学年秋季学期硕士课表（2026-10-11提
+ 供）；用户已确认的校历和秋冬季作息表。\n教学周统一
+ 按2026-09-07为第1周周一计算。时间包含课间休息。暂无节
+ 假日停课、调课通知，按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:30分钟后上课：现代农业概论
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:现代农业概论
+DTSTART;TZID=Asia/Shanghai:20261109T140000
+DTEND;TZID=Asia/Shanghai:20261109T174000
+DTSTAMP:20261011T111204Z
+UID:45696b9554fbac4a1e44463ee1963a33@sdau-calendar.yuanzhibx
+SEQUENCE:0
+CATEGORIES:课程
+DESCRIPTION:2026—2027学年第一学期，第10周\n教师：朱西存\n
+ 地点：3#320\n学院课表明确第5—12周，周一第5—8节，14:00
+ —17:40。时间重叠：本次课与智慧耕地保育技术与应用同
+ 为周一第5—8节，需向任课教师核实安排。\n来源：资源
+ 与环境学院2026—2027学年秋季学期硕士课表（2026-10-11提
+ 供）；用户已确认的校历和秋冬季作息表。\n教学周统一
+ 按2026-09-07为第1周周一计算。时间包含课间休息。暂无节
+ 假日停课、调课通知，按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:30分钟后上课：现代农业概论
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:现代农业概论
+DTSTART;TZID=Asia/Shanghai:20261116T140000
+DTEND;TZID=Asia/Shanghai:20261116T174000
+DTSTAMP:20261011T111204Z
+UID:4da015d9903a00e017afd7e654b6f369@sdau-calendar.yuanzhibx
+SEQUENCE:0
+CATEGORIES:课程
+DESCRIPTION:2026—2027学年第一学期，第11周\n教师：朱西存\n
+ 地点：3#320\n学院课表明确第5—12周，周一第5—8节，14:00
+ —17:40。时间重叠：本次课与智慧耕地保育技术与应用同
+ 为周一第5—8节，需向任课教师核实安排。\n来源：资源
+ 与环境学院2026—2027学年秋季学期硕士课表（2026-10-11提
+ 供）；用户已确认的校历和秋冬季作息表。\n教学周统一
+ 按2026-09-07为第1周周一计算。时间包含课间休息。暂无节
+ 假日停课、调课通知，按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:30分钟后上课：现代农业概论
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:现代农业概论
+DTSTART;TZID=Asia/Shanghai:20261123T140000
+DTEND;TZID=Asia/Shanghai:20261123T174000
+DTSTAMP:20261011T111204Z
+UID:864914b291398740ea2c1d7262721404@sdau-calendar.yuanzhibx
+SEQUENCE:0
+CATEGORIES:课程
+DESCRIPTION:2026—2027学年第一学期，第12周\n教师：朱西存\n
+ 地点：3#320\n学院课表明确第5—12周，周一第5—8节，14:00
+ —17:40。时间重叠：本次课与智慧耕地保育技术与应用同
+ 为周一第5—8节，需向任课教师核实安排。\n来源：资源
+ 与环境学院2026—2027学年秋季学期硕士课表（2026-10-11提
+ 供）；用户已确认的校历和秋冬季作息表。\n教学周统一
+ 按2026-09-07为第1周周一计算。时间包含课间休息。暂无节
+ 假日停课、调课通知，按课表保留。
+LAST-MODIFIED:20261011T111204Z
+LOCATION:3#320
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:30分钟后上课：现代农业概论
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
