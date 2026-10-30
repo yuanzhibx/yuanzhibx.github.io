@@ -168,32 +168,6 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:智慧耕地保育技术与应用
-DTSTART;TZID=Asia/Shanghai:20261102T140000
-DTEND;TZID=Asia/Shanghai:20261102T174000
-DTSTAMP:20261011T111204Z
-UID:eac6e7af2584537d8f9419677f101a3a@sdau-calendar.yuanzhibx
-SEQUENCE:1
-CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第9周\n教师：诸葛玉平
- \n地点：3#302\n学院课表明确第9—12周，周一、周三第5—8
- 节，14:00—17:40。时间重叠：本次课与现代农业概论同为
- 周一第5—8节，需向任课教师核实安排。\n来源：资源与
- 环境学院2026—2027学年秋季学期硕士课表（2026-10-11提供
- ）；用户已确认的校历和秋冬季作息表。\n教学周统一按
- 2026-09-07为第1周周一计算。时间包含课间休息。暂无节假
- 日停课、调课通知，按课表保留。
-LAST-MODIFIED:20261011T111204Z
-LOCATION:3#302
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
-TRIGGER:-PT30M
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:现代农业创新与乡村振兴战略【暂定】
 DTSTART;TZID=Asia/Shanghai:20261103T140000
 DTEND;TZID=Asia/Shanghai:20261103T154000
@@ -222,18 +196,18 @@ BEGIN:VEVENT
 SUMMARY:智慧耕地保育技术与应用
 DTSTART;TZID=Asia/Shanghai:20261104T140000
 DTEND;TZID=Asia/Shanghai:20261104T174000
-DTSTAMP:20261011T111204Z
+DTSTAMP:20261030T082619Z
 UID:ce0c0314c1abb024e5665a3fc1f43f7b@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第9周\n教师：诸葛玉平
- \n地点：3#302\n学院课表明确第9—12周，周一、周三第5—8
- 节，14:00—17:40。\n来源：资源与环境学院2026—2027学年秋
- 季学期硕士课表（2026-10-11提供）；用户已确认的校历和
- 秋冬季作息表。\n教学周统一按2026-09-07为第1周周一计算
- 。时间包含课间休息。暂无节假日停课、调课通知，按
- 课表保留。
-LAST-MODIFIED:20261011T111204Z
+DESCRIPTION:2026—2027学年第一学期，第9周\n教师：诸葛玉平\
+ n地点：3#302\n2026-10-30调课通知：本课程调整为第9—16周
+ 周三下午；鉴于农信专业周一下午有学位课，周一下午
+ 不再上课。\n第5—8节，14:00—17:40，沿用此前已明确的节
+ 次和教室，时间包含课间休息。\n来源：用户提供的调课
+ 通知；原学院课表及已确认的校历和秋冬季作息表。\n教
+ 学周统一按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261030T082619Z
 LOCATION:3#302
 STATUS:CONFIRMED
 TRANSP:OPAQUE
@@ -268,32 +242,6 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:智慧耕地保育技术与应用
-DTSTART;TZID=Asia/Shanghai:20261109T140000
-DTEND;TZID=Asia/Shanghai:20261109T174000
-DTSTAMP:20261011T111204Z
-UID:c45ba31bc5350f995dddf6336c396443@sdau-calendar.yuanzhibx
-SEQUENCE:1
-CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第10周\n教师：诸葛玉
- 平\n地点：3#302\n学院课表明确第9—12周，周一、周三第5
- —8节，14:00—17:40。时间重叠：本次课与现代农业概论同
- 为周一第5—8节，需向任课教师核实安排。\n来源：资源
- 与环境学院2026—2027学年秋季学期硕士课表（2026-10-11提
- 供）；用户已确认的校历和秋冬季作息表。\n教学周统一
- 按2026-09-07为第1周周一计算。时间包含课间休息。暂无节
- 假日停课、调课通知，按课表保留。
-LAST-MODIFIED:20261011T111204Z
-LOCATION:3#302
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
-TRIGGER:-PT30M
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:现代农业创新与乡村振兴战略【暂定】
 DTSTART;TZID=Asia/Shanghai:20261110T140000
 DTEND;TZID=Asia/Shanghai:20261110T154000
@@ -322,18 +270,18 @@ BEGIN:VEVENT
 SUMMARY:智慧耕地保育技术与应用
 DTSTART;TZID=Asia/Shanghai:20261111T140000
 DTEND;TZID=Asia/Shanghai:20261111T174000
-DTSTAMP:20261011T111204Z
+DTSTAMP:20261030T082619Z
 UID:d6aeafaa6a9d3d4db6e189818f4ddd66@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第10周\n教师：诸葛玉
- 平\n地点：3#302\n学院课表明确第9—12周，周一、周三第5
- —8节，14:00—17:40。\n来源：资源与环境学院2026—2027学
- 年秋季学期硕士课表（2026-10-11提供）；用户已确认的校
- 历和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一
- 计算。时间包含课间休息。暂无节假日停课、调课通知
- ，按课表保留。
-LAST-MODIFIED:20261011T111204Z
+DESCRIPTION:2026—2027学年第一学期，第10周\n教师：诸葛玉平
+ \n地点：3#302\n2026-10-30调课通知：本课程调整为第9—16周
+ 周三下午；鉴于农信专业周一下午有学位课，周一下午
+ 不再上课。\n第5—8节，14:00—17:40，沿用此前已明确的节
+ 次和教室，时间包含课间休息。\n来源：用户提供的调课
+ 通知；原学院课表及已确认的校历和秋冬季作息表。\n教
+ 学周统一按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261030T082619Z
 LOCATION:3#302
 STATUS:CONFIRMED
 TRANSP:OPAQUE
@@ -388,32 +336,6 @@ TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:30分钟后上课：深度学习技术及应用
-TRIGGER:-PT30M
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:智慧耕地保育技术与应用
-DTSTART;TZID=Asia/Shanghai:20261116T140000
-DTEND;TZID=Asia/Shanghai:20261116T174000
-DTSTAMP:20261011T111204Z
-UID:d5563c927a121beebc15b7916090f920@sdau-calendar.yuanzhibx
-SEQUENCE:1
-CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第11周\n教师：诸葛玉
- 平\n地点：3#302\n学院课表明确第9—12周，周一、周三第5
- —8节，14:00—17:40。时间重叠：本次课与现代农业概论同
- 为周一第5—8节，需向任课教师核实安排。\n来源：资源
- 与环境学院2026—2027学年秋季学期硕士课表（2026-10-11提
- 供）；用户已确认的校历和秋冬季作息表。\n教学周统一
- 按2026-09-07为第1周周一计算。时间包含课间休息。暂无节
- 假日停课、调课通知，按课表保留。
-LAST-MODIFIED:20261011T111204Z
-LOCATION:3#302
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -498,18 +420,18 @@ BEGIN:VEVENT
 SUMMARY:智慧耕地保育技术与应用
 DTSTART;TZID=Asia/Shanghai:20261118T140000
 DTEND;TZID=Asia/Shanghai:20261118T174000
-DTSTAMP:20261011T111204Z
+DTSTAMP:20261030T082619Z
 UID:f03f31c742f8146933ee3f5a1dd46cac@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第11周\n教师：诸葛玉
- 平\n地点：3#302\n学院课表明确第9—12周，周一、周三第5
- —8节，14:00—17:40。\n来源：资源与环境学院2026—2027学
- 年秋季学期硕士课表（2026-10-11提供）；用户已确认的校
- 历和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一
- 计算。时间包含课间休息。暂无节假日停课、调课通知
- ，按课表保留。
-LAST-MODIFIED:20261011T111204Z
+DESCRIPTION:2026—2027学年第一学期，第11周\n教师：诸葛玉平
+ \n地点：3#302\n2026-10-30调课通知：本课程调整为第9—16周
+ 周三下午；鉴于农信专业周一下午有学位课，周一下午
+ 不再上课。\n第5—8节，14:00—17:40，沿用此前已明确的节
+ 次和教室，时间包含课间休息。\n来源：用户提供的调课
+ 通知；原学院课表及已确认的校历和秋冬季作息表。\n教
+ 学周统一按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261030T082619Z
 LOCATION:3#302
 STATUS:CONFIRMED
 TRANSP:OPAQUE
@@ -645,32 +567,6 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:智慧耕地保育技术与应用
-DTSTART;TZID=Asia/Shanghai:20261123T140000
-DTEND;TZID=Asia/Shanghai:20261123T174000
-DTSTAMP:20261011T111204Z
-UID:d41731fe2b79959c268f1447541c8042@sdau-calendar.yuanzhibx
-SEQUENCE:1
-CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第12周\n教师：诸葛玉
- 平\n地点：3#302\n学院课表明确第9—12周，周一、周三第5
- —8节，14:00—17:40。时间重叠：本次课与现代农业概论同
- 为周一第5—8节，需向任课教师核实安排。\n来源：资源
- 与环境学院2026—2027学年秋季学期硕士课表（2026-10-11提
- 供）；用户已确认的校历和秋冬季作息表。\n教学周统一
- 按2026-09-07为第1周周一计算。时间包含课间休息。暂无节
- 假日停课、调课通知，按课表保留。
-LAST-MODIFIED:20261011T111204Z
-LOCATION:3#302
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
-TRIGGER:-PT30M
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:GIS与空间信息分析（理论）
 DTSTART;TZID=Asia/Shanghai:20261124T080000
 DTEND;TZID=Asia/Shanghai:20261124T114000
@@ -751,18 +647,18 @@ BEGIN:VEVENT
 SUMMARY:智慧耕地保育技术与应用
 DTSTART;TZID=Asia/Shanghai:20261125T140000
 DTEND;TZID=Asia/Shanghai:20261125T174000
-DTSTAMP:20261011T111204Z
+DTSTAMP:20261030T082619Z
 UID:32f186833725805c1714525cb5b75168@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第12周\n教师：诸葛玉
- 平\n地点：3#302\n学院课表明确第9—12周，周一、周三第5
- —8节，14:00—17:40。\n来源：资源与环境学院2026—2027学
- 年秋季学期硕士课表（2026-10-11提供）；用户已确认的校
- 历和秋冬季作息表。\n教学周统一按2026-09-07为第1周周一
- 计算。时间包含课间休息。暂无节假日停课、调课通知
- ，按课表保留。
-LAST-MODIFIED:20261011T111204Z
+DESCRIPTION:2026—2027学年第一学期，第12周\n教师：诸葛玉平
+ \n地点：3#302\n2026-10-30调课通知：本课程调整为第9—16周
+ 周三下午；鉴于农信专业周一下午有学位课，周一下午
+ 不再上课。\n第5—8节，14:00—17:40，沿用此前已明确的节
+ 次和教室，时间包含课间休息。\n来源：用户提供的调课
+ 通知；原学院课表及已确认的校历和秋冬季作息表。\n教
+ 学周统一按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261030T082619Z
 LOCATION:3#302
 STATUS:CONFIRMED
 TRANSP:OPAQUE
@@ -2251,21 +2147,19 @@ BEGIN:VEVENT
 SUMMARY:现代农业概论
 DTSTART;TZID=Asia/Shanghai:20261102T140000
 DTEND;TZID=Asia/Shanghai:20261102T174000
-DTSTAMP:20261012T114615Z
+DTSTAMP:20261030T082619Z
 UID:0cbbbc46e892632310f0164c715d2981@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第9周\n教师：朱西存\n
  地点：3#320\n2026-10-12课程群通知明确：10月19日正式开课
  ，周一第5—8节，地点3#320。起始周按新通知调整为第7周
  ；结束周暂沿用学院原课表第12周（11月23日），尚无新
- 的结课通知。本次课与智慧耕地保育技术与应用同在周
- 一第5—8节，需向任课教师核实重叠安排。\n时间：14:00
- —17:40，按已确认秋冬季作息表换算，包含课间休息。\n
- 来源：2026-10-12课程群通知（用户确认通知当天发送）；
- 学院课表及此前确认的校历、作息表。\n教学周统一按202
- 6-09-07为第1周周一计算。
-LAST-MODIFIED:20261012T114615Z
+ 的结课通知。\n时间：14:00—17:40，按已确认秋冬季作息
+ 表换算，包含课间休息。\n来源：2026-10-12课程群通知（
+ 用户确认通知当天发送）；学院课表及此前确认的校历
+ 、作息表。\n教学周统一按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261030T082619Z
 LOCATION:3#320
 STATUS:CONFIRMED
 TRANSP:OPAQUE
@@ -2279,21 +2173,19 @@ BEGIN:VEVENT
 SUMMARY:现代农业概论
 DTSTART;TZID=Asia/Shanghai:20261109T140000
 DTEND;TZID=Asia/Shanghai:20261109T174000
-DTSTAMP:20261012T114615Z
+DTSTAMP:20261030T082619Z
 UID:45696b9554fbac4a1e44463ee1963a33@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第10周\n教师：朱西存\n
  地点：3#320\n2026-10-12课程群通知明确：10月19日正式开课
  ，周一第5—8节，地点3#320。起始周按新通知调整为第7周
  ；结束周暂沿用学院原课表第12周（11月23日），尚无新
- 的结课通知。本次课与智慧耕地保育技术与应用同在周
- 一第5—8节，需向任课教师核实重叠安排。\n时间：14:00
- —17:40，按已确认秋冬季作息表换算，包含课间休息。\n
- 来源：2026-10-12课程群通知（用户确认通知当天发送）；
- 学院课表及此前确认的校历、作息表。\n教学周统一按202
- 6-09-07为第1周周一计算。
-LAST-MODIFIED:20261012T114615Z
+ 的结课通知。\n时间：14:00—17:40，按已确认秋冬季作息
+ 表换算，包含课间休息。\n来源：2026-10-12课程群通知（
+ 用户确认通知当天发送）；学院课表及此前确认的校历
+ 、作息表。\n教学周统一按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261030T082619Z
 LOCATION:3#320
 STATUS:CONFIRMED
 TRANSP:OPAQUE
@@ -2307,21 +2199,19 @@ BEGIN:VEVENT
 SUMMARY:现代农业概论
 DTSTART;TZID=Asia/Shanghai:20261116T140000
 DTEND;TZID=Asia/Shanghai:20261116T174000
-DTSTAMP:20261012T114615Z
+DTSTAMP:20261030T082619Z
 UID:4da015d9903a00e017afd7e654b6f369@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第11周\n教师：朱西存\n
  地点：3#320\n2026-10-12课程群通知明确：10月19日正式开课
  ，周一第5—8节，地点3#320。起始周按新通知调整为第7周
  ；结束周暂沿用学院原课表第12周（11月23日），尚无新
- 的结课通知。本次课与智慧耕地保育技术与应用同在周
- 一第5—8节，需向任课教师核实重叠安排。\n时间：14:00
- —17:40，按已确认秋冬季作息表换算，包含课间休息。\n
- 来源：2026-10-12课程群通知（用户确认通知当天发送）；
- 学院课表及此前确认的校历、作息表。\n教学周统一按202
- 6-09-07为第1周周一计算。
-LAST-MODIFIED:20261012T114615Z
+ 的结课通知。\n时间：14:00—17:40，按已确认秋冬季作息
+ 表换算，包含课间休息。\n来源：2026-10-12课程群通知（
+ 用户确认通知当天发送）；学院课表及此前确认的校历
+ 、作息表。\n教学周统一按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261030T082619Z
 LOCATION:3#320
 STATUS:CONFIRMED
 TRANSP:OPAQUE
@@ -2335,27 +2225,125 @@ BEGIN:VEVENT
 SUMMARY:现代农业概论
 DTSTART;TZID=Asia/Shanghai:20261123T140000
 DTEND;TZID=Asia/Shanghai:20261123T174000
-DTSTAMP:20261012T114615Z
+DTSTAMP:20261030T082619Z
 UID:864914b291398740ea2c1d7262721404@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第12周\n教师：朱西存\n
  地点：3#320\n2026-10-12课程群通知明确：10月19日正式开课
  ，周一第5—8节，地点3#320。起始周按新通知调整为第7周
  ；结束周暂沿用学院原课表第12周（11月23日），尚无新
- 的结课通知。本次课与智慧耕地保育技术与应用同在周
- 一第5—8节，需向任课教师核实重叠安排。\n时间：14:00
- —17:40，按已确认秋冬季作息表换算，包含课间休息。\n
- 来源：2026-10-12课程群通知（用户确认通知当天发送）；
- 学院课表及此前确认的校历、作息表。\n教学周统一按202
- 6-09-07为第1周周一计算。
-LAST-MODIFIED:20261012T114615Z
+ 的结课通知。\n时间：14:00—17:40，按已确认秋冬季作息
+ 表换算，包含课间休息。\n来源：2026-10-12课程群通知（
+ 用户确认通知当天发送）；学院课表及此前确认的校历
+ 、作息表。\n教学周统一按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261030T082619Z
 LOCATION:3#320
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:30分钟后上课：现代农业概论
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:智慧耕地保育技术与应用
+DTSTART;TZID=Asia/Shanghai:20261202T140000
+DTEND;TZID=Asia/Shanghai:20261202T174000
+DTSTAMP:20261030T082619Z
+UID:f40a39694bce8c683fc7a7aaeca7e553@sdau-calendar.yuanzhibx
+SEQUENCE:0
+CATEGORIES:课程
+DESCRIPTION:2026—2027学年第一学期，第13周\n教师：诸葛玉平
+ \n地点：3#302\n2026-10-30调课通知：本课程调整为第9—16周
+ 周三下午；鉴于农信专业周一下午有学位课，周一下午
+ 不再上课。\n第5—8节，14:00—17:40，沿用此前已明确的节
+ 次和教室，时间包含课间休息。\n来源：用户提供的调课
+ 通知；原学院课表及已确认的校历和秋冬季作息表。\n教
+ 学周统一按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261030T082619Z
+LOCATION:3#302
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:智慧耕地保育技术与应用
+DTSTART;TZID=Asia/Shanghai:20261209T140000
+DTEND;TZID=Asia/Shanghai:20261209T174000
+DTSTAMP:20261030T082619Z
+UID:8b0085209308ff58fe49279443bc3d32@sdau-calendar.yuanzhibx
+SEQUENCE:0
+CATEGORIES:课程
+DESCRIPTION:2026—2027学年第一学期，第14周\n教师：诸葛玉平
+ \n地点：3#302\n2026-10-30调课通知：本课程调整为第9—16周
+ 周三下午；鉴于农信专业周一下午有学位课，周一下午
+ 不再上课。\n第5—8节，14:00—17:40，沿用此前已明确的节
+ 次和教室，时间包含课间休息。\n来源：用户提供的调课
+ 通知；原学院课表及已确认的校历和秋冬季作息表。\n教
+ 学周统一按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261030T082619Z
+LOCATION:3#302
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:智慧耕地保育技术与应用
+DTSTART;TZID=Asia/Shanghai:20261216T140000
+DTEND;TZID=Asia/Shanghai:20261216T174000
+DTSTAMP:20261030T082619Z
+UID:6e53ceb8e622f985df111f2c1be63cfb@sdau-calendar.yuanzhibx
+SEQUENCE:0
+CATEGORIES:课程
+DESCRIPTION:2026—2027学年第一学期，第15周\n教师：诸葛玉平
+ \n地点：3#302\n2026-10-30调课通知：本课程调整为第9—16周
+ 周三下午；鉴于农信专业周一下午有学位课，周一下午
+ 不再上课。\n第5—8节，14:00—17:40，沿用此前已明确的节
+ 次和教室，时间包含课间休息。\n来源：用户提供的调课
+ 通知；原学院课表及已确认的校历和秋冬季作息表。\n教
+ 学周统一按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261030T082619Z
+LOCATION:3#302
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:智慧耕地保育技术与应用
+DTSTART;TZID=Asia/Shanghai:20261223T140000
+DTEND;TZID=Asia/Shanghai:20261223T174000
+DTSTAMP:20261030T082619Z
+UID:c72b0f8e1affc51c0a17d2d7d05dd681@sdau-calendar.yuanzhibx
+SEQUENCE:0
+CATEGORIES:课程
+DESCRIPTION:2026—2027学年第一学期，第16周\n教师：诸葛玉平
+ \n地点：3#302\n2026-10-30调课通知：本课程调整为第9—16周
+ 周三下午；鉴于农信专业周一下午有学位课，周一下午
+ 不再上课。\n第5—8节，14:00—17:40，沿用此前已明确的节
+ 次和教室，时间包含课间休息。\n来源：用户提供的调课
+ 通知；原学院课表及已确认的校历和秋冬季作息表。\n教
+ 学周统一按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261030T082619Z
+LOCATION:3#302
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:30分钟后上课：智慧耕地保育技术与应用
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
