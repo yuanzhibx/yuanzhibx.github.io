@@ -797,19 +797,19 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20261130T190000
 DTEND;TZID=Asia/Shanghai:20261130T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:3883756535e4817eabdb32e312d37d35@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第13周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
@@ -900,19 +900,19 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20261202T190000
 DTEND;TZID=Asia/Shanghai:20261202T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:97ea04ba727207b59d4cda25191a1a52@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第13周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
@@ -1051,19 +1051,19 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20261207T190000
 DTEND;TZID=Asia/Shanghai:20261207T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:bed43ff79da79daff07a02d4ae594ca4@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第14周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
@@ -1154,19 +1154,19 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20261209T190000
 DTEND;TZID=Asia/Shanghai:20261209T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:4f9ad146e488a4d77bc2dba142d2b4ec@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第14周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
@@ -1305,19 +1305,19 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20261214T190000
 DTEND;TZID=Asia/Shanghai:20261214T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:8ba7e8a724603f41657dd3eb0ef7637c@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第15周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
@@ -1356,19 +1356,19 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20261216T190000
 DTEND;TZID=Asia/Shanghai:20261216T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:f44c315efd76234019f62dc30575965f@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第15周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
@@ -1507,19 +1507,19 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20261221T190000
 DTEND;TZID=Asia/Shanghai:20261221T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:ed9a2fb82324227e58db2f646b70cc40@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第16周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
@@ -1558,19 +1558,19 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20261223T190000
 DTEND;TZID=Asia/Shanghai:20261223T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:32cf8b021f5f7f0e2d33a915d53e06e3@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第16周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
@@ -1709,19 +1709,19 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20261228T190000
 DTEND;TZID=Asia/Shanghai:20261228T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:a464e5ee7dbfbc4b930bf12ceed3e822@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第17周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
@@ -1760,19 +1760,19 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20261230T190000
 DTEND;TZID=Asia/Shanghai:20261230T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:688d04a9c026c6d536ec857096ca0dc3@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第17周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
@@ -1835,19 +1835,19 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20270104T190000
 DTEND;TZID=Asia/Shanghai:20270104T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:95b0ff704d93405f777d773eb88dc164@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第18周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
@@ -1886,19 +1886,19 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20270106T190000
 DTEND;TZID=Asia/Shanghai:20270106T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:88b5d9b71eb94059670fdcebacc7a615@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第18周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
@@ -1937,19 +1937,19 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20270111T190000
 DTEND;TZID=Asia/Shanghai:20270111T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:065f6f758497432b8145388de635df73@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第19周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
@@ -1988,19 +1988,19 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20270113T190000
 DTEND;TZID=Asia/Shanghai:20270113T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:294d190508ac2071b241b57773c4dd08@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第19周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
@@ -2014,20 +2014,21 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20270118T190000
 DTEND;TZID=Asia/Shanghai:20270118T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:f31473db9f94675d3f0f2315f12996e3@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第20周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。\n本次排课日期位于校历期末考试周；公共
- 课结束周次暂定，案例课原表包含第20周。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。\n本
+ 次日期位于校历期末考试周，课程群公告安排包含第20周
+ 。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
@@ -2068,20 +2069,21 @@ BEGIN:VEVENT
 SUMMARY:农业工程与信息技术案例【暂定】
 DTSTART;TZID=Asia/Shanghai:20270120T190000
 DTEND;TZID=Asia/Shanghai:20270120T204000
-DTSTAMP:20261004T013410Z
+DTSTAMP:20261103T015921Z
 UID:6ddd718d2c5d5c23ddc9f60048a1258e@sdau-calendar.yuanzhibx
-SEQUENCE:0
+SEQUENCE:1
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第20周\n教师：吴秋兰\n
- 地点：待通知\n原表只注明晚上。按用户要求占据晚上第
- 9—10节（19:00—20:40）；准确起止时间及教室待通知。\n
- 来源：2026-2027学年课程汇总_更新版.xlsx；用户提供的校
- 历和作息时间表。\n教学周统一按2026-09-07为第1周周一计
- 算。暂无节假日停课、调课通知，按原课表保留；不推
- 定实际开课。\n本次排课日期位于校历期末考试周；公共
- 课结束周次暂定，案例课原表包含第20周。
-LAST-MODIFIED:20261004T013410Z
-LOCATION:待通知
+ 校区：岱宗校区，教室待通知\n课程群公告确认第13—20
+ 周周一、周三晚上上课，2026年11月30日开始。本人已确认
+ 所属岱宗校区。\n具体钟点及教室待通知。日历沿用第9
+ —10节19:00—20:40作为晚上占位。\n来源：用户于2026年11月
+ 3日提供的课程群公告截图和校区确认，已确认的校历及
+ 作息时间表。\n教学周按2026-09-07为第1周周一计算。\n本
+ 次日期位于校历期末考试周，课程群公告安排包含第20周
+ 。
+LAST-MODIFIED:20261103T015921Z
+LOCATION:岱宗校区（教室待通知）
 STATUS:TENTATIVE
 TRANSP:OPAQUE
 BEGIN:VALARM
