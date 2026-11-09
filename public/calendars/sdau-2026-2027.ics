@@ -448,29 +448,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业大数据【暂定】
+SUMMARY:农业大数据
 DTSTART;TZID=Asia/Shanghai:20261119T080000
 DTEND;TZID=Asia/Shanghai:20261119T114000
-DTSTAMP:20261108T021226Z
+DTSTAMP:20261109T120830Z
 UID:9db2596035f3abf3c4127da25caa9314@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第11周\n教师：张成龙\n
- 地点：5N210\n周次依据学院课表，星期四及上午已确认；
- 按用户要求占据上午第1—4节（08:00—11:40），准确起止
- 时间待通知。\n来源：2026-2027学年课程汇总_更新版.xlsx；
- 用户提供的校历和作息时间表。\n教学周统一按2026-09-07
- 为第1周周一计算。暂无节假日停课、调课通知，按原课
- 表保留；不推定实际开课。\n教室依据：2026年11月8日提
- 供的信息学院2026级硕士研究生2026-2027第一学期专业课表2
- 026.10.19.xls。
-LAST-MODIFIED:20261108T021226Z
+DESCRIPTION:2026—2027学年第一学期，第11周\n教师：张朝林\n
+ 地点：5N210\n课程群通知已确认第11—18周，每周四上午第
+ 1—4节，地点5N210。\n第11—14周张朝林授课，第15—16周张
+ 成龙授课，第17—18周张华霞授课。\n按秋冬季作息表换
+ 算为08:00—11:40（含课间）。\n来源：用户于2026年11月9日
+ 提供的农业大数据课程群通知截图，以及已记录的校历
+ 和作息时间表。\n教学周按2026-09-07为第1周周一计算；后
+ 续调课以新通知为准。
+LAST-MODIFIED:20261109T120830Z
 LOCATION:5N210
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业大数据【暂定】
+DESCRIPTION:30分钟后上课：农业大数据
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -681,29 +680,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业大数据【暂定】
+SUMMARY:农业大数据
 DTSTART;TZID=Asia/Shanghai:20261126T080000
 DTEND;TZID=Asia/Shanghai:20261126T114000
-DTSTAMP:20261108T021226Z
+DTSTAMP:20261109T120830Z
 UID:5712b6f404f62b0983282f60c6d7dbc1@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第12周\n教师：张成龙\n
- 地点：5N210\n周次依据学院课表，星期四及上午已确认；
- 按用户要求占据上午第1—4节（08:00—11:40），准确起止
- 时间待通知。\n来源：2026-2027学年课程汇总_更新版.xlsx；
- 用户提供的校历和作息时间表。\n教学周统一按2026-09-07
- 为第1周周一计算。暂无节假日停课、调课通知，按原课
- 表保留；不推定实际开课。\n教室依据：2026年11月8日提
- 供的信息学院2026级硕士研究生2026-2027第一学期专业课表2
- 026.10.19.xls。
-LAST-MODIFIED:20261108T021226Z
+DESCRIPTION:2026—2027学年第一学期，第12周\n教师：张朝林\n
+ 地点：5N210\n课程群通知已确认第11—18周，每周四上午第
+ 1—4节，地点5N210。\n第11—14周张朝林授课，第15—16周张
+ 成龙授课，第17—18周张华霞授课。\n按秋冬季作息表换
+ 算为08:00—11:40（含课间）。\n来源：用户于2026年11月9日
+ 提供的农业大数据课程群通知截图，以及已记录的校历
+ 和作息时间表。\n教学周按2026-09-07为第1周周一计算；后
+ 续调课以新通知为准。
+LAST-MODIFIED:20261109T120830Z
 LOCATION:5N210
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业大数据【暂定】
+DESCRIPTION:30分钟后上课：农业大数据
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -945,29 +943,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业大数据【暂定】
+SUMMARY:农业大数据
 DTSTART;TZID=Asia/Shanghai:20261203T080000
 DTEND;TZID=Asia/Shanghai:20261203T114000
-DTSTAMP:20261108T021226Z
+DTSTAMP:20261109T120830Z
 UID:db10bd8934ffbebd4fa0ac710f559bb3@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第13周\n教师：张成龙\n
- 地点：5N210\n周次依据学院课表，星期四及上午已确认；
- 按用户要求占据上午第1—4节（08:00—11:40），准确起止
- 时间待通知。\n来源：2026-2027学年课程汇总_更新版.xlsx；
- 用户提供的校历和作息时间表。\n教学周统一按2026-09-07
- 为第1周周一计算。暂无节假日停课、调课通知，按原课
- 表保留；不推定实际开课。\n教室依据：2026年11月8日提
- 供的信息学院2026级硕士研究生2026-2027第一学期专业课表2
- 026.10.19.xls。
-LAST-MODIFIED:20261108T021226Z
+DESCRIPTION:2026—2027学年第一学期，第13周\n教师：张朝林\n
+ 地点：5N210\n课程群通知已确认第11—18周，每周四上午第
+ 1—4节，地点5N210。\n第11—14周张朝林授课，第15—16周张
+ 成龙授课，第17—18周张华霞授课。\n按秋冬季作息表换
+ 算为08:00—11:40（含课间）。\n来源：用户于2026年11月9日
+ 提供的农业大数据课程群通知截图，以及已记录的校历
+ 和作息时间表。\n教学周按2026-09-07为第1周周一计算；后
+ 续调课以新通知为准。
+LAST-MODIFIED:20261109T120830Z
 LOCATION:5N210
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业大数据【暂定】
+DESCRIPTION:30分钟后上课：农业大数据
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1209,29 +1206,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业大数据【暂定】
+SUMMARY:农业大数据
 DTSTART;TZID=Asia/Shanghai:20261210T080000
 DTEND;TZID=Asia/Shanghai:20261210T114000
-DTSTAMP:20261108T021226Z
+DTSTAMP:20261109T120830Z
 UID:2b4fb86cd61b2be5ee4c0721288981aa@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第14周\n教师：张成龙\n
- 地点：5N210\n周次依据学院课表，星期四及上午已确认；
- 按用户要求占据上午第1—4节（08:00—11:40），准确起止
- 时间待通知。\n来源：2026-2027学年课程汇总_更新版.xlsx；
- 用户提供的校历和作息时间表。\n教学周统一按2026-09-07
- 为第1周周一计算。暂无节假日停课、调课通知，按原课
- 表保留；不推定实际开课。\n教室依据：2026年11月8日提
- 供的信息学院2026级硕士研究生2026-2027第一学期专业课表2
- 026.10.19.xls。
-LAST-MODIFIED:20261108T021226Z
+DESCRIPTION:2026—2027学年第一学期，第14周\n教师：张朝林\n
+ 地点：5N210\n课程群通知已确认第11—18周，每周四上午第
+ 1—4节，地点5N210。\n第11—14周张朝林授课，第15—16周张
+ 成龙授课，第17—18周张华霞授课。\n按秋冬季作息表换
+ 算为08:00—11:40（含课间）。\n来源：用户于2026年11月9日
+ 提供的农业大数据课程群通知截图，以及已记录的校历
+ 和作息时间表。\n教学周按2026-09-07为第1周周一计算；后
+ 续调课以新通知为准。
+LAST-MODIFIED:20261109T120830Z
 LOCATION:5N210
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业大数据【暂定】
+DESCRIPTION:30分钟后上课：农业大数据
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1421,29 +1417,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业大数据【暂定】
+SUMMARY:农业大数据
 DTSTART;TZID=Asia/Shanghai:20261217T080000
 DTEND;TZID=Asia/Shanghai:20261217T114000
-DTSTAMP:20261108T021226Z
+DTSTAMP:20261109T120830Z
 UID:5a4faa92243b638c258b7a6f45dd4489@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第15周\n教师：张成龙\n
- 地点：5N210\n周次依据学院课表，星期四及上午已确认；
- 按用户要求占据上午第1—4节（08:00—11:40），准确起止
- 时间待通知。\n来源：2026-2027学年课程汇总_更新版.xlsx；
- 用户提供的校历和作息时间表。\n教学周统一按2026-09-07
- 为第1周周一计算。暂无节假日停课、调课通知，按原课
- 表保留；不推定实际开课。\n教室依据：2026年11月8日提
- 供的信息学院2026级硕士研究生2026-2027第一学期专业课表2
- 026.10.19.xls。
-LAST-MODIFIED:20261108T021226Z
+ 地点：5N210\n课程群通知已确认第11—18周，每周四上午第
+ 1—4节，地点5N210。\n第11—14周张朝林授课，第15—16周张
+ 成龙授课，第17—18周张华霞授课。\n按秋冬季作息表换
+ 算为08:00—11:40（含课间）。\n来源：用户于2026年11月9日
+ 提供的农业大数据课程群通知截图，以及已记录的校历
+ 和作息时间表。\n教学周按2026-09-07为第1周周一计算；后
+ 续调课以新通知为准。
+LAST-MODIFIED:20261109T120830Z
 LOCATION:5N210
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业大数据【暂定】
+DESCRIPTION:30分钟后上课：农业大数据
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1633,29 +1628,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业大数据【暂定】
+SUMMARY:农业大数据
 DTSTART;TZID=Asia/Shanghai:20261224T080000
 DTEND;TZID=Asia/Shanghai:20261224T114000
-DTSTAMP:20261108T021226Z
+DTSTAMP:20261109T120830Z
 UID:f37e429d126059166aef7c486c938cb9@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
 DESCRIPTION:2026—2027学年第一学期，第16周\n教师：张成龙\n
- 地点：5N210\n周次依据学院课表，星期四及上午已确认；
- 按用户要求占据上午第1—4节（08:00—11:40），准确起止
- 时间待通知。\n来源：2026-2027学年课程汇总_更新版.xlsx；
- 用户提供的校历和作息时间表。\n教学周统一按2026-09-07
- 为第1周周一计算。暂无节假日停课、调课通知，按原课
- 表保留；不推定实际开课。\n教室依据：2026年11月8日提
- 供的信息学院2026级硕士研究生2026-2027第一学期专业课表2
- 026.10.19.xls。
-LAST-MODIFIED:20261108T021226Z
+ 地点：5N210\n课程群通知已确认第11—18周，每周四上午第
+ 1—4节，地点5N210。\n第11—14周张朝林授课，第15—16周张
+ 成龙授课，第17—18周张华霞授课。\n按秋冬季作息表换
+ 算为08:00—11:40（含课间）。\n来源：用户于2026年11月9日
+ 提供的农业大数据课程群通知截图，以及已记录的校历
+ 和作息时间表。\n教学周按2026-09-07为第1周周一计算；后
+ 续调课以新通知为准。
+LAST-MODIFIED:20261109T120830Z
 LOCATION:5N210
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业大数据【暂定】
+DESCRIPTION:30分钟后上课：农业大数据
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1845,29 +1839,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业大数据【暂定】
+SUMMARY:农业大数据
 DTSTART;TZID=Asia/Shanghai:20261231T080000
 DTEND;TZID=Asia/Shanghai:20261231T114000
-DTSTAMP:20261108T021226Z
+DTSTAMP:20261109T120830Z
 UID:7f0bc57890e3105aed2a266befc19562@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第17周\n教师：张成龙\n
- 地点：5N210\n周次依据学院课表，星期四及上午已确认；
- 按用户要求占据上午第1—4节（08:00—11:40），准确起止
- 时间待通知。\n来源：2026-2027学年课程汇总_更新版.xlsx；
- 用户提供的校历和作息时间表。\n教学周统一按2026-09-07
- 为第1周周一计算。暂无节假日停课、调课通知，按原课
- 表保留；不推定实际开课。\n教室依据：2026年11月8日提
- 供的信息学院2026级硕士研究生2026-2027第一学期专业课表2
- 026.10.19.xls。
-LAST-MODIFIED:20261108T021226Z
+DESCRIPTION:2026—2027学年第一学期，第17周\n教师：张华霞\n
+ 地点：5N210\n课程群通知已确认第11—18周，每周四上午第
+ 1—4节，地点5N210。\n第11—14周张朝林授课，第15—16周张
+ 成龙授课，第17—18周张华霞授课。\n按秋冬季作息表换
+ 算为08:00—11:40（含课间）。\n来源：用户于2026年11月9日
+ 提供的农业大数据课程群通知截图，以及已记录的校历
+ 和作息时间表。\n教学周按2026-09-07为第1周周一计算；后
+ 续调课以新通知为准。
+LAST-MODIFIED:20261109T120830Z
 LOCATION:5N210
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业大数据【暂定】
+DESCRIPTION:30分钟后上课：农业大数据
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
@@ -1979,29 +1972,28 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:农业大数据【暂定】
+SUMMARY:农业大数据
 DTSTART;TZID=Asia/Shanghai:20270107T080000
 DTEND;TZID=Asia/Shanghai:20270107T114000
-DTSTAMP:20261108T021226Z
+DTSTAMP:20261109T120830Z
 UID:ed980e77c424b4828b564c34ceeee3d3@sdau-calendar.yuanzhibx
-SEQUENCE:1
+SEQUENCE:2
 CATEGORIES:课程
-DESCRIPTION:2026—2027学年第一学期，第18周\n教师：张成龙\n
- 地点：5N210\n周次依据学院课表，星期四及上午已确认；
- 按用户要求占据上午第1—4节（08:00—11:40），准确起止
- 时间待通知。\n来源：2026-2027学年课程汇总_更新版.xlsx；
- 用户提供的校历和作息时间表。\n教学周统一按2026-09-07
- 为第1周周一计算。暂无节假日停课、调课通知，按原课
- 表保留；不推定实际开课。\n教室依据：2026年11月8日提
- 供的信息学院2026级硕士研究生2026-2027第一学期专业课表2
- 026.10.19.xls。
-LAST-MODIFIED:20261108T021226Z
+DESCRIPTION:2026—2027学年第一学期，第18周\n教师：张华霞\n
+ 地点：5N210\n课程群通知已确认第11—18周，每周四上午第
+ 1—4节，地点5N210。\n第11—14周张朝林授课，第15—16周张
+ 成龙授课，第17—18周张华霞授课。\n按秋冬季作息表换
+ 算为08:00—11:40（含课间）。\n来源：用户于2026年11月9日
+ 提供的农业大数据课程群通知截图，以及已记录的校历
+ 和作息时间表。\n教学周按2026-09-07为第1周周一计算；后
+ 续调课以新通知为准。
+LAST-MODIFIED:20261109T120830Z
 LOCATION:5N210
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:30分钟后上课：农业大数据【暂定】
+DESCRIPTION:30分钟后上课：农业大数据
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
