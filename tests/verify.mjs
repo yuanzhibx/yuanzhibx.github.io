@@ -342,7 +342,8 @@ try {
     assert.equal(/DRAFT_SENTINEL_74329|DRAFT_BODY_SECRET_74329|DEFAULT_DRAFT_SECRET_74329/.test(contents), false, `草稿泄露：${path}`);
   }
   const liveFiles = await filesIn(join(root, 'dist'));
-  assert.equal(liveFiles.filter((file) => file.endsWith('.html')).length, 6 + productionArticles.length);
+  assert.ok(liveFiles.includes(join(root, 'dist/soil/index.html')), '缺少山东耕地地图入口');
+  assert.equal(liveFiles.filter((file) => file.endsWith('.html')).length, 7 + productionArticles.length);
   assert.equal(liveFiles.some((file) => /test-project|test-soil|test-related|hidden-draft|default-draft/.test(file)), false);
   passed('显式草稿和默认草稿均无路由、无列表、无构建正文；正式目录没有任何测试文章');
 
