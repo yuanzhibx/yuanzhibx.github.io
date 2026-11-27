@@ -14,7 +14,7 @@ Astro + TypeScript 静态网站，导航为 Home / Study / Coding / Tools / Abou
 | 输出 | 年度盐渍化图、年际变化图、春季 NDVI 图层和当前视野的耕地面积占比。 |
 | 技术 | 网页使用 Vue 3.5.45 和 OpenLayers 10.11.0。GeoServer 3.0.2 WMS 与 Spring Boot、MySQL 用于本地全栈版。 |
 | 模块 | Python、GDAL、NumPy 预处理数据，本地服务提供图层发布和记录维护，公开网页读取发布时导出的静态图层与快照。 |
-| 规则 | 年度 ECe 决定盐渍化等级，NDVI 展示春季植被绿度。以 2021 年耕地为固定基准，地图缩放或平移后按当前视野内的耕地面积重新统计。 |
+| 规则 | 年度 ECe 决定盐渍化等级，NDVI 展示春季植被绿度。以 2021 年耕地为固定基准。放大后按约 60–74 米的 WorldCover 耕地像元绘制边界，颜色依据其所属约 1 千米网格的等级。面积随当前视野重新统计。 |
 | 当前进展 | 覆盖山东省约 20.6 万个含耕地网格，已上线 10 年年度图、年际对比和春季 NDVI。 |
 
 GitHub Pages 部署的 `public/soil/` 采用静态发布方式。实时 WMS 接入需要单独部署的公共 HTTPS GeoServer。更新快照时，先在课程项目重新执行 `npm run build:pages`，再同步发布包。 [GitHub Pages 静态托管说明](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)
